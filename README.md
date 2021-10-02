@@ -24,23 +24,23 @@ Disfrutá de la evolución que sólo te puede brindar Electro Hogar.
 
 # Integrantes del proyecto:
 
-Federico Nahuel Angeles, 27 años.
+[Federico Nahuel Angeles](https://github.com/fedeangeles23), 27 años.
 * Técnico electrónico.
 * Estudiante de programación web Full Stack en Digital House.
 
-Rivera Alan Agustin , 23 años.
+[Rivera Alan Agustin](https://github.com/AgustinRiivera) , 23 años.
 * Cartero / jardinero.
 * Estudiante de programación web Full Stack en Digital House.
 
-Joaquín Gerez, 20 años.
+[Joaquín Gerez](https://github.com/JoaquinLGerez), 20 años.
 * Técnico informático.
 * Estudiante para analista en tecnologías de la información en la UNLP.
 
-Karen Daiana Gonzalez, 20 años.
+[Karen Daiana Gonzalez](https://github.com/karenGonza), 20 años.
 * Técnica electrónica.
 * Estudiante de programación web Full Stack en Digital House.
 
-Victor Hugo Pinto, 24 años.
+[Victor Hugo Pinto](https://github.com/HugoPinto97), 24 años.
 * Repartidor.
 * Estudiante de tecnicatura en informatica en UNPAZ.
 * Estudiante de programacion web full stack en Digital house. 
