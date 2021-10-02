@@ -2,7 +2,7 @@
 
 # Grupo 9 - Comisión 12
 
-![Electro Hogar](electrohogar.png)
+![Electro Hogar](electrohogar.pn)
 
 # Descripción del sitio web:
 
