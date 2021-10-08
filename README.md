@@ -58,3 +58,8 @@ Disfrutá de la evolución que sólo te puede brindar Electro Hogar.
 * [Garbarino](https://www.garbarino.com/)
 
 * [Otero](https://www.otero.com.ar/)
+
+
+# Diseño en figma:
+
+>https://www.figma.com/file/SAqxhkxtKNogzvhPJRNAmD/Electro-Hogar---Wireframe-%2F-Grupo-9?node-id=78%3A3
