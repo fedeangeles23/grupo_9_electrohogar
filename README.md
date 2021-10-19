@@ -2,7 +2,7 @@
 
 # Grupo 9 - Comisión 12
 
-![Electro Hogar](electrohogar.png)
+![electrohogarlogo](https://user-images.githubusercontent.com/90283601/137998822-b6d70649-9870-4300-88af-54ac97d27692.png)
 
 # Descripción del sitio web:
 
