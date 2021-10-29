@@ -58,4 +58,4 @@ Disfrutá de la evolución que sólo te puede brindar Electro Hogar.
 
 # Diseño en figma:
 
->https://www.figma.com/file/SAqxhkxtKNogzvhPJRNAmD/Electro-Hogar---Wireframe-%2F-Grupo-9?node-id=78%3A3
+* [Figma](https://www.figma.com/file/SAqxhkxtKNogzvhPJRNAmD/Electro-Hogar---Wireframe-%2F-Grupo-9?node-id=78%3A3)
