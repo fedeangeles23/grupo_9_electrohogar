@@ -692,19 +692,13 @@ padding:0px 14px;
 
     .carousel-item .panel2 {
         position: absolute;
-        bottom:30%;
-        right: 0px;
-        width: 45px;
+        bottom:35%;
+        right: 10px;
+        width: 30px;
         display: flex;
         align-items: center;
         flex-flow: column;
-        border-radius: 30px;
-        background: transparent;
-        box-shadow: 0 10px 10px 0 #7A7A7A;
-        border-radius:200px 0px 200px 200px;
-        -moz-border-radius: 200px 0px 200px 200px;
-        -webkit-border-radius:200px 0px 200px 200px;
-        border: 0px solid #0000;
+        
     }
 
     .carousel-item .panel2 a {
@@ -720,6 +714,68 @@ padding:0px 14px;
         font-family: 'Lato', sans-serif;
         margin-bottom: 10px;
 
+    }
+
+    .carousel-item span{
+        font-size: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        
+
+    }
+
+    .carousel-item .btncomprar {
+        border-radius: 20px;
+        line-height: 30px;
+        width: 55%;
+        background:white;
+        border:1px solid rgb(255, 255, 255);
+        margin: 15px 5px;
+        font-weight: bold;
+        color:white;
+        background:rgb(15, 15, 15);
+        border-style: double;
+        font-family: Lato, sans-serif;
+        
+    }
+    .carousel-item .btncarrito {
+        border-radius: 20px;
+        line-height: 30px;
+        width: 60%;
+        background:white;
+        border:1px solid rgb(255, 255, 255);
+        margin: 15px 15px;
+        font-weight: bold;
+        color:rgb(0, 0, 0);
+        background:rgb(255, 255, 255);
+        border: 1px solid black;
+        font-family: Lato, sans-serif;
+        
+        
+    }
+
+    .carousel-item .btndiv {
+        display:flex;
+    }
+
+
+
+    .carousel-item .fav {
+        border:none;
+        width: 25px;
+        margin-bottom: 35px;
+
+    }
+
+    .carousel-item .fav:hover{
+        background-image: url(/public/icons/heart\ \(1\).svg);
+    }
+
+    .carousel-item img {
+        border-bottom: 1px solid #585858;
+        border-radius: 0;
     }
 
     .carousel-item .info h3 {
