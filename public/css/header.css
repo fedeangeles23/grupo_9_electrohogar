@@ -244,12 +244,11 @@ nav ul li:hover{
     display: flex;
     justify-content: space-around;
     padding: 15px;
-    position: absolute;
     bottom:0;
     width: 100%;
     margin-top: auto;
     border:1px solid var(--border);
-    z-index:1;
+   
 }
 
 .footertop .inputemail{
@@ -288,10 +287,7 @@ padding:0px 14px;
         width: 100%;
         height: 240px;
         background-color: rgba(255, 255, 255, 0.486);
-        display:flex;
-        position: absolute;
-        bottom:0;
-        z-index: 0;
+        display: flex;
         border:1px solid hsl(0, 7%, 81%);
     }
 
@@ -387,7 +383,7 @@ padding:0px 14px;
 
 /*HEADER RESPONSIVE----------------------*/
 
-@media screen and (max-width: 1250px) {
+/* media screen and (max-width: 1250px) {
       
 
 
@@ -510,7 +506,7 @@ padding:0px 14px;
         }
 
     }
-
+ */
   
   .heladera  {
         width: auto;
@@ -529,6 +525,7 @@ padding:0px 14px;
         display:flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         font-family: Lato, sans-serif;
 
     }
@@ -625,3 +622,157 @@ padding:0px 14px;
 
 
     }
+
+
+    .carousel {
+        margin:5px;
+        width: 100%;
+        overflow: scroll;
+        position:relative;
+        box-shadow:border-box
+    }
+
+    .carousel__container{
+        white-space: nowrap;
+        margin: 40px 0px;
+        padding-bottom: 10px;
+    }
+
+    .carousel-item {
+        background-color:#fff;
+        width: 15%;
+        height:auto;
+        border-radius:10px;
+        overflow:hidden;
+        margin: 10px 20px;
+        display: inline-block;
+        cursor:pointer;
+        transition: 450ms all;
+        transform-origin: center left;
+        position: relative;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 26);
+        margin-left: 30px
+    }
+
+    .carousel1 h3 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .carousel-item .panel1{
+        position:absolute;
+        top:0;
+        right:-50%;
+        width: 45px;
+        background-color: transparent;
+        display:flex;
+        align-items: center;
+        flex-flow:column;
+        opacity: 1;
+
+    
+    }
+
+    .carousel-item:hover .panel1 {
+        right:0;
+        opacity: 1;
+        transition: 0.4s;
+    }
+
+    .carousel-item .panel1 a {
+        font-size:20px;
+        color:yellow;
+        margin: 15px 0;
+    }
+
+    .carousel-item .panel a:hover{
+        color:rgba(255, 0, 0, 0.9);
+
+    }
+
+    .carousel-item .panel2 {
+        position: absolute;
+        bottom:30%;
+        right: 0px;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        border-radius: 30px;
+        background: transparent;
+        box-shadow: 0 10px 10px 0 #7A7A7A;
+        border-radius:200px 0px 200px 200px;
+        -moz-border-radius: 200px 0px 200px 200px;
+        -webkit-border-radius:200px 0px 200px 200px;
+        border: 0px solid #0000;
+    }
+
+    .carousel-item .panel2 a {
+        font-size:18px;
+        color: #ff9900;
+        margin: 15px 0;
+    }
+
+    .carousel-item .info {
+        text-align: center;
+        line-height: 20px;
+        margin-top:-10px;
+        font-family: 'Lato', sans-serif;
+        margin-bottom: 10px;
+
+    }
+
+    .carousel-item .info h3 {
+        color:#333;
+        padding-top:5px;
+        cursor:pointer;
+        font-family: 'Lato',sans-serif;
+        letter-spacing: 1px;
+        font-size: 14px;
+    }
+
+    .carousel-item .info .stars {
+        margin-top:-20px;
+    }
+
+    .carousel-item .info stars i {
+        color:gold;
+        padding: 10px 0;
+    }
+
+    .carousel-item .info .price {
+        font-size:13px;
+        color:#f04603;
+        letter-spacing: 0.5px;
+    }
+
+    .carousel-item ~ .carousel-item {
+        transform:translate(20px, 0, 0);
+    }
+
+    .carousel__container:hover carousel-item:hover {
+        transform:scale(1.09);
+        opacity: 1;
+    }
+
+    .carousel-item-img{
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-radius:19px;
+    }
+
+    .carousel::-webkit-scrollbar-track {
+        border-radius:10px;
+    }
+
+    .carousel::-webkit-scrollbar-track-piece {
+        max-width: 100px;
+    }
+    .carousel::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color:#fff;
+        background-image: -webkit-gradient(linear,40% 0%, 75% 84%, from(#ff6da2), to(#7394fa), color-stop(0.6, #9863f8));
+
+    }
+
