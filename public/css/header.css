@@ -383,7 +383,7 @@ padding:0px 14px;
 
 /*HEADER RESPONSIVE----------------------*/
 
-/* media screen and (max-width: 1250px) {
+ @media screen and (max-width: 1250px) {
       
 
 
@@ -509,9 +509,9 @@ padding:0px 14px;
  */
   
   .heladera  {
-        width: auto;
-        height: auto;
-        background-size: cover;
+        width: 50%;
+        height: 50%;
+
     }
 
     .ofertas {
@@ -651,7 +651,8 @@ padding:0px 14px;
         transform-origin: center left;
         position: relative;
         box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 26);
-        margin-left: 30px
+        margin-left: 30px;
+       
     }
 
     .carousel1 h3 {
@@ -659,36 +660,7 @@ padding:0px 14px;
         margin-top: 20px;
     }
 
-    .carousel-item .panel1{
-        position:absolute;
-        top:0;
-        right:-50%;
-        width: 45px;
-        background-color: transparent;
-        display:flex;
-        align-items: center;
-        flex-flow:column;
-        opacity: 1;
 
-    
-    }
-
-    .carousel-item:hover .panel1 {
-        right:0;
-        opacity: 1;
-        transition: 0.4s;
-    }
-
-    .carousel-item .panel1 a {
-        font-size:20px;
-        color:yellow;
-        margin: 15px 0;
-    }
-
-    .carousel-item .panel a:hover{
-        color:rgba(255, 0, 0, 0.9);
-
-    }
 
     .carousel-item .panel2 {
         position: absolute;
@@ -723,8 +695,17 @@ padding:0px 14px;
         justify-content: center;
         margin-bottom: 10px;
         
-
     }
+
+    .carousel-item small{
+
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4px;
+        color: #090cce;
+        }
 
     .carousel-item .btncomprar {
         border-radius: 20px;
@@ -759,7 +740,7 @@ padding:0px 14px;
     .carousel-item .btndiv {
         display:flex;
     }
-
+   
 
 
     .carousel-item .fav {
@@ -776,6 +757,7 @@ padding:0px 14px;
     .carousel-item img {
         border-bottom: 1px solid #585858;
         border-radius: 0;
+        width: 100%;
     }
 
     .carousel-item .info h3 {
@@ -787,48 +769,17 @@ padding:0px 14px;
         font-size: 14px;
     }
 
-    .carousel-item .info .stars {
-        margin-top:-20px;
-    }
-
-    .carousel-item .info stars i {
-        color:gold;
-        padding: 10px 0;
-    }
-
     .carousel-item .info .price {
         font-size:13px;
         color:#f04603;
         letter-spacing: 0.5px;
     }
 
-    .carousel-item ~ .carousel-item {
-        transform:translate(20px, 0, 0);
-    }
-
-    .carousel__container:hover carousel-item:hover {
-        transform:scale(1.09);
-        opacity: 1;
-    }
-
     .carousel-item-img{
         width: 100%;
-        height: 210px;
+        height: 200px;
         object-fit: cover;
         border-radius:19px;
     }
 
-    .carousel::-webkit-scrollbar-track {
-        border-radius:10px;
-    }
-
-    .carousel::-webkit-scrollbar-track-piece {
-        max-width: 100px;
-    }
-    .carousel::-webkit-scrollbar-thumb {
-        border-radius: 20px;
-        background-color:#fff;
-        background-image: -webkit-gradient(linear,40% 0%, 75% 84%, from(#ff6da2), to(#7394fa), color-stop(0.6, #9863f8));
-
-    }
-
+ 
