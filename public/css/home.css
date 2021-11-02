@@ -59,10 +59,10 @@ header .iconfav {
 
 
 .logo {
-    width: 140px;
+    width: 80px;
     position: relative;
-    bottom:22px;
-
+    left: 40px;
+    top:10px;
 }
 
 header ul {
@@ -190,23 +190,22 @@ nav {
     border-color: #CEC8C8;
     border-bottom:1px solid #CEC8C8;
     padding:0 15px;
+    height: 50px;
 }
 
 
 nav ul {
     display:flex;
     list-style:none;
-    line-height:20px;
+    line-height:30px;
     border:10px;
-    
-   
 }
 
 nav ul li {
     display:inline-block;
     padding: 10px 25px;
     color:black;
-    font-size:13px;
+    font-size:16px;
   
     
 }
@@ -294,7 +293,7 @@ padding:0px 14px;
         }
 
         .footercolumna3Row h3{
-            font-size:14px;
+            font-size:17px;
         } 
         
         
@@ -304,62 +303,35 @@ padding:0px 14px;
             margin-top: 40px;
         }
         
-        .whapp {
-            border-radius: 4px;
-    float: left;
-    width: auto;
-    max-width: 100%;
-    color: #fff;
-    padding: 4px 17px 4px 55px;
-    margin: -10px 0 0;
-    border: 1px solid #52ba63;
-    position: relative;
-    clear: left;
-    background-color: #52ba638a;
-    top:130px;
-    left: 420px;
+        .mediosdepago span {
+            position: relative;
+            bottom: 40px;
+            left: 160px;
+        }
 
-}
-
-.wpp {
-    width: 25px;
-   position: relative;
-   top:122px;
-   left: 180px;
-
-}
-
+        .mediosdepago img {
+            padding-top: 140px;
+            padding-left:40px;
+        }
         
-        .footercolumna2Row h3 {
-            font-size:14px;
+            .footercolumna2Row h3 {
+            font-size:17px;
         }
         .footercolumna2Row ul li {
-            font-size:11px;
+            font-size:15px;
             list-style: none;
             color: #7A7A7A;
-            margin: 4px;
+            margin: 10px;
         }
         
         .footercolumna3Row ul li {
-            font-size:11px;
+            font-size:14px;
             list-style: none;
             color:#7A7A7A;
-            margin: 4px;
+            margin: 10px;
         }
 
-        .mediosdepago h3 {
-            font-size: 19px;
-            margin-left: 4px;
-        }
-
-        .mediosdepago img{
-            padding-top:7px;
-        }
-        .mediosdepago {
-            position: relative;
-            top: 40px;
-            left: 850px;
-        }
+    
        
 
 /* NAV RESPONSIVE ------------------------*/
@@ -371,8 +343,12 @@ padding:0px 14px;
 
 /*HEADER RESPONSIVE----------------------*/
 
+
+
  @media screen and (max-width: 1250px) {
       
+
+    
 
     nav {
         display:none;
@@ -385,8 +361,11 @@ padding:0px 14px;
 
     header .logo {
         display:inline-block;
-        padding: 15px 30px;
-       
+        padding: 15px 14px;
+       width: 120px;
+       position:relative;
+       left: -4px;
+
     }
     
     header .buscar {
@@ -427,10 +406,18 @@ padding:0px 14px;
         header .bar {
             display:block;
             position:absolute;
-            top:20px;
+            top:70px;
             right:80px;
             cursor:pointer;
 
+        }
+
+        header .bar span {
+            color:rgb(255, 255, 255);
+            background-color: rgb(2, 12, 150);
+            padding:4px;
+            border-radius: 5px;
+           font-weight: bold; 
         }
 
         header .bar #times{
@@ -485,6 +472,8 @@ padding:0px 14px;
         header {
             height: 180px;
         }
+
+
 
 
     } /*END RESPONSIVE*/ 
@@ -630,4 +619,10 @@ padding:0px 14px;
 
 .fav i:hover{
     color: rgb(219, 2, 2);
+}
+
+.heladera {
+    height: 600px;
+    object-fit: fill;
+    width: 100%;
 }
