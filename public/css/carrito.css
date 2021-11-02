@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* TEXTO SUPERIOR */
+.textSuperior{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.textSuperior a{
+    text-decoration: none;
+    color: #101010; /* Color de fondo */
+}
+
+.container1{ /* El primer contenedor de 3 cajas con carrito,etc */
+    border: 1px; /* Sinceramente no tengo idea y no le vi cambio alguno */
+    display: flex; /* Para que las cajitas estén una al lado del otro */
+    margin-top: 30px; /* Distancia al márgen superior de 30px */
+    justify-content: center; /* Para que las cajitas queden en el centro */
+    font-family: Roboto,sans-serif;
+}
+
+.container1 .container-proccess1 { /* Esta es la primer cajita */
+    background-color: #009688; /* el color de la cajita */
+    width: 380px; /* el ancho de la caja */
+    height: 40px; /* la altura de la caja */
+}
+
+.container-proccess1 p{
+    text-align: center; /* Para que el texto esté en el centro */
+    margin-top: 11.5px;
+}
+
+.container1 .container-proccess2 { /* Esta es la primer cajita */
+    background-color: #35529C; /* el color de la cajita */
+    width: 380px; /* el ancho de la caja */
+    height: 40px; /* la altura de la caja */
+}
+
+.container-proccess2 p{
+    text-align: center; /* Para que el texto esté en el centro */
+    margin-top: 11.5px;
+}
+
+.container1 .container-proccess3 {
+    background-color: #35529C; /* el color de la cajita */
+    width: 380px; /* el ancho de la caja */
+    height: 40px; /* la altura de la caja */
+}
+.container-proccess3 p{
+    text-align: center; /* Para que el texto esté en el centro */
+    margin-top: 11.5px;
+}
+
+/* SEGUNDO CONTENEDOR */
+
+.container2{
+    background-color: #2D2D2D; /* La cajita lateral negra sobre el tercer contenedor */
+    width: 1140px; /* el ancho de la caja */
+    height: 10px; /* la altura de la caja */
+    border: 1px solid #2D2D2D;
+    margin-left: auto; /* Acomoda automáticamente el márgen del centro a la izquierda */
+    margin-right: auto; /* Acomoda automáticamente el márgen del centro a la derecha */
+    margin-top: 20px; /* Distancia al margen inferior del primer contenedor */
+}
+
+/* TERCER CONTENEDOR */ 
+/* Producto 1 */
+
+.container3{
+    margin-top: 2px;
+    display: flex;
+    background-color: #FAFAFA;
+    border: 1px solid #2D2D2D;
+    width: 1140px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+}
+
+.container3 .box1{
+    margin-top: 10px;
+}
+
+.container3 .box2 p{
+    font-family: Roboto, sans-serif;
+    margin-top: 40px;
+}
+
+.container3 .box3{
+    margin-top: 40px;
+}
+
+.container3 .box4{
+    font-family: Roboto, sans-serif;
+    margin-top: 40px;
+}
+
+.container3 .box5{
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    margin-top: 40px;
+}
+
+.container3 img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border-style:solid;
+    border-width: 1px;
+}
+
+/* TERCER CONTENEDOR */
+/* Producto 2 */
+
+.container3{
+    margin-top: 2px;
+    display: flex;
+    background-color: #FAFAFA;
+    border: 1px solid #2D2D2D;
+    width: 1140px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+}
+
+.container3 .box1{
+    margin-top: 10px;
+}
+
+.container3 .box2 p{
+    font-family: Roboto, sans-serif;
+    margin-top: 40px;
+}
+
+.container3 .box3{
+    margin-top: 40px;
+}
+
+.container3 .box4 a{
+    font-family: Roboto, sans-serif;
+    font-weight:100px;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #2D2D2D;
+}
+
+.container3 .box5 a{
+    font-family: Roboto, sans-serif;
+    font-weight:100px;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #2D2D2D;
+}
+
+.container3 img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border-style:solid;
+    border-width: 1px;
+}
+
+/* CUARTO CONTENEDOR */
+/* Total a pagar, etc */
+
+.container4{ /* El contenedor inferior de cupón,agregar,total,etc */
+    background-color: #EDEDED;
+    width: 1140px; /* el ancho de la caja */
+    height: 90px; /* la altura de la caja */
+    margin-left: auto; /* Acomoda automáticamente el márgen del centro a la izquierda */
+    margin-right: auto; /* Acomoda automáticamente el márgen del centro a la derecha */
+    border: 1px solid #2D2D2D; /* Definición del borde para contener el blanco dentro */
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-evenly ;
+}
+
+.btn{
+    background-color: #2D2D2D; /* color de fondo del botón. */
+    color: #FAFAFA; /* color del texto en código hexadecimal */
+    text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
+    font-family: Roboto, sans-serif; /* Tipo de fuente */
+    font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
+    padding: 10px;  /* el relleno */
+    border-radius: 20px; /* redondeo del botón. */
+    box-shadow: 0 1px 1´x rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover{
+    background-color: #111111;
+}
+
+.btn-add-product{
+    font-size: 15px; /* el tamaño del texto en pixeles. */
+}
+
+.input-style{
+    padding: 10px;
+    text-align: center;
+}
+
+.btn2{
+    background-color: #2D2D2D; /* color de fondo del botón. */
+    color: #FAFAFA; /* color del texto en código hexadecimal */
+    text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
+    font-family: Roboto, sans-serif; /* Tipo de fuente */
+    font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
+    padding: 10px;  /* el relleno */
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn2:hover{
+    background-color: #111111;
+}
+
+.container4 p{
+    font-family: Roboto,sans-serif;
+    margin-top: 35px;
+}
+
+.product{
+    margin-top: 33.5px;
+}
+
+.cupon{
+    margin-top: 21.5px;
+}
+
+.stepaso{
+    margin-top: 33.5px;
+}
+
+/* Modelo Responsive */
+@media screen and (max-width: 1100px){ /* Cuando llegue a 1100px... */
+    
+    /* No tendrá display flex */   
+    .container-proccess1{
+        flex-wrap: wrap; /* Adapta los elementos en línea o diferentes líneas para adaptarse a los formatos correspondientes */
+        max-width: 100%; /* Rellenar el ancho en responsive */
+     }
+    .container-proccess2{
+        flex-wrap: wrap; /* Adapta los elementos en línea o diferentes líneas para adaptarse a los formatos correspondientes */
+        max-width: 100%; /* Rellenar el ancho en responsive */
+     }
+    .container-proccess3{
+       flex-wrap: wrap; /* Adapta los elementos en línea o diferentes líneas para adaptarse a los formatos correspondientes */
+       max-width: 100%; /* Rellenar el ancho en responsive */
+    }
+
+    .container2{
+        flex-wrap: wrap; /* Adapta los elementos en línea o diferentes líneas para adaptarse a los formatos correspondientes */
+        max-width: 100%; /* Rellenar el ancho en responsive */
+    }
+
+    .container3{
+        display: inline;
+        max-width: 100%;
+    }
+
+    .container4{
+        display: inline;
+        max-width: 100%;
+    } 
+}
