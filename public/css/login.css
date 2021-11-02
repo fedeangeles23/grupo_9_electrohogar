@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*cambie el tamaño de las letras*/
+body {
+    background-color: #E8E8E4;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.logo img{
+    width: 250px;
+    height: 250px;
+}
+
+/* maneja el espacio del ingresa los datos de cuenta*/
+header {
+    height: 210px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.datos {
+    display: flex;
+    flex-direction: row-reverse; 
+}
+
+ /*para separar la caja no tengo cuenta con olvide mi contraseña, le dio color a olvide mi contraseña*/
+span a.link {
+margin: 25px;
+margin-bottom: 90px;
+color: black;
+}
+
+/*para mover la caja de olvide mi contraseña*/
+ .olvide{
+    padding-top: 10px; 
+}
+
+.ingreso {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/*para q no se vean los errores*/
+.error {
+    display: none;
+}
+
+/*el espacio entrer las cajas de email y contraseña*/
+.form input{
+    margin-bottom: 15px;
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+/*para el recuadro branco*/
+border: none;
+
+}
+
+/*para los botones naranja*/
+span.cuenta button{
+    background-color: orange;
+    color: white;
+    text-decoration: underline;
+    font-size: 17px;
+    width: 225px;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+
+

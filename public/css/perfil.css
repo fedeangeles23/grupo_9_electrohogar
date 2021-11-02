@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*cambie el tamaño de las letras*/
+body {
+    background-color: #E8E8E4;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/*titulo bienvenido cosme fulanito....*/
+.bienvenido {
+    color: orange;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 45px;
+    font-size: 16px;
+
+    /*para resaltar la palabra*/
+    /*font-weight: bold;*/   
+}
+
+/*para el titulo mis compras*/
+.datos {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-style: italic;
+}
+
+/*para el botones naranja*/
+span.cuenta button{
+    background-color: orange;
+    color: white;
+    font-size: 17px;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    
+    margin-left: 540px;
+}
+
+/*parte de la tabla de aca... */
+table {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #B7B7A4;
+    border: 1px solid #B7B7A4;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 15px;
+    border-collapse: collapse;
+}
+
+td {
+    background-color: white;
+    border: 2px solid white;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+/*hasta aca*/
+
+.perfil2 p {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 20px;
+}
