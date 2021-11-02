@@ -1,0 +1,147 @@
+main {
+    border: 0, 0, 1px, 0 solid black;
+   
+}
+div h2 {
+    font-weight: lighter;
+    font-size: 15px;
+    color: #6D6D6D;
+    position: relative;
+    bottom: -4rem;
+    margin-left: 20px;
+}
+article h1 {
+    font-size: 20px;
+    position: relative;
+    bottom: -4rem;
+    margin-left: 40px;
+}
+article img.one {
+    position: relative;
+    left: 130px;
+    bottom: -6rem;
+    border-right: 1px solid grey;
+    width: 250px;
+    height: 250px;
+}
+article img.two {
+   width: 125px;
+   height: 125px;
+   position: relative;
+   right: 200px;
+   top: 6rem;
+}
+article img.three {
+    width: 125px;
+    height: 125px;
+    position: relative;
+    right: 328px;
+    top: -30px;
+ }
+div.especificaciones {
+     display: flex;
+     flex-direction: column;
+ }
+div.especificaciones p.a {
+    font-weight: bold;
+    position: relative;
+    left: 35%;
+    top: -155px;
+}
+div.especificaciones p.b {
+    color: blue;
+    position: relative;
+    left: 35%;
+    top: -180px;
+}
+div.especificaciones button {
+    background-color: black;
+    color: white;
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    position: relative;
+    left: 35%;
+    top: -175px;
+}
+div.especificaciones a.input {
+    border: 1px solid black;
+    width: 210px;
+    height: 28px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    position: relative;
+    left: 35%;
+    top: -160px;
+}
+div.especificaciones i.far.fa-store {
+    position: relative;
+    left: 35%;
+    top: -140px;
+    font-size: 30px;
+    color: grey;
+}
+div.especificaciones i.fal.fa-shipping-fast {
+    position: relative;
+    left: 55%;
+    top: -238px;
+    font-size: 30px;
+    color: grey;
+}
+div.especificaciones a.ver {
+    color: #04771D;
+    position: relative;
+    left: 39%;
+    top: -205px;
+}
+div.especificaciones a.verd {
+    color: #04771D;
+    position: relative;
+    left: 59%;
+    top: -300px;
+}
+div.especificaciones p.p-one {
+    position: relative;
+    left: 39%;
+    top: -190px;
+}
+div.especificaciones p.p-two {
+    position: relative;
+    left: 59%;
+    top: -285px;
+}
+div.detalles h1 {
+    font-weight: lighter;
+    color: grey;
+    text-decoration: underline black;
+    font-size: 20px;
+    position: relative;
+    top: -16rem;;
+}
+div.detalles h2 {
+    color: grey;
+    font-size: 20px;
+    margin-left: 50%;
+    position: relative;
+    top: -18rem;;
+}
+div.detalles h3 {
+    color: grey;
+    font-size: 12px;
+    position: relative;
+    top: -19rem;;
+}
+div.detalles li {
+    color: grey;
+    font-size: 10px;
+    margin-left: 20px;
+    position: relative;
+    top: -19rem;;
+}
+hr {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    top: -16rem;
+}
