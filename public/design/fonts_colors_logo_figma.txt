@@ -1,4 +1,0 @@
-Fonts: Roboto,Ubuntu
-Colors: White, Grey variations, Red, Blue
-Logo: Electro Hogar.png
-Figma: Prototipos y diseños https://www.figma.com/file/SAqxhkxtKNogzvhPJRNAmD/Electro-Hogar---Wireframe-%2F-Grupo-9?node-id=78%3A3
