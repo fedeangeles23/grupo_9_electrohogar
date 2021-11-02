@@ -191,6 +191,7 @@ nav {
     border-bottom:1px solid #CEC8C8;
     padding:0 15px;
     height: 50px;
+    cursor: pointer;
 }
 
 
@@ -208,6 +209,19 @@ nav ul li {
     font-size:16px;
   
     
+}
+nav ul li i {
+    color:rgb(71, 71, 71);
+    margin-left: 7px;
+    font-size: 22px;
+    position: relative;
+    top: 4px;
+
+
+}
+
+nav ul li i:hover {
+    color:rgb(255, 166, 0);
 }
 
 nav ul li:hover{
