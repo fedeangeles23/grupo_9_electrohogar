@@ -17,7 +17,7 @@ http://localhost:${PORT}
 
 //middlewares
 
-app.use(express.static(__dirname +'/public/'));
+app.use(express.static('/public/'));
 
 //------------------Rutas---------------------// 
 // el metodo dentro de sendfile Join() busca la ruta en donde estamos, primer parametro __dirname hace referencia al directorio en donde estamos, el segundo parametro es el path relativo que 
