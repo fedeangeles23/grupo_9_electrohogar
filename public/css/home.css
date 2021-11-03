@@ -641,3 +641,10 @@ padding:0px 14px;
     object-fit: fill;
     width: 100%;
 }
+
+.card:hover{
+    box-shadow: -2px 0px 8px 8px rgba(0,0,0,0.55);
+-webkit-box-shadow: -2px 0px 8px 8px rgba(0,0,0,0.55);
+-moz-box-shadow: -2px 0px 8px 8px rgba(0,0,0,0.55);
+    transition: 0.5s all;
+}
