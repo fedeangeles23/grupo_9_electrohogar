@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -13,9 +15,11 @@ body {
   
 }
 
-.logo images{
-    width: 250px;
-    height: 250px;
+.logo img{
+    width: 200px;
+    height: 200px;
+   margin-left:-110px;
+
 }
 
 /* maneja el espacio del ingresa los datos de cuenta*/
@@ -71,15 +75,171 @@ border: none;
 
 /*para los botones naranja*/
 span.cuenta button{
-    background-color: orange;
-    color: white;
-    text-decoration: underline;
-    font-size: 17px;
-    width: 225px;
-    height: 40px;
-    border-radius: 20px;
-    margin-bottom: 30px;
+    display: inline-block;
+    padding: 5px 5px;
+      margin-bottom:30px;
+    border-radius:5px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    background-color:transparent;
+    text-align:center;
+    transition: all 0.2s;
+    width: 140px;
+    font-weight: 700;
+  }
+
+  
+span.cuenta button:hover{
+    background-color:#1d1d1ce5;
+    color:#fff;
 }
 
+@media all and (max-width:30em){
+     span.cuenta button{
+    display:block;
+    margin:0.2em auto;
+    }
+    }
 
 
+
+
+/*HEADER RESPONSIVE----------------------*/
+
+
+
+@media screen and (max-width: 769px) {
+      
+
+    
+
+    nav {
+        display:none;
+    }
+
+    header {
+        display:block;
+        padding:0;
+    }
+
+    header .logo {
+        display:inline-block;
+        padding: 15px 14px;
+       width: 120px;
+       position:relative;
+       left: -4px;
+
+    }
+    
+    header .buscar {
+        width: 100%;
+        display:inline-flex;
+        justify-content:center;
+        margin-bottom:15px;
+    }
+
+    header .buscar input {
+        width:90%;
+  }
+  header ul {
+            display:flex;
+            width: 100%;
+            flex-direction: column;
+            background: rgb(19, 54, 255);
+            height:0;
+            visibility: hidden;
+            transition: 0.3s;
+            
+        }
+    
+
+
+        header ul li a {
+            color:rgb(255, 255, 255);
+            font-size:20px;
+            padding:25px;
+            display:block;
+            text-align: center;
+        }
+        header ul li a:hover {
+            background-color: #fff;
+            color:rgb(19, 54, 255);
+        }
+
+        header .bar {
+            display:block;
+            position:absolute;
+            top:70px;
+            right:80px;
+            cursor:pointer;
+
+        }
+
+        header .bar span {
+            color:rgb(255, 255, 255);
+            background-color: rgb(2, 12, 150);
+            padding:4px;
+            border-radius: 5px;
+           font-weight: bold; 
+        }
+
+        header .bar #times{
+            display:none;
+        }
+
+        #check:checked ~ header .bar #times {
+            display:block;
+        }
+
+        #check:checked ~ header .bar #bars {
+            display:none;
+        }
+
+        #check:checked ~ header ul {
+            visibility: visible;
+            height:465px;
+        }
+
+        footer{
+            background-color: #EDEDED;
+            height: 100%;
+            width:100%;
+            
+        }
+
+
+        .iconcarrito {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            top:23px;
+        }
+
+    
+
+        .iconfav {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            top:23px;
+            left:40px;  
+        }
+        .iconcuenta {
+           position: relative;
+            display: flex;
+            flex-direction: column;
+            top:23px;
+            left:40px;
+
+        }
+        header {
+            height: 180px;
+        }
+
+
+
+
+    } /*END RESPONSIVE*/ 

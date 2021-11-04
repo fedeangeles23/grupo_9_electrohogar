@@ -428,10 +428,12 @@ padding:0px 14px;
 
         header .bar span {
             color:rgb(255, 255, 255);
-            background-color: rgb(2, 12, 150);
+            background-color: rgb(4, 19, 231);
             padding:4px;
             border-radius: 5px;
            font-weight: bold; 
+           width: 40px;
+           height:40px;
         }
 
         header .bar #times{

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -13,9 +13,11 @@ body {
   
 }
 
-.logo images{
-    width: 250px;
-    height: 250px;
+.logo img{
+    width: 200px;
+    height: 200px;
+   margin-left:-110px;
+
 }
 
 .container {
@@ -26,8 +28,12 @@ body {
 }
 
  /*le doy color a volver a menú de inicio*/
+
+ 
+ 
 span a.link {
 color: black;
+padding-bottom: 40px;
 }
 
 .ingreso {
@@ -55,15 +61,37 @@ border: none;
 
 /*para los botones naranja*/
 span.cuenta button{
-    background-color: orange;
-    color: white;
-    text-decoration: underline;
-    font-size: 17px;
-    width: 225px;
-    height: 40px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+  display: inline-block;
+  padding: 5px 5px;
+    margin-bottom:30px;
+  border-radius:5px;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#000000;
+  background-color:transparent;
+  text-align:center;
+  transition: all 0.2s;
+  width: 140px;
+  font-weight: 700;
 }
+
+
+span.cuenta button:hover{
+    background-color:#1d1d1ce5;
+    color:#fff;
+}
+
+@media all and (max-width:30em){
+     span.cuenta button{
+    display:block;
+    margin:0.2em auto;
+    }
+    }
+
+
+
 
 .padre{
     width: 520px;
@@ -90,3 +118,4 @@ span.cuenta button{
 .padre .box-2 input {
     width: 94%;
 }
+
