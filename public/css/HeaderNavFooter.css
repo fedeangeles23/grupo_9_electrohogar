@@ -17,12 +17,12 @@
 header { 
     width: 100%;
     height: 110px;
-    background-color: #E2E2E2;
+   /* background-color: #E2E2E2; */ /*comente porque le daba un borde y un color al logo */
     display: flex;
     position: relative;
     justify-content: space-between;
     text-align: center;
-    border: 1px solid #BBAFAF;
+   /* border: 1px solid #BBAFAF; */
 }
 
 
@@ -286,7 +286,7 @@ padding:0px 14px;
 
     .footercentral {
         width: 100%;
-        height: 240px;
+        height: 180px;
         background-color: rgba(255, 255, 255, 0.486);
         display: flex;
         border:1px solid hsl(0, 7%, 81%);
@@ -303,7 +303,7 @@ padding:0px 14px;
 
         .footercolumna3Row{
             padding-left:40px;
-            margin-top: 40px;
+            /*margin-top: 40px;*/ /*para quitar espacio*/
         }
 
         .footercolumna3Row h3{
@@ -314,7 +314,7 @@ padding:0px 14px;
         
         .footercolumna2Row{
             padding-left:40px;
-            margin-top: 40px;
+            /*margin-top: 40px;*/ /*para quitar espacio*/
         }
         
         .mediosdepago span {
