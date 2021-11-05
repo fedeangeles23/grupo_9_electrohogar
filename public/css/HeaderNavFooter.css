@@ -271,7 +271,7 @@ nav ul li:hover{
 }
 
 .footertop .confirmaremail {
-background-color:#ff9900;
+background-color:#5d5d5d;
 height: 39px;
 color:#FBFFFF;
 font-size: 14px;
@@ -281,6 +281,11 @@ border:1px solid #AAAAAA;
 padding:0px 14px;
 }
 
+
+.footertop .confirmaremail:hover {
+    background-color: rgb(32, 32, 32);
+    transition: 0.5s;
+}
 
 
 .footertop .contenedorventatelefonica .bRED{

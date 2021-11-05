@@ -12,20 +12,35 @@
 
 
 
-.logo img{
-    width: 200px;
-    height: 200px;
-   margin-left:-110px;
-
+.logo-registro img{
+    width: 170px;
+    height: 170px;
+    
 }
+
+
+
+
+.ingreso{
+text-align: center;
+}
+
+
+.container-registro {
+    text-align: center;
+}
+
+
+
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background-color: rgb(253, 253, 253);
 }
+
+
 
  /*le doy color a volver a menú de inicio*/
 
@@ -34,6 +49,7 @@
 span a.link {
 color: black;
 padding-bottom: 40px;
+margin-left: 40px;
 }
 
 .ingreso {
@@ -54,9 +70,12 @@ padding-bottom: 40px;
     width: 250px;
     height: 35px;
     padding-left: 10px;
-/*para el recuadro branco*/
-border: 1px solid black;
-border-radius: 10px;
+    
+    /*para el recuadro branco*/
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+
 
 }
 
@@ -97,9 +116,11 @@ span.cuenta button:hover{
 
 
 .padre{
-    width: 520px;
-    height: 170px;
-    margin: 0 auto;
+
+    width: 600px;
+    height: 200px;
+    border-radius: 10%;
+    margin: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

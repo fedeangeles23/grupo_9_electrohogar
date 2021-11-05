@@ -202,23 +202,24 @@
 .input-style{
     padding: 10px;
     text-align: center;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-   
+    border: 1px solid #828282;
+    border-radius: 5px;
 }
 
 .btn2{
-    background-color: #2D2D2D; /* color de fondo del botón. */
+    background-color: #797373; /* color de fondo del botón. */
     color: #FAFAFA; /* color del texto en código hexadecimal */
     text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
     font-family: Roboto, sans-serif; /* Tipo de fuente */
     font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
-    padding: 10px;  /* el relleno */
-    border-color: #2D2D2D;
-    border-radius: 0px 4px 4px 0px;
+    padding:11px;
+    border-right: none;
+    border-radius:5px;
+    border:none;
 }
 
 .btn2:hover{
-    background-color: #111111;
+    background-color: #0805b4d8;
 }
 
 .container4 p{
