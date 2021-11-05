@@ -126,8 +126,9 @@ span a.link {
 }
 }
 
+
 /*tamaño mas chico*/
-@media (max-width:411px) {
+@media (max-width:400px) {
     .logo-registro {
         width: 100%;
         height: 100%;
@@ -173,20 +174,17 @@ span a.link {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
-.padre .box-1{
-    width: 50%;
 }
 
-.padre .box-2{
-    width: 50%;
-}
-
-.padre .box-1 input {
-    width: 90%;
-}
-
-.padre .box-2 input {
-    width: 94%;
+/*tamaño aun más chico*/
+@media(max-width:380px)
+{
+.padre{
+    width: 310px;
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 }
