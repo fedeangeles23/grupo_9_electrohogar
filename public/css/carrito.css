@@ -14,9 +14,11 @@
 .container1{ /* El primer contenedor de 3 cajas con carrito,etc */
     border: 1px; /* Sinceramente no tengo idea y no le vi cambio alguno */
     display: flex; /* Para que las cajitas estén una al lado del otro */
+    width: 1140px; /* el ancho de la caja */
     margin-top: 30px; /* Distancia al márgen superior de 30px */
-    justify-content: center; /* Para que las cajitas queden en el centro */
     font-family: Roboto,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container1 .container-proccess1 { /* Esta es la primer cajita */
@@ -114,8 +116,7 @@
 /* Producto 2 */
 
 .container3{
-    margin-top: 2px;
-    display: flex;
+    margin-top: 2px; 
     background-color: #FAFAFA;
     border: 1px solid #2D2D2D;
     width: 1140px;
@@ -185,7 +186,7 @@
     font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
     padding: 10px;  /* el relleno */
     border-radius: 20px; /* redondeo del botón. */
-    box-shadow: 0 1px 1´x rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .btn:hover{
@@ -232,35 +233,207 @@
     margin-top: 33.5px;
 }
 
-/* Modelo Responsive */
-@media screen and (max-width: 1100px){ /* Cuando llegue a 1100px... */
-    
-    /* No tendrá display flex */   
-    .container-proccess1{
-        flex-wrap: wrap; /* Adapta los elementos en línea o diferentes líneas para adaptarse a los formatos correspondientes */
-        max-width: 100%; /* Rellenar el ancho en responsive */
-     }
-    .container-proccess2{
-        flex-wrap: wrap; /* Adapta los elementos en línea o diferentes líneas para adaptarse a los formatos correspondientes */
-        max-width: 100%; /* Rellenar el ancho en responsive */
-     }
-    .container-proccess3{
-       flex-wrap: wrap; /* Adapta los elementos en línea o diferentes líneas para adaptarse a los formatos correspondientes */
-       max-width: 100%; /* Rellenar el ancho en responsive */
+/* Versión Tablet */
+
+@media only screen 
+  and (min-device-width: 590px) 
+  and (max-device-width: 1024px){
+
+    .container1{ /* El primer contenedor de 3 cajas con carrito,etc */
+        border: 1px; /* Sinceramente no tengo idea y no le vi cambio alguno */
+        display: flex; /* Para que las cajitas estén una al lado del otro */
+        margin-top: 30px; /* Distancia al márgen superior de 30px */
+        justify-content: center; /* Para que las cajitas queden en el centro */
+        font-family: Roboto,sans-serif;
+        width: 586.5px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .container2{
-        flex-wrap: wrap; /* Adapta los elementos en línea o diferentes líneas para adaptarse a los formatos correspondientes */
-        max-width: 100%; /* Rellenar el ancho en responsive */
+        flex-wrap: wrap;
+        width: 586.5px; 
     }
 
     .container3{
-        display: inline;
-        max-width: 100%;
+        width: 586.5px;
+        height: auto;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .container4{
-        display: inline;
-        max-width: 100%;
+        width: 586.5px;
+        height: auto;
+        flex-wrap: wrap;
     } 
+
+    .btn:hover{
+        background-color: #111111;
+    }
+    
+    .btn{
+        font-size: 12px; /* el tamaño del texto en pixeles. */
+    }
+    
+    .input-style{
+        font-size: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    ::placeholder {
+        font-size: 9px;
+      }
+    
+    .btn2{
+        background-color: #2D2D2D; /* color de fondo del botón. */
+        color: #FAFAFA; /* color del texto en código hexadecimal */
+        text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
+        font-family: Roboto, sans-serif; /* Tipo de fuente */
+        font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
+        font-size: 10px;
+        padding: 10px;  /* el relleno */
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+    
+    .btn2:hover{
+        background-color: #111111;
+    }
+
+    .product{
+        position: relative;
+        margin-top: 27.5px;
+        margin-left: 0px;
+    }
+    
+    .cupon{
+        position: relative;
+        margin-left: -10px;
+    }
+
+    .stepaso{
+        position: relative;
+        margin-top: 27.5px;
+        margin-left: -10px;
+    }
+
+    .container4 p{
+        position: relative;
+        font-family: Roboto,sans-serif;
+        margin-top: 20px;
+        margin-left: 32.5px;
+    }
+
+    .carrito-mobile{
+        display: none;
+    }
+}
+
+/* Versión mobile */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 589px){
+
+    .textSuperior{
+        display: none;
+    }
+
+    .container1{
+        display: none;
+    }
+
+    .carrito-mobile{
+        background-color: #009688;
+        height: 40px;
+        width: 320px;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        padding:10px;
+        border: 1px #EDEDED;
+        box-shadow: 0px 1px 5px 0px #2D2D2D;
+    }
+
+    .container2{
+        display: none;
+    }
+
+    .container3{
+        width: 320px;
+        height: auto;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 3px;
+        border: 1px solid #EDEDED;
+        box-shadow: 0px 1px 5px 0px #2D2D2D;
+    }
+
+    .container4{
+       display: none;
+    } 
+
+    .pago-mobile{
+        width: 320px;
+        height: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px; 
+        background-color: #EDEDED;
+        border: 1px solid #EDEDED;
+        box-shadow: 0px 1px 5px 0px #2D2D2D;
+    }
+    
+    .cupon{
+        padding-left: 14.5%;
+        margin-top: 10px;
+        padding-bottom: 40px;
+    }
+
+    .input-style{
+        font-size: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    ::placeholder {
+        font-size: 9px;
+      }
+    
+    .btn2{
+        background-color: #2D2D2D; /* color de fondo del botón. */
+        color: #FAFAFA; /* color del texto en código hexadecimal */
+        text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
+        font-family: Roboto, sans-serif; /* Tipo de fuente */
+        font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
+        font-size: 10px;
+    }
+    
+    .btn2:hover{
+        background-color: #111111;
+    }
+
+    .pago-mobile p{
+        text-align: center;
+        font-family: Roboto,sans-serif;
+        margin-top: -30px;
+        font-size: 12px;
+    }
+
+    .btn{
+        background-color: #2D2D2D; /* color de fondo del botón. */
+        color: #FAFAFA; /* color del texto en código hexadecimal */
+        padding: 10px;  /* el relleno */
+        border-radius: 20px; /* redondeo del botón. */
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        font-size: 10px; /* el tamaño del texto en pixeles. */
+        font-weight: 100px;
+    }
+
+    .flex{
+        display: flex;
+        justify-content: space-around;
+        margin-top: -20px;
+    }
+
 }
