@@ -62,12 +62,13 @@
     &nbsp;
     <main>
 
-        <!-- Texto superior -->
+        <!-- Texto y enlaces superioriores -->
         <div class="textSuperior">
             <p><a href="#">Inicio</a> > <a href="#">Tecnología</a> > <a href="#">Celulares y Accesorios</a> > <a
                     href="#">Motorola</a></p>
         </div>
 
+        <!-- Contenedor de detalles [Carrito-Verificación-Pago] -->
         <div class="container1">
             <!-- Primer contenedor -->
 
@@ -88,14 +89,20 @@
 
         </div>
         
-        <div class="carrito-mobile"> <!-- Cajita del carrito mobile --> 
+        <!-- Cajita del texto carrito mobile -->
+        <div class="carrito-mobile">  
             <p>Carrito</p>
         </div>
 
-        <!--  -->
-        <div class="container2"></div> <!-- El contenedor negro -->
+        <!-- Barra decorativa de color negro -->
+        <div class="container2"></div>
 
-        <div class="container3"> <!-- Contenedor de los productos -->
+        <!-- Barra decorativa de color negro versión mobile -->
+
+        <div class="black-bar-mobile"></div>
+
+        <!-- Contenedor de los productos -->
+        <div class="container3"> 
             <div class="box1">
                 <img src="/img/mogogs60.webp" alt="Moto G s60">
             </div>
@@ -121,7 +128,8 @@
             </div>
         </div>
 
-        <div class="container3"> <!-- Contenedor de los productos -->
+        <!-- Contenedor de los productos -->
+        <div class="container3">
             <div class="box1">
                 <img src="/img/mogogs60.webp" alt="Moto G s60">
             </div>
@@ -147,35 +155,57 @@
             </div>
         </div>
 
-        <div class="container4"> <!-- Contenedor para confirmar el pago -->
-            <div class="product">
-                <a class="btn btn-add-product" href="#">Agregar otro producto</a>
-            </div>
-
+        <!-- Contenedor para confirmar el pago -->
+        <div class="container4">
             <div class="cupon">
                 <input class="input-style" type="cupon" name="name" placeholder="CÓDIGO DE DESCUENTO">
                 <button class="btn2" type="submit">Validar cupón</button>
             </div>
-
+            <p>TOTAL A PAGAR: $96.000,00</p>
+            <div class="product">
+                <a class="btn btn-add-product" href="#">Añadir producto</a>
+            </div>
             <div class="stepaso">
                 <a class="btn btn-add-product" href="#">Siguiente paso</a>
             </div>
-            <p>TOTAL A PAGAR: $96.000,00</p>
         </div>
 
-        <div class="pago-mobile"> <!-- Contenedor para confirmar el pago -->
-
-            <div class="cupon">
-                <input class="input-style" type="cupon" name="name" placeholder="CÓDIGO DE DESCUENTO">
-                <button class="btn2" type="submit">Validar cupón</button>
-            </div>
-            <p>TOTAL A PAGAR: $96.000,00</p>
+        <!-- Contenedor para confirmar el pago versión Tablet -->
+        <div class="pago-tablet">
             <div class="flex">
                 <div class="product">
-                    <a class="btn btn-add-product"  href="#">Añadir producto</a>
+                    <a class="btn-tablet" href="#">Añadir producto</a>
                 </div>
                 <div class="stepaso">
-                    <a class="btn btn-add-product" href="#">Siguiente paso</a>
+                    <a class="btn-tablet" href="#">Siguiente paso</a>
+                </div>
+            </div>
+
+            <div class="flex2">
+                <div class="cupon">
+                    <button class="btn-tablet2" type="submit">Validar</button>
+                    <input class="input-tablet" type="cupon" name="name" placeholder="Código de descuento">
+                </div>
+                <div class="tpago">
+                    <p>TOTAL A PAGAR: $96.000,00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenedor para confirmar el pago versión Mobile -->
+        <div class="pago-mobile">
+
+            <div class="cupon-mobile">
+                <input class="input-mobile" type="cupon" name="name" placeholder="CÓDIGO DE DESCUENTO">
+                <button class="btn2-mobile" type="submit">Validar cupón</button>
+            </div>
+            <p>TOTAL A PAGAR: $96.000,00</p>
+            <div class="flex-mobile">
+                <div class="product-mobile">
+                    <a class="btn-mobile"  href="#">Añadir producto</a>
+                </div>
+                <div class="stepaso-mobile">
+                    <a class="btn-mobile" href="#">Siguiente paso</a>
                 </div>
             </div>
         </div>

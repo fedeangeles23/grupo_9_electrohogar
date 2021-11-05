@@ -17,6 +17,7 @@
     width: 1140px; /* el ancho de la caja */
     margin-top: 30px; /* Distancia al márgen superior de 30px */
     font-family: Roboto,sans-serif;
+    color: #EDEDED;
     margin-left: auto;
     margin-right: auto;
 }
@@ -161,6 +162,7 @@
     border-radius: 100%;
     border-style:solid;
     border-width: 1px;
+    border-color: lightslategrey ;
 }
 
 /* CUARTO CONTENEDOR */
@@ -175,7 +177,7 @@
     border: 1px solid #2D2D2D; /* Definición del borde para contener el blanco dentro */
     margin-top: 4px;
     display: flex;
-    justify-content: space-evenly ;
+    justify-content: space-around ;
 }
 
 .btn{
@@ -185,8 +187,8 @@
     font-family: Roboto, sans-serif; /* Tipo de fuente */
     font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
     padding: 10px;  /* el relleno */
-    border-radius: 20px; /* redondeo del botón. */
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 5px; /* redondeo del botón. */
+    border-color: #2D2D2D;
 }
 
 .btn:hover{
@@ -200,6 +202,8 @@
 .input-style{
     padding: 10px;
     text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+   
 }
 
 .btn2{
@@ -209,7 +213,8 @@
     font-family: Roboto, sans-serif; /* Tipo de fuente */
     font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
     padding: 10px;  /* el relleno */
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    border-color: #2D2D2D;
+    border-radius: 0px 4px 4px 0px;
 }
 
 .btn2:hover{
@@ -221,12 +226,12 @@
     margin-top: 35px;
 }
 
-.product{
-    margin-top: 33.5px;
+.cupon{
+    margin-top: 23px;
 }
 
-.cupon{
-    margin-top: 21.5px;
+.product{
+    margin-top: 33.5px;
 }
 
 .stepaso{
@@ -237,6 +242,10 @@
     display: none;
 }
 .pago-mobile{
+    display: none;
+}
+
+.pago-tablet{
     display: none;
 }
 
@@ -258,8 +267,18 @@
     }
 
     .container2{
-        flex-wrap: wrap;
+        display: none;
+    }
+
+    .black-bar-mobile{
+        display: flex;
         width: 580px; 
+        height: 10px; /* la altura de la caja */
+        background-color: #2D2D2D; /* La cajita lateral negra sobre el tercer contenedor */
+        border: 1px solid #2D2D2D;
+        margin-left: auto; /* Acomoda automáticamente el márgen del centro a la izquierda */
+        margin-right: auto; /* Acomoda automáticamente el márgen del centro a la derecha */
+        margin-top: 10px;
     }
 
     .container3{
@@ -270,68 +289,88 @@
     }
 
     .container4{
-        width: 580px;
-        height: auto;
-        flex-wrap: wrap;
-    } 
+        display: none;
+    }
 
-    .btn:hover{
+    .pago-tablet{
+        display: flex;
+        flex-direction: column ;
+        height: auto;
+        width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px; 
+        background-color: #EDEDED;
+        border: 1px solid #EDEDED;
+        box-shadow: 0px 1px 5px 0px #2D2D2D;
+    }
+
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        margin-top: -20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .flex2{
+        display: flex;
+        justify-content: space-between;
+        margin-top: -5px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .flex2 p{
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .btn-tablet:hover{
         background-color: #111111;
     }
     
-    .btn{
-        font-size: 12px; /* el tamaño del texto en pixeles. */
-    }
-    
-    .input-style{
+    .btn-tablet{
+        background-color: #2D2D2D;
+        color: #FAFAFA;
+        text-decoration: none;
+        font-family: Roboto, sans-serif;
+        font-weight: 100px;
         font-size: 10px;
-        padding: 10px;
-        text-align: center;
-    }
-
-    ::placeholder {
-        font-size: 9px;
-      }
-    
-    .btn2{
-        background-color: #2D2D2D; /* color de fondo del botón. */
-        color: #FAFAFA; /* color del texto en código hexadecimal */
-        text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
-        font-family: Roboto, sans-serif; /* Tipo de fuente */
-        font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
-        font-size: 10px;
-        padding: 10px;  /* el relleno */
+        padding: 10px; 
+        padding-top: 5px;
+        padding-bottom: 6px;
+        border-radius: 5px;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     }
     
-    .btn2:hover{
-        background-color: #111111;
+    .btn-tablet2{
+        font-size: 10px;
+        padding: 5.3px;
+        border-radius: 4px 0px 0px 4px;
+        background-color: #2D2D2D;
+        color: #FAFAFA;
+        text-decoration: none;
+        font-family: Roboto, sans-serif;
+        font-weight: 100px;
+        border-color: #2D2D2D;
+        border-radius: 4px 0px 0px 4px;
     }
 
-    .product{
-        position: relative;
-        margin-top: 27.5px;
-        margin-left: 0px;
+    .input-tablet{
+        font-size: 10px;
+        padding: 4.2px;
+        margin-left: -4px;
+        border-radius: 0px;
+        text-align: center;
+        border: solid #2D2D2D;
     }
+
+    ::placeholder {
+        font-size: 9px; 
+      }
     
-    .cupon{
-        position: relative;
-        margin-left: -10px;
-    }
-
-    .stepaso{
-        position: relative;
-        margin-top: 27.5px;
-        margin-left: -10px;
-    }
-
-    .container4 p{
-        position: relative;
-        font-family: Roboto,sans-serif;
-        margin-top: 20px;
-        margin-left: 32.5px;
-    }
-
     .carrito-mobile{
         display: none;
     }
@@ -368,7 +407,10 @@
     .container2{
         display: none;
     }
-
+    
+    .black-bar-mobile{
+        display: none;
+    }
     .container3{
         width: 320px;
         height: auto;
@@ -383,40 +425,52 @@
        display: none;
     } 
 
+    .pago-tablet{
+        display: none;
+    }
     .pago-mobile{
+        display: flex;
+        flex-direction: column;
         width: 320px;
-        height: 120px;
+        height: auto;
         margin-left: auto;
         margin-right: auto;
         margin-top: 5px; 
+        padding-bottom: 18px;
         background-color: #EDEDED;
         border: 1px solid #EDEDED;
         box-shadow: 0px 1px 5px 0px #2D2D2D;
     }
     
-    .cupon{
-        padding-left: 14.5%;
+    .cupon-mobile{
+        padding-left: 15%;
         margin-top: 10px;
         padding-bottom: 40px;
     }
 
-    .input-style{
+    .input-mobile{
         font-size: 10px;
-        padding: 10px;
+        padding: 5px;
         text-align: center;
+        border-color: #2D2D2D;
+        border-radius: 4px 0px 0px 4px;
     }
 
     ::placeholder {
         font-size: 9px;
       }
     
-    .btn2{
+    .btn2-mobile{
         background-color: #2D2D2D; /* color de fondo del botón. */
         color: #FAFAFA; /* color del texto en código hexadecimal */
         text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
         font-family: Roboto, sans-serif; /* Tipo de fuente */
         font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
         font-size: 10px;
+        padding: 5px;
+        border-color: #2D2D2D;
+        border-radius: 0px 4px 4px 0px;
+        margin-left: -4px;
     }
     
     .btn2:hover{
@@ -426,23 +480,24 @@
     .pago-mobile p{
         text-align: center;
         font-family: Roboto,sans-serif;
-        margin-top: -30px;
+        margin-top: -25px;
         font-size: 12px;
     }
 
-    .btn{
+    .btn-mobile{
         background-color: #2D2D2D; /* color de fondo del botón. */
         color: #FAFAFA; /* color del texto en código hexadecimal */
         padding: 10px;  /* el relleno */
-        border-radius: 20px; /* redondeo del botón. */
+        border-radius: 15px; /* redondeo del botón. */
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
         font-size: 10px; /* el tamaño del texto en pixeles. */
         font-weight: 100px;
+        text-decoration: none;
     }
 
-    .flex{
+    .flex-mobile{
         display: flex;
         justify-content: space-around;
-        margin-top: -20px;
+        margin-top: 20px;
     }
 }
