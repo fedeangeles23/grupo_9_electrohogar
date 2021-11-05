@@ -13,8 +13,121 @@ body {
   
 }
 
-.container {
+@media (max-width:990px) {
+    table {
+        width:100px;
+        height: 50px;
+    }
+    .container-perfil {
+        padding: 50px;
+        margin-left: 30px;
+        width: 100%;
+    }
+
+    .perfil2 p {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-size: 25px;
+        width: 100%;
+    }
+
+    p.datosP{
+     width: 700px;
+     font-size: 30px;
+    }
+
+    .perfil2 {
+        width: 100px;
+    }
+
+    p.perfil2 {
+        width: 500px;
+        font-size: 30px;
+    }
+
+    /*parte de la tabla de aca... */
+table {
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #B7B7A4;
+    border: 1px solid #B7B7A4;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 25px;
+    border-collapse: collapse;
+    font-size: 23px;
+}
+
+td {
+    background-color: white;
+    border: 2px solid white;
+    padding-left: 18px;
+   font-size: 22px;
+}
+/*hasta aca*/
+
+/*titulo bienvenido cosme fulanito....*/
+p.bienvenido {
+    color: orange;
     display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+    font-size: 30px;
+    width:500px;
+
+    /*para resaltar la palabra*/
+    /*font-weight: bold;*/   
+}
+
+/*para el titulo mis datos*/
+.datos {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    margin-left: 120px;
+    width: 100%;
+    font-size: 40px;
+    font-style: italic;
+}
+
+p.datos {
+    width: 400px;
+}
+
+/*para el botones naranja*/
+span.cuenta button{
+    background-color: orange;
+    color: white;
+    font-size: 25px;
+    width: 250px;
+    height: 60px;
+    border-radius: 30px;
+    
+    margin-left: 390px;
+}
+
+}
+
+
+
+/*tamaño escritorio */
+@media (min-whith:1000px) {
+
+.container-perfil {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+
+
+
+
+    
+    margin: 50px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -86,4 +199,6 @@ td {
     flex-direction: column;
     text-align: left;
     font-size: 20px;
+}
+
 }

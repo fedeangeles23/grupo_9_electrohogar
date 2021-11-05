@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*cambie el tamaño de las letras*/
+body {
+    background-color: #E8E8E4;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.logo-registro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-registro img{
+    width: 250px;
+    height: 250px;
+}
+
+.container-registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ /*le doy color a volver a menú de inicio*/
+span a.link {
+color: black;
+}
+
+.ingreso {
+    font-size: 16px;
+    /*font-weight: bold;*/
+    margin-bottom: 40px;
+}
+
+/*para q no se vean los errores*/
+.error {
+    display: none;
+}
+
+
+.form input { 
+    margin-bottom: 15px;
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+/*para el recuadro branco*/
+border: none;
+
+}
+
+/*para el boton naranja*/
+span.cuenta button{
+    background-color: orange;
+    color: white;
+    text-decoration: underline;
+    font-size: 17px;
+    width: 225px;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.padre{
+    width: 520px;
+    height: 170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.padre .box-1{
+    width: 50%;
+}
+
+.padre .box-2{
+    width: 50%;
+}
+
+.padre .box-1 input {
+    width: 90%;
+}
+
+.padre .box-2 input {
+    width: 94%;
+}
+
+/*tamaño chico*/
+@media (max-width:500px) {
+    .logo-registro {
+        width: 100%;
+        height: 100%;
+       padding-left: 85px;
+    }
+    
+    /*para el boton naranja*/
+span.cuenta button{
+    margin-left: 85px;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+/*ingresar los datos de tu cuenta */
+p.ingreso {
+    margin-left: 85px;
+    font-size: 20px;
+}
+
+/*volver al menú de inicio*/
+span a.link {
+    margin-left: 85px;
+    font-size: 20px;
+}
+}
+
+/*tamaño mas chico*/
+@media (max-width:411px) {
+    .logo-registro {
+        width: 100%;
+        height: 100%;
+       padding-left: 5px;
+    }
+    
+    /*para el boton naranja*/
+span.cuenta {
+    width: 200px;
+    height: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 90px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+span.cuenta button {
+   font-size: 17px;
+}
+
+/*ingresar los datos de tu cuenta */
+p.ingreso {
+    margin-left: 85px;
+    font-size: 20px;
+   width: 100%;
+}
+
+/*volver al menú de inicio*/
+span a.link {
+    margin-left: 45px;
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+.padre{
+    width: 320px;
+    height: 170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.padre .box-1{
+    width: 50%;
+}
+
+.padre .box-2{
+    width: 50%;
+}
+
+.padre .box-1 input {
+    width: 90%;
+}
+
+.padre .box-2 input {
+    width: 94%;
+}
+}
