@@ -421,19 +421,26 @@ padding:0px 14px;
 
 @media screen and (max-width: 577) /*De este ancho para abajo se va a ver asi:*/ {
 
-    
+   
     header {
         width: 100%;
     }
 
-    
 
     }
+/*  Por alguna extraña razon, al aplicar este media screen el header deja de romperse, volviendose totalmente responsive. */
+    @media screen and (min-width: 1336) {
+
+    } 
+        
+    }
+
+
+
 
  @media screen and (max-width: 1250px) /*De este ancho para abajo se va a ver asi:*/ {
       
-
-    nav {
+        nav {
         display:none;
     }
 
@@ -445,14 +452,14 @@ padding:0px 14px;
     header .logo {
         display:inline-block;
         padding: 15px 14px;
-       width: 120px;
+       width: 100px;
        position:relative;
        left: -4px;
 
     }
     
     header .buscar {
-        width: 100%;
+        width: 80%;
         display:inline-flex;
         justify-content:center;
         margin-bottom:15px;
@@ -560,4 +567,4 @@ padding:0px 14px;
 
 
     } /*END RESPONSIVE*/ 
-  }
+  

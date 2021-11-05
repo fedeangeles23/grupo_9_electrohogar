@@ -117,6 +117,12 @@ span.cuenta button{
 /*tamaño escritorio */
 @media (min-whith:1000px) {
 
+
+    
+    .logo img {
+        width: 140px;
+        height: 140px;
+    }
 .container-perfil {
     display: flex;
     width: 100%;
@@ -235,3 +241,4 @@ td {
 }
 
 }
+
