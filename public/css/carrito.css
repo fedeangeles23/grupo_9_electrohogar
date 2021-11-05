@@ -264,3 +264,8 @@
         max-width: 100%;
     } 
 }
+
+body {
+    background-color: #E2E2E2;
+    border: 1px solid #BBAFAF;
+}
