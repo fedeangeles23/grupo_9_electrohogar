@@ -233,6 +233,13 @@
     margin-top: 33.5px;
 }
 
+.carrito-mobile{
+    display: none;
+}
+.pago-mobile{
+    display: none;
+}
+
 /* Versión Tablet */
 
 @media only screen 
@@ -252,18 +259,18 @@
 
     .container2{
         flex-wrap: wrap;
-        width: 586.5px; 
+        width: 580px; 
     }
 
     .container3{
-        width: 586.5px;
+        width: 580px;
         height: auto;
         justify-content: space-around;
         flex-wrap: wrap;
     }
 
     .container4{
-        width: 586.5px;
+        width: 580px;
         height: auto;
         flex-wrap: wrap;
     } 
@@ -326,6 +333,9 @@
     }
 
     .carrito-mobile{
+        display: none;
+    }
+    .pago-mobile{
         display: none;
     }
 }
@@ -435,5 +445,4 @@
         justify-content: space-around;
         margin-top: -20px;
     }
-
 }
