@@ -9,20 +9,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Lato, sans-serif;
+    font-family: 'Roboto', sans-serif;
         
 }
+
+
+body {
+    overflow-x: hidden; /* Hide scrollbars */
+  }
+
 
 /* HEADER DESKTOP */
 header { 
     width: 100%;
     height: 110px;
-   /* background-color: #E2E2E2; */ /*comente porque le daba un borde y un color al logo */
+    background-color: #E2E2E2;
     display: flex;
     position: relative;
     justify-content: space-between;
     text-align: center;
-   /* border: 1px solid #BBAFAF; */
+    border: 1px solid #BBAFAF;
+    border-right:none;
 }
 
 
@@ -70,6 +77,7 @@ header ul {
     list-style: none;
     margin: auto 0;
     list-style: none;
+    z-index: 1;
 }
 
 header ul li {
@@ -179,13 +187,17 @@ input[type=checkbox]{
 
 
 
+
+
+
+
 /* NAV---------------------------------------------*/
 
 nav {
     display:flex;
     background-color: #E2E2E2;
     justify-content: space-between;
-    width: 100%px;
+    width: 100%;
     border-top:none;
     border-color: #CEC8C8;
     border-bottom:1px solid #CEC8C8;
@@ -246,9 +258,8 @@ nav ul li:hover{
     justify-content: space-around;
     padding: 15px;
     bottom:0;
-    width: 100%;
-    margin-top: auto;
-    border:1px solid var(--border);
+    width: 100vp;
+    border:1px solid #AAAAAA;
    
 }
 
@@ -271,11 +282,12 @@ padding:0px 14px;
 }
 
 
+
 .footertop .contenedorventatelefonica .bRED{
     color:rgb(255, 0, 0);
     font-size: 23px;
-    font-family: 'Lato';
-    font-weight:300;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;;
     } 
     
     .footertop .contenedorventatelefonica .numerotel {
@@ -286,7 +298,7 @@ padding:0px 14px;
 
     .footercentral {
         width: 100%;
-        height: 180px;
+        height: 240px;
         background-color: rgba(255, 255, 255, 0.486);
         display: flex;
         border:1px solid hsl(0, 7%, 81%);
@@ -303,7 +315,7 @@ padding:0px 14px;
 
         .footercolumna3Row{
             padding-left:40px;
-            /*margin-top: 40px;*/ /*para quitar espacio*/
+            margin-top: 40px;
         }
 
         .footercolumna3Row h3{
@@ -314,7 +326,7 @@ padding:0px 14px;
         
         .footercolumna2Row{
             padding-left:40px;
-            /*margin-top: 40px;*/ /*para quitar espacio*/
+            margin-top: 40px;
         }
         
         .mediosdepago span {
@@ -358,11 +370,68 @@ padding:0px 14px;
 /*HEADER RESPONSIVE----------------------*/
 
 
-
- @media screen and (max-width: 1250px) {
-      
+@media screen and (max-width: 576px) /*De este ancho para abajo se va a ver asi:*/ {
+    
 
     
+
+    .footertop .contenedorventatelefonica {
+        margin:15px;
+        text-align: center;
+    }
+
+    
+    .footertop .emailsub {
+        text-align: center;
+        margin-top:10px; 
+    }
+
+    
+    .footertop .social a{
+        padding: 0px 10px;
+    }
+
+
+
+    .footertop {
+        
+            background-color: #E2E2E2;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 15px;
+            bottom: 0;
+            width: 100vp;
+            border: 1px solid #AAAAAA;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            align-items: center;
+    }
+
+    .button-group {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: stretch;
+}
+
+
+@media screen and (max-width: 577) /*De este ancho para abajo se va a ver asi:*/ {
+
+    
+    header {
+        width: 100%;
+    }
+
+    
+
+    }
+
+ @media screen and (max-width: 1250px) /*De este ancho para abajo se va a ver asi:*/ {
+      
 
     nav {
         display:none;
@@ -390,7 +459,7 @@ padding:0px 14px;
     }
 
     header .buscar input {
-        width:90%;
+        width:80%;
   }
   header ul {
             display:flex;
@@ -403,8 +472,6 @@ padding:0px 14px;
             
         }
     
-
-
         header ul li a {
             color:rgb(255, 255, 255);
             font-size:20px;
@@ -428,7 +495,7 @@ padding:0px 14px;
 
         header .bar span {
             color:rgb(255, 255, 255);
-            background-color: rgb(4, 19, 231);
+            background-color:transparent;
             padding:4px;
             border-radius: 5px;
            font-weight: bold; 
@@ -493,4 +560,4 @@ padding:0px 14px;
 
 
     } /*END RESPONSIVE*/ 
- 
+  }

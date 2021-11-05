@@ -16,15 +16,10 @@ body {
 }
 
 
-/* maneja el espacio del ingresa los datos de cuenta*/
-header {
-    height: 210px;
-}
-
 .container {
     display: flex;
     width: 100%;
-    height: 500%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -33,6 +28,7 @@ header {
 .datos {
     display: flex;
     flex-direction: row-reverse; 
+    margin-left: 30px;
 }
 
  /*para separar la caja no tengo cuenta con olvide mi contraseña, le dio color a olvide mi contraseña*/

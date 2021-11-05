@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,11 +8,9 @@
 }
 
 /*cambie el tamaño de las letras*/
-body {
-    background-color: #E8E8E4;
-  font-family: 'Roboto', sans-serif;
-  
-}
+
+
+
 
 .logo img{
     width: 200px;
@@ -25,6 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: rgb(253, 253, 253);
 }
 
  /*le doy color a volver a menú de inicio*/
@@ -55,7 +55,8 @@ padding-bottom: 40px;
     height: 35px;
     padding-left: 10px;
 /*para el recuadro branco*/
-border: none;
+border: 1px solid black;
+border-radius: 10px;
 
 }
 
@@ -67,19 +68,21 @@ span.cuenta button{
   border-radius:5px;
   box-sizing: border-box;
   text-decoration:none;
-  font-family:'Roboto',sans-serif;
   font-weight:300;
-  color:#000000;
+  color:#ffffff;
   background-color:transparent;
   text-align:center;
   transition: all 0.2s;
   width: 140px;
-  font-weight: 700;
+  font-weight: 5 00;
+  background-color: rgb(4, 14, 151);
+  font-family: Roboto, sans-serif;
+  border:none;
 }
 
 
 span.cuenta button:hover{
-    background-color:#1d1d1ce5;
+    background-color:#000000;
     color:#fff;
 }
 
