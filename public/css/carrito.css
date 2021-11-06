@@ -18,8 +18,10 @@
 }
 
 .container1{ /* El primer contenedor de 3 cajas con carrito,etc */
-    border: 1px; /* Sinceramente no tengo idea y no le vi cambio alguno */
     display: flex; /* Para que las cajitas estén una al lado del otro */
+    margin-bottom: 5px;
+    border: 1px solid #EDEDED;
+    box-shadow: 0px 0px 5px #2D2D2D;
     width: 1140px; /* el ancho de la caja */
     margin-top: 30px; /* Distancia al márgen superior de 30px */
     font-family: Roboto,sans-serif;
@@ -260,6 +262,10 @@
     display: none;
 }
 
+.container3-mobile{
+    display: none;
+}
+
 /* Versión Tablet */
 
 @media only screen 
@@ -267,7 +273,8 @@
   and (max-device-width: 1024px){
 
     .container1{ /* El primer contenedor de 3 cajas con carrito,etc */
-        border-color: lightslategrey;
+        border: 1px solid #EDEDED;
+        box-shadow: 0px 0px 5px #2D2D2D;
         box-shadow: 0px 0px 2px;
         display: flex; /* Para que las cajitas estén una al lado del otro */
         margin-top: 30px; /* Distancia al márgen superior de 30px */
@@ -287,7 +294,8 @@
         width: 580px; 
         height: 10px; /* la altura de la caja */
         background-color: #2D2D2D; /* La cajita lateral negra sobre el tercer contenedor */
-        border-color: lightslategrey;
+        border: 1px solid #797373;
+        box-shadow: 5px 5px 0px #EDEDED;
         box-shadow: 0px 0px 2px;
         margin-left: auto; /* Acomoda automáticamente el márgen del centro a la izquierda */
         margin-right: auto; /* Acomoda automáticamente el márgen del centro a la derecha */
@@ -307,8 +315,8 @@
         margin-right: auto;
         display: flex;
         padding: 10px;
-        border-color: lightslategrey;
-        box-shadow: 0px 0px 2px;
+        border: 1px solid #797373;
+        box-shadow: 5px 5px 0px #EDEDED;
     }
 
     .box1-tablet{
@@ -328,8 +336,8 @@
         border-radius: 100%;
         border-style:solid;
         border-width: 1px;
-        border-color: lightslategrey;
-        box-shadow: 0px 0px 2px;
+        border: 1px solid #797373;
+        box-shadow: 5px 5px 0px #EDEDED;
     }
 
     .column-tablet {
@@ -340,30 +348,14 @@
 
     .box2-tablet{
         display: flex;
-        width: 210px;
-        justify-content: space-around;
+        width: 170px;
+        margin-top: 9px;
+        justify-content: end;
     }
 
-    .botones{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .icon-tablet{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    button{
-        width: 40px;
-        height: 30px;
-        cursor: pointer;
-        font-size: 1.5rem;
-        background: white;
-        border:none;
-        border-radius: 5px;
+    .desplegagle-tablet{
+        height: 19px;
+        margin-right: 50px;
     }
 
     .container4{
@@ -379,8 +371,8 @@
         margin-right: auto;
         margin-top: 5px; 
         background-color: #EDEDED;
-        border-color: lightslategrey;
-        box-shadow: 0px 0px 2px;
+        border: 1px solid #797373;
+        box-shadow: 5px 5px 0px #EDEDED;
     }
 
     .flex{
@@ -396,7 +388,7 @@
         justify-content: space-between;
         margin-top: -5px;
         margin-bottom: 10px;
-        margin-left: 20px;
+        margin-left: 24px;
         margin-right: 20px;
     }
 
@@ -424,16 +416,16 @@
     }
     
     .btn-tablet2{
+        background-color: #2D2D2D; /* color de fondo del botón. */
+        color: #FAFAFA; /* color del texto en código hexadecimal */
+        text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
+        font-family: Roboto, sans-serif; /* Tipo de fuente */
+        font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
         font-size: 10px;
-        padding: 5.3px;
-        border-radius: 4px 0px 0px 4px;
-        background-color: #2D2D2D;
-        color: #FAFAFA;
-        text-decoration: none;
-        font-family: Roboto, sans-serif;
-        font-weight: 100px;
+        padding: 5px;
         border-color: #2D2D2D;
-        border-radius: 4px 0px 0px 4px;
+        border-radius: 0px 4px 4px 0px;
+        margin-left: -4px;
     }
 
     .input-tablet{
@@ -512,6 +504,7 @@
     }
 
     .container3-mobile{
+        display: flex;
         width: 320px;
         height: 160px;
         margin-left: auto;
@@ -519,6 +512,7 @@
         margin-bottom: 2px;
         border: 1px solid #797373;
         box-shadow: 5px 5px 0px #EDEDED;
+        justify-content: center;
     }
 
     .content-mobile{

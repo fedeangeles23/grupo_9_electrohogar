@@ -159,7 +159,6 @@ span.cuenta button:hover{
         margin-bottom:15px;
     }
 
-<<<<<<< HEAD
     header .buscar input {
         width:90%;
   }
@@ -262,21 +261,3 @@ span.cuenta button:hover{
 
 
     } /*END RESPONSIVE*/ 
-=======
-@media(max-width:370px) {
-    /*para mover la caja de olvide mi contraseña*/
- .olvide{
-    padding-top: 10px; 
-    font-size: 14px;
-}
-
-/*para los botones naranja*/
-span.cuenta button{
-    font-size: 15px;
-    width: 200px;
-    height: 35px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-}
-}
->>>>>>> b98a174a7b41d917af67fa7700dd950053881cf5
