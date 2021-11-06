@@ -73,9 +73,8 @@ span.cuenta button{
 }
 
 .padre{
-    width: 520px;
+    width: 75%;
     height: 170px;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -98,8 +97,11 @@ span.cuenta button{
     width: 94%;
 }
 
+
+
+
 /*tamaño chico*/
-@media (max-width:500px) {
+@media (max-width:450px) {
     .logo-registro {
         width: 100%;
         height: 100%;
@@ -127,8 +129,11 @@ span a.link {
 }
 
 
+
+
+
 /*tamaño mas chico*/
-@media (max-width:600px) {
+@media (max-width:700px) {
     .logo-registro {
         width: 100%;
         height: 100%;
@@ -166,25 +171,13 @@ span a.link {
 }
 
 .padre{
-    width: 320px;
+    width: 80%;
     height: 170px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+    justify-content: center;
 }
 
-/*tamaño aun más chico*/
-@media(max-width:380px)
-{
-.padre{
-    width: 310px;
-    height: 170px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
 }
