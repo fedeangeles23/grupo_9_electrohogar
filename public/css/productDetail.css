@@ -1,158 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
-
-* {
-    padding:0;
-    margin:0;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Lato, sans-serif;
 }
 
-main {
-    border: 0, 0, 1px, 0 solid black;
-   
+body{
+    font-family: 'Lato', sans-serif;
 }
-div h2 {
-    font-weight: lighter;
-    font-size: 15px;
-    color: #6D6D6D;
-    position: relative;
-    bottom: -4rem;
-    margin-left: 20px;
+
+.small-container{
+
+    padding-left:25px;
+    padding-right:20px;
 }
-article h1 {
-    font-size: 20px;
-    position: relative;
-    bottom: -4rem;
-    margin-left: 40px;
+
+.row{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-article img.one {
-    position: relative;
-    left: 130px;
-    bottom: -6rem;
-    border-right: 1px solid grey;
-    width: 250px;
-    height: 250px;
+
+.single-product{
+    margin-top:10px;
 }
-article img.two {
-   width: 125px;
-   height: 125px;
-   position: relative;
-   right: 200px;
-   top: 6rem;
+
+.small-img-row{
+    display:flex;
+    justify-content: space-around;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
 }
-article img.three {
-    width: 125px;
-    height: 125px;
-    position: relative;
-    right: 328px;
-    top: -30px;
- }
-div.especificaciones {
-     display: flex;
-     flex-direction: column;
- }
-div.especificaciones p.a {
+
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.small-img-col{
+    cursor:pointer;
+    
+}
+
+.single-product .col-2 img {
+    padding:0;
+}
+
+.single-product .col-2{
+    padding:20px;
+}
+
+.col-2 {
+    flex-basis:50%;
+    min-width: 300px;
+}
+
+.col-2 h1{
+    font: 50px;
+    line-height: 60px;
+    margin:25px 0;
+}
+
+.single-product select{
+    display:block;
+    padding:10px;
+    margin-top:20px;
+}
+
+.single-product h4 {
+    margin:20px 0;
+    font-size: 22px;
     font-weight: bold;
-    position: relative;
-    left: 35%;
-    top: -155px;
 }
-div.especificaciones p.b {
-    color: blue;
-    position: relative;
-    left: 35%;
-    top: -180px;
-}
-div.especificaciones button {
-    background-color: black;
-    color: white;
-    width: 90px;
+.single-product input{
+    width: 50px;
     height: 40px;
-    border-radius: 20px;
-    position: relative;
-    left: 35%;
-    top: -175px;
-}
-div.especificaciones a.input {
-    border: 1px solid black;
-    width: 210px;
-    height: 28px;
-    border-radius: 5px;
-    text-align: center;
-    color: black;
-    position: relative;
-    left: 35%;
-    top: -160px;
-}
-div.especificaciones i.far.fa-store {
-    position: relative;
-    left: 35%;
-    top: -140px;
-    font-size: 30px;
-    color: grey;
-}
-div.especificaciones i.fal.fa-shipping-fast {
-    position: relative;
-    left: 55%;
-    top: -238px;
-    font-size: 30px;
-    color: grey;
-}
-div.especificaciones a.ver {
-    color: #04771D;
-    position: relative;
-    left: 39%;
-    top: -205px;
-}
-div.especificaciones a.verd {
-    color: #04771D;
-    position: relative;
-    left: 59%;
-    top: -300px;
-}
-div.especificaciones p.p-one {
-    position: relative;
-    left: 39%;
-    top: -190px;
-}
-div.especificaciones p.p-two {
-    position: relative;
-    left: 59%;
-    top: -285px;
-}
-div.detalles h1 {
-    font-weight: lighter;
-    color: grey;
-    text-decoration: underline black;
+    padding-left: 10px;
     font-size: 20px;
-    position: relative;
-    top: -16rem;;
+    margin-right: 10px;
+    border: 1px solid #949190;
 }
-div.detalles h2 {
-    color: grey;
-    font-size: 20px;
-    margin-left: 50%;
-    position: relative;
-    top: -18rem;;
+
+input:focus{
+    outline:none;
 }
-div.detalles h3 {
-    color: grey;
-    font-size: 12px;
-    position: relative;
-    top: -19rem;;
+a{
+    text-decoration: none;
+    color: #555;
 }
-div.detalles li {
-    color: grey;
-    font-size: 10px;
-    margin-left: 20px;
-    position: relative;
-    top: -19rem;;
+.single-product .fa{
+    color:#000000;
+    margin-left:10px;
+    opacity: 70%;
 }
-hr {
-    width: 100%;
-    background-color: black;
-    position: relative;
-    top: -16rem;
+p{
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    background:#000000;
+    color:#fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.btn-cuotas {
+        display:inline-block;
+        background:transparent;
+        color:rgb(2, 2, 2);
+        padding: 8px 30px;
+        margin: 30px 0;
+        border-radius: 7px;
+        transition: background 0.5s;
+        border:1px solid black;
+        text-decoration: underline;
+}
+
+.btn:hover{
+    background: rgb(6, 9, 224);
 }

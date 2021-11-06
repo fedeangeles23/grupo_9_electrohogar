@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,169 +10,182 @@
     <link rel="stylesheet" href="../public/css/HeaderNavFooter.css">
 
 </head>
+
 <body>
     <input type="checkbox" id="check">
 
-  <header >
+    <header>
 
-    <div class="logomain">
-        
-        <a href="home.html"><img class="logo" src="/public/images/electrohogarlogo2resuelto.png" alt=""></a>
-    </div>
-    <div class="buscar"> 
-        <input type="search" placeholder="Buscar productos..">
+        <div class="logomain">
+
+            <a href="home.html"><img class="logo" src="/public/images/electrohogarlogo2resuelto.png" alt=""></a>
+        </div>
+        <div class="buscar">
+            <input type="search" placeholder="Buscar productos..">
             <i class="fas fa-search"></i>
         </div>
 
-        <div class="headernav"> 
+        <div class="headernav">
+            <ul>
+                <li><a href="carrito.html"><img class="iconcarrito" src="/public/icons/shopping-cart.png"
+                            alt="Carrito">Carrito</a></li>
+                <li><a href="#"><img class="iconfav" src="/public/icons/favorite.png" alt="Favoritos">Favoritos</a></li>
+                <li><a href="registro.html"><img class="iconcuenta" src="/public/icons/perfil.png" alt="Mi cuenta">Mi
+                        cuenta</a></li>
+            </ul>
+            <label for="check" class="bar">
+                <span class="fa fa-bars" id="bars"></span>
+                <span class="fa fa-times" id="times"></span>
+
+            </label>
+        </div>
+
+    </header>
+
+    <nav>
         <ul>
-            <li><a href="carrito.html"><img class="iconcarrito" src="/public/icons/shopping-cart.png" alt="Carrito">Carrito</a></li>
-            <li><a href="#"><img class="iconfav" src="/public/icons/favorite.png" alt="Favoritos">Favoritos</a></li>
-            <li><a href="registro.html"><img class="iconcuenta" src="/public/icons/perfil.png" alt="Mi cuenta">Mi cuenta</a></li>
+            <li href="#">Categorias</i></li>
+            <li href="#">Smart TV</li>
+            <li href="#">Celulares</li>
+            <li href="#">Notebooks</li>
+            <li href="#">Aire Acondicionado</li>
+            <li href="#">Cocinas</li>
+            <li href="#">Heladeras</li>
+            <li href="#">Lavado</li>
+            <li href="#">Colchones</li>
+            <li href="#">Gaming</li>
+
         </ul>
-        <label for="check" class="bar">
-            <span class="fa fa-bars" id="bars"></span>
-            <span class="fa fa-times" id="times"></span>
+    </nav>
 
-        </label>
-    </div>
-
-</header>
-
-<nav>
-    <ul>
-        <li href="#">Categorias</i></li>
-        <li href="#">Smart TV</li>
-        <li href="#">Celulares</li>
-        <li href="#">Notebooks</li>
-        <li href="#">Aire Acondicionado</li>
-        <li href="#">Cocinas</li>
-        <li href="#">Heladeras</li>
-        <li href="#">Lavado</li>
-        <li href="#">Colchones</li>
-        <li href="#">Gaming</li>
-        
-    </ul>
-</nav>
-
+   <main>
     <div class="container-perfil">
 
-     
 
-  <p class="bienvenido">BIENVENIDO <b> Cosme Fulanito </b> A LA FECHA CONTAS CON: </p>
 
-  <p class="datos"> Mis compras </p>
+        <p class="bienvenido">BIENVENIDO <b> Cosme Fulanito </b> A LA FECHA CONTAS CON: </p>
 
-       <table class="tabladatos">
+        <p class="datos"> Mis compras </p>
 
-         <tr>
-           <th>Orden</th>
-           <th>Pedido</th>
-           <th>Fecha</th>
-           <th>Estado</th>
-           <th>Pago</th>
-           <th>Estado de envio</th>
-           <th>Total</th>
-           
-         </tr>
+        <table class="tabladatos">
 
-        <tr>
-           <td>#8222</td>
-           <td>Celular Moto G60</td>
-           <td> 11/6/2021</td>
-           <td>Abierta</td>
-           <td>Pagado</td>
-           <td>Envíado</td>
-           <td>$1.449,55</td>
-        <td><a href="www.correoargentino.com.ar/4945942/">Segui tu orden</a></td>        
-        </tr>
+            <tr>
+                <th>Orden</th>
+                <th>Pedido</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Pago</th>
+                <th>Estado de envio</th>
+                <th>Total</th>
+
+            </tr>
+
+            <tr>
+                <td>#8222</td>
+                <td>Celular Moto G60</td>
+                <td> 11/6/2021</td>
+                <td>Abierta</td>
+                <td>Pagado</td>
+                <td>Envíado</td>
+                <td>$1.449,55</td>
+                <td><a href="www.correoargentino.com.ar/4945942/">Segui tu orden</a></td>
+            </tr>
+
+        </table>
+        <p class="datos"> Mis datos </p>
+
+        <div class="perfil2">
+            <span> <b>Nombre:</b> Cosme</span>
+            <span> <b>Apellido:</b> Fulanito</span>
+            <span> <b>Email:</b> HankScorpio@gmail77.com</span>
+            <span> <b>Contraseña:</b>*******</span>
+            <span> <b>Telefono:</b> +221395930</span>
+            <span> <b>DNI:</b> 43396920</span>
+            <span> <b>Direccion:</b> Calle falsa 123</span>
+            <span> <b>Codigo Postal:</b>1925</span>
+
+
+
+        </div>
+
+        <span class="cuenta"> <button type="continue" class="btn btn-continue">Editar mis datos</button></span>
+
+
+
+
+
+
         
-       </table>
-  <p class="datos"> Mis datos </p>
+    </div>
+   </main>
+   
+    <footer>
 
-  <div class="perfil2">
-    <span> <b>Nombre:</b> Cosme</span>
-    <span> <b>Apellido:</b> Fulanito</span>
-    <span> <b>Email:</b> HankScorpio@gmail77.com</span>
-    <span> <b>Contraseña:</b>*******</span>
-    <span> <b>Telefono:</b> +221395930</span>
-    <span> <b>DNI:</b> 43396920</span>
-    <span> <b>Direccion:</b> Calle falsa 123</span>
-    <span> <b>Codigo Postal:</b>1925</span>
-
-
-
+        <div class="footertop">
+  
+  
+          <div class="emailsub">
+            <span>¡Recibí nuestras promociones exclusivas! </span>
+  
+            <input type="email" class="inputemail" name="email" id="" placeholder="Ingresá tu e-mail...">
+            <input type="submit" value="Suscribirse" class="confirmaremail" />
+          </div>
+  
+          <div class="contenedorventatelefonica">
+  
+            <b class="bRED"> VENTA TELEFONICA: </b> <span class="numerotel"> 0810-111-0707 </span>
+            <div class="contenedorclietne">
+              <span>Atencion al cliente:</span>
+              de <b>9</b> a <b> 20 </b> hs / Sáb. de <b>9</b> a <b>18</b> hs
+            </div>
+          </div>
+  
+          <div class="social">
+            <a href="https://www.facebook.com/electroHogar"><img src="../public/icons/facebook.png"
+                alt="Seguinos en Facebook" class="facebook"></a>
+            <a href="www.instagram.com/electrohogarr"><img src="../public/icons/instagram.png"
+                alt="Seguinos en Instagram" class="instagram"></a>
+            <a href="www.twitter.com/electroHogar"><img src="../public/icons/twitter.png" alt="Seguinos en twitter"
+                class="twitter"></a>
+            <a href="www.youtube.com/electroHogar"><img src="../public/icons/youtube.png" alt="Seguienos en Youtube"
+                class="youtube"></a>
+          </div>
+  
         </div>
-
-       <span class="cuenta"> <button type="continue" class="btn btn-continue">Editar mis datos</button></span>
-
-
-            
-    
-    
-    
-<footer>
-
-  <div class="footertop">
-  
-  
-      <div class="emailsub">
-           <span>¡Recibí nuestras promociones exclusivas! </span>
-           
-          <input type="email" class="inputemail" name="email" id="" placeholder="Ingresá tu e-mail...">
-          <input type="submit" value="Suscribirse" class="confirmaremail"/> 
-      </div>
-  
-      <div class="contenedorventatelefonica">  
-                      
-          <b class="bRED"> VENTA TELEFONICA: </b> <span class="numerotel"> 0810-111-0707 </span>
-                <div class="contenedorclietne">
-                   <span>Atencion al cliente:</span> 
-                 de <b>9</b> a <b> 20 </b> hs / Sáb. de <b>9</b> a <b>18</b> hs
-                </div>                                                
-        </div>
-  
-      <div class="social">
-          <a href="https://www.facebook.com/electroHogar"><img src="../public/icons/facebook.png" alt="Seguinos en Facebook" class="facebook"></a> 
-          <a href="www.instagram.com/electrohogarr"><img src="../public/icons/instagram.png" alt="Seguinos en Instagram" class="instagram"></a> 
-          <a href="www.twitter.com/electroHogar"><img src="../public/icons/twitter.png" alt="Seguinos en twitter" class="twitter"></a> 
-          <a href="www.youtube.com/electroHogar"><img src="../public/icons/youtube.png" alt="Seguienos en Youtube" class="youtube"></a> 
-      </div>
-  
-  </div>
-      <section>
+        <section>
           <div class="footercentral">
-                      
-                  <div class="footercolumna2Row">
-                      <h3>Categorias</h3>
-                           <ul>
-                          <li>Tecnologia</li>
-                          <li>Decoracion</li>
-                          <li>Celulares</li>
-                          <li>Heladeras</li>
-                          <li>Climatizacion</li>
-                           </ul>
-                   </div>
-      
-              <div class="footercolumna3Row">
-                  <h3>Nosotros</h3>
-                      <ul>
-                          <li>Sucursales</li>
-                          <li>Trabaja con nosotros</li>
-                          <li>Quienes somos</li>
-                          <li>Terminos y condiciones</li>
-                         
-                       </ul>                   
-                       
-              </div>
   
-            
-      
-      
+            <div class="footercolumna2Row">
+              <h3>Categorias</h3>
+              <ul>
+                <li>Tecnologia</li>
+                <li>Decoracion</li>
+                <li>Celulares</li>
+                <li>Heladeras</li>
+                <li>Climatizacion</li>
+              </ul>
+            </div>
+  
+            <div class="footercolumna3Row">
+              <h3>Nosotros</h3>
+              <ul>
+                <li>Sucursales</li>
+                <li>Trabaja con nosotros</li>
+                <li>Quienes somos</li>
+                <li>Terminos y condiciones</li>
+  
+              </ul>
+  
+            </div>
+  
+  
+  
+  
   
           </div>
-      </section>
+        </section>
   
-  </footer>
+      </footer>
 </body>
+
 </html>

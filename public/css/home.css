@@ -47,6 +47,9 @@
      margin:auto;
  }
 
+ 
+ 
+ 
  .card{
      display:flex;
      justify-content: center;
@@ -60,6 +63,14 @@
      background-color: #fff;
  }
 
+
+ .card:hover{
+    box-shadow: -2px 0px 8px 8px rgba(0,0,0,0.55);
+-webkit-box-shadow: -2px 0px 8px 8px rgba(0,0,0,0.55);
+-moz-box-shadow: -2px 0px 8px 8px rgba(0,0,0,0.55);
+    transition: 0.5s all; 
+      }
+
  .image-section{
      width: 100%;
      height:400px;
@@ -71,7 +82,8 @@
  .image-section img {
      width: 100%;
      height: 100%;
-     object-fit:cover;
+     object-fit:contain;
+     border-bottom:1px solid rgba(104, 104, 104, 0.5);
  }
 
  .description{
@@ -82,6 +94,7 @@
      text-transform: uppercase;
      color:#222;
      margin-bottom: 15px;
+     margin-top: 15px;
  }
 
  .description span {
@@ -105,17 +118,18 @@
  }
 
  .button-group .buy{
-     background-color:#000000;
+     background-color:#63187D;
      font-size: 14px;
      padding: 8px 20px;
      border-radius:5px;
      text-decoration: none;
      letter-spacing: 1px;
-     color:#fff
+     color:#fff;
+     margin-bottom: 5px;
  }
 
  .button-group .buy:hover{
-     background-color: rgb(0, 0, 0);
+     background-color: #5b0179;
      transition: 0.6s ease;
  }
 
@@ -132,7 +146,7 @@
  }
 
  .button-group .cart:hover{
-    background-color: rgb(2, 12, 150);
+    background-color: rgb(3, 3, 3);
     transition: 0.3s ease;
     color:#fff;
 }
@@ -142,7 +156,11 @@
    position: relative;
    bottom: 140px;
    left: 130px;
+   transition: 0.5ms;
+   
 }
+
+
 
 .fav i:hover{
     color: rgb(219, 2, 2);
