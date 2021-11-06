@@ -128,7 +128,7 @@ span a.link {
 
 
 /*tamaño mas chico*/
-@media (max-width:400px) {
+@media (max-width:600px) {
     .logo-registro {
         width: 100%;
         height: 100%;

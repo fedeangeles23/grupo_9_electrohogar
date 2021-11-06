@@ -10,18 +10,16 @@
 body {
     background-color: #E8E8E4;
   font-family: 'Roboto', sans-serif;
-  
 }
 
-@media (max-width:990px) {
-    table {
-        width:100px;
-        height: 50px;
-    }
+
     .container-perfil {
-        padding: 50px;
-        margin-left: 30px;
         width: 100%;
+        margin: auto;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+      justify-content: center;
     }
 
     .perfil2 p {
@@ -33,40 +31,33 @@ body {
     }
 
     p.datosP{
-     width: 700px;
-     font-size: 30px;
-    }
-
-    .perfil2 {
-        width: 100px;
+     font-size: 16px;
     }
 
     p.perfil2 {
-        width: 500px;
-        font-size: 30px;
+        font-size: 16px;
     }
 
     /*parte de la tabla de aca... */
+
 table {
-    margin-right: auto;
+  width: 600px;
     border-collapse: collapse;
 }
 
 th {
     background-color: #B7B7A4;
     border: 1px solid #B7B7A4;
-    padding-left: 30px;
-    padding-right: 20px;
-    padding-top: 25px;
+    padding-top: 15px;
     border-collapse: collapse;
-    font-size: 23px;
+    font-size: 17px;
 }
 
 td {
     background-color: white;
     border: 2px solid white;
-    padding-left: 18px;
-   font-size: 22px;
+    padding-left: 10px;
+   font-size: 16px;
 }
 /*hasta aca*/
 
@@ -75,58 +66,39 @@ p.bienvenido {
     color: orange;
     display: flex;
     justify-content: center;
-    margin-bottom: 45px;
-    font-size: 30px;
-    width:500px;
-
-    /*para resaltar la palabra*/
-    /*font-weight: bold;*/   
+    font-size: 20px;  
+    margin-bottom: 20px;
 }
 
 /*para el titulo mis datos*/
 .datos {
     display: flex;
-    margin-bottom: 30px;
-    justify-content: center;
-    margin-left: 120px;
-    width: 100%;
-    font-size: 40px;
+    margin-bottom: 10px;
+    font-size: 25px;
     font-style: italic;
-}
-
-p.datos {
-    width: 400px;
 }
 
 /*para el botones naranja*/
 span.cuenta button{
     background-color: orange;
     color: white;
-    font-size: 25px;
-    width: 250px;
-    height: 60px;
-    border-radius: 30px;
-    
-    margin-left: 390px;
+    font-size: 13px;
+    width: 130px;
+    height: 25px;
+    border-radius: 10px;
+    margin-left: 130px;
 }
 
-}
 
 
 
 /*tamaño escritorio */
-@media (min-whith:1000px) {
+@media (min-whith:480px) {
 
 .container-perfil {
     display: flex;
     width: 100%;
     height: 100%;
-
-
-
-
-
-    
     margin: 50px;
     justify-content: center;
     align-items: center;
@@ -142,7 +114,6 @@ span.cuenta button{
     margin-top: 80px;
     margin-bottom: 45px;
     font-size: 16px;
-
     /*para resaltar la palabra*/
     /*font-weight: bold;*/   
 }
@@ -165,7 +136,6 @@ span.cuenta button{
     width: 150px;
     height: 40px;
     border-radius: 20px;
-    
     margin-left: 540px;
 }
 
@@ -192,13 +162,12 @@ td {
     padding-left: 20px;
     padding-top: 20px;
 }
-/*hasta aca*/
 
+/*hasta aca*/
 .perfil2 p {
     display: flex;
     flex-direction: column;
     text-align: left;
     font-size: 20px;
 }
-
 }
