@@ -62,10 +62,12 @@
     </nav>
 
     <main>
+        <p>>Inicio > Tecnologia> Celulares y accesorios>Motorola</p>
+
         <div class="smallcontainer single-product">
                 <div class="row">
                     <div class="col-2">
-                            <img src="/public/images/motog50sproducdetail.webp" width="100%" id="ProductImg" alt="">
+                            <img src="/public/images/motog50sproducdetail.webp" width="50%" id="ProductImg" alt="">
                             <div class="small-img-row">
                                 <div class="small-img-col">
                                     <img src="/public/images/motog50sproducdetail2.webp" alt="" width="20%" class="small-img">
@@ -87,8 +89,7 @@
                                 </div>
                             </div>
                       </div>
-                      <div class="col-2">
-                          <p>>Inicio > Tecnologia> Celulares y accesorios>Motorola</p>
+                       <div class="col-2">
                           <h1>Motorola Moto G60S 128gb Azul</h1>
                           <h4>$96.999</h4>
                           <select> 
@@ -116,6 +117,9 @@
                             Su procesador Octa Core 1.8 Ghz y la memoria RAM de 6 GB te permitirán ejecutar aplicaciones, disfrutar de juegos, reproducir videos y navegar por internet de un modo veloz y sin interrupciones.
                           </p>
                       </div>
+                    
+
+                
                 </div>
         </div>
 
@@ -159,6 +163,27 @@
         </div> -->
     </main>
     
+    <!-- Este script hace que las imagenes al hacer click se puedan visualizar como imagen principal en detail product -->
+    <script>
+        var Productimg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img")
+
+        SmallImg[0].onclick = function () {
+            Productimg.src = SmallImg[0].src;
+        }
+
+        SmallImg[1].onclick = function () {
+            Productimg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function () {
+            Productimg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function () {
+            Productimg.src = SmallImg[3].src;
+        }
+
+    </script>
+
 <footer>
 
     <div class="footertop">

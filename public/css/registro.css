@@ -116,16 +116,11 @@ span.cuenta button:hover{
 
 
 .padre{
-<<<<<<< HEAD
 
     width: 600px;
     height: 200px;
     border-radius: 10%;
     margin: 30px;
-=======
-    width: 75%;
-    height: 170px;
->>>>>>> b98a174a7b41d917af67fa7700dd950053881cf5
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -148,90 +143,7 @@ span.cuenta button:hover{
     width: 94%;
 }
 
-<<<<<<< HEAD
-=======
-
-
-
-/*tamaño chico*/
-@media (max-width:450px) {
-    .logo-registro {
-        width: 100%;
-        height: 100%;
-       padding-left: 85px;
-    }
-    
-    /*para el boton naranja*/
-span.cuenta button{
-    margin-left: 85px;
-    text-decoration: underline;
-    font-size: 20px;
+.container .logo img{
+    width: 144px;
+    height: 144px;
 }
-
-/*ingresar los datos de tu cuenta */
-p.ingreso {
-    margin-left: 85px;
-    font-size: 20px;
-}
-
-/*volver al menú de inicio*/
-span a.link {
-    margin-left: 85px;
-    font-size: 20px;
-}
-}
-
-
-
-
-
-/*tamaño mas chico*/
-@media (max-width:700px) {
-    .logo-registro {
-        width: 100%;
-        height: 100%;
-       padding-left: 5px;
-    }
-    
-    /*para el boton naranja*/
-span.cuenta {
-    width: 200px;
-    height: 20px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 90px;
-    text-decoration: underline;
-    margin-bottom: 10px;
-}
-
-span.cuenta button {
-   font-size: 17px;
-}
-
-/*ingresar los datos de tu cuenta */
-p.ingreso {
-    margin-left: 85px;
-    font-size: 20px;
-   width: 100%;
-}
-
-/*volver al menú de inicio*/
-span a.link {
-    margin-left: 45px;
-    font-size: 20px;
-    margin-right: 40px;
-}
-
-.padre{
-    width: 80%;
-    height: 170px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-}
->>>>>>> b98a174a7b41d917af67fa7700dd950053881cf5

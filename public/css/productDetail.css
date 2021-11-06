@@ -29,13 +29,25 @@ body{
 }
 
 .small-img-row{
-    display:flex;
-    justify-content: space-around;
-    justify-content: flex-start;
+    display: flex;
     flex-direction: row;
-    align-content: center;
-    flex-wrap: nowrap;
+    position: relative;
+    bottom:550px;
+    
 }
+
+
+
+#ProductImg {
+    margin-left:100px;
+    width: 600px;
+    height: 600px;
+    border-right: 1px solid rgb(155, 154, 154);
+    object-fit: contain;
+}
+
+
+
 
 .col-2 img{
     max-width: 100%;
@@ -58,7 +70,22 @@ body{
 .col-2 {
     flex-basis:50%;
     min-width: 300px;
+    
 }
+
+
+
+
+
+.datos span{
+    color:rgb(22, 10, 194)
+    
+
+}
+
+
+
+
 
 .col-2 h1{
     font: 50px;
@@ -100,6 +127,7 @@ a{
 }
 p{
     color:#555;
+    margin: 10px 10px;
 }
 
 .btn{
