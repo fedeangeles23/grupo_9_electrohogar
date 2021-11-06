@@ -455,6 +455,9 @@
     .pago-mobile{
         display: none;
     }
+    .container3-mobile{
+        display: none;
+    }
 }
 
 /* Versión mobile */

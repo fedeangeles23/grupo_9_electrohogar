@@ -32,10 +32,10 @@ body {
 }
 
  /*para separar la caja no tengo cuenta con olvide mi contraseña, le dio color a olvide mi contraseña*/
-span a.link {
-margin: 25px;
-margin-bottom: 90px;
-color: black;
+ span a.link {
+     margin: 25px;
+     margin-bottom: 90px;
+     color: black;
 }
 
 /*para mover la caja de olvide mi contraseña*/
@@ -89,6 +89,7 @@ span.cuenta button:hover{
     color:#fff;
 }
 
+<<<<<<< HEAD
 @media all and (max-width:30em){
      span.cuenta button{
     display:block;
@@ -110,6 +111,31 @@ span.cuenta button:hover{
 
     nav {
         display:none;
+=======
+
+/*tamaño escritorio*/
+@media(min-width:770px) {
+    .container {
+    width: 100%;
+    height: 100%;
+    }
+    p.ingreso {
+        font-size: 30px;
+    }
+    .form input {
+        margin-bottom: 30px;
+        width: 350px;
+        height: 45px;
+        padding-left: 10px;
+    }
+    input.input-style {
+        font-size: 30px;
+    }
+    button.btn.btn-continue, .btn.btn-cuenta {
+        width: 350px;
+        height: 65px;
+        font-size: 30px;
+>>>>>>> b98a174a7b41d917af67fa7700dd950053881cf5
     }
 
     header {
@@ -133,6 +159,7 @@ span.cuenta button:hover{
         margin-bottom:15px;
     }
 
+<<<<<<< HEAD
     header .buscar input {
         width:90%;
   }
@@ -235,3 +262,21 @@ span.cuenta button:hover{
 
 
     } /*END RESPONSIVE*/ 
+=======
+@media(max-width:370px) {
+    /*para mover la caja de olvide mi contraseña*/
+ .olvide{
+    padding-top: 10px; 
+    font-size: 14px;
+}
+
+/*para los botones naranja*/
+span.cuenta button{
+    font-size: 15px;
+    width: 200px;
+    height: 35px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+}
+>>>>>>> b98a174a7b41d917af67fa7700dd950053881cf5
