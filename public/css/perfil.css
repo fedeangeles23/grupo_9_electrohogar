@@ -35,8 +35,11 @@ body {
      font-size: 16px;
     }
 
-    p.perfil2 {
-        font-size: 16px;
+    .perfil2 {
+        font-size: 17px;
+        text-align: left;
+        margin:15px;
+
     }
 
     /*parte de la tabla de aca... */
@@ -73,30 +76,38 @@ td {
 
 /*titulo bienvenido cosme fulanito....*/
 p.bienvenido {
-    color: orange;
+    color: rgb(15, 15, 15);
     display: flex;
     justify-content: center;
     font-size: 20px;  
     margin-bottom: 20px;
+    margin-top:100px;
 }
 
+
+p.bienvenido b {
+    color:rgb(0, 26, 255);
+    margin: 0 5px;
+}
 /*para el titulo mis datos*/
 .datos {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
     font-size: 25px;
-    font-style: italic;
+    text-transform: uppercase;
 }
 
 /*para el botones naranja*/
 span.cuenta button{
-    background-color: orange;
+    background-color: rgb(17, 0, 255);
     color: white;
     font-size: 13px;
     width: 130px;
     height: 25px;
-    border-radius: 10px;
-    margin-left: 130px;
+    border-radius: 5px;
+    margin: 15px 0 200px;
+    
 }
 
 
@@ -147,7 +158,7 @@ span.cuenta button{
 /*para el titulo mis compras*/
 .datos {
     display: flex;
-    margin-bottom: 20px;
+    margin: 20px;
     justify-content: center;
     align-items: center;
     font-size: 23px;
@@ -155,11 +166,8 @@ span.cuenta button{
 
 /*para el botones naranja*/
 span.cuenta button{
-<<<<<<< HEAD
     display: inline-block;
     padding: 8px 7px;
-      margin-top:30px;
-      margin-bottom: 15px;
     border-radius:5px;
     box-sizing: border-box;
     text-decoration:none;
@@ -171,20 +179,12 @@ span.cuenta button{
     transition: all 0.2s;
     width: 140px;
     font-weight: 700;
+    
 }
 
 span.cuenta button:hover{
     background-color:#1d1d1ce5;
     color:#fff;
-=======
-    background-color: orange;
-    color: white;
-    font-size: 17px;
-    width: 150px;
-    height: 40px;
-    border-radius: 20px;
-    margin-left: 540px;
->>>>>>> b98a174a7b41d917af67fa7700dd950053881cf5
 }
 
 /*parte de la tabla de aca... */
@@ -215,12 +215,7 @@ td {
 
 }
 
-<<<<<<< HEAD
 .perfil2  {
-=======
-/*hasta aca*/
-.perfil2 p {
->>>>>>> b98a174a7b41d917af67fa7700dd950053881cf5
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -236,8 +231,3 @@ td {
 }
 
 }
-<<<<<<< HEAD
-
-=======
-}
->>>>>>> b98a174a7b41d917af67fa7700dd950053881cf5
