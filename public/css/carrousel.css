@@ -7,7 +7,7 @@
 
 
 .carrousel .grande {
-    width: 200%;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -16,9 +16,6 @@
     transition: all .5s ease;
     transform: translateX(-50%);
 }
-
-
-
 
 .carrousel .img{
     width: 100%;
@@ -36,13 +33,20 @@
 
 
 .carrousel .punto{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(110, 110, 110);
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.247);
     border-radius: 50px;
     list-style: none;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    cursor: pointer;
+    border: 1px solid rgba(146, 144, 144, 0.466);
 }
 
 .carrousel .punto.activo{
-    background-color: rgb(110, 110, 110);
+    background-color: rgba(255, 174, 0, 0.959);
+    border: 2px solid rgba(255, 174, 0, 0.959);;
+    transition: 0.2s all;
+
 }

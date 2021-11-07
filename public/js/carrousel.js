@@ -14,7 +14,7 @@ punto[i].addEventListener('click',() =>{
         //guardar la posicion de ese PUNTO
         let posicion = i 
         //calculado el espacio que se desplaza el contenedor grande
-        let operacion = posicion * -60
+        let operacion = posicion * -100
 
             //Mueve la imagen
         grande.style.transform = `translateX(${ operacion }%)`
