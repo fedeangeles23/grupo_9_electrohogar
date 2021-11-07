@@ -573,3 +573,16 @@ padding:0px 14px;
 
     } /*END RESPONSIVE*/ 
   
+
+
+
+    /*SCROLL*/
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(223, 216, 216);
+    border-radius: 50px;
+}

@@ -59,6 +59,7 @@ body{
     
 }
 
+
 .single-product .col-2 img {
     padding:0;
 }
@@ -67,36 +68,71 @@ body{
     padding:20px;
 }
 
-.col-2 {
-    flex-basis:50%;
+.col-2right {
+    flex-basis: 50%;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 500px;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: stretch;
     
 }
 
+.col-2right span {
+    color:rgb(3, 3, 158);
+}
 
+.col-2right select {
+    height: 20%;
+    width: 15%;
+    text-align: center;
+    margin-bottom: 5px;
+    
+}
 
 
 
 .datos span{
     color:rgb(22, 10, 194)
     
-
 }
 
 
 
 
 
-.col-2 h1{
+.col-2right h1{
     font: 50px;
     line-height: 60px;
-    margin:25px 0;
-}
+    
+    }
+    
+    .col-2right h3{
+        margin-top: 20px;
+    }
+
+    
+    .col-2right .btn {
+        width: 150px;
+        text-align: center;
+        margin:20px 0px;
+    }
+
+    .col-2right .btn-cuotas {
+        width: 300px;
+        text-align: center;
+        margin:0;
+    }
+
 
 .single-product select{
     display:block;
     padding:10px;
     margin-top:20px;
+    width: 200px;
 }
 
 .single-product h4 {

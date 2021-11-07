@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../public/images/electrohogarlogo.png">
     <link rel="stylesheet" href="/public/css/home.css">
     <link rel="stylesheet" href="/public/css/HeaderNavFooter.css">
+    <link rel="stylesheet" href="/public/css/carrousel.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/fb257ce5bf.js" crossorigin="anonymous"></script>
@@ -16,6 +17,8 @@
 
 
 <body>
+
+
     <input type="checkbox" id="check">
 
     <header>
@@ -67,11 +70,29 @@
         </ul>
     </nav>
 
+
+    <div class="carrousel">
+        <div class="grande">
+            <img src="/public/images/carrouselimg1.webp" alt="imagen 1" class="img">
+            <img src="/public/images/carrouselimg2.webp" alt="imagen 1" class="img">
+            <img src="/public/images/carrouselimg3.webp" alt="imagen 1" class="img">
+        </div>
+
+        <ul class="puntos">
+                <li class="punto activo"></i></li>
+                <li class="punto"></li>
+        </ul>
+
+    </div>
+
+
+<!-- 
     <section> 
-        <div class="carrousel">
+        
+        <div class="carrousel3">
             <img src="/public/images/carrouselimg1.webp" alt="">
         </div>
-    </section>
+    </section> -->
 
     <main>
         <div class="section">
@@ -252,6 +273,7 @@
 
     </footer>
 
+    <script defer src="/public/js/carrousel.js"></script>
 </body>
 
 </html>
