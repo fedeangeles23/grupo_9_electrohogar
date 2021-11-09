@@ -15,6 +15,8 @@ app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}
 http://localhost:${PORT}
 `));
 
+
+
 //middlewares
 
 app.use(express.static('/public/'));
@@ -27,6 +29,27 @@ app.get('/', function (req, res){
     res.sendFile(path.join(__dirname, './views/home.html'))
 });
 
-// Servidor levantado con exito
 
+app.get('/carrito', function (req, res){
+    res.sendFile(path.join(__dirname, './views/carrito.html'))
+});
+
+app.get('/login', function (req, res){
+    res.sendFile(path.join(__dirname, './views/login.html'))
+});
+
+app.get('/perfil', function (req, res){
+    res.sendFile(path.join(__dirname, './views/perfil.html'))
+});
+
+app.get('/productDetail', function (req, res){
+    res.sendFile(path.join(__dirname, './views/productDetail.html'))
+});
+
+app.get('/registro', function (req, res){
+    res.sendFile(path.join(__dirname, './views/registro.html'))
+});
+
+
+// Servidor levantado con exito
 

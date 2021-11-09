@@ -118,7 +118,7 @@
  }
 
  .button-group .buy{
-     background-color:#63187D;
+     background-color: #fb8500;
      font-size: 14px;
      padding: 8px 20px;
      border-radius:5px;
@@ -129,8 +129,8 @@
  }
 
  .button-group .buy:hover{
-     background-color: #5b0179;
-     transition: 0.6s ease;
+    transition: 0.6s ease;
+    
  }
 
  .button-group .cart {
