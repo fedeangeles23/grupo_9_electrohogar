@@ -173,9 +173,14 @@ header .bar {
 
 }
 
+header .btnavmobile {
+    display: flex;
+    
+}
+
 header .bar span {
     position:absolute;
-    color:#Fff;
+    color:rgb(163, 51, 51);
     font-size:35px;
 }
 
@@ -506,13 +511,11 @@ padding:0px 14px;
         }
 
         header .bar span {
-            color:rgb(255, 255, 255);
-            background-color:transparent;
-            padding:4px;
-            border-radius: 5px;
+            color:rgb(80, 77, 77);
            font-weight: bold; 
            width: 40px;
            height:40px;
+        
         }
 
         header .bar #times{

@@ -12,9 +12,10 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    height: 400px;
+    height: 250px;
     transition: all .5s ease;
     transform: translateX(-50%);
+    z-index: 0;
 }
 
 .carrousel .img{
@@ -29,12 +30,13 @@
     justify-content: center;
     align-items: center;
     border: 50px;
+    z-index: 99;
 }
 
 
 .carrousel .punto{
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: rgba(255, 255, 255, 0.247);
     border-radius: 50px;
     list-style: none;
