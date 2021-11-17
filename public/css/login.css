@@ -8,9 +8,8 @@
 
 /*cambie el tamaño de las letras*/
 body {
-    background-color: #E8E8E4;
+    background-color: rgb(198, 207, 211);
   font-family: 'Roboto', sans-serif;
-  
 }
 
 .logoLogin img{
@@ -31,6 +30,7 @@ body {
     display: flex;
     flex-direction: row-reverse; 
     margin-left: 30px;
+    font-weight: bold;
 }
 
  /*para separar la caja no tengo cuenta con olvide mi contraseña, le dio color a olvide mi contraseña*/
@@ -38,6 +38,7 @@ body {
      margin: 25px;
      margin-bottom: 90px;
      color: black;
+     font-weight: bold;
 }
 
 /*para mover la caja de olvide mi contraseña*/
@@ -45,15 +46,19 @@ body {
     padding-top: 10px; 
 }
 
+/*ingresa los datos de tu cuenta*/
 .ingreso {
-    font-size: 16px;
+
+    font-size: 22px;
+    margin-bottom: 40px;
+    font-style:oblique;
     font-weight: bold;
-    margin-bottom: 15px;
 }
 
 /*para q no se vean los errores*/
 .error {
     display: none;
+    color: red;
 }
 
 /*el espacio entrer las cajas de email y contraseña*/
@@ -62,21 +67,25 @@ body {
     width: 250px;
     height: 35px;
     padding-left: 10px;
-/*para el recuadro branco*/
-border: none;
-
 }
 
 /*para los botones naranja*/
 span.cuenta button{
-    background-color: orange;
-    color: white;
-    text-decoration: underline;
-    font-size: 17px;
+    background-color: rgb(245, 119, 16);
+    color: black;
+    font-weight: bold ;
+    font-size: 15px;
     width: 225px;
     height: 40px;
     border-radius: 20px;
     margin-bottom: 30px;
+}
+
+span.cuenta button:hover {
+    background-color: white;
+    color: black;
+    font-size: 29px;
+    font-weight: bold;
 }
 
 
