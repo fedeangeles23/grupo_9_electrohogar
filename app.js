@@ -7,7 +7,7 @@
 
 const express = require('express');
 const app = express();
-const PORT = 3030;
+const PORT = 3000;
 const path = require('path')
 
 
@@ -19,16 +19,15 @@ http://localhost:${PORT}
 
 //middlewares
 
-app.use(express.static('/public/'));
+app.use(express.static(__dirname));
 
 //------------------Rutas---------------------// 
-// el metodo dentro de sendfile Join() busca la ruta en donde estamos, primer parametro __dirname hace referencia al directorio en donde estamos, el segundo parametro es el path relativo que 
-//queremos enviar, en este caso views/index.html
+ /* el metodo dentro de sendfile Join() busca la ruta en donde estamos, primer parametro __dirname hace referencia al directorio en donde estamos,
+ el segundo parametro es el path relativo que queremos enviar, en este caso views/index.html */
 
 app.get('/', function (req, res){
     res.sendFile(path.join(__dirname, './views/home.html'))
 });
-
 
 app.get('/carrito', function (req, res){
     res.sendFile(path.join(__dirname, './views/carrito.html'))
