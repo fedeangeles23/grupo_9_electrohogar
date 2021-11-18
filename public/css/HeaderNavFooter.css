@@ -36,6 +36,7 @@ header {
 header .headernav {
     display:flex;
    padding:12px;
+   
 }
 
 header .iconcarrito {
