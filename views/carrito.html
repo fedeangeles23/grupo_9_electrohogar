@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificación de compra</title>
-    <link rel="stylesheet" href="../public/css/carrito.css">
-    <link rel="stylesheet" href="../public/css/HeaderNavFooter.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/fb257ce5bf.js" crossorigin="anonymous"></script>
-
+    <title>Carrito</title>
 </head>
-
 <body>
+
     <input type="checkbox" id="check">
 
     <header>
         <div class="logomain">
-
             <a href="home.html"><img class="logo" src="/public/images/electrohogarlogo2resuelto.png" alt=""></a>
         </div>
         <div class="buscar">
             <input type="search" placeholder="Buscar productos..">
             <i class="fas fa-search"></i>
         </div>
-
         <div class="headernav">
             <ul>
                 <li><a href="carrito.html"><img class="iconcarrito" src="/public/icons/shopping-cart.png"
@@ -38,12 +33,9 @@
             <label for="check" class="bar">
                 <span class="fa fa-bars" id="bars"></span>
                 <span class="fa fa-times" id="times"></span>
-
             </label>
         </div>
-
     </header>
-
     <nav>
         <ul>
             <li href="#">Categorias</li>
@@ -56,121 +48,39 @@
             <li href="#">Lavado</li>
             <li href="#">Colchones</li>
             <li href="#">Gaming</li>
-
         </ul>
     </nav>
     &nbsp;
-    <main>
 
-        <!-- Texto y enlaces superioriores -->
+    <main>
         <div class="textSuperior">
-            <p><a href="#">Inicio</a> > <a href="#">Tecnología</a> > <a href="#">Celulares y Accesorios</a> > <a
+            <p><a href="#">Inicio > </a><a href="#">Tecnología > </a><a href="#">Celulares y Accesorios > </a><a
                     href="#">Motorola</a></p>
         </div>
 
-        <!-- Contenedor de detalles [Carrito-Verificación-Pago] -->
-        <div class="container1">
-            <!-- Primer contenedor -->
-
-            <div class="container-proccess1">
-                <!-- Cajita del carrito -->
+        <!-- Contenedor triple que indica la sección actual -->
+        <div class="container-text">
+            <div class="container-text1">
                 <p>Carrito</p>
             </div>
-
-            <div class="container-proccess2">
-                <!-- Cajita de la verificación -->
-                <p>Verificación compra</p>
+            <div class="container-text2">
+                <p>Verificación de compra</p>
             </div>
-
-            <div class="container-proccess3">
-                <!-- Cajita de Forma de pago -->
+            <div class="container-text3">
                 <p>Forma de pago</p>
             </div>
-
         </div>
 
-        <!-- Cajita del texto carrito mobile -->
-        <div class="carrito-mobile">
-            <p>Carrito</p>
-        </div>
-
-        <!-- Barra decorativa de color negro -->
-        <div class="container2"></div>
-
-        <!-- Barra decorativa de color negro versión mobile -->
-
-        <div class="black-bar-tablet"></div>
-
-        <!-- Contenedor de los productos -->
-        <div class="container3">
-            <div class="box1">
-                <img src="/img/mogogs60.webp" alt="Moto G s60">
-            </div>
-            <div class="box2">
-                <p>Celular Motorola G60s 128gb Aqua</p>
-            </div>
-            <div class="box3">
-                <select name="cantidad" id="cantidad">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <label for="box3">x $49.000,00</label>
-            </div>
-            <div class="box4">
-                <a href="#">Eliminar del carrito</a>
-            </div>
-
-            <div class="box5">
-                <a href="#">Guardar para después</a>
-            </div>
-        </div>
-
-        <!-- Contenedor de los productos -->
-        <div class="container3">
-            <div class="box1">
-                <img src="/img/mogogs60.webp" alt="Moto G s60">
-            </div>
-            <div class="box2">
-                <p>Celular Motorola G60s 128gb Aqua</p>
-            </div>
-            <div class="box3">
-                <select name="cantidad" id="cantidad">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <label for="box3">x $49.000,00</label>
-            </div>
-            <div class="box4">
-                <a href="#">Eliminar del carrito</a>
-            </div>
-
-            <div class="box5">
-                <a href="#">Guardar para después</a>
-            </div>
-        </div>
-
-        <div class="container3-tablet">
-            <div class="box1-tablet">
-                <div class="img-tablet">
-                    <img src="/img/mogogs60.webp" alt="Moto G s60">
+        <!-- Contenedor del producto y su información -->
+        <div class="box1">
+            <div class="product-container">
+                <div class="product">
+                    <img src="/public/images/mogogs60.webp" alt="Moto G s60">
                 </div>
-                <div class="column-tablet">
-                    <div class="info-tablet">
-                        <p>Celular Motorola G60s 128gb Aqua</p>
-                    </div>
-                    <div class="info2-tablet">
-                        <p>$49.000,00</p>
-                    </div>
+                <div class="product-name">
+                    <p>Celular Motorola G60s 128gb Aqua</p>
                 </div>
-            </div>
-            <div class="box2-tablet">
-                <div class="desplegagle-tablet">
+                <div class="add-unit">
                     <select name="cantidad" id="cantidad">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -178,29 +88,30 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                    <label for="add-product">x $49.000,00</label>
                 </div>
-                <div class="icon-tablet">
+                <div class="delet-product-t">
                     <i class="fas fa-trash-alt"></i>
+                </div>
+                <div class="delet-product">
+                    <a class="btn delete-item" href="#">Quitar del carrito</a>
+                </div>
+                <div class="add-product-fav">
+                    <a class="btn add-favorite" href="#">Añadir a favoritos</a>
                 </div>
             </div>
         </div>
         
-        <div class="container3-tablet">
-            <div class="box1-tablet">
-                <div class="img-tablet">
-                    <img src="/img/mogogs60.webp" alt="Moto G s60">
+        <!-- Repetición de código para muestra -->
+        <div class="box1">
+            <div class="product-container">
+                <div class="product">
+                    <img src="/public/images/mogogs60.webp" alt="Moto G s60">
                 </div>
-                <div class="column-tablet">
-                    <div class="info-tablet">
-                        <p>Celular Motorola G60s 128gb Aqua</p>
-                    </div>
-                    <div class="info2-tablet">
-                        <p>$49.000,00</p>
-                    </div>
+                <div class="product-name">
+                    <p>Celular Motorola G60s 128gb Aqua</p>
                 </div>
-            </div>
-            <div class="box2-tablet">
-                <div class="desplegagle-tablet">
+                <div class="add-unit">
                     <select name="cantidad" id="cantidad">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -208,99 +119,105 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
+                    <label for="add-product">x $49.000,00</label>
                 </div>
-                <div class="icon-tablet">
+                <div class="delet-product-t">
+                    <i class="fas fa-trash-alt"></i>
+                </div>
+                <div class="delet-product">
+                    <a class="btn delete-item" href="#">Quitar del carrito</a>
+                </div>
+                <div class="add-product-fav">
+                    <a class="btn add-favorite" href="#">Añadir a favoritos</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="total-pay">
+            <div class="product">
+                <a class="btn add-product" href="#">Añadir producto</a>
+            </div>
+            <div class="cupon-d">
+                <input class="input-style-d" type="cupon-d" name="name" placeholder="CÓDIGO DE DESCUENTO">
+                <button class="btn2" type="submit">Validar cupón</button>
+            </div>
+            <p>TOTAL A PAGAR: $96.000,00</p>
+            <div class="stepaso">
+                <a class="btn stepaso" href="#">Siguiente paso</a>
+            </div>
+        </div>
+
+        <!-- Estructura reservada para versión tablet -->
+        <div class="total-pay-t">
+            <div class="grupo1-t">
+                    <div class="flex1">
+                        <a class="btn-t add-product" href="#">Añadir producto</a>
+                        <a class="btn-t add-favorite-t" href="#">Añadir a favoritos</a>
+                    </div>
+                    <div class="flex2">
+                        <a class="btn-t sgrcomprando" href="">Seguir comprando</a>
+                        <a class="btn-t stepaso" href="#">Siguiente paso</a>
+                    </div>
+            </div>
+            <div class="grupo2-t">
+                <div class="cupon-t">
+                    <input class="input-style-t" type="cupon-t" name="name" placeholder="CÓDIGO DE DESCUENTO">
+                    <button class="btn2-t" type="submit">Validar</button>
+                </div>
+                <div class="total-price-t"><p>TOTAL A PAGAR: $96.000,00</p></div>
+            </div>
+        </div>
+
+        <!-- Estructuras reservadas para la versión mobile -->
+        <div class="container-mobile">
+            <div class="img-mobile">
+                <img src="/public/images/mogogs60.webp" alt="Moto G s60">
+            </div>
+
+            <div class="info-mobile">
+                <p>Celular Motorola G60s 128gb Aqua</p>
+            </div>
+
+            <div class="content-mobile">
+                <div class="desplegagle-mobile">
+                    <select name="cantidad" id="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <label for="box3">x $49.000,00</label>
+                </div>
+                <div class="icon-mobile">
                     <i class="fas fa-trash-alt"></i>
                 </div>
             </div>
         </div>
 
-        <!-- Contenedor de producto versión mobile -->
-        <div class="container3-mobile">
+        <!-- Contenedor de relleno para muestra -->
+        <div class="container-mobile">
+            <div class="img-mobile">
+                <img src="/public/images/mogogs60.webp" alt="Moto G s60">
+            </div>
+
+            <div class="info-mobile">
+                <p>Celular Motorola G60s 128gb Aqua</p>
+            </div>
+
             <div class="content-mobile">
-                <div class="img-mobile">
-                    <img src="/img/mogogs60.webp" alt="Moto G s60">
+                <div class="desplegagle-mobile">
+                    <select name="cantidad" id="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <label for="box3">x $49.000,00</label>
                 </div>
-                <div class="info-mobile">
-                    <p>Celular Motorola G60s 128gb Aqua</p>
-                </div>
-                <div class="content-mobile2">
-                    <div class="desplegagle-mobile">
-                        <select name="cantidad" id="cantidad">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <label for="box3">x $49.000,00</label>
-                    </div>
-                    <div class="icon-mobile">
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container3-mobile">
-            <div class="content-mobile">
-                <div class="img-mobile">
-                    <img src="/img/mogogs60.webp" alt="Moto G s60">
-                </div>
-                <div class="info-mobile">
-                    <p>Celular Motorola G60s 128gb Aqua</p>
-                </div>
-                <div class="content-mobile2">
-                    <div class="desplegagle-mobile">
-                        <select name="cantidad" id="cantidad">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <label for="box3">x $49.000,00</label>
-                    </div>
-                    <div class="icon-mobile">
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contenedor para confirmar el pago -->
-        <div class="container4">
-            <div class="cupon">
-                <input class="input-style" type="cupon" name="name" placeholder="CÓDIGO DE DESCUENTO">
-                <button class="btn2" type="submit">Validar cupón</button>
-            </div>
-            <p>TOTAL A PAGAR: $96.000,00</p>
-            <div class="product">
-                <a class="btn btn-add-product" href="#">Añadir producto</a>
-            </div>
-            <div class="stepaso">
-                <a class="btn btn-add-product" href="#">Siguiente paso</a>
-            </div>
-        </div>
-
-        <!-- Contenedor para confirmar el pago versión Tablet -->
-        <div class="pago-tablet">
-            <div class="flex">
-                <div class="product">
-                    <a class="btn-tablet" href="#">Añadir producto</a>
-                </div>
-                <div class="stepaso">
-                    <a class="btn-tablet" href="#">Siguiente paso</a>
-                </div>
-            </div>
-
-            <div class="flex2">
-                <div class="cupon">
-                    <input class="input-tablet" type="cupon" name="name" placeholder="Código de descuento">
-                    <button class="btn-tablet2" type="submit">Validar</button>
-                </div>
-                <div class="tpago">
-                    <p>TOTAL A PAGAR: $96.000,00</p>
+                <div class="icon-mobile">
+                    <i class="fas fa-trash-alt"></i>
                 </div>
             </div>
         </div>
@@ -312,32 +229,35 @@
                 <input class="input-mobile" type="cupon" name="name" placeholder="CÓDIGO DE DESCUENTO">
                 <button class="btn2-mobile" type="submit">Validar cupón</button>
             </div>
+
             <p>TOTAL A PAGAR: $96.000,00</p>
+
             <div class="flex-mobile">
+
                 <div class="product-mobile">
                     <a class="btn-mobile" href="#">Añadir producto</a>
                 </div>
+
                 <div class="stepaso-mobile">
                     <a class="btn-mobile" href="#">Siguiente paso</a>
                 </div>
+
             </div>
         </div>
-        &nbsp;
+
     </main>
 
+    <!-- Contenedor para generar espacio vacío entre el main y el footer -->
+    <div class="espacio-vacio"></div>
 
     <footer>
-
         <div class="footertop">
-
-
             <div class="emailsub">
                 <span>¡Recibí nuestras promociones exclusivas! </span>
 
                 <input type="email" class="inputemail" name="email" id="" placeholder="Ingresá tu e-mail...">
                 <input type="submit" value="Suscribirse" class="confirmaremail" />
             </div>
-
             <div class="contenedorventatelefonica">
 
                 <b class="bRED"> VENTA TELEFONICA: </b> <span class="numerotel"> 0810-111-0707 </span>
@@ -346,7 +266,6 @@
                     de <b>9</b> a <b> 20 </b> hs / Sáb. de <b>9</b> a <b>18</b> hs
                 </div>
             </div>
-
             <div class="social">
                 <a href="https://www.facebook.com/electroHogar"><img src="../public/icons/facebook.png"
                         alt="Seguinos en Facebook" class="facebook"></a>
@@ -357,11 +276,9 @@
                 <a href="www.youtube.com/electroHogar"><img src="../public/icons/youtube.png" alt="Seguienos en Youtube"
                         class="youtube"></a>
             </div>
-
         </div>
         <section>
             <div class="footercentral">
-
                 <div class="footercolumna2Row">
                     <h3>Categorias</h3>
                     <ul>
@@ -372,7 +289,6 @@
                         <li>Climatizacion</li>
                     </ul>
                 </div>
-
                 <div class="footercolumna3Row">
                     <h3>Nosotros</h3>
                     <ul>
@@ -380,20 +296,8 @@
                         <li>Trabaja con nosotros</li>
                         <li>Quienes somos</li>
                         <li>Terminos y condiciones</li>
-
                     </ul>
-
                 </div>
-
-
-
-
-
             </div>
         </section>
-
     </footer>
-
-</body>
-
-</html>
