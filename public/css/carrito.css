@@ -1,637 +1,565 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* TEXTO SUPERIOR */
+/* Prosición del texto superior */
 .textSuperior{
     margin-left: 10px;
     margin-top: 5px;
 }
-
+/* Estilo del texto superior */
 .textSuperior a{
     text-decoration: none;
-    color: #101010; /* Color de fondo */
+    font-family: Roboto, sans-serif;
+    font-weight: 200px;
+    color: var(--color-black2);
 }
 
-.container1{ /* El primer contenedor de 3 cajas con carrito,etc */
-    display: flex; /* Para que las cajitas estén una al lado del otro */
-    margin-bottom: 5px;
-    border: 1px solid #EDEDED;
-    box-shadow: 0px 0px 5px #2D2D2D;
-    width: 1140px; /* el ancho de la caja */
-    margin-top: 30px; /* Distancia al márgen superior de 30px */
+/* Configuración del contenedor padre */
+.container-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 1110;
+}
+/* Configuración del texto 1 */
+.container-text1{
+    width: 370px;
+    height: 40px;
+    align-self: center;  
+    background:var(--color-especial1);
+    border: 1px solid var(--color-white-gray);
+    border-color: var(--fine-border1);
+    box-shadow: 0px 0px 1px;
+}
+/* Configuración del texto 2 */
+.container-text2{
+    width: 370px;
+    height: 40px;
+    align-self: center;
+    background:var(--color-especial2);
+    border: 1px solid var(--color-white-gray);
+    border-color: var(--fine-border1);
+    box-shadow: 0px 0px 1px;
+}
+/* Configuración del texto 3 */
+.container-text3{
+    width: 370px;
+    height: 40px;
+    align-self: center;
+    background:var(--color-especial2);
+    border: 1px solid var(--color-white-gray);
+    border-color: var(--fine-border1);
+    box-shadow: 0px 0px 1px;
+}
+/* Estilos para las fuentes de los contenedores */
+.container-text p{
+    color: var(--color-black-gray);
     font-family: Roboto,sans-serif;
-    color: #EDEDED;
+    font-weight:500;
+    text-align: center;
+    text-transform:uppercase;
+    margin-top: 11px;
+}
+/* Contenedor padre del producto */
+.box1{
+    background: var(--color-white1);
     margin-left: auto;
     margin-right: auto;
-}
-
-.container1 .container-proccess1 { /* Esta es la primer cajita */
-    background-color: #009688; /* el color de la cajita */
-    width: 380px; /* el ancho de la caja */
-    height: 40px; /* la altura de la caja */
-}
-
-.container-proccess1 p{
-    text-align: center; /* Para que el texto esté en el centro */
-    margin-top: 11.5px;
-}
-
-.container1 .container-proccess2 { /* Esta es la primer cajita */
-    background-color: #35529C; /* el color de la cajita */
-    width: 380px; /* el ancho de la caja */
-    height: 40px; /* la altura de la caja */
-}
-
-.container-proccess2 p{
-    text-align: center; /* Para que el texto esté en el centro */
-    margin-top: 11.5px;
-}
-
-.container1 .container-proccess3 {
-    background-color: #35529C; /* el color de la cajita */
-    width: 380px; /* el ancho de la caja */
-    height: 40px; /* la altura de la caja */
-}
-.container-proccess3 p{
-    text-align: center; /* Para que el texto esté en el centro */
-    margin-top: 11.5px;
-}
-
-/* SEGUNDO CONTENEDOR */
-
-.container2{
-    background-color: #2D2D2D; /* La cajita lateral negra sobre el tercer contenedor */
-    width: 1140px; /* el ancho de la caja */
-    height: 10px; /* la altura de la caja */
-    border: 1px solid #2D2D2D;
-    margin-left: auto; /* Acomoda automáticamente el márgen del centro a la izquierda */
-    margin-right: auto; /* Acomoda automáticamente el márgen del centro a la derecha */
-    margin-top: 20px; /* Distancia al margen inferior del primer contenedor */
-}
-
-/* TERCER CONTENEDOR */ 
-/* Producto 1 */
-
-.container3{
-    margin-top: 2px;
-    display: flex;
-    background-color: #FAFAFA;
-    border: 1px solid #2D2D2D;
-    width: 1140px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-evenly;
-}
-
-.container3 .box1{
-    margin-top: 10px;
-}
-
-.container3 .box2 p{
-    font-family: Roboto, sans-serif;
-    margin-top: 40px;
-}
-
-.container3 .box3{
-    margin-top: 40px;
-}
-
-.container3 .box4{
-    font-family: Roboto, sans-serif;
-    margin-top: 40px;
-}
-
-.container3 .box5{
-    font-family: Roboto, sans-serif;
-    font-weight: normal;
-    margin-top: 40px;
-}
-
-.container3 img{
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
-    border-style:solid;
-    border-width: 1px;
-}
-
-/* TERCER CONTENEDOR */
-/* Producto 2 */
-
-.container3{
-    margin-top: 2px; 
-    background-color: #FAFAFA;
-    border: 1px solid #2D2D2D;
-    width: 1140px;
     height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-evenly;
+    width: 1110px;
+    margin-top: 5px;
+    border: 1px solid var(--color-white-gray);
+    border-color: var(--fine-border1);
+    box-shadow: 0px 0px 1px;
 }
-
-.container3 .box1{
-    margin-top: 10px;
+/* Contenedor del producto y su información */
+.product-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 14px;
 }
-
-.container3 .box2 p{
-    font-family: Roboto, sans-serif;
-    margin-top: 40px;
-}
-
-.container3 .box3{
-    margin-top: 40px;
-}
-
-.container3 .box4 a{
-    font-family: Roboto, sans-serif;
-    font-weight:100px;
-    margin-top: 40px;
-    text-decoration: none;
-    color: #2D2D2D;
-}
-
-.container3 .box5 a{
-    font-family: Roboto, sans-serif;
-    font-weight:100px;
-    margin-top: 40px;
-    text-decoration: none;
-    color: #2D2D2D;
-}
-
-.container3 img{
+/* Configuración de la imágen */
+.product img{
     width: 70px;
     height: 70px;
     border-radius: 100%;
     border-style:solid;
-    border-width: 1px;
-    border-color: lightslategrey ;
+    border-width: 0px;
+    border-color: var(--color-white-gray);
+    box-shadow: 0px 0px 2px;
 }
-
-/* CUARTO CONTENEDOR */
-/* Total a pagar, etc */
-
-.container4{ /* El contenedor inferior de cupón,agregar,total,etc */
-    background-color: #EDEDED;
-    width: 1140px; /* el ancho de la caja */
-    height: 90px; /* la altura de la caja */
-    margin-left: auto; /* Acomoda automáticamente el márgen del centro a la izquierda */
-    margin-right: auto; /* Acomoda automáticamente el márgen del centro a la derecha */
-    border: 1px solid #2D2D2D; /* Definición del borde para contener el blanco dentro */
-    margin-top: 4px;
+/* Estilo de la fuente en el contenedor de producto */
+.product-container p,a{
+    font-family: Roboto,sans-serif;
+    text-decoration: none;
+    color: var(--color-black-gray);
+}
+/* Contenedor padre del total a pagar */
+.total-pay{
     display: flex;
-    justify-content: space-around ;
+    background: var(--color-white-gray);
+    height: 90px;
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid var(--color-white-gray);
+    border-color: var(--fine-border1);
+    box-shadow: 0px 0px 1px;
+    margin-top: 5px;
 }
-
+/* Estilos de la fuente en el total-pay */
+.total-pay a,p,button{
+    font-family: Roboto,sans-serif;
+    text-decoration: none;
+    color: var(--color-black-gray);
+}
+/* Configuración y estilos de los btn */
 .btn{
-    background-color: #2D2D2D; /* color de fondo del botón. */
-    color: #FAFAFA; /* color del texto en código hexadecimal */
-    text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
-    font-family: Roboto, sans-serif; /* Tipo de fuente */
-    font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
-    padding: 10px;  /* el relleno */
-    border-radius: 5px; /* redondeo del botón. */
-    border-color: #2D2D2D;
+    background-color: var();
+    padding: 10px;
+    border-radius: 10px;
 }
-
+/* Estilo Hover para el btn */
 .btn:hover{
-    background-color: #111111;
+    background: var(--color-black2);
+    color: var(--color-white1);
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
+}
+.btn:active{
+    background: var(--color-black-gray);
 }
 
-.btn-add-product{
-    font-size: 15px; /* el tamaño del texto en pixeles. */
-}
-
-.input-style{
+/* Configuración para la caja del código cupón */
+.input-style-d{
     padding: 10px;
     text-align: center;
-    border: 1px solid #828282;
-    border-radius: 5px;
+    border: 1px solid var(--color-black1);
+    border-radius: 4px 0px 0px 4px;
 }
-
+::placeholder {
+    font-size: 12px;
+  }
+/* Configuración y estilos de los btn2 */
 .btn2{
-    background-color: #797373; /* color de fondo del botón. */
-    color: #FAFAFA; /* color del texto en código hexadecimal */
-    text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
-    font-family: Roboto, sans-serif; /* Tipo de fuente */
-    font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
-    padding:11px;
-    border-right: none;
-    border-radius:5px;
-    border:none;
+    background: var(--color-black2);
+    color: var(--color-white-gray);
+    padding: 10px;
+    padding-top: 10px;
+    margin-left: -6px;
+    z-index: 1;
+    border: 1px solid var(--color-black1);
+    border-radius: 0px 4px 4px 0px;
 }
-
 .btn2:hover{
-    background-color: #0805b4d8;
+    background-color: var(--color-black1);
+}
+.btn2:active{
+    background: var(--color-black2);
 }
 
-.container4 p{
-    font-family: Roboto,sans-serif;
-    margin-top: 35px;
-}
+/* Versión All-Desktop */
+@media only screen and (min-width: 1011px){
+    
+    .delet-product-t{
+        display: none;
+    }
 
-.cupon{
-    margin-top: 23px;
-}
+    .btn-t{
+        display: none;
+    }
 
-.product{
-    margin-top: 33.5px;
-}
+    .total-pay-t{
+        display: none;
+    }
 
-.stepaso{
-    margin-top: 33.5px;
-}
+    .container-mobile{
+        display: none;
+    }
 
-.carrito-mobile{
-    display: none;
-}
-.pago-mobile{
-    display: none;
-}
+    .pago-mobile{
+        display: none;
+    }
 
-.pago-tablet{
-    display: none;
-}
+    .container-text{
+        width: 1110;
+    }
 
-.container3-tablet{
-    display: none;
-}
+    .container-text1{
+        min-width: 370px;
+    }
+    /* Configuración del texto 2 */
+    .container-text2{
+        min-width: 370px;
+    }
+    /* Configuración del texto 3 */
+    .container-text3{
+        min-width: 370px;
+       
+    }
 
-.container3-mobile{
-    display: none;
 }
 
 /* Versión Tablet */
+@media only screen and (min-width: 576px) and (max-width: 1010px){
 
-@media only screen 
-  and (min-device-width: 590px) 
-  and (max-device-width: 1024px){
+/* Prescindiendo de ciertos elementos para la versión Tablet */
 
-    .container1{ /* El primer contenedor de 3 cajas con carrito,etc */
-        border: 1px solid #EDEDED;
-        box-shadow: 0px 0px 5px #2D2D2D;
-        box-shadow: 0px 0px 2px;
-        display: flex; /* Para que las cajitas estén una al lado del otro */
-        margin-top: 30px; /* Distancia al márgen superior de 30px */
-        justify-content: center; /* Para que las cajitas queden en el centro */
-        font-family: Roboto,sans-serif;
-        width: 580px;
-        margin-left: auto;
-        margin-right: auto;
+.delet-product{
+    display: none;
     }
 
-    .container2{
-        display: none;
+.add-product-fav{
+    display: none;
     }
 
-    .black-bar-tablet{
-        display: flex;
-        width: 580px; 
-        height: 10px; /* la altura de la caja */
-        background-color: #2D2D2D; /* La cajita lateral negra sobre el tercer contenedor */
-        border: 1px solid #797373;
-        box-shadow: 5px 5px 0px #EDEDED;
-        box-shadow: 0px 0px 2px;
-        margin-left: auto; /* Acomoda automáticamente el márgen del centro a la izquierda */
-        margin-right: auto; /* Acomoda automáticamente el márgen del centro a la derecha */
-        margin-top: 10px;
+.total-pay{
+    display: none;
     }
 
-    .container3{
-        display: none;
+.container-mobile{
+    display: none;
     }
 
-    .container3-tablet{
-        margin-top: 2px;
-        background-color: #FAFAFA;
-        width: 580px;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        padding: 10px;
-        border: 1px solid #797373;
-        box-shadow: 5px 5px 0px #EDEDED;
+.pago-mobile{
+    display: none;
     }
 
-    .box1-tablet{
-        display: flex;
-        width: 370px;
-        justify-content: space-around;
+/* ---------------------------------------------------------- */
+
+/* Configuración del contenedor padre */
+.container-text{
+    margin-top: 30px;
+    width: 588;
+    }
+/* Configuración del texto 1 */
+.container-text1{
+    width: 196px;
+    height: 40px;
+    }
+/* Configuración del texto 2 */
+.container-text2{
+    width: 196px;
+    height: 40px;
+    }
+/* Configuración del texto 3 */
+.container-text3{
+    width: 196px;
+    height: 40px;
+    }
+/* Estilos para las fuentes de los contenedores */
+.container-text p{
+    font-size: small;
+    }
+/* Contenedor padre del producto */
+.box1{
+    width: 588px;
     }
 
-    .box1-tablet .img-tablet{
-        display: flex;
-        align-self: center;
+/* Estilo de la fuente en el contenedor de producto */
+.product-container p{
+    font-size: 14px;
     }
 
-    .img-tablet img{
-        width: 70px;
-        height: 70px;
-        border-radius: 100%;
-        border-style:solid;
-        border-width: 1px;
-        border: 1px solid #797373;
-        box-shadow: 5px 5px 0px #EDEDED;
+/* Total a pagar de la versión Tablet */
+.total-pay-t{
+    display: flex;
+    flex-direction: column;
+    background:var(--color-white-gray);
+    height: 90px;
+    width: 588px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid var(--color-white-gray);
+    border-color: var(--fine-border1);
+    box-shadow: 0px 0px 1px;
+    margin-top: 5px;
     }
 
-    .column-tablet {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+/* Estilo de la fuente de las etiquetas a del total pay */
+.total-pay-t a{
+    font-size: 11px;
     }
 
-    .box2-tablet{
-        display: flex;
-        width: 170px;
-        margin-top: 9px;
-        justify-content: end;
+/* Disponiendo la posición de los elementos del grupo1 */
+.grupo1-t{
+    display: flex;
     }
 
-    .desplegagle-tablet{
-        height: 19px;
-        margin-right: 50px;
+/* Posicionando elementos */
+.flex2{
+   margin-left: 134px;
     }
 
-    .container4{
-        display: none;
+/* Disponiendo la posición de los elementos del grupo2 */
+.grupo2-t{
+    display:flex;
+    align-items: center;
     }
 
-    .pago-tablet{
-        display: flex;
-        flex-direction: column ;
-        height: auto;
-        width: 580px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5px; 
-        background-color: #EDEDED;
-        border: 1px solid #797373;
-        box-shadow: 5px 5px 0px #EDEDED;
+/* Posicionando elementos */
+.total-price-t{
+    margin-left: 160px;
     }
 
-    .flex{
-        display: flex;
-        justify-content: space-between;
-        margin-top: -20px;
-        margin-left: 20px;
-        margin-right: 20px;
+/* Estilos de la fuente en el total-pay */
+.total-pay-t a,p,button{
+    font-family: Roboto,sans-serif;
+    text-decoration: none;
+    color: var(--color-black-gray);
     }
 
-    .flex2{
-        display: flex;
-        justify-content: space-between;
-        margin-top: -5px;
-        margin-bottom: 10px;
-        margin-left: 24px;
-        margin-right: 20px;
+/* Configuración y estilos de los btn */
+.btn-t{
+    padding: 10px;
+    border-radius: 10px;
     }
 
-    .flex2 p{
-        margin-top: 30px;
-        position: relative;
+/* Estilo Hover para el btn */
+.btn-t:hover{
+    background: var(--color-black2);
+    color: var(--color-white1);
+    font-family: Roboto,sans-serif;
+    font-weight: 500;
     }
 
-    .btn-tablet:hover{
-        background-color: #111111;
-    }
-    
-    .btn-tablet{
-        background-color: #2D2D2D;
-        color: #FAFAFA;
-        text-decoration: none;
-        font-family: Roboto, sans-serif;
-        font-weight: 100px;
-        font-size: 10px;
-        padding: 10px; 
-        padding-top: 5px;
-        padding-bottom: 6px;
-        border-radius: 5px;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-    }
-    
-    .btn-tablet2{
-        background-color: #2D2D2D; /* color de fondo del botón. */
-        color: #FAFAFA; /* color del texto en código hexadecimal */
-        text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
-        font-family: Roboto, sans-serif; /* Tipo de fuente */
-        font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
-        font-size: 10px;
-        padding: 5px;
-        border-color: #2D2D2D;
-        border-radius: 0px 4px 4px 0px;
-        margin-left: -4px;
+.btn-t:active{
+    background: var(--color-black-gray);
     }
 
-    .input-tablet{
-        font-size: 10px;
-        padding: 4.2px;
-        margin-left: -4px;
-        border-radius: 0px;
-        text-align: center;
-        border: solid #2D2D2D;
+/* Configuración para la caja del código cupón */
+.input-style-t{
+    font-size: 10px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid var(--color-black1);
+    border-radius: 4px 0px 0px 4px;
     }
 
-    ::placeholder {
-        font-size: 9px; 
-      }
-    
-    .carrito-mobile{
-        display: none;
+::placeholder {
+    font-size: 9px;
     }
-    .pago-mobile{
-        display: none;
+
+/* Configuración y estilos de los btn2 */
+.btn2-t{
+    background: var(--color-black2);
+    color: var(--color-white-gray);
+    font-size: 10px;
+    padding: 5px;
+    margin-left: -6px;
+    z-index: 1;
+    border: 1px solid var(--color-black1);
+    border-radius: 0px 4px 4px 0px;
     }
-    .container3-mobile{
-        display: none;
+
+.btn2-t:hover{
+    background-color: var(--color-black1);
+    }
+
+.btn2-t:active{
+    background: var(--color-black2);
     }
 }
 
-/* Versión mobile */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 589px){
+/* Versión Mobile */
+@media only screen and (max-width: 575px){
 
-    .textSuperior{
-        display: none;
+/* Prescindiendo de ciertos elementos para la versión Mobile */
+.delet-product{
+    display: none;
     }
 
-    .container1{
-        display: none;
+.add-product-fav{
+    display: none;
     }
 
-    .carrito-mobile{
-        display: flex;
-        background-color: #009688;
-        height: 40px;
-        width: 320px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 5px;
-        padding:10px;
-        border: 1px solid #EDEDED;
-        box-shadow: 0px 0px 5px #2D2D2D;
+.total-pay{
+    display: none;
     }
 
-    .carrito-mobile p{
-        margin-right: auto;
-        margin-left: auto;
-        text-transform: uppercase;
-        font-family: Roboto,sans-serif;
-        color: #EDEDED;
-        
+.total-pay-t{
+    display:none;
+}
+
+.container-text2{
+    display: none;
+}
+
+.container-text3{
+    display: none;
+}
+
+.box1{
+    display: none;
+}
+
+/* Contenedor del texto "CARRITO" */
+
+.container-text{
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+}
+
+/* SECCIÓN DEL CONTENEDOR DE LOS PRODUCTOS */
+
+/* Configuración del contenedor de los productos versión mobile */  
+.container-mobile{
+    flex-direction: column;
+    background: var(--color-white1);
+    width: 320px;
+    height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    border: 1px solid var(--color-white-gray);
+    border-color: var(--fine-border1);
+    box-shadow: 0px 0px 1px;
+}
+
+/* Configuración de la imágen del producto */
+.img-mobile img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border-style:solid;
+    border-width: 0px;
+    border-color: var(--fine-border1);
+    box-shadow: 0px 0px 2px;
+    }
+.img-mobile img{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
     }
 
-    .container2{
-        display: none;
+/* Disposición del nombre del producto */
+.info-mobile{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
     }
-    
-    .black-bar-mobile{
-        display: none;
-    }
-
-   .container3{
-       display: none;
-   }
-
-    .container3-tablet{
-        display: none;
+/* Disposición de los elementos dentro de content mobile */
+.content-mobile{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 15px;
     }
 
-    .container3-mobile{
-        display: flex;
-        width: 320px;
-        height: 160px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2px;
-        border: 1px solid #797373;
-        box-shadow: 5px 5px 0px #EDEDED;
-        justify-content: center;
+/* SECCIÓN DEL PAGO VERSIÓN MOBILE */
+
+/* Configuración de los estilos del contenedor pago-mobile */
+.pago-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px; 
+    padding-bottom: 18px;
+    }
+.pago-mobile{
+    background: var(--color-white-gray);
+    border: 1px solid var(--color-white-gray);
+    border-color: var(--fine-border1);
+    box-shadow: 0px 0px 1px;
     }
 
-    .content-mobile{
-        flex-direction: column;
+/* Configuración de la sección código de descuento */
+.cupon-mobile{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 40px;
+    }
+.input-mobile{
+    font-size: 10px;
+    padding: 5px;
+    text-align: center;
+    border-color: var(--color-black-gray);
+    border-radius: 4px 0px 0px 4px;
     }
 
-    .img-mobile{
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
+::placeholder {
+    font-size: 9px;
+  }
+
+/* Configuración del btn2-mobile */
+.btn2-mobile{
+    background-color: var(--color-black1); /* color de fondo del botón. */
+    padding: 5px;
+    z-index: 1;
+    border: 1px solid var(--color-black1);
+    border-radius: 0px 4px 4px 0px;
+    margin-left: -4px;
     }
-    
-    .info-mobile{
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-   }
-
-    .info2-mobile{
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-   }
-
-   .content-mobile2{
-       display: flex;
-       justify-content: space-evenly;
-       margin-top: 15px;
-   }
-
-    .img-mobile img{
-        width: 70px;
-        height: 70px;
-        border-radius: 100%;
-        border-style:solid;
-        border-width: 1px;
-        border-color: lightslategrey;
-        box-shadow: 0px 0px 2px;
-   }
-
-    .container4{
-       display: none;
-   } 
-
-    .pago-tablet{
-        display: none;
+.btn2-mobile{
+    color: var(--color-white1); 
+    text-decoration: none; 
+    font-family: Roboto, sans-serif;
+    font-weight: 100px; 
+    font-size: 10px;
+    }
+.btn2-mobile:active{
+    background: var(--color-black-gray);
     }
 
-    .pago-mobile{
-        display: flex;
-        flex-direction: column;
-        width: 320px;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 2px; 
-        padding-bottom: 18px;
-        background-color: #EDEDED;
-        border: 1px solid #797373;
-        box-shadow: 5px 5px 0px #EDEDED;
-    }
-    
-    .cupon-mobile{
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-        padding-bottom: 40px;
+/* Configuración del texto total a pagar */
+.pago-mobile p,a{
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    margin-top: -25px;
+    font-size: 11px; 
+    font-weight: 100px;
+    text-decoration: none;
     }
 
-    .input-mobile{
-        font-size: 10px;
-        padding: 5px;
-        text-align: center;
-        border-color: #2D2D2D;
-        border-radius: 4px 0px 0px 4px;
+/* Configuración del btn-mobile */
+.btn-mobile{
+    background:var(--color-black1);
+    color: var(--color-white1); 
+    padding: 10px; 
+    border-radius: 15px;  
     }
 
-    ::placeholder {
-        font-size: 9px;
-      }
-    
-    .btn2-mobile{
-        background-color: #2D2D2D; /* color de fondo del botón. */
-        color: #FAFAFA; /* color del texto en código hexadecimal */
-        text-decoration: none; /* para quitarle el estilo de enlace, como el subrayado */
-        font-family: Roboto, sans-serif; /* Tipo de fuente */
-        font-weight: 100px; /* para darle cuerpo (tipo negrita) al texto del botón. */
-        font-size: 10px;
-        padding: 5px;
-        border-color: #2D2D2D;
-        border-radius: 0px 4px 4px 0px;
-        margin-left: -4px;
-    }
-    
-    .btn2:hover{
-        background-color: #111111;
+.btn-mobile:active{
+    background: var(--color-black-gray);
     }
 
-    .pago-mobile p{
-        text-align: center;
-        font-family: Roboto,sans-serif;
-        margin-top: -25px;
-        font-size: 12px;
+.flex-mobile{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    }
+}
+
+/* Versión "Mini Mobile" */
+@media only screen and (max-width:319px){
+
+/* Contenedor del texto "CARRITO" */
+.container-text{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.container-mobile{
+    width: 300px;
+    height: 150px;
+    }    
+
+.pago-mobile{
+    width: 300px;
     }
 
-    .btn-mobile{
-        background-color: #2D2D2D; /* color de fondo del botón. */
-        color: #FAFAFA; /* color del texto en código hexadecimal */
-        padding: 10px;  /* el relleno */
-        border-radius: 15px; /* redondeo del botón. */
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-        font-size: 10px; /* el tamaño del texto en pixeles. */
-        font-weight: 100px;
-        text-decoration: none;
-    }
+}
 
-    .flex-mobile{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 20px;
-    }
+/* Contenedor vacío para generar espacio entre el main y el footer */
+.espacio-vacio{
+    height: 40px;
+    width: 100%;
 }
