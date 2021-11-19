@@ -8,9 +8,7 @@
     <link rel="shortcut icon" href="../public/images/electrohogarlogo.png">
     <link rel="stylesheet" href="/public/css/home.css">
     <link rel="stylesheet" href="/public/css/HeaderNavFooter.css">
-
-    <link rel="stylesheet" href="/public/css/carrusel.css">
-
+    <link rel="stylesheet" href="/public/css/carrousel.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/fb257ce5bf.js" crossorigin="anonymous"></script>
@@ -34,7 +32,7 @@
         
         <div class="logomain">
 
-            <a href="/views/home.html"><img class="logo" src="/public/images/electrohogarlogo2resuelto.png" alt=""></a>
+            <a href="/src/views/home.html"><img class="logo" src="/public/images/electrohogarlogo2resuelto.png" alt=""></a>
         </div>
 
         
@@ -51,10 +49,10 @@
 
         <div class="headernav">
             <ul>
-                <li><a href="/views/carrito.html"><img class="iconcarrito" src="/public/icons/shopping-cart.png"
+                <li><a href="/src/views/carrito.html"><img class="iconcarrito" src="/public/icons/shopping-cart.png"
                             alt="Carrito">Carrito</a></li>
                 <li><a href="#"><img class="iconfav" src="/public/icons/favorite.png" alt="Favoritos">Favoritos</a></li>
-                <li><a href="/views/registro.html"><img class="iconcuenta" src="/public/icons/perfil.png" alt="Mi cuenta">Mi
+                <li><a href="/src/views/registro.html"><img class="iconcuenta" src="/public/icons/perfil.png" alt="Mi cuenta">Mi
                         cuenta</a></li>
             </ul>
                 
@@ -80,15 +78,12 @@
     </nav>
 
 
-    <div class="slider">
-        <ul>
-            <li><img src="/public/images/carousel5.jpg" alt=""></li>
-            <li><img src="/public/images/carousel.jpg" alt=""></li>
-            <li><img src="/public/images/carousel2.jpg" alt=""></li>
-            <li><img src="/public/images/carousel3.jpg" alt=""></li>
-            <li><img src="/public/images/carousel4.jpg" alt=""></li>
-        </ul>
-    </div>
+    <div class="carrousel">
+        <div class="grande">
+            <img src="/public/images/carousel5.jpg" alt="imagen 1" class="img">
+           <!--  <img src="/public/images/carousel2.jpg" alt="imagen 1" class="img">
+            <img src="/public/images/carousel3.jpg" alt="imagen 1" class="img"> -->
+        </div>
 
         <ul class="puntos">
                 <li class="punto activo"></i></li>
@@ -232,13 +227,13 @@
             </div>
 
             <div class="social">
-                <a href="https://www.facebook.com/electroHogar"><img src="../public/icons/facebook.png"
+                <a href="https://www.facebook.com/electroHogar"><img src="/public/icons/facebook.png"
                         alt="Seguinos en Facebook" class="facebook"></a>
-                <a href="www.instagram.com/electrohogarr"><img src="../public/icons/instagram.png"
+                <a href="www.instagram.com/electrohogarr"><img src="/public/icons/instagram.png"
                         alt="Seguinos en Instagram" class="instagram"></a>
-                <a href="www.twitter.com/electroHogar"><img src="../public/icons/twitter.png" alt="Seguinos en twitter"
+                <a href="www.twitter.com/electroHogar"><img src="/public/icons/twitter.png" alt="Seguinos en twitter"
                         class="twitter"></a>
-                <a href="www.youtube.com/electroHogar"><img src="../public/icons/youtube.png" alt="Seguienos en Youtube"
+                <a href="www.youtube.com/electroHogar"><img src="/public/icons/youtube.png" alt="Seguienos en Youtube"
                         class="youtube"></a>
             </div>
 
@@ -260,8 +255,8 @@
                 <div class="footercolumna3Row">
                     <h3>Nosotros</h3>
                     <ul>
-                        <li>Sucursales</li>
-                        <li>Trabaja con nosotros</li>
+                       <li>Sucursales</li>
+                       <a href="/src/views/trabajaConNosotros.html"><li>Trabaja con nosotros</li></a> 
                         <li>Quienes somos</li>
                         <li>Terminos y condiciones</li>
 

@@ -327,7 +327,16 @@ padding:0px 14px;
         .footercolumna3Row{
             padding-left:40px;
             margin-top: 40px;
+            text-decoration: none;
         }
+
+        .footercolumna3Row a{
+            text-decoration: none;
+        }
+        .footercolumna3Row a:hover{
+            text-decoration: underline;
+        }
+
 
         .footercolumna3Row h3{
             font-size:17px;
