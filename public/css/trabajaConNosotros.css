@@ -4,17 +4,20 @@ body {
 
 .titulo {
     text-align: center;
-    font-size: 45px;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 100px;
 }
 
 .texto {
-    font-family:cursive;
+  margin-bottom: 15px;
     font-size: 19px;
+    text-align: center;
 }
 .cv {
-    font-family:cursive;
     text-align: center;
     font-size: 19px;
+    margin-bottom: 80px;
 }
 
 
@@ -32,7 +35,6 @@ body {
 
 .subtitulo {
     font-size: 27px;
-    font-style: italic;
     text-align: center;
 }
 
@@ -41,7 +43,7 @@ body {
       width: 50%;
       height: 30px;
       text-align: center;
-      font-family:cursive;
+      border: none;
       font-size: 17px;
   }
 

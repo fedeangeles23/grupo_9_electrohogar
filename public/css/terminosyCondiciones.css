@@ -8,21 +8,24 @@ body {
 
 /*modificaciones del titulo*/
 .titulo {
+    margin-top: 50px;
+    margin-bottom: 40px;
     font-size: 40px;
-    font-style: oblique;
-    font-weight: bolder;
     text-align: center;
 }
 
 /*modificaciones de los subtitulos*/
 .subtitulo {
+    margin-top:30px;
+    margin-bottom: 20px;
     font-size: 23px;
-    font-weight: bolder;
+    font-family: initial;
 }
 
 /*cambia el tipo de letra para ell texto*/
 .texto {
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
 }
 
 
