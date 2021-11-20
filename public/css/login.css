@@ -51,9 +51,8 @@ body {
 /*ingresa los datos de tu cuenta*/
 .ingreso {
 
-    font-size: 22px;
+    font-size: 19px;
     margin-bottom: 40px;
-    font-weight: bold;
 }
 
 /*para q no se vean los errores*/
@@ -74,16 +73,15 @@ body {
 span.cuenta button{
     background-color: rgb(13, 40, 197);
     color: rgb(255, 255, 255);
-    font-weight: bold ;
     font-size: 39px;
     width: 140px;
     height: 42px;
     border-radius: 20px;
     margin-bottom: 30px;
-    font-family: 'Work Sans', sans-serif;
     border: none;
     box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
-    
+    font-weight: lighter;
+    font-family: 'Work-Sans', sans-serif;
 }
 
 span.cuenta button:hover {
@@ -149,7 +147,7 @@ span.cuenta button:hover {
     background-color: rgba(255, 249, 249, 0.26);
     }
     p.ingreso {
-        font-size: 15px;
+        font-size: 19px;
     }
     .form input {
         margin-bottom: 30px;
@@ -203,7 +201,7 @@ span.cuenta button:hover {
         background-color: rgba(255, 249, 249, 0.26);
         }
         p.ingreso {
-            font-size: 15px;
+            font-size: 19px;
         }
         .form input {
             margin-bottom: 30px;
@@ -249,7 +247,7 @@ span.cuenta button:hover {
         background-color: rgba(255, 249, 249, 0.26);
         }
         p.ingreso {
-            font-size: 15px;
+            font-size: 19px;
         }
         .form input {
             margin-bottom: 30px;

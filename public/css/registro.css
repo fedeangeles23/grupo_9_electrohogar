@@ -65,13 +65,11 @@ span a.link {
 span.cuenta button{
     background-color: rgb(13, 40, 197);
     color: rgb(255, 255, 255);
-    font-weight: lighter ;
     font-size: 14px;
     width: 140px;
     height: 42px;
     border-radius: 20px;
     margin-bottom: 30px;
-    font-family: 'Work Sans', sans-serif;
     border: none;
     box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
 }
@@ -212,9 +210,7 @@ span.cuenta {
     margin-bottom: 10px;
 }
 
-span.cuenta button {
-   font-size: 17px;
-}
+
 
 /*ingresar los datos de tu cuenta */
 p.ingreso {
