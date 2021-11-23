@@ -56,4 +56,5 @@ app.get('/registro', function (req, res){
 
 
 /* Enrutadores */
+
 // Eliminar los sendfile por que ya no sirven para nuestra app
