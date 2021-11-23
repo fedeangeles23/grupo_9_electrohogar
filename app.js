@@ -26,7 +26,7 @@ app.use(express.static(__dirname));
  el segundo parametro es el path relativo que queremos enviar, en este caso views/index.html */
 
 app.get('/', function (req, res){
-    res.sendFile(path.join(__dirname, './views/home.html'))
+    res.sendFile(path.join(__dirname, './src/views/home.html'))
 });
 
 app.get('/carrito', function (req, res){
@@ -52,3 +52,8 @@ app.get('/registro', function (req, res){
 
 // Servidor levantado con exito
 
+
+
+
+/* Enrutadores */
+// Eliminar los sendfile por que ya no sirven para nuestra app
