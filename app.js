@@ -26,7 +26,7 @@ app.use(express.static(__dirname));
  el segundo parametro es el path relativo que queremos enviar, en este caso views/index.html */
 
 app.get('/', function (req, res){
-    res.sendFile(path.join(__dirname, './src/views/home.html'))
+    res.render(path.join(__dirname, './src/views/products/home.ejs'))
 });
 
 app.get('/carrito', function (req, res){
