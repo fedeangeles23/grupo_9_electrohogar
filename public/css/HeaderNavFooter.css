@@ -259,14 +259,16 @@ nav ul li:hover{
 
 
 .footertop {
-    background-color: #E2E2E2;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-around;
     padding: 15px;
     bottom:0;
     width: 100vp;
     border:1px solid #AAAAAA;
-   
+   border-left: none;
+   border-right: none;
+
 }
 
 .footertop .inputemail{
@@ -310,8 +312,8 @@ padding:0px 14px;
     .footercentral {
         width: 100%;
         height: 240px;
-        background-color: rgba(255, 255, 255, 0.486);
-        display: flex;
+        background-color: rgb(213 209 209 / 49%);
+                display: flex;
         border:1px solid hsl(0, 7%, 81%);
     }
 

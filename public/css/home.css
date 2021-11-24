@@ -60,7 +60,8 @@
      text-align: center;
      margin:25px;
      cursor:pointer;
-     background-color: #fff;
+     background-color: #fff; 
+    height: 500px;
  }
 
 
@@ -155,7 +156,7 @@
 .fav i{
    font-size: 25px;
    position: relative;
-   bottom: 530px;
+   bottom: 450px;
    left: 120px;
    transition: 0.5ms;
    color:rgba(155, 153, 153, 0.411);
@@ -167,6 +168,7 @@
 .fav i:hover{
     color: rgb(219, 2, 2);
 }
+
 
 .carrousel img{
     width: 100%;
