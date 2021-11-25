@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../public/images/electrohogarlogo.png">
-    <link rel="stylesheet" href="/public/css/home.css">
-    <link rel="stylesheet" href="/public/css/HeaderNavFooter.css">
-
-   <link rel="stylesheet" href="/public/css/carrusel.css">
-
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-     <script src="https://kit.fontawesome.com/fb257ce5bf.js" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-     <title>Tienda | ElectroHogar </title>
-</head>
-
+    <%- include('../partials/head.ejs')  %> 
 
 <body>
 
@@ -35,15 +19,10 @@
         
         <div class="logomain">
 
-            <a href="/src/views/home.html"><img class="logo" src="/public/images/electrohogarlogo2resuelto.png" alt=""></a>
+            <a href="./"><img class="logo" src="/images/electrohogarlogo2resuelto.png" alt=""></a>
         </div>
 
         
-
-        <!-- <div class="buscar-mobile">
-            <input type="search" placeholder="Buscar productos..">
-            <i class="fas fa-search"></i>
-        </div> -->
 
         <div class="buscar">
             <input type="search" placeholder="Buscar productos..">
@@ -52,10 +31,10 @@
 
         <div class="headernav">
             <ul>
-                <li><a href="/src/views/carrito.html"><img class="iconcarrito" src="/public/icons/shopping-cart.png"
+                <li><a href="./carrito"><img class="iconcarrito" src="/icons/shopping-cart.png"
                             alt="Carrito">Carrito</a></li>
-                <li><a href="#"><img class="iconfav" src="/public/icons/favorite.png" alt="Favoritos">Favoritos</a></li>
-                <li><a href="/src/views/registro.html"><img class="iconcuenta" src="/public/icons/perfil.png" alt="Mi cuenta">Mi
+                <li><a href="#"><img class="iconfav" src="/icons/favorite.png" alt="Favoritos">Favoritos</a></li>
+                <li><a href="/src/views/registro.html"><img class="iconcuenta" src="/icons/perfil.png" alt="Mi cuenta">Mi
                         cuenta</a></li>
             </ul>
                 
@@ -83,11 +62,11 @@
 
     <div class="slider">
         <ul>
-            <li><img src="/public/images/carousel5.jpg" alt=""></li>
-            <li><img src="/public/images/carousel.jpg"  alt=""></li>
-            <li><img src="/public/images/carousel2.jpg" alt=""></li>
-            <li><img src="/public/images/carousel3.jpg" alt=""></li>
-            <li><img src="/public/images/carousel4.jpg" alt=""></li>
+            <li><img src="/images/carousel5.jpg" alt=""></li>
+            <li><img src="/images/carousel.jpg"  alt=""></li>
+            <li><img src="/images/carousel2.jpg" alt=""></li>
+            <li><img src="/images/carousel3.jpg" alt=""></li>
+            <li><img src="/images/carousel4.jpg" alt=""></li>
         </ul>
     </div>
 
@@ -106,7 +85,7 @@
 
                 <div class="card">
                     <div class="image-section">
-                        <img src="/public/images/tv55led.jpg" alt="">
+                        <img src="/images/tv55led.jpg" alt="">
                     </div>
                     <div class="description">
                         <h1>Smart TV 55</h1>
@@ -130,7 +109,7 @@
                 </div>
                 <div class="card">
                     <div class="image-section">
-                        <img src="/public/images/mogogs60.webp" alt="">
+                        <img src="/images/mogogs60.webp" alt="">
                     </div>
                     <div class="description">
                         <h1>Celular MOTO G60S</h1>
@@ -151,7 +130,7 @@
                 </div>
                 <div class="card">
                     <div class="image-section">
-                        <img src="/public/images/ps5.webp" alt="">
+                        <img src="/images/ps5.webp" alt="">
                     </div>
                     <div class="description">
                         <h1>PS5 Sony + 1 Joystick</h1>
@@ -160,8 +139,8 @@
                     <small class="cuotas">12 cuotas x $23.766</small>
 
                     <div class="button-group">
-                        <a href="/views/carrito.html" class="buy">Comprar</a>
-                        <a href="/views/carrito.html" class="cart">Agregar al carrito</a>
+                        <a href="/views/products/carrito.ejs" class="buy">Comprar</a>
+                        <a href="/views/carrito.ejs" class="cart">Agregar al carrito</a>
                     </div>
 
                     <div class="fav">
@@ -175,7 +154,7 @@
                 </div>
                 <div class="card">
                     <div class="image-section">
-                        <img src="/public/images/heladera.jpg" alt="">
+                        <img src="/images/heladera.jpg" alt="">
                     </div>
                     <div class="description">
                         <h1>Smart TV 55</h1>
@@ -230,13 +209,13 @@
             </div>
 
             <div class="social">
-                <a href="https://www.facebook.com/electroHogar"><img src="/public/icons/facebook.png"
+                <a href="https://www.facebook.com/electroHogar"><img src="/icons/facebook.png"
                         alt="Seguinos en Facebook" class="facebook"></a>
-                <a href="www.instagram.com/electrohogarr"><img src="/public/icons/instagram.png"
+                <a href="www.instagram.com/electrohogarr"><img src="/icons/instagram.png"
                         alt="Seguinos en Instagram" class="instagram"></a>
-                <a href="www.twitter.com/electroHogar"><img src="/public/icons/twitter.png" alt="Seguinos en twitter"
+                <a href="www.twitter.com/electroHogar"><img src="/icons/twitter.png" alt="Seguinos en twitter"
                         class="twitter"></a>
-                <a href="www.youtube.com/electroHogar"><img src="/public/icons/youtube.png" alt="Seguienos en Youtube"
+                <a href="www.youtube.com/electroHogar"><img src="/icons/youtube.png" alt="Seguienos en Youtube"
                         class="youtube"></a>
             </div>
 
@@ -276,7 +255,7 @@
 
     </footer>
 
-    <script defer src="/public/js/carrousel.js"></script>
+    <script defer src="/js/carrousel.js"></script>
 </body>
 
 
