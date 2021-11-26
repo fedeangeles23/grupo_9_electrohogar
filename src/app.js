@@ -42,19 +42,19 @@ app.get('/carrito', function (req, res){
 });
 
 app.get('/login', function (req, res){
-    res.render(path.join(__dirname, './views/login.ejs'))
+    res.render(path.join(__dirname, './views/users/login.ejs'))
 });
  
 app.get('/perfil', function (req, res){
-    res.render(path.join(__dirname, './views/perfil.ejs'))
+    res.render(path.join(__dirname, './views/users/perfil.ejs'))
 });
 
 app.get('/productDetail', function (req, res){
-    res.sendFile(path.join(__dirname, './views/productDetail.ejs'))
+    res.render(path.join(__dirname, './views/products/productDetail.ejs'))
 });
 
 app.get('/registro', function (req, res){
-    res.sendFile(path.join(__dirname, './views/registro.ejs'))
+    res.render(path.join(__dirname, './views/users/registro.ejs'))
 });
 
 

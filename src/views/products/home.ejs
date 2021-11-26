@@ -1,76 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
+    <input type="checkbox" id="check">
     <%- include('../partials/head.ejs')  %> 
-    
+
 <body>
 
 
-    <input type="checkbox" id="check">
-
-    <header>
-
-                <label for="check" class="bar">
-                    <span class="fa fa-bars" id="bars"></span>
-                    <span class="fa fa-times" id="times"></span>
-    
-        
-        </label>
-        
-        <div class="logomain">
-
-            <a href="./"><img class="logo" src="/images/electrohogarlogo2resuelto.png" alt=""></a>
-        </div>
-
-        
-
-        <div class="buscar">
-            <input type="search" placeholder="Buscar productos..">
-            <i class="fas fa-search"></i>
-        </div>
-
-        <div class="headernav">
-            <ul>
-                <li><a href="./carrito"><img class="iconcarrito" src="/icons/shopping-cart.png"
-                            alt="Carrito">Carrito</a></li>
-                <li><a href="#"><img class="iconfav" src="/icons/favorite.png" alt="Favoritos">Favoritos</a></li>
-                <li><a href="/src/views/registro.html"><img class="iconcuenta" src="/icons/perfil.png" alt="Mi cuenta">Mi
-                        cuenta</a></li>
-            </ul>
-                
-           
-        </div>
-
-    </header>
+    <%- include('../partials/header.ejs') %> 
      
-    <nav>
-        <ul>
-            <li href="#">Categorias</li>
-            <li href="#">Smart TV</li>
-            <li href="#">Celulares</li>
-            <li href="#">Notebooks</li>
-            <li href="#">Climatizacion</li>
-            <li href="#">Cocinas</li>
-            <li href="#">Heladeras</li>
-            <li href="#">Lavado</li>
-            <li href="#">Colchones</li>
-            <li href="#">Gaming</li>
-
-        </ul>
-    </nav>
-
-
-    <div class="slider">
-        <ul>
-            <li><img src="/images/carousel.jpg"  alt=""></li>
-        </ul>
-    </div>
-
-      
-
-    </div>
-
-
+     <%- include ('../partials/nav.ejs') %>
 
     <main>
         <div class="section">
@@ -183,81 +121,11 @@
 
 
 
-    <footer>
+    <%- include ('../partials/footer.ejs') %>
 
-        <div class="footertop">
+    <%- include ('../partials/scripts.ejs') %>
 
-
-            <div class="emailsub">
-                <span>¡Recibí nuestras promociones exclusivas! </span>
-
-                <input type="email" class="inputemail" name="email" id="" placeholder="Ingresá tu e-mail...">
-                <input type="submit" value="Suscribirse" class="confirmaremail" />
-            </div>
-
-            <div class="contenedorventatelefonica">
-
-                <b class="bRED"> VENTA TELEFONICA: </b> <span class="numerotel"> 0810-111-0707 </span>
-                <div class="contenedorclietne">
-                    <span>Atencion al cliente:</span>
-                    de <b>9</b> a <b> 20 </b> hs / Sáb. de <b>9</b> a <b>18</b> hs
-                </div>
-            </div>
-
-            <div class="social">
-                <a href="https://www.facebook.com/electroHogar"><img src="/icons/facebook.png"
-                        alt="Seguinos en Facebook" class="facebook"></a>
-                <a href="www.instagram.com/electrohogarr"><img src="/icons/instagram.png"
-                        alt="Seguinos en Instagram" class="instagram"></a>
-                <a href="www.twitter.com/electroHogar"><img src="/icons/twitter.png" alt="Seguinos en twitter"
-                        class="twitter"></a>
-                <a href="www.youtube.com/electroHogar"><img src="/icons/youtube.png" alt="Seguienos en Youtube"
-                        class="youtube"></a>
-            </div>
-
-        </div>
-        <section>
-            <div class="footercentral">
-
-                <div class="footercolumna2Row">
-                    <h3>Categorias</h3>
-                    <ul>
-                        <li>Tecnologia</li>
-                        <li>Decoracion</li>
-                        <li>Celulares</li>
-                        <li>Heladeras</li>
-                        <li>Climatizacion</li>
-                    </ul>
-                </div>
-
-                <div class="footercolumna3Row">
-                    <h3>Nosotros</h3>
-                    <ul>
-                       <li>Sucursales</li>
-                       <a href="/src/views/trabajaConNosotros.html"><li>Trabaja con nosotros</li></a> 
-                        <li>Quienes somos</li>
-                        <a href="/src/views/sobreNosotros.html"><li>Sobre Nosotros</li></a>
-                        <a href="/src/views/termiosyCondiciones.html"><li>Terminos y condiciones</li></a>
-                    </ul>
-
-                </div>
-
-
-
-
-
-            </div>
-        </section>
-
-    </footer>
-
-    <script defer src="../js/carrousel.js"></script>
 </body>
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </html>
