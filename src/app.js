@@ -29,21 +29,24 @@ app.set('view engine','ejs');
 
 app.use(express.static(path.join(__dirname, '../public')));
 
+
+let login = require('./routes/loginRouter')
+let registro = require('./routes/registroRouter') 
+
+
 //------------------Rutas---------------------// 
  /* el metodo dentro de sendfile Join() busca la ruta en donde estamos, primer parametro __dirname hace referencia al directorio en donde estamos,
  el segundo parametro es el path relativo que queremos enviar, en este caso views/index.html */
 
 app.get('/', function (req, res){
     res.render(path.join(__dirname, './views/products/home.ejs'))
-});
+}); 
 
 app.get('/carrito', function (req, res){
     res.render(path.join(__dirname, './views/products/carrito.ejs'))
 });
 
-app.get('/login', function (req, res){
-    res.render(path.join(__dirname, './views/users/login.ejs'))
-});
+app.use('/login', login);
  
 app.get('/perfil', function (req, res){
     res.render(path.join(__dirname, './views/users/perfil.ejs'))
@@ -53,9 +56,7 @@ app.get('/productDetail', function (req, res){
     res.render(path.join(__dirname, './views/products/productDetail.ejs'))
 });
 
-app.get('/registro', function (req, res){
-    res.render(path.join(__dirname, './views/users/registro.ejs'))
-});
+app.use('/registro', registro);
 
 
 // Servidor levantado con exito
