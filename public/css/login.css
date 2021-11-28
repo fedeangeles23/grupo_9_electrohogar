@@ -51,15 +51,15 @@
 }
 
 /*el espacio entrer las cajas de email y contraseña*/
-.form input{
+.login2 input{
     margin-bottom: 15px;
     width: 250px;
     height: 35px;
     padding-left: 10px;
 }
 
-/*para los botones naranja*/
-span.cuenta button{
+/*para los botones n*/
+span.cuenta2 button{
     background-color: rgb(13, 40, 197);
     color: rgb(255, 255, 255);
     font-size: 39px;
@@ -73,7 +73,7 @@ span.cuenta button{
     font-family: 'Work-Sans', sans-serif;
 }
 
-span.cuenta button:hover {
+span.cuenta2 button:hover {
     color: rgb(255, 255, 255);
     background-color: black;
 }
@@ -138,7 +138,7 @@ span.cuenta button:hover {
     p.ingreso {
         font-size: 19px;
     }
-    .form input {
+    .login2 input {
         margin-bottom: 30px;
         width: 350px;
         height: 45px;
