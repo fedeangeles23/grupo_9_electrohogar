@@ -28,7 +28,7 @@
  .cards .new-arrival h3{
      text-align: center;
      font-size:34px;
-     color:#222;
+     color:#323232;
      font-weight:700;
      letter-spacing: 1px;
  }
@@ -96,6 +96,9 @@
      color:#222;
      margin-bottom: 15px;
      margin-top: 15px;
+     font-weight: 400;
+     font-family: 'Roboto';
+
  }
 
  .description span {
@@ -103,8 +106,8 @@
      letter-spacing: 1.5px;
      margin-top: 8px;
      margin-left: 8px;
-     font-weight: 700;
-     font-family: 'Roboto';
+     font-weight: 500;
+     font-family: 'Lato';
  }
 
  .card .cuotas {
@@ -119,7 +122,7 @@
  }
 
  .button-group .buy{
-     background-color: #fb8500;
+     background-color: #2726d2;
      font-size: 14px;
      padding: 8px 20px;
      border-radius:5px;
@@ -144,7 +147,7 @@
      text-decoration:none;
      letter-spacing:1px;
      color:rgb(0, 0, 0);
-     font-weight: 510;
+     font-weight: lighter;
  }
 
  .button-group .cart:hover{
@@ -176,3 +179,27 @@
 
 
 
+
+@media screen and (max-width: 700px) /*De este ancho para abajo se va a ver asi:*/ {
+    
+    
+    .cards .new-arrival h3 {
+        font-size: 22px;
+    }
+
+    .button-group .buy {
+        background-color: #2726d2;
+        font-size: 14px;
+        padding: 8px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+
+    
+    .card .cuotas {
+        margin-bottom:5px;
+    }
+}

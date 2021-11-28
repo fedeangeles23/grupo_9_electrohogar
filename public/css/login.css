@@ -1,18 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto:wght@300&family=Work+Sans:wght@100;300;700&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 
 /*cambie el tamaño de las letras*/
-body {
-    background-color: rgb(198, 207, 211);
-  font-family: 'Roboto', sans-serif;
-}
 
 .logoLogin img{
     width: 150px;
@@ -198,7 +187,7 @@ span.cuenta button:hover {
     .container {
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 249, 249, 0.26);
+        background-color: rgba(248, 248, 248, 0.712);
         }
         p.ingreso {
             font-size: 19px;
@@ -244,7 +233,7 @@ span.cuenta button:hover {
     .container {
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 249, 249, 0.26);
+        background-color: #F6F6F7;
         }
         p.ingreso {
             font-size: 19px;

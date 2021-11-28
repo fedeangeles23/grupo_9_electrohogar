@@ -16,8 +16,6 @@ http://localhost:${PORT}
 `));
 
 
-
-
 //View engine setup---
 
 app.set('views', path.join(__dirname, 'views'));
@@ -56,6 +54,7 @@ app.get('/productDetail', function (req, res){
 app.get('/registro', function (req, res){
     res.render(path.join(__dirname, './views/users/registro.ejs'))
 });
+
 
 
 // Servidor levantado con exito
