@@ -16,8 +16,6 @@ http://localhost:${PORT}
 `));
 
 
-
-
 //View engine setup---
 
 app.set('views', path.join(__dirname, 'views'));
@@ -55,6 +53,7 @@ app.use('/registro', registro);
 app.use('/productDetail', detail)
 
 app.use('/perfil', perfil)
+
 
 // Servidor levantado con exito
 

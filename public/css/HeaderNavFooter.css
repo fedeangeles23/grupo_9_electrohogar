@@ -3,15 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
 
-/* GENERAL CONFIG*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-        
-}
 
 
 body {
@@ -417,7 +408,7 @@ padding:0px 14px;
 
     .footertop {
         
-            background-color: #E2E2E2;
+            background-color: #ffffff;
             display: flex;
             justify-content: space-evenly;
             padding: 15px;
