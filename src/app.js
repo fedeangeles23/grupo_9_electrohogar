@@ -32,6 +32,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 let login = require('./routes/loginRouter')
 let registro = require('./routes/registroRouter') 
+let perfil = require('./routes/perfilRouter')
+let detail = require('./routes/productRouter')
 
 
 //------------------Rutas---------------------// 
@@ -48,16 +50,11 @@ app.get('/carrito', function (req, res){
 
 app.use('/login', login);
  
-app.get('/perfil', function (req, res){
-    res.render(path.join(__dirname, './views/users/perfil.ejs'))
-});
-
-app.get('/productDetail', function (req, res){
-    res.render(path.join(__dirname, './views/products/productDetail.ejs'))
-});
-
 app.use('/registro', registro);
 
+app.use('/productDetail', detail)
+
+app.use('/perfil', perfil)
 
 // Servidor levantado con exito
 
