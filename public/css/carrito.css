@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 /* Prosición del texto superior */
 .textSuperior{
     margin-left: 10px;
@@ -23,9 +32,9 @@
     width: 370px;
     height: 40px;
     align-self: center;  
-    background:var(--color-especial1);
+    background-color: #009688;
     border: 1px solid var(--color-white-gray);
-    border-color: var(--fine-border1);
+    border-color: var(--fine-border-especial);
     box-shadow: 0px 0px 1px;
 }
 /* Configuración del texto 2 */
@@ -33,9 +42,9 @@
     width: 370px;
     height: 40px;
     align-self: center;
-    background:var(--color-especial2);
+    background-color: #009688;
     border: 1px solid var(--color-white-gray);
-    border-color: var(--fine-border1);
+    border-color: var(--fine-border);
     box-shadow: 0px 0px 1px;
 }
 /* Configuración del texto 3 */
@@ -43,14 +52,14 @@
     width: 370px;
     height: 40px;
     align-self: center;
-    background:var(--color-especial2);
+    background-color: #009688;
     border: 1px solid var(--color-white-gray);
-    border-color: var(--fine-border1);
+    border-color: var(--fine-border);
     box-shadow: 0px 0px 1px;
 }
 /* Estilos para las fuentes de los contenedores */
 .container-text p{
-    color: var(--color-black-gray);
+    color: var(--color-white1);
     font-family: Roboto,sans-serif;
     font-weight:500;
     text-align: center;
@@ -62,7 +71,7 @@
     background: var(--color-white1);
     margin-left: auto;
     margin-right: auto;
-    height: 100px;
+    height: 140px;
     width: 1110px;
     margin-top: 5px;
     border: 1px solid var(--color-white-gray);
@@ -76,7 +85,28 @@
     align-items: center;
     margin-top: 14px;
 }
+
+
+
+.delet-product{
+    cursor: pointer;
+}
+
+
+/* Configuración del contenedor creado para evitar rompimientos al modificar un texto */
+
+.product-section{
+    display: flex;
+}
+
+.product-name{
+    width: 250px;
+    align-self: center;
+    margin-left: 30px;
+}
+
 /* Configuración de la imágen */
+
 .product img{
     width: 70px;
     height: 70px;
@@ -92,6 +122,134 @@
     text-decoration: none;
     color: var(--color-black-gray);
 }
+
+/* Configuración del sector venta por unidad */
+
+.text-unit p{
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+    margin-top: -44px;
+}
+
+/* Configuración del texto quitar y el icon-trash */
+
+.delete-text p{
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+    margin-top: -44px;
+    margin-left: -18px;
+}
+
+/* Configuración del sector garantía */
+
+.garantia {
+    width: 200px;
+}
+
+.extend-warranty p{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.garantia label{
+    margin-top: 4px;
+}
+
+.radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.radio__input {
+    display: none;
+}
+
+.radio__radio {
+    width: 1em;
+    height: 1em;
+    border: 2px solid #d8e4e2;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.radio__radio::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #35529C;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio__input:checked  +  .radio__radio::after {
+    transform: scale(1);
+}
+
+/* --------------------------------------------------- */
+
+/* Configuración del sector garantía 2 (Del contenedor de muestra)*/
+
+.garantia2 {
+    width: 200px;
+}
+
+.extend-warranty p{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.garantia2 label{
+    margin-top: 4px;
+}
+
+.radio-1 {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.radio__input {
+    display: none;
+}
+
+.radio__radio {
+    width: 1em;
+    height: 1em;
+    border: 2px solid #d8e4e2;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.radio__radio::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #35529C;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+
+.radio__input:checked  +  .radio__radio::after {
+    transform: scale(1);
+}
+
+/* --------------------------------------------------- */
+
 /* Contenedor padre del total a pagar */
 .total-pay{
     display: flex;
@@ -115,19 +273,16 @@
 }
 /* Configuración y estilos de los btn */
 .btn{
-    background-color: var();
     padding: 10px;
     border-radius: 10px;
 }
 /* Estilo Hover para el btn */
 .btn:hover{
-    background: var(--color-black2);
-    color: var(--color-white1);
     font-family: Roboto,sans-serif;
-    font-weight: 500;
+    text-decoration: underline;
 }
 .btn:active{
-    background: var(--color-black-gray);
+    text-decoration: none;
 }
 
 /* Configuración para la caja del código cupón */
@@ -213,6 +368,14 @@
     display: none;
     }
 
+.text-unit{
+    display: none;
+}
+
+.delete-text{
+    display: none;
+}
+
 .total-pay{
     display: none;
     }
@@ -224,6 +387,14 @@
 .pago-mobile{
     display: none;
     }
+
+.garantia{
+    display: none;
+}
+
+.garantia2{
+    display: none;
+}
 
 /* ---------------------------------------------------------- */
 
@@ -254,6 +425,7 @@
 /* Contenedor padre del producto */
 .box1{
     width: 588px;
+    height: 100px;
     }
 
 /* Estilo de la fuente en el contenedor de producto */
@@ -283,15 +455,21 @@
     font-size: 11px;
     }
 
-/* Disponiendo la posición de los elementos del grupo1 */
+/* Disponiendo los elementos del grupo1 */
 .grupo1-t{
     display: flex;
+    justify-content: space-between;
     }
 
-/* Posicionando elementos */
+.flex1{
+    position: absolute;
+    margin-left: -270px;
+}
+
 .flex2{
-   margin-left: 134px;
-    }
+    position: absolute;
+    margin-left: 185px;
+}
 
 /* Disponiendo la posición de los elementos del grupo2 */
 .grupo2-t{
@@ -313,20 +491,20 @@
 
 /* Configuración y estilos de los btn */
 .btn-t{
-    padding: 10px;
+    padding: 7px;
     border-radius: 10px;
-    }
-
-/* Estilo Hover para el btn */
-.btn-t:hover{
-    background: var(--color-black2);
     color: var(--color-white1);
     font-family: Roboto,sans-serif;
-    font-weight: 500;
     }
 
+.total-pay-t a{
+    text-decoration-color: var(--color-gray2);
+}
+
 .btn-t:active{
-    background: var(--color-black-gray);
+    background: var(--color-especial2);
+    color: var(--color-white1);
+    text-decoration: none;
     }
 
 /* Configuración para la caja del código cupón */
@@ -352,10 +530,6 @@
     z-index: 1;
     border: 1px solid var(--color-black1);
     border-radius: 0px 4px 4px 0px;
-    }
-
-.btn2-t:hover{
-    background-color: var(--color-black1);
     }
 
 .btn2-t:active{

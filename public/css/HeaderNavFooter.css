@@ -264,6 +264,7 @@ nav ul li:hover{
     justify-content: space-evenly;
     align-content: flex-start;
     align-items: center;
+    border-top: 1px solid #c4c1c1;
 }
 
 
@@ -369,7 +370,7 @@ cursor:pointer;
 .contenedorventatelefonica {
     display: flex;
 flex-direction: column;
-align-items: flex-end;
+
 }
 
 .contenedorventatelefonica .bRED{
@@ -393,30 +394,47 @@ align-items: flex-end;
     @media screen and (max-width:1056px) {
 
 
-        
-              .emailsub {
-                  display: flex;
-
-                }
-
-                
-                .emailsub .inputemail {
-                    height: 40px;
-                    border-radius: 5px;
-                    border:1px solid grey;
-                }
 
 
-                
                 .social {
                     display: flex;
                     cursor:pointer;
                     flex-wrap: wrap;
+                    
                 }
 
+
+                
+                .footercolumna3Row {
+                    font-size: 15px;
+                }
+
+
+                
+                .contenedorventatelefonica {
+                    font-size: 14px;
+                }
     }
     
        
+    
+    @media screen and (max-width: 643px) /*De este ancho para abajo se va a ver asi:*/ {
+
+        
+        .footerlinealtop {
+
+            flex-direction: column;
+            height: 130px;
+        }
+
+        
+     
+
+    }
+
+
+
+
 
 /* NAV RESPONSIVE ------------------------*/
 
@@ -430,41 +448,10 @@ align-items: flex-end;
 
 @media screen and (max-width: 576px) /*De este ancho para abajo se va a ver asi:*/ {
     
-
-    
-
-    .footertop .contenedorventatelefonica {
-        margin:15px;
-        text-align: center;
-    }
-
-    
-    .footertop .emailsub {
-        text-align: center;
-        margin-top:10px; 
-    }
-
-    
-    .footertop .social a{
-        padding: 0px 10px;
-    }
-
-
-
-    .footertop {
+    .footerlinealtop .social img {
+       margin-top: 28px;
         
-            background-color: #ffffff;
-            display: flex;
-            justify-content: space-evenly;
-            padding: 15px;
-            bottom: 0;
-            width: 100vp;
-            border: 1px solid #AAAAAA;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-content: center;
-            align-items: center;
-    }
+     }    
 
     .button-group {
         margin-top: 30px;
@@ -476,6 +463,20 @@ align-items: flex-end;
         align-items: stretch;
 }
 
+
+.contenedorventatelefonica .bRED{
+    font-size: 13px;
+}
+
+.contenedorventatelefonica {
+    font-size: 12px;
+}
+
+
+
+.footercentral h3 {
+    font-size: 13px;
+}
 
 @media screen and (max-width: 577) /*De este ancho para abajo se va a ver asi:*/ {
 

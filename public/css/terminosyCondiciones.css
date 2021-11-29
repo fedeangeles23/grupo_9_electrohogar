@@ -32,11 +32,7 @@ body {
 
 /*para todos los tamaños menos compu*/
 @media(max-width:900px) {
-   
-body {
-    background-color: rgba(0, 0, 0, 0.884);
-  }
-  
+     
  
   .titulo {
       color:white;
