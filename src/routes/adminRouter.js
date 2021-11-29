@@ -1,9 +1,7 @@
 let express = require('express')
 let router = express.Router()
-let controller = require('../controllers/adminController') // Requerimos el controlador previamente creado en la carpeta
+let controller = require('../controllers/adminController')
 
-
-
-
+router.get('/', controller.editprod);
 
 module.exports = router

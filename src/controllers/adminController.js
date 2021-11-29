@@ -1,12 +1,9 @@
-// Creas controller
 let controller = {
-    
-    editarperfil: (req, res) => {
-        res.render('users/editarprod')
-    }
 
+    editprod: (req,res) => {
+            res.render('users/editarprod')
+}
 
 }
 
-
-module.exports = controller // Exportamos el modulo creado recientemente
+module.exports = controller

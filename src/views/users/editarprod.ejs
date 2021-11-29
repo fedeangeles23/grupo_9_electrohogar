@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-    <input type="checkbox" id="check">
-    <%- include('../partials/head.ejs')  %> 
+<input type="checkbox" id="check">
+<%- include('../partials/head.ejs') %>
 
-<body>
-
-
-    <%- include('../partials/header.ejs') %> 
-     
-     <%- include ('../partials/nav.ejs') %>
-
-   <main>
-
-    
-   </main>
+    <body>
 
 
+        <%- include('../partials/header.ejs') %>
 
-    <%- include ('../partials/footer.ejs') %>
+            <%- include ('../partials/nav.ejs') %>
 
-    <%- include ('../partials/scripts.ejs') %>
+                <main>
+<div class="formmain">
+
+
+                    <form action="" method="GET">
+
+                        <div class="formproduct">
+
+                            <label for="nombre">Nombre del producto:</label>
+                            <input type="text" name="user" id="nombre">
+
+                            <label for="nombre">Precio:</label>
+                            <input type="text" name="price" id="nombre">
+
+                            <label for="descripcion">Descripcion: </label>
+                            <textarea name="descripcion" id="descripcionid" cols="30" rows="10"></textarea>
+                            <input type="file" name="productoimg" id="idprodimg">
+
+                            <label for="select">Categoria </label>
+                            <select name="categorias" id="idcategoria">
+                                <option value="Electrodomesticos"></option>
+                                <option value="SmartTV">Smart TV</option>
+                                <option value="Celulares">Celulares</option>
+                                <option value="Notebooks"> Notebooks</option>
+                                <option value="Climatizacion">Climatizacion</option>
+                                <option value="Heladeras">Heladeras</option>
+                                <option value="Gaming">Gaming</option>
+                                <option value="Lavado">Lavado</option>
+                                <option value="Colchones">Colchones</option>
+
+                            </select>
+                            <button type="submit"> Cargar producto </button>
+                            
+                        </div>
+
+
+                    
 
 
 
-    
-</body>
+
+                    </form>
+                    <button class="btneditprod" type="submit"> Editar producto </button>
+                    <button class="btneditprod" type="submit"> Eliminar producto </button>
+
+                </div>
+
+                </main>
+
+
+
+                <%- include ('../partials/footer.ejs') %>
+
+                    <%- include ('../partials/scripts.ejs') %>
+
+
+
+
+    </body>
+
 </html>

@@ -35,6 +35,9 @@ let home = require('./routes/homeRouter')
 let perfil = require('./routes/perfilRouter')
 let detail = require('./routes/productRouter')
 
+let editarprod = require('./routes/adminRouter')
+
+let carrito = require ('./routes/cartRouter')
 
 //------------------Rutas---------------------// 
  /* el metodo dentro de sendfile Join() busca la ruta en donde estamos, primer parametro __dirname hace referencia al directorio en donde estamos,
@@ -49,10 +52,7 @@ let detail = require('./routes/productRouter')
 
 app.use('/', home);
 
-
-app.get('/carrito', function (req, res){
-    res.render(path.join(__dirname, './views/products/carrito.ejs'))
-});
+app.use('/carrito', carrito)
 
 app.use('/login', login);
  
@@ -61,6 +61,9 @@ app.use('/registro', registro);
 app.use('/productDetail', detail)
 
 app.use('/perfil', perfil)
+
+app.use('/editarprod', editarprod);
+
 
 
 // Servidor levantado con exito

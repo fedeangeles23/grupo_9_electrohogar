@@ -1,0 +1,47 @@
+.formproduct {
+    background-color: rgb(247, 247, 247);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    margin-left: 500px;
+}
+
+
+
+.formmain {
+    text-align:center;
+}
+.formproduct input {
+    width: 200px;
+    height: 20px;
+    border:none;
+}
+
+.formproduct button {
+    background-color: rgb(3, 3, 202);
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    color:white;
+    margin-top: 50px;
+    border:none;
+    cursor: pointer;
+
+
+}
+
+.btneditprod {
+    background-color: rgb(3, 3, 202);
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    color:white;
+    margin-top: 50px;
+    border:none;
+    cursor: pointer;
+
+}
