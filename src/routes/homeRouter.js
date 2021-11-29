@@ -1,6 +1,6 @@
 let express = require('express') //Llamamos express y enrutador
 let router = express.Router() //Ejecutamos el metodo router de express
-let controller = require('../controllers/homeController.js')
+let controller = require('../controllers/homeController.js') // Requerimos el controlador para utilizarlo con router.get
 
 
 // GET - Listado de productos

@@ -30,15 +30,23 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 let login = require('./routes/loginRouter')
 let registro = require('./routes/registroRouter') 
+let home = require('./routes/homeRouter')
+
 
 
 //------------------Rutas---------------------// 
  /* el metodo dentro de sendfile Join() busca la ruta en donde estamos, primer parametro __dirname hace referencia al directorio en donde estamos,
  el segundo parametro es el path relativo que queremos enviar, en este caso views/index.html */
 
-app.get('/', function (req, res){
+
+ // El viejo : 
+/* app.get('/', function (req, res){
     res.render(path.join(__dirname, './views/products/home.ejs'))
 }); 
+ */
+
+app.use('/', home);
+
 
 app.get('/carrito', function (req, res){
     res.render(path.join(__dirname, './views/products/carrito.ejs'))
@@ -65,4 +73,3 @@ app.use('/registro', registro);
 
 /* Enrutadores */
 
-// Eliminar los sendfile por que ya no sirven para nuestra app
