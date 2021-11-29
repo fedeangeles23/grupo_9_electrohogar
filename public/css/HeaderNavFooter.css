@@ -242,134 +242,179 @@ nav ul li:hover{
 
 
 /* FOOTER ---------------------------------------------------------------------------------*/
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
- .social img{
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.footerlinealtop {
+    font-family: 'Lato', sans-serif;
+    background-color: #EEEEEE;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    align-items: center;
+}
+
+
+.footerlinealtop span {
+    color: black;
+    max-width: 270px;
+        font-size: 13px;
+        line-height: 17px;
+        margin: 0 15px;
+        opacity: .8;
+    
+}
+
+
+.footerlinealtop img {
     width: 40px;
     height: 40px;
+
 }
 
 
-.footertop {
-    background-color: #ffffff;
+.newsletter span {
+    margin-top: 15px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+.newsletter {
     display: flex;
-    justify-content: space-around;
-    padding: 15px;
-    bottom:0;
-    width: 100vp;
-    border:1px solid #AAAAAA;
-   border-left: none;
-   border-right: none;
+}
+
+
+
+
+.footercentral {
+    width: 100%;
+    height: 160px;
+    background: rgb(58,63,180);
+background: linear-gradient(90deg, rgba(58,63,180,1) 0%, rgba(29,133,253,1) 50%, rgba(69,80,252,1) 100%);
+}
+
+
+
+.footercentral {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+.footercentral h3 {
+    color: rgba(184, 184, 184, 0.562);
+}
+
+
+.footercolumna3Row ul li{
+    list-style: none;
+    color: white;
+    font-weight: 300;
+    margin:5px;
+    cursor:pointer;
 
 }
 
-.footertop .inputemail{
-    border:1px solid #AAAAAA;
-    background:white;
-    padding:10px;
-    border-radius: 5px;         
+
+.footercolumna3Row ul li:hover {
+    text-decoration: underline;
 }
 
-.footertop .confirmaremail {
-background-color:#5d5d5d;
-height: 39px;
+
+
+.emailsub .inputemail{
+            padding:9px;
+                    height: 40px;
+                    border-radius: 5px;
+                    border:1px solid grey;
+    }
+
+.emailsub .confirmaremail {
+background-color: rgb(124, 27, 189);
+height: 40px;
+border-radius: 5px;
 color:#FBFFFF;
 font-size: 14px;
 font-family: 'Lato';
-border-radius: 5px;
 border:1px solid #AAAAAA;
 padding:0px 14px;
+margin-left: 2px;
+cursor:pointer;
 }
 
 
-.footertop .confirmaremail:hover {
-    background-color: rgb(32, 32, 32);
+.emailsub .confirmaremail:hover {
+    background-color: rgb(106, 20, 163);
     transition: 0.5s;
 }
 
 
-.footertop .contenedorventatelefonica .bRED{
-    color:rgb(255, 0, 0);
+
+
+.contenedorventatelefonica {
+    display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
+
+.contenedorventatelefonica .bRED{
+    color:rgb(204, 204, 204);
     font-size: 23px;
-    font-family: Roboto, sans-serif;
-    font-weight: 300;;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     } 
     
-    .footertop .contenedorventatelefonica .numerotel {
-        color: rgb(0, 0, 0);
+     .contenedorventatelefonica .numerotel {
+        color: rgb(253, 253, 253);
         font-weight: bold;
     
     }
 
-    .footercentral {
-        width: 100%;
-        height: 240px;
-        background-color: rgb(213 209 209 / 49%);
-                display: flex;
-        border:1px solid hsl(0, 7%, 81%);
+    .contenedorclietne {
+        color:white
     }
 
-    .btnarrepentirse{
-        background-color: hsl(0, 0%, 100%);
-        color:rgb(255, 0, 0);
-        border:none;
-        text-decoration: underline;
-        position: relative;
-        left:1560px;            
+
+    @media screen and (max-width:1056px) {
+
+
+        
+              .emailsub {
+                  display: flex;
+
+                }
+
+                
+                .emailsub .inputemail {
+                    height: 40px;
+                    border-radius: 5px;
+                    border:1px solid grey;
+                }
+
+
+                
+                .social {
+                    display: flex;
+                    cursor:pointer;
+                    flex-wrap: wrap;
+                }
+
     }
-
-        .footercolumna3Row{
-            padding-left:40px;
-            margin-top: 40px;
-            text-decoration: none;
-        }
-
-        .footercolumna3Row a{
-            text-decoration: none;
-        }
-        .footercolumna3Row a:hover{
-            text-decoration: underline;
-        }
-
-
-        .footercolumna3Row h3{
-            font-size:17px;
-        } 
-        
-        
-        
-        .footercolumna2Row{
-            padding-left:40px;
-            margin-top: 40px;
-        }
-        
-        .mediosdepago span {
-            position: relative;
-            bottom: 40px;
-            left: 160px;
-        }
-
-        .mediosdepago img {
-            padding-top: 140px;
-            padding-left:40px;
-        }
-        
-            .footercolumna2Row h3 {
-            font-size:17px;
-        }
-        .footercolumna2Row ul li {
-            font-size:15px;
-            list-style: none;
-            color: #7A7A7A;
-            margin: 10px;
-        }
-        
-        .footercolumna3Row ul li {
-            font-size:14px;
-            list-style: none;
-            color:#7A7A7A;
-            margin: 10px;
-        }
-
     
        
 

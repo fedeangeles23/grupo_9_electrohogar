@@ -30,10 +30,15 @@ body {
 
  /* volver a menú de inicio*/
 span a.link {
-    margin: 25px;
+    margin-top: 25px;
     color: #383737;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 14px;
+text-transform: none;}
+
+span a.link:hover {
+    text-decoration: underline;
+
 }
 
 /*para el ingresa los datos de tu cuenta*/
