@@ -12,6 +12,9 @@
 
 .formmain {
     text-align:center;
+    width: 500px;
+    height: 500px;
+
 }
 .formproduct input {
     width: 200px;
@@ -33,22 +36,35 @@
 }
 
 .btneditprod {
-    background-color: rgb(3, 3, 202);
-    border-radius: 50px;
+    background-color: rgb(3, 202, 63);
     width: 150px;
-    height: 40px;
+    height: 60px;
     color:white;
-    margin-top: 50px;
     border:none;
     cursor: pointer;
 
 }
+
+
+
+.btndellprod {
+    background-color: rgb(202, 3, 3);
+    width: 150px;
+    height: 60px;
+    color:white;
+    border:none;
+    cursor: pointer;
+}
+
+
 
 .productoslista {
     width: 800px;
     height: 60px;
     background-color: darkcyan;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .productoslista span {
@@ -57,12 +73,16 @@
 
 }
 
-.prodlista {
-    border-bottom: 1px solid black;
-}
+
 
 .prodlista a {
     margin-left: 50px;
     color: rgb(19, 18, 18);
 
+}
+
+.centerdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
