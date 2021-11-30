@@ -7,9 +7,7 @@
     align-items: center;
     border-radius: 10px;
     justify-content: center;
-    margin-left: 500px;
 }
-
 
 
 .formmain {
@@ -43,5 +41,28 @@
     margin-top: 50px;
     border:none;
     cursor: pointer;
+
+}
+
+.productoslista {
+    width: 800px;
+    height: 60px;
+    background-color: darkcyan;
+    display: flex;
+}
+
+.productoslista span {
+    color:rgb(255, 255, 255);
+    margin-left: 90px;
+
+}
+
+.prodlista {
+    border-bottom: 1px solid black;
+}
+
+.prodlista a {
+    margin-left: 50px;
+    color: rgb(19, 18, 18);
 
 }
