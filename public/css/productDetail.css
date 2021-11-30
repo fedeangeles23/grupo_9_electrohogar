@@ -166,7 +166,7 @@ p{
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;
-    transition: background 0.5s;
+    transition: 0.5s;
 }
 .btn-cuotas {
         display:inline-block;
@@ -175,7 +175,7 @@ p{
         padding: 8px 30px;
         margin: 30px 0;
         border-radius: 7px;
-        transition: background 0.5s;
+        transition: 0.5s;
         border:1px solid black;
         text-decoration: underline;
 }
