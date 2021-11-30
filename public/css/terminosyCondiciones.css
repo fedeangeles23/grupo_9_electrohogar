@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
 
 /*cambia el tamaño de las letras*/
-body {
+body.body-terminos-y-condiciones {
  background-color: rgb(241, 242, 243);
   font-size: 17px;
 }
