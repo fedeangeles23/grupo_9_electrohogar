@@ -21,6 +21,7 @@ header {
     text-align: center;
     border: 1px solid #BBAFAF;
     border-right:none;
+    
 }
 
 
@@ -191,7 +192,6 @@ input[type=checkbox]{
 
 nav {
     display:flex;
-    background-color: #E2E2E2;
     justify-content: space-around;
     width: 100%;
     border-top:none;
@@ -201,6 +201,7 @@ nav {
     height: 50px;
     cursor: pointer;
     user-select: none;
+    background: #E2E2E2;
 }
 
 
@@ -229,13 +230,42 @@ nav ul li i {
 
 }
 
-nav ul li i:hover {
-    color:rgb(255, 166, 0);
+nav ul li {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1,6rem;
+    transition: .5s ease;
+    
 }
 
-nav ul li:hover{
-    background-color: white;
-    color:rgb(255, 166, 0);
+.li {
+    display: inline-block;
+    position: relative;
+    color: #3b3b3b;
+    z-index: 9;
+    font-weight: bold;
+    
+  }
+  
+  .li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0b16b3;
+    transition: transform 0.25s ease-out;
+    z-index: 9;
+
+  }
+  
+  
+  .li:hover:after {
+    transform: scaleX(1);
+    transform-origin: center;
+    z-index: 9;
 
 }
 
@@ -253,6 +283,17 @@ nav ul li:hover{
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+} */
+
+
 
 
 .footerlinealtop {
