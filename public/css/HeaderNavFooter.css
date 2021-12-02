@@ -243,8 +243,8 @@ nav ul li {
     position: relative;
     color: #3b3b3b;
     z-index: 9;
-    font-weight: bold;
-    
+    font-weight:500;
+    font-family: 'Roboto', sans-serif;
   }
   
   .li:after {
