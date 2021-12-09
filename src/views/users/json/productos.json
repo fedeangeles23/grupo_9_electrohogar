@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "nombre": "Aspiradora robot Smart Tek automática",
+        "precio": "$ 33.299",
+        "imagen": "aspiradora img1",
+        "descripcion": ["ESPECIFICACIONES TÉCNICAS", 
+        "Detector de Polvo - Limpieza inteligente.",
+        "Detector de Obstáculos - Esquiva objetos.",
+        "Detector de abismos - Nunca se cae.",
+        "Inalámbrico - Carga Total en 4hs.",
+        "Función de ahorro de energía.",
+        "Poder de limpieza de 0.9m2 por minuto.",
+        "Canasto Fácil de limpiar y lavar.",
+        "Colores disponibles: Rojo, Celeste y Rosa."],
+        
+        
+       "accesorios": ["Accesorios incluidos",
+        "Filtro adicional.",
+        "Escobillas de repuesto.",
+        "Control Remoto.",
+        "Base de carga.",
+        "Función de ahorro de energía.",
+        "Poder de limpieza de 0.9m2 por minuto.",
+        "Canasto Fácil de limpiar y lavar"]
+    }, 
+       {
+           "id":2,
+           "nombre": "Auriculares Samsung Galaxy Buds Pro",
+           "precio": "$ 27.999",
+           "imagen": "auriculares img1",
+           "descripcion": ["Cancelación de ruido a tu alcance",
+           "La cancelación de ruido de los Galaxy Buds Pro elimina el 99% del ruido de fondo. Los micrófonos internos y externos controlan el sonido en tiempo real. Elegí el nivel de cancelación de ruido activa para ajustar el ruido externo con un algoritmo inteligente que cancela el ruido. Configurala en modo Alto cuando viajes en autobús o en modo Bajo cuando vayas a la biblioteca; no necesitás ajustar el volumen."],
+           "precentacion": ["PRESENTAMOS LOS GALAXY BUDS PRO",
+           "Estos son verdaderos auriculares inalámbricos, con tecnología de última generación para un sonido envolvente sin precedentes. La cancelación de ruido activa inteligente te permite intercambiar sin problemas entre la cancelación de ruido y el sonido ambiente completamente ajustable. Dejá que entren o eliminalos. Es tu mundo. Los Galaxy Buds Pro te permiten escuchar lo mejor de él."],
+           "deteccion de voz": ["LA DETECCIÓN DE VOZ",
+           "La detección de voz cambia al instante la cancelación de ruido activa por sonido ambiente cuando escucha tu voz. Si estás en una cafetería usando la cancelación de ruido activa para bloquear el ruido exterior, cuando le hables al camarero para pedirle tu orden, se desactivará de manera automática. Estos auriculares inteligentes bajan su sonido cuando conversas, incluso si estás usando el modo Ambiente o si tienes la cancelación de ruido activa desactivada. La música baja y el micrófono le dan protagonismo a la persona con la que hablas."]
+    },
+    {
+        "id":3,
+        "nombre": "Auriculares inalámbricos Samsung Galaxy Buds Live",
+        "precio": "$ 20.999",
+        "imagen": "auriculares Inalambricos img1",
+        "descripcion": ["Presentamos los Galaxy Buds Live",
+        "Auriculares diseñados para cada momento. Gracias a su forma icónica y su diseño ergonómico, se adaptan de forma natural a tu entorno. Además, su altavoz optimizado te permite disfrutar una mejor experiencia. Sonido hecho para tus oídos.",
+        
+        "La nueva forma de auriculares verdaderamente inalámbricos"],
+        "precentacion": ["El diseño atractivo de los Galaxy Buds Live se ajusta de manera perfecta a tu oído. Los auriculares reflejan las curvas de tu rostro y oído para lograr un aspecto natural. Tienen una apariencia brillante para acompañar tu estilo y vienen en una caja de joyería, para que los puedas llevar cuando estés en movimiento.",
+
+            "Acompañá tu estilo",
+            "Disponibles en tres colores: Mystic Bronze, Mystic White y Mystic Black para agregar un toque llamativo a tu estilo y que amarás llevar con vos.",
+            
+            "Hecho para tus oídos",
+            "Los Galaxy Buds Live se adaptan suavemente al oído y te dan comodidad todo el día. El diseño ergonómico permite que los auriculares se mantengan dentro del oído sin ser invasivos. Con dos tamaños de aletas de fijación para una mayor comodidad, con estos auriculares vas a poder realizar todo tipo de actividad."]
+    },
+    {
+        "id":4,
+        "nombre": "Batidora Smart Tek Kitchen Asist Powy",
+        "precio": "$ 11.999",
+        "imagen": "batidora img1",
+        "descripcion": ["ESPECIFICACIONES TÉCNICAS",
+
+        "Bowl desmontable de acero inoxidable con capacidad para 1,5 kg de preparación.",
+        "Su batidor de acero inoxidable permite batir todo tipo de preparaciones.",
+        "6 Niveles de velocidad y función Pulso.",
+        "Potencia 450 Watts",
+        "Cabezal con bisagra metálica y botón ejector que permite elevarlo fácilmente.",
+        "Motor silencioso."]
+    }, 
+    {
+        "id":5,
+        "nombre": "Batidora de pie Smart Tek Kitchen Assist Powy2 450W",
+        "precio": "$ 12.799",
+        "imagen": "batidora de pie img1",
+        "descripcion": ["Bowl desmontable de acero inoxidable con capacidad para 1,5 kg de preparación.",
+        "Su batidor de acero inoxidable permite batir todo tipo de preparaciones.",
+        "6 Niveles de velocidad y función Pulso.",
+        "Potencia 450 Watts",
+        "Cabezal con bisagra metálica y botón ejector que permite elevarlo fácilmente.",
+        "Motor silencioso."]
+    },
+    {
+        "id":6,
+        "nombre": "Molinillo de café autómatico Oster",
+        "precio": "$ 17.999",
+        "imagen": "cafetera img1",
+        "descripcion":["El molinillo de café Oster® te permite preparar distintos tipos de café molido, logrando un mayor sabor y aroma que los molinos de cuchilla.",
+
+        "CARACTERISTICAS",
+        "Molinillo con muelas de acero inoxidable. Ideal para la molienda óptima de café. Apto para molienda filtro, espresso, entre otros",
+        "18 ajustes de groso personalizados",
+        "Libera más sabor y aroma que molinos de cuchilla",
+        "Aguanta hasta ¼ KG de café en granos",
+        "Vertedero removible y fácil de limpiar",
+        "Cámara de café molido removible que permite transferir fácilmente el café en polvo",
+        "Botón de encendido/apagado y selector de cantidad de café en tazas para porciones perfectas",
+        "Incluye cuchara/brocha para una limpieza más fácil"]
+    }
+
+]
