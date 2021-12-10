@@ -8,7 +8,7 @@
 
  .section{
      width: 100%;
-     min-height: 100vh;
+     min-height: 40vh;
      background-color:#eee;
  }
 
@@ -277,3 +277,69 @@
 
 
 }
+
+
+
+/* CATEGORIAS IMAGENES GAMING,COCINA RESPONSIVE */
+
+.imgcategorias {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #eeeeee;
+    justify-content: space-evenly;
+}
+
+.imgcategorias img {
+    margin: 10px;
+    width: 670px;
+}
+
+@media screen and (max-width: 720px) /*De este ancho para abajo se va a ver asi:*/ {
+        
+        
+    .imgcategorias img {
+        width: 450px;
+        margin: 10px;
+
+    }
+
+    .lineabajocarousel {
+
+            font-size: 11px;
+        }
+
+        .lineabajocarousel .col3linea .envioslinea {
+            width: 20px;
+            height: 20px;
+        }
+
+        .lineabajocarousel .col2linea .tarjetaslinea {
+            width: 0px;
+            height: 30px;
+        }
+
+        .lineabajocarousel .col1linea .imgtrucklinea {
+            width: 25px;
+            height: 25px;
+            margin-left: 3px;
+        }
+
+
+
+}
+
+@media screen and (max-width: 496px) /*De este ancho para abajo se va a ver asi:*/ {
+ 
+    
+    .imgcategorias img {
+        width: 300px;
+        margin: 10px;
+
+    }
+
+}
+
+
+/* LINE BAJO CAROUSEL RESPONSIVE */
+
