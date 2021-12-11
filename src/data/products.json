@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nombre": "Aspiradora robot Smart Tek automática",
+        "precio": "$ 33.299",
+        "imagen": "aspiradora img1",
+        "categoria": "Electro"
+
+    },
+    {
+        "id": 2,
+        "nombre": "Auriculares Samsung Galaxy Buds Pro",
+        "precio": "$ 27.999",
+        "imagen": "auriculares img1",
+        "categoria": "TV&Audio"
+
+    },
+    {
+        "id": 3,
+        "nombre": "Auriculares inalámbricos Samsung Galaxy Buds Live",
+        "precio": "$ 20.999",
+        "imagen": "auriculares Inalambricos img1",
+        "categoria": "TV&Audio"
+
+    },
+    {
+        "id": 4,
+        "nombre": "Batidora Smart Tek Kitchen Asist Powy",
+        "precio": "$ 11.999",
+        "imagen": "batidora img1",
+        "categoria": "Electro"
+
+    },
+    {
+        "id": 5,
+        "nombre": "Batidora de pie Smart Tek Kitchen Assist Powy2 450W",
+        "precio": "$ 12.799",
+        "imagen": "batidora de pie img1",
+        "categoria": "Electro"
+
+    },
+    {
+        "id": 6,
+        "nombre": "Molinillo de café autómatico Oster",
+        "precio": "$ 17.999",
+        "imagen": "cafetera img1",
+        "categoria": "Electro"
+
+    }
+]

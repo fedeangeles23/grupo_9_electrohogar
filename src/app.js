@@ -9,6 +9,7 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 const path = require('path')
+const method0verride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}
@@ -26,6 +27,10 @@ app.set('view engine','ejs');
 //middlewares
 
 app.use(express.static(path.join(__dirname, '../public')));
+//Sirve para solicitudes en donde se envian datos POST y PUT
+app.use(express.urlencoded({ extended: false }));
+//para trabajar con forms
+app.use(express.json());
 
 
 let login = require('./routes/loginRouter')
