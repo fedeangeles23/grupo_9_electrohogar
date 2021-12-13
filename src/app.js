@@ -19,9 +19,9 @@ http://localhost:${PORT}
 
 //View engine setup---
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views')); //Ubicacion de la carpeta views
 
-app.set('view engine','ejs');
+app.set('view engine','ejs'); // setea que el view engine sera EJS 
 
 
 //middlewares
@@ -48,7 +48,6 @@ let carrito = require ('./routes/cartRouter')
  /* el metodo dentro de sendfile Join() busca la ruta en donde estamos, primer parametro __dirname hace referencia al directorio en donde estamos,
  el segundo parametro es el path relativo que queremos enviar, en este caso views/index.html */
 
-
  // El viejo : 
 /* app.get('/', function (req, res){
     res.render(path.join(__dirname, './views/products/home.ejs'))
@@ -68,13 +67,4 @@ app.use('/productDetail', detail)
 app.use('/perfil', perfil)
 
 app.use('/editarprod', editarprod);
-
-
-
-// Servidor levantado con exito
-
-
-
-
-/* Enrutadores */
 

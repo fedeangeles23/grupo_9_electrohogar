@@ -4,6 +4,8 @@
 <%- include('../partials/head.ejs') %>
 
     <body>
+
+
         <%- include('../partials/header.ejs') %>
 
             <%- include ('../partials/nav.ejs') %>
@@ -73,7 +75,7 @@
 
                             <!-- Cards de productos -->
 
-                            <% productselectro.forEach(product => { %>
+                            <% products.forEach(product => { %>
                                 <div class="card">
                                 <div class="image-section">
                                     <img src="/images/products/<%- product.imagen %>" alt="">

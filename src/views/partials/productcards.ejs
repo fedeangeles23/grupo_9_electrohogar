@@ -1,0 +1,22 @@
+<% productselectro.forEach(product => { %>
+    <div class="card">
+    <div class="image-section">
+        <img src="/images/products/<%- product.imagen %>" alt="">
+    </div>
+    <div class="description">
+        <h1><%- product.nombre %></h1>
+        <span>$<%- product.precio %></span>
+    </div>
+    <small class="cuotas"> 12 cuotas x  <%- toThousand((product.precio)) %> </small>
+
+    <div class="button-group">
+        <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
+        <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>
+    </div>
+
+    <div class="fav">
+        <i class="fa">&#xf004;</i>
+    </div>
+</div>
+
+<% }) %>
