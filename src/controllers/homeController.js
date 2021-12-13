@@ -37,6 +37,7 @@ let controller = {
             
             res.render('products/productDetail',{
                 product
+                
             }
             )
            

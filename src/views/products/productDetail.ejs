@@ -3,7 +3,8 @@
 <input type="checkbox" id="check">
 
 
-<%- include('../partials/head.ejs') %>
+
+<%- include('../partials/head', {title: product.nombre }) %>
 
     <body>
 
@@ -71,16 +72,17 @@
                         <div class="infoprod">
                             <div class="detalleyinfo">
                                 <h4 class="detalleproductocol1">Detalle de producto</h4>
-                                <h4 class="especificacionestecnicas">Especificaciones tecnicas</h4>
 
                             </div>
-                            
+                            <br>
+
                             <div class="descripcionprod" id="dpDescripcion" style="display: block;">
                                 <%- product.descripcion %> 
                         </div>
 
                        
                     </div>
+                    <br>
 
                 </main>
 
