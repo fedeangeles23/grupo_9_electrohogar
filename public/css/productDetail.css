@@ -253,3 +253,27 @@ a {
     transform: scaleX(1);
     transform-origin:center;
   }
+
+
+  /* ADMIN BUTTONS */
+  .btneditprodform {
+    width: 140px;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 16);
+    border: 8px solid rgb(255, 255, 16);
+    margin: 10px;
+    border-radius: 10px;
+
+}
+
+  .btndeleteprod {
+background-color: red;
+width: 140px;
+height: 40px;
+border-radius: 10px;
+color: white;
+border: none;
+margin: 10px;
+
+  }

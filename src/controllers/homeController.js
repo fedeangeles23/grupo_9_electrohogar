@@ -10,6 +10,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
+
+
+const writeJson = (database) => fs.writeFileSync(productsFilePath, JSON.stringify(database), 'utf-8')
+
+
+
 let controller = { 
     home: (req,res) => {    
         //Filtrando productos que contengan la palabra "Electro"
@@ -42,6 +48,54 @@ let controller = {
             )
            
          },
+
+
+         
+         create: (req, res) => {
+             res.render('users/editarprod')
+         },
+
+         /* Te manda al store con el nuevo producto creado, method post */
+         store: (req, res) => {
+             
+             const { nombre, precio, imagen, descripcion,categoria, marca } = req.body
+
+             let lastId = 0
+             
+             products.forEach(product =>{
+                if(product.id > lastId) {
+                    lastId = product.id
+                }
+            });
+
+            
+            let newProduct = {
+                id: lastId + 1,
+                nombre,
+                precio,
+                imagen,
+                descripcion,
+                categoria,
+                marca,
+            }
+
+                products.push(newProduct)
+
+                writeJson(products)
+                res.redirect('/products')
+            }, 
+
+            
+            edit: (req, res) => {
+                let productId = +req.params.id
+                let productToEdit = products.find(product = product.id === productId)
+               
+                
+                res.render('users/editarprod', {
+                    product: productToEdit
+                })
+            },
+
 
 };
 
