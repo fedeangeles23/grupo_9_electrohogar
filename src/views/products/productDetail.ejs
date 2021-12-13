@@ -13,29 +13,29 @@
 
 
                 <main>
-                    <p class="enrutador"> Inicio > Tecnologia > Celulares y accesorios > Motorola</p>
+                    <p class="enrutador"> Inicio > Tecnologia > <%- product.categoria %> > <%- product.marca %></p>
 
                     <div class="small-container single-product">
                         <div class="row">
                             <div class="col-2">
-                                <img src="/images/motog50sproducdetail.webp" alt="" id="ProductImg">
+                                <img src="/images/products/<%- product.imagen %>" alt="" id="ProductImg">
                                 <div class="small-img-row">
                                     <div class="small-img-col">
-                                        <img class="small-img" src="/images/motog50sproducdetail2.webp" alt="">
+                                        <img class="small-img" src="/images/products/<%- product.imagen %> " alt="">
                                     </div>
-                                    <div class="small-img-col">
+                                  <!--   <div class="small-img-col">
                                         <img class="small-img" src="/images/motog50sproducdetail3.webp" alt="">
                                     </div>
                                     <div class="small-img-col">
                                         <img class="small-img" src="/images/motog50sproducdetail4.webp" alt="">
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="col2">
-                                <p class="p"><%- product.nombre %>  </p>
-                                <h3 class="tituloprod">A </h3>
-                                <h4 class="precioprod">A</h4>
-                                <p class="cuotaprod">6 Cuotas sin interes x A</p>
+                                <p class="p"><%- product.marca %>  </p>
+                                <h3 class="tituloprod"><%- product.nombre %>  </h3>
+                                <h4 class="precioprod"><%- product.precio %> </h4>
+                                <p class="cuotaprod">6 Cuotas sin interes x <%- product.precio %> </p>
                                 <select>
                                     <option> Elegir Color</option>
                                     <option> Coral Blue</option>
@@ -76,7 +76,7 @@
                             </div>
                             
                             <div class="descripcionprod" id="dpDescripcion" style="display: block;">
-                              A
+                                <%- product.descripcion %> 
                         </div>
 
                        

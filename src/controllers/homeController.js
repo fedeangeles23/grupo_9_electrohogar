@@ -26,20 +26,21 @@ let controller = {
                products,
                toThousand
            })
-        },  
-        
-        detail: (req, res) => {
-            
-            let productId = +req.params.id;
-            let product = products.find(product => products === productId)
-            
-            res.send(product)
+        }, 
 
+        detail: (req, res) => {
+          
+              
+            let productId = +req.params.id;
+            let product = products.find(product => product.id === productId)
+
+            
+            res.render('products/productDetail',{
+                product
+            }
+            )
            
          },
-
-     
-
 
 };
 
