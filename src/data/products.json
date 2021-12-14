@@ -76,5 +76,14 @@
         "descripcion": "",
         "categoria": "Electro",
         "marca": "Ava mini"
+    },
+    {
+        "id": 9,
+        "nombre": "Jeannet",
+        "precio": "15555",
+        "imagen": "aurisinalambricos.jpg",
+        "descripcion": "Jeannet",
+        "categoria": "",
+        "marca": "Jeannet"
     }
 ]
