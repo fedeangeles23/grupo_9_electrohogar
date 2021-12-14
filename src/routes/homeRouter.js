@@ -12,13 +12,13 @@ router.get('/products/detail/:id', controller.detail) //
 router.get('/create', controller.create) // Envia los datos
  router.post('/products', controller.store) //  Recibe los datos
 
+/* Editar productos */
+router.get('/products/edit/:id', controller.edit);
+router.put('products/detail/:id', controller.update);
+ 
+/* Eliminar productos */
+router.delete('/:id', controller.del);
 
-
-
-
-// GET - Detalle de productos
-/* router.get('/detallproducts/:id', controller.productdetail)
- */
 
 
 module.exports = router // Exportamos el let router
