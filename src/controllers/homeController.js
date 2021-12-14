@@ -96,7 +96,7 @@ let controller = {
 
         const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
 
-/* 
+
         products.forEach(product => {
 
             if (product.id === productId) {
@@ -111,7 +111,7 @@ let controller = {
 
         })
 
-        writeJson(products) */
+        writeJson(products) 
         res.rediect('')
 
     },
@@ -120,21 +120,21 @@ let controller = {
     del: (req, res) => {
         let productId = +req.params.id;
 
-    
-            products.forEach(product => {
+
+        products.forEach(product => {
             if (product.id === productId) {
-            let productDestroyI = products.indexOf(product)
-            productDestroyI !== -1 ? product.splice(productDestroyI, 1) 
-            : console.log('No encontre el producto chee')
+                let productDestroyI = products.indexOf(product)
+                productDestroyI !== -1 ? product.splice(productDestroyI, 1)
+                    : console.log('No encontre el producto chee')
 
-        }
-            })
+            }
+        })
 
-            writeJson(products)
-            res.redirect("users/products")
-        
-        }
-        
+        writeJson(products)
+        res.redirect("users/products")
+
+    }
+
 };
 
 module.exports = controller
