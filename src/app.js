@@ -7,7 +7,7 @@
 
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 const path = require('path')
 const method0verride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
 //para trabajar con forms
 app.use(express.json());
-
+app.use(method0verride('__method'))
 
 let login = require('./routes/loginRouter')
 let registro = require('./routes/registroRouter') 

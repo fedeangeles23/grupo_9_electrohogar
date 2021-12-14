@@ -92,6 +92,7 @@ let controller = {
 
     update: (req, res) => {
         let productId = +req.params.id
+        res.send(req.body)
 
         const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
 
@@ -111,7 +112,7 @@ let controller = {
         })
 
         writeJson(products) */
-        res.send(req.body)
+        res.rediect('')
 
     },
 
