@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<input type="checkbox" id="check">
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/header.ejs') %>
+
+            <%- include ('../partials/nav.ejs') %>
+
+                <main>
+                    <h3 class="h3editprod">Estas editando el producto <p><%- product.nombre %></p>  <style> .h3editprod p{ color: rgb(0, 26, 255);} </style></h3>
+
+                    <div class="centerdiv ">
+
+                        <div class="formmain">
+                            <form action="/products/detail/<%- product.id %>?_method=PUT" method="POST">
+
+                                <div class="formproduct">
+
+                                    <label for="nombre">Nombre del producto:</label>
+                                    <input type="text" name="nombre" id="nombre" value="<%- product.nombre %>">
+
+                                    <label for="nombre">Marca:</label>
+                                    <input type="text" name="marca" id="marca" value="<%- product.marca %>">
+
+                                    <label for="nombre">Precio:</label>
+                                    <input type="text" name="precio" id="precio" value="<%- product.precio %>">
+
+                                    <label for="descripcion">Descripcion: </label>
+                                    <textarea name="descripcion" id="descripcionid" cols="30" rows="10"></textarea>
+                                    <input type="file" name="imagen" id="imagen">
+
+
+                                    <label for="nombre">Categoria:</label>
+                                    <input type="text" name="categoria" id="categoria" value="<%- product.categoria %>">
+
+
+                                    <button type="submit"> Editar producto </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                
+                    </main>
+
+
+
+                <%- include ('../partials/footer.ejs') %>
+
+                    <%- include ('../partials/scripts.ejs') %>
+
+    </body>
+
+</html>

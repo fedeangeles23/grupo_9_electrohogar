@@ -4,14 +4,13 @@
 
 
 
-<%- include('../partials/head', {title: product.nombre }) %>
+<%- include('../partials/head.ejs') %>
 
     <body>
 
         <%- include('../partials/header.ejs') %>
 
             <%- include('../partials/nav.ejs') %>
-
 
                 <main>
                     <p class="enrutador"> Inicio > Tecnologia > <%- product.categoria %> > <%- product.marca %></p>
@@ -58,6 +57,13 @@
                                        <br> <a class="greelineprod" href="#">Ver costos de envio</a>
                                     </p>
                                 </div>
+                                
+                                <div class="adminbtn">
+                                    <a class="btneditprodform" href="/products/edit/<%- product.id %> ">Editar producto</a>
+                                </div>
+                                <form action="/products/<%- product.id %>?_method=DELETE"  method="POST">
+                                    <button class="btndeleteprod" type="submit">Eliminar Producto</button>
+                                </form>
 
 
 
