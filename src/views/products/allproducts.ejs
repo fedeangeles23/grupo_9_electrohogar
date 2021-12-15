@@ -77,30 +77,20 @@
 
                             <% products.forEach(product=> { %>
                                 <div class="card">
-                                    <a href="/products/detail/<%- product.id %>"></a>
-
-                                    <div class="image-section">
-                                        <img src="/images/products/<%- product.imagen %>" alt="">
-                                    </div>
-                                    <div class="description">
-                                        <h1>
-                                            <%- product.nombre %>
-                                        </h1>
-                                        <span>$<%- product.precio %></span>
-                                    </div>
-                                    <small class="cuotas"> 12 cuotas x <%- toThousand((product.precio)) %> </small>
-
-                                    <div class="button-group">
-                                        <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
-                                        <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>
-                                    </div>
-
-                                    <div class="fav">
-                                        <i class="fa">&#xf004;</i>
-                                    </div>
+                                    <a href="/products/detail/<%- product.id %>">
+                                <div class="image-section">
+                                    <img src="/images/products/<%- product.imagen %>" alt="">
                                 </div>
-
-                                <% }) %>
+                                <div class="description">
+                                    <h1><%- product.nombre %></h1>
+                                    <span>$<%- product.precio %></span>
+                                </div>
+                                <small class="cuotas"> 12 cuotas x  <%- toThousand((product.precio)) %> </small>
+                            </a>
+                                <div class="button-group">
+                                    <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
+                                    <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>
+                                </div>
 
 
 

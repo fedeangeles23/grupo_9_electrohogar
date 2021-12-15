@@ -14,10 +14,10 @@ router.get('/create', controller.create) // Envia los datos
 
 /* Editar productos */
 router.get('/products/edit/:id', controller.edit);
-router.put('products/detail/:id', controller.update);
+router.put('/products/detail/:id', controller.update);
  
 /* Eliminar productos */
-router.delete('/:id', controller.del);
+router.delete('/products/delete/:id', controller.del);
 
 
 
