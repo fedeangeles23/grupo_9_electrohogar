@@ -33,6 +33,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(method0verride('__method'))
 
+/* Enrutadores */
+
 let login = require('./routes/loginRouter')
 let registro = require('./routes/registroRouter') 
 let home = require('./routes/homeRouter')
@@ -40,20 +42,11 @@ let home = require('./routes/homeRouter')
 let perfil = require('./routes/perfilRouter')
 let detail = require('./routes/productRouter')
 
-let editarprod = require('./routes/adminRouter')
+let admin = require('./routes/adminRouter')
 
 let carrito = require ('./routes/cartRouter')
 
-//------------------Rutas---------------------// 
- /* el metodo dentro de sendfile Join() busca la ruta en donde estamos, primer parametro __dirname hace referencia al directorio en donde estamos,
- el segundo parametro es el path relativo que queremos enviar, en este caso views/index.html */
-
- // El viejo : 
-/* app.get('/', function (req, res){
-    res.render(path.join(__dirname, './views/products/home.ejs'))
-}); 
- */
-
+/* ----------------------------------------- */
 app.use('/', home);
 
 app.use('/carrito', carrito)
@@ -66,5 +59,5 @@ app.use('/productDetail', detail)
 
 app.use('/perfil', perfil)
 
-app.use('/editarprod', editarprod);
+app.use('/admin', admin);
 

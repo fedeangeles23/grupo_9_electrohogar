@@ -5,19 +5,11 @@ let controller = require('../controllers/homeController.js') // Requerimos el co
 
 // GET - Listado de productos
 router.get('/', controller.home) // buscamos en el objeto controller el HOME
+
 router.get('/products', controller.products) // Va hacia la ruta /products y consume el controlador products para mostrar todos los productos en la DB
+
 router.get('/products/detail/:id', controller.detail) // 
 
-/* Crear productos */
-router.get('/create', controller.create) // Envia los datos
- router.post('/products', controller.store) //  Recibe los datos
-
-/* Editar productos */
-router.get('/products/edit/:id', controller.edit);
-router.put('/products/detail/:id', controller.update);
- 
-/* Eliminar productos */
-router.delete('/products/delete/:id', controller.del);
 
 
 

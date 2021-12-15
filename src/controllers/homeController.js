@@ -23,7 +23,7 @@ let controller = {
     },
 
     products: (req, res) => {
-        res.render('products/allproducts', {
+        res.render('products/allProducts', {
             products,
             toThousand
         })
@@ -42,99 +42,11 @@ let controller = {
         }
         )
 
-    },
-
-
-
-    create: (req, res) => {
-        res.render('users/createProd')
-    },
-
-    store: (req, res) => {
-
-        const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
-
-        let lastId = 0
-
-        products.forEach(product => {
-            if (product.id > lastId) {
-                lastId = product.id
-            }
-        });
-
-
-        let newProduct = {
-            id: lastId + 1,
-            nombre,
-            precio,
-            imagen,
-            descripcion,
-            categoria,
-            marca,
-        }
-
-        products.push(newProduct)
-
-        writeJson(products)
-        res.redirect('/products')
-    },
-
-
-    edit: (req, res) => {
-        let productId = +req.params.id
-        let productToEdit = products.find(product => product.id === productId)
-
-
-        res.render('users/editProd', {
-            product: productToEdit
-        })
-    },
-
-    update: (req, res) => {
-        let productId = +req.params.id
-        res.send(req.body)
-
-        const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
-
-
-        products.forEach(product => {
-
-            if (product.id === productId) {
-                product.id = product.id,
-                    product.nombre = nombre,
-                    product.precio = precio,
-                    product.descripcion = descripcion,
-                    product.categoria = categoria,
-                    product.marca = marca,
-                    product.imagen = imagen
-            }
-
-        })
-
-        writeJson(products) 
-        res.rediect('')
-
-    },
-
-
-    del: (req, res) => {
-        let productId = +req.params.id;
-
-
-        products.forEach(product => {
-            if (product.id === productId) {
-                let productDestroyI = products.indexOf(product)
-                productDestroyI !== -1 ? product.splice(productDestroyI, 1)
-                    : console.log('No encontre el producto chee')
-
-            }
-        })
-
-        writeJson(products)
-        res.redirect("users/products")
-
     }
 
 };
 
 module.exports = controller
+
+const express = require('express');
+const router = express.Router();
