@@ -2,16 +2,23 @@ let express = require('express')
 let router = express.Router()
 let controller = require('../controllers/adminController')
 
+//se requiere el middleware
+let userAdminCheck = require('../middlewares/userAdminCheck')
+
 
 /* Crear productos */
-router.get('/products/create', controller.create) // Envia los datos
- router.post('/products', controller.store) //  Recibe los datos
+router.get('/products/create', userAdminCheck , controller.create) // Envia los datos
+router.post('/products',controller.store) //  Recibe los datos
+
 
 /* Editar productos */
+
 router.get('/products/edit/:id', controller.edit);
 router.put('/products/detail/:id', controller.update);
+
  
 /* Eliminar productos */
+
 router.delete('/products/delete/:id', controller.del);
 
 
