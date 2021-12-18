@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
 
-
-
 body {
     overflow-x: hidden; /* Hide scrollbars */
   }
@@ -23,7 +21,6 @@ header {
     border-right:none;
     
 }
-
 
 header .headernav {
     display:flex;
@@ -143,14 +140,10 @@ header .buscar i::after{
     transition:0.3s;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    
-
 } 
 
 header .buscar i:hover::after{
-    width: 100%;
-   
-
+    width: 100%; 
 }
 
 header .bar {
@@ -160,14 +153,10 @@ header .bar {
 header .bar {
     position: relative;
     margin:auto;
-
-
-
 }
 
 header .btnavmobile {
-    display: flex;
-    
+    display: flex;   
 }
 
 header .bar span {
@@ -180,14 +169,6 @@ input[type=checkbox]{
     -webkit-appearance: none;
     display:none;
 }
-
-
-
-
-
-
-
-
 
 /* NAV---------------------------------------------*/
 
@@ -202,7 +183,6 @@ nav {
     height: 50px;
     user-select: none;
     background: #E2E2E2;
-
 }
 
 nav ul {
@@ -217,9 +197,7 @@ nav ul li {
     padding: 10px 25px;
     color:black;
     font-size:16px;
-    cursor: pointer;
-
-    
+    cursor: pointer;   
 }
 nav ul li i {
     color:rgb(71, 71, 71);
@@ -227,16 +205,13 @@ nav ul li i {
     font-size: 22px;
     position: relative;
     top: 4px;
-
-
 }
 
 nav ul li {
     text-decoration: none;
     color: #fff;
     font-size: 1,6rem;
-    transition: .5s ease;
-    
+    transition: .5s ease;  
 }
 
 .li {
@@ -277,11 +252,7 @@ nav ul li {
 }
 
 
-
 /* FOOTER ---------------------------------------------------------------------------------*/
-/* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
 
 
@@ -377,6 +348,10 @@ background: linear-gradient(90deg, rgba(58,63,180,1) 0%, rgba(29,133,253,1) 50%,
     margin:5px;
     cursor:pointer;
 
+}
+
+.footerul a {
+    color: white;
 }
 
 
@@ -532,7 +507,10 @@ flex-direction: column;
     header {
         width: 100%;
     }
-
+    .footercentral h3 {
+        font-size: 20px;
+        text-align: center;
+    }
 
     }
 /*  Por alguna extraña razon, al aplicar este media screen el header deja de romperse, volviendose totalmente responsive. */
@@ -672,7 +650,7 @@ flex-direction: column;
             height: 180px;
         }
 
-
+       
 
      
 

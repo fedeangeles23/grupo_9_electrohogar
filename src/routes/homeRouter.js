@@ -11,6 +11,12 @@ router.get('/products', controller.products) // Va hacia la ruta /products y con
 router.get('/products/detail/:id', controller.detail) // 
 
 
+/* Footer vistas */
+
+router.get('/sobre-nosotros', controller.sobreNosotros) // 
+
+
+
 
 
 module.exports = router // Exportamos el let router

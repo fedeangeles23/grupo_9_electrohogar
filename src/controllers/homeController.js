@@ -42,7 +42,13 @@ let controller = {
         }
         )
 
+    },
+
+    sobreNosotros: (req,res) => {
+        res.render('footerViews/sobreNosotros')
     }
+
+
 
 };
 
@@ -50,3 +56,12 @@ module.exports = controller
 
 const express = require('express');
 const router = express.Router();
+
+
+/* 
+
+sobreNosotros: (req,res) => {
+        
+} 
+
+*/
