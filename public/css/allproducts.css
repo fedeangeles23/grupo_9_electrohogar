@@ -1,0 +1,66 @@
+.querysearchh3 {
+    color: rgb(48, 46, 46);
+    font-size: 30px;
+    display: block;
+    margin:0
+
+}
+
+aside{
+    background-color: #EEEEEE;
+
+}
+
+.asidediv{
+    background-color: #ffffff;
+    margin:50px;
+    width: 300px;
+    height: 1000px;
+    text-align: center;
+}
+
+.section {
+    display: flex;
+}
+
+.boxarea {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #EEEEEE;
+    font-size: 17px;
+}
+
+.boxareachild1, 
+.boxareachild2,
+.boxareachild3 {
+    margin: 5px;
+}
+
+.vistagrid {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    color: rgb(236, 55, 55);
+}
+
+.selectprecio {
+    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+
+.selectprecio select{
+    border: none;
+}
+
+.boxareachild2 {
+    border-right: 1px solid #d0d0d0;
+    border-left: 1px solid #d0d0d0;
+    padding: 5px;
+}
+
+.boxareachild3 {
+    margin-right: 30px;
+}

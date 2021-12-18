@@ -9,103 +9,69 @@
             <%- include ('../partials/nav.ejs') %>
 
                 <main>
-                    <!-- Carrousel -->
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/images/carr1.jpg" class="d-block w-100" alt="imgcarousel">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/images/carr2.jpg" class="d-block w-100" alt="carousel">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/images/carr3.jpg" class="d-block w-100" alt="carousel">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <!-- End Carrousel -->
 
-     <!-- Linea bajo carusel -->
 
-                    <div class="lineabajocarousel">
-                        <div class="col1linea"> 
-                            <img class="imgtrucklinea" src="/images/delivery-truck (1).png" alt="">
-                            <span>ENVÍOS A <b> TODO EL PAÍS </b>  </span>
+
+                    
+
+                    <div class="boxarea">
+                        <div class="boxareachild1">
+                            <span><b>*N*</b>Productos</span>
                         </div>
 
-                        <div class="col2linea">
-                            <img class="tarjetaslinea" src="/images/549d2cb2275c2ae398b2f7bd1450.png" alt="">
-                            <span>Pagá con crédito y débito 
-                                <a href="#">Ver promociones</a></span>
+                        <div class="boxareachild2">
+                            <b>Vista: <img class="vistagrid" src="/icons/grid-view-svgrepo-com.svg" alt=""> <img class="vistagrid" src="/icons/menu-hamburger-nav-svgrepo-com.svg" alt=""> </b> 
                         </div>
 
-                        <div class="col3linea"> 
-                           <img class="envioslinea" src="/images/ayudar.png" alt="">
-                            <span>Consulta tus dudas al <b>0810-1111-4444</b> </span>
-
+                        <div class="boxareachild3">
+                          <b>Filtrar por: <select class="selectprecio" name="selectprecio" id="">
+                              <option value="menorprecio">Menor precio</option>
+                              <option value="menorprecio">Mayor precio</option>
+                          </select></b>  
                         </div>
                     </div>
-                         <!-- End Linea bajo carusel -->
 
                     <div class="section">
+                        <aside>
+                            <div class="asidediv">
+                                <h3 class="querysearchh3"> req.query searchbar</h3>
+                                <small><b>*numero*</b> resultados</small>
+                            </div>
+                        </aside>
+                                            <!-- Cards de productos -->
+
                         <div class="cards">
-                            <div class="new-arrival">
-                                <h3>Ofertas imperdibles <span>12 cuotas sin interes</span></h3>
-                            </div>
+                            <% products.forEach(product=> { %>
+                                <div class="card" >
+                                    <div class="image-section">
+                                        <img src="/images/products/<%- product.imagen %>" alt="">
+                                    </div>
+                                    <a href="/products/detail/<%- product.id %>"></a>
+                                    <div class="description">
+                                        <h1>
+                                            <%- product.nombre %>
+                                        </h1>
+                                        <span>$<%- product.precio %></span>
+                                    </div>
+                                    <small class="cuotas"> 12 cuotas x <%- toThousand((product.precio)) %> </small>
 
-                            <!-- Cards de productos -->
+                                    <div class="button-group">
+                                        <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
+                                        <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>
+                                    </div>
 
-                            <% products.forEach(product => { %>
-                                <div class="card">
-                                <div class="image-section">
-                                    <img src="/images/products/<%- product.imagen %>" alt="">
+                                    <div class="fav">
+                                        <i class="fa">&#xf004;</i>
+                                    </div>
                                 </div>
-                                <div class="description">
-                                    <h1><%- product.nombre %></h1>
-                                    <span>$<%- product.precio %></span>
-                                </div>
-                                <small class="cuotas"> 12 cuotas x  <%- toThousand((product.precio)) %> </small>
 
-                                <div class="button-group">
-                                    <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
-                                    <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>
-                                </div>
+                                <% }) %>
 
-                                <div class="fav">
-                                    <i class="fa">&#xf004;</i>
-                                </div>
-                            </div>
-
-                            <% }) %>
-
-            
-
-                            </div>
                         </div>
                     </div>
-
-                    <div class="imgcategorias">
-                      <a href="#"> <img src="/images/512.jpg" alt=""></a> 
-                      <a href="#"> <img src="/images/513.jpg" alt=""></a> 
                     </div>
+
+
 
 
 
