@@ -14,7 +14,7 @@ const writeJson = (database) => fs.writeFileSync(productsFilePath, JSON.stringif
 let controller = {
 
     create: (req, res) => {
-        res.render('products/createProd')
+        res.render('admin/createProd')
     },
 
     store: (req, res) => {
@@ -33,10 +33,10 @@ let controller = {
             id: lastId + 1,
             nombre,
             precio,
-            imagen,
             descripcion,
             categoria,
             marca,
+            imagen : req.file ? req.file.filename : ("default-imagen.png")
         }
 
         products.push(newProduct)
@@ -50,7 +50,7 @@ let controller = {
         let productId = +req.params.id
         let productToEdit = products.find(product => product.id === productId)
 
-        res.render('products/editProd', {
+        res.render('admin/editProd', {
             product: productToEdit
         })
     },
@@ -69,7 +69,7 @@ let controller = {
                     product.descripcion = descripcion,
                     product.categoria = categoria,
                     product.marca = marca,
-                    product.imagen = imagen
+                    product.imagen = req.file ? req.file.filename : product.imagen
             }
 
         })

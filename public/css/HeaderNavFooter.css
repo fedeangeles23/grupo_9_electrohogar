@@ -274,6 +274,7 @@ header {
 
 
 
+
 .footerlinealtop {
     font-family: 'Lato', sans-serif;
     background-color: #EEEEEE;
@@ -323,6 +324,7 @@ header {
     height: 160px;
     background: rgb(58,63,180);
 background: linear-gradient(90deg, rgba(58,63,180,1) 0%, rgba(29,133,253,1) 50%, rgba(69,80,252,1) 100%);
+
 }
 
 

@@ -1,4 +1,4 @@
-const USER_ROL = "USER";
+const USER_ROL = "USER_ADMIN";
 
 function userAdminCheck(req,res, next) {
     

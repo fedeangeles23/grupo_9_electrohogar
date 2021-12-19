@@ -43,27 +43,27 @@
                     </div>
                     <!-- End Carrousel -->
 
-     <!-- Linea bajo carusel -->
+                    <!-- Linea bajo carusel -->
 
                     <div class="lineabajocarousel">
-                        <div class="col1linea"> 
+                        <div class="col1linea">
                             <img class="imgtrucklinea" src="/images/delivery-truck (1).png" alt="">
-                            <span>ENVÍOS A <b> TODO EL PAÍS </b>  </span>
+                            <span>ENVÍOS A <b> TODO EL PAÍS </b> </span>
                         </div>
 
                         <div class="col2linea">
                             <img class="tarjetaslinea" src="/images/549d2cb2275c2ae398b2f7bd1450.png" alt="">
-                            <span>Pagá con crédito y débito 
+                            <span>Pagá con crédito y débito
                                 <a href="#">Ver promociones</a></span>
                         </div>
 
-                        <div class="col3linea"> 
-                           <img class="envioslinea" src="/images/ayudar.png" alt="">
+                        <div class="col3linea">
+                            <img class="envioslinea" src="/images/ayudar.png" alt="">
                             <span>Consulta tus dudas al <b>0810-1111-4444</b> </span>
 
                         </div>
                     </div>
-                         <!-- End Linea bajo carusel -->
+                    <!-- End Linea bajo carusel -->
 
                     <div class="section">
                         <div class="cards">
@@ -73,38 +73,40 @@
 
                             <!-- Cards de productos -->
 
-                            <% productselectro.forEach(product => { %>
+                            <% productselectro.forEach(product=> { %>
                                 <div class="card">
-                                <div class="image-section">
-                                    <img src="/images/products/<%- product.imagen %>" alt="">
+                                    <div class="image-section">
+                                        <img src="/images/products/<%- product.imagen %>" alt="">
+                                    </div>
+                                    <div class="description">
+                                        <h1>
+                                            <%- product.nombre %>
+                                        </h1>
+                                        <span>$<%- product.precio %></span>
+                                    </div>
+                                    <small class="cuotas"> 12 cuotas x <%- toThousand((product.precio)) %> </small>
+
+                                    <div class="button-group">
+                                        <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
+                                        <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>
+                                    </div>
+
+                                    <div class="fav">
+                                        <i class="fa">&#xf004;</i>
+                                    </div>
                                 </div>
-                                <div class="description">
-                                    <h1><%- product.nombre %></h1>
-                                    <span>$<%- product.precio %></span>
-                                </div>
-                                <small class="cuotas"> 12 cuotas x  <%- toThousand((product.precio)) %> </small>
 
-                                <div class="button-group">
-                                    <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
-                                    <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>
-                                </div>
+                                <% }) %>
 
-                                <div class="fav">
-                                    <i class="fa">&#xf004;</i>
-                                </div>
-                            </div>
 
-                            <% }) %>
 
-            
-
-                            </div>
                         </div>
+                    </div>
                     </div>
 
                     <div class="imgcategorias">
-                      <a href="#"> <img src="/images/512.jpg" alt=""></a> 
-                      <a href="#"> <img src="/images/513.jpg" alt=""></a> 
+                        <a href="#"> <img src="/images/512.jpg" alt=""></a>
+                        <a href="#"> <img src="/images/513.jpg" alt=""></a>
                     </div>
 
 

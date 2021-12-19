@@ -9,12 +9,11 @@
 
 }
 
-.row {
+.roww {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-
 
 
 .small-img-row{
