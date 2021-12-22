@@ -100,13 +100,13 @@
                             },
                             {
                                 "id":11,
-                                "nombre": "Notebook HP X360 435 G7 Amd Ryzen 5 4500u 13' 8GB 256GB SSD Touch",
-                                "precio": 158.999,
-                                "imagen": "Notebook HP.jpg",
+                                "nombre": "Impresora Multifuncional HP Ink Tank 415 Z4B53A",
+                                "precio": 34.099,
+                                "imagen": "Impresora Multifuncional HP Ink Tank 415 Z4B53A.jpg",
                                 "categoria": "Computacion",
                                 "cuotas": 12,
-                                "marca":"Amy Ryzen",
-                                "descripcion": "El versátil equipo portátil ultradelgado HP ProBook x360 435 se adapta a lo largo del día, con cuatro modos de uso que le permiten crear, presentar y colaborar de forma cómoda. Afronta tu día con Windows 10 Pro y las potentes funciones de seguridad, colaboración y conectividad de HP. Obtenga conexión Wi-Fi® de velocidad gigabit con Wi-Fi 6 (802.11ax). Los ataques de firmware pueden devastar completamente su equipo. Manténgase protegido con el BIOS de recuperación automática de HP. HP Sure Start Gen5, automáticamente, recupera el BIOS de los ataques de malware, rootkits o corrupción."
+                                "marca":"Ink Tank",
+                                "descripcion": ": Imprima, copie, escanee, inalámbrica. Tipos de soporte admitidos: Papel normal, papeles fotográficos HP, papel mate para folletos o papel profesional HP, papel mate para presentaciones HP, papel brillante para folletos o papel profesional HP, papeles de inyección de tinta fotográficos, papeles de inyección de tinta mate, papeles de inyección de tinta brillantes.  "
                             },
                             {
                                 "id":12,
@@ -197,8 +197,14 @@
                                 "cuotas": 12,
                                 "marca":"Smartlife",
                                 "descripcion": "" 
-                            }
-                          
-
-                            
-                            ]
+                            },
+                            {
+                                "id":21,
+                                "nombre": "Tablet Level up mymo 7' 16 GB",
+                                "precio": 11.569,
+                                "imagen": "Tablet Level up mymo 7' 16 GB.jpg",
+                                "categoria": "Electro",
+                                "cuotas": 12,
+                                "marca":"Level up",
+                                "descripcion": ""
+                            }]
