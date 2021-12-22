@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-  <input type="checkbox" id="check">
+<input type="checkbox" id="check">
 
-    <%- include('../partials/head.ejs')  %> 
-
-
-<body>
-
-    <%- include('../partials/header.ejs')  %> 
+<%- include('../partials/head.ejs') %>
 
 
-    <%- include('../partials/nav.ejs')  %> 
+  <body>
+
+    <%- include('../partials/header.ejs') %>
 
 
-    <div class="container">
-    <div class="logoLogin"> 
-        <img src="/images/electrohogarlogo.png">
-    </div>
+      <%- include('../partials/nav.ejs') %>
 
-  <p class="ingreso">Ingresa los datos de tu cuenta</p>
-  
-      <div class="login2">
-      <input class="input-style" type="Email" name="name" placeholder="Email:">
-      <span class="error">Debes ingresar tu Email</span>
-      </div>
+      <main class="logregistermain"> 
+        <div class="containerregistro">
+          <div class="logoLogin">
+            <img src="/images/electrohogarlogo.png">
+          </div>
 
-       <div class="login2">
-        <input class="input-style" type="Contraseña" name="name" placeholder="Contraseña:">
-        <span class="error">Debes ingresar tu Contraseña</span>
-       </div>
+          <p class="ingreso">Ingresa los datos de tu cuenta</p>
 
-       <span class="cuenta2"> <button type="continue" class="btn btn-continue">Continuar </button> </span>
+          <div class="login2">
+            <input class="input-style" type="Email" name="name" placeholder="Email:">
+            <span class="error">Debes ingresar tu Email</span>
+          </div>
+
+          <div class="login2">
+            <input class="input-style" type="Contraseña" name="name" placeholder="Contraseña:">
+            <span class="error">Debes ingresar tu Contraseña</span>
+          </div>
+
+          <span class="cuenta2"> <button type="continue" class="btn btn-continue">Continuar </button> </span>
+
+
+          <div class="google-btnlogin">
+            <div class="google-icon-wrapper">
+              <img class="google-icon"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+            </div>
+            <a href="#">
+              <p class="btn-text"><b>Ingresa con google</b></p>
+            </a>
+          </div>
+
+          <div class="datos-login">
+            <div class="olvide"> <span class="centro"><a href="#" class="link-login"> Olvidé mi contraseña</a></span>
+            </div>
+            <a span class="cuenta">No tengo cuenta </a> </span>
+          </div>
+
+          <span> <a href="/" class="link-login"> Volver al menú de inicio</a> </span>
+        </div>
+
+      </main>
 
        
-<div class="google-btn">
-    <div class="google-icon-wrapper">
-      <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
-    </div>
-    <a href="#"> <p class="btn-text"><b>Ingresa con google</b></p></a>    
-  </div>
 
-       <div class="datos-login"> 
-       <div class="olvide"> <span class="centro"><a href="#" class="link-login"> Olvidé mi contraseña</a></span> </div>
-       <a span class="cuenta">No tengo cuenta </a> </span>
-       </div>
+        <%- include('../partials/footer.ejs') %>
+          <%- include('../partials/scripts.ejs') %>
 
-              <span> <a href="/" class="link-login"> Volver al menú de inicio</a> </span>
-    </div>
+  </body>
 
-    
-    <%- include('../partials/footer.ejs')  %> 
-    <%- include('../partials/scripts.ejs')  %> 
-
-</body>
 </html>

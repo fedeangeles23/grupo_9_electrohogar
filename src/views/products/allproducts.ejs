@@ -32,21 +32,16 @@
                     </div>
 
                     <div class="section">
-                      <!--   <aside>
-                            <div class="asidediv">
-                                <h3 class="querysearchh3"> req.query searchbar</h3>
-                                <small><b>*numero*</b> resultados</small>
-                            </div>
-                        </aside> -->
+                     
                                             <!-- Cards de productos -->
 
                         <div class="cards">
                             <% products.forEach(product=> { %>
-                                <div class="card" >
+                                <div class="card">
+                                    <a href="/products/detail/<%- product.id %>">
                                     <div class="image-section">
                                         <img src="/images/products/<%- product.imagen %>" alt="">
                                     </div>
-                                    <a href="/products/detail/<%- product.id %>"></a>
                                     <div class="description">
                                         <h1>
                                             <%- product.nombre %>
@@ -54,7 +49,7 @@
                                         <span>$<%- product.precio %></span>
                                     </div>
                                     <small class="cuotas"> 12 cuotas x <%- toThousand((product.precio)) %> </small>
-
+                                      </a>
                                     <div class="button-group">
                                         <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
                                         <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>

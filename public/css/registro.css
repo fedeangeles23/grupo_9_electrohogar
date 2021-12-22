@@ -33,7 +33,7 @@ span a.link {
     margin-top: 25px;
     color: #383737;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 17px;
 text-transform: none;}
 
 span a.link:hover {
@@ -169,21 +169,16 @@ span.cuenta button{
     margin-left: 85px;
     text-decoration: underline;
     font-size: 20px;
+    margin-left: -90px;
 }
 span.cuenta button:hover {
     font-size: 19px;
 }
 
-/*ingresar los datos de tu cuenta */
-p.ingreso {
-    margin-left: 80px;
-    font-size: 20px;
-}
-
 /*volver al menú de inicio*/
 span a.link {
     margin-left: 85px;
-    font-size: 20px;
+    font-size: 17px;
 }
 }
 
@@ -201,29 +196,14 @@ span a.link {
     
     /*para el boton naranja*/
 span.cuenta {
-    width: 200px;
-    height: 20px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 90px;
-    text-decoration: underline;
-    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
-
-
-/*ingresar los datos de tu cuenta */
-p.ingreso {
-    margin-left: 85px;
-    font-size: 20px;
-   width: 100%;
-}
 
 /*volver al menú de inicio*/
 span a.link {
     margin-left: 45px;
-    font-size: 20px;
+    font-size: 17px;
     margin-right: 40px;
 }
 
@@ -237,4 +217,12 @@ span a.link {
     justify-content: center;
 }
 
+}
+
+.botonesregister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
