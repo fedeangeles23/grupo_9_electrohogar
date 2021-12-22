@@ -14,6 +14,10 @@ router.get('/products/detail/:id', controller.detail) //
 /* Footer vistas */
 
 router.get('/sobre-nosotros', controller.sobreNosotros) // 
+router.get('/preguntas-frecuentes', controller.preguntasFrecuentes) // 
+router.get('/terminos-y-condiciones', controller.terminosYcondiciones) // 
+router.get('/trabaja-con-nosotros', controller.trabajaConNosotros) // 
+
 
 
 

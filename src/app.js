@@ -26,12 +26,6 @@ app.use(express.urlencoded({ extended: false }));
 //para trabajar con forms
 app.use(express.json());
 app.use(method0verride('_method'));
-app.use(session({
-    secret: "secret",
-    resave: false,
-    saveUninitialized: true,
-    cookie: {secure: true}
-}))
 
 
 
@@ -68,7 +62,7 @@ app.use('/admin', admin);
 
 
 
-/*  ERROR 404 */
+/* ----------- ERROR 404 ---------------*/
 app.use((req, res, next) => {
 res.status(404).render('404-page') //le tira al cliente el status de la peticion realizada
 })

@@ -16,7 +16,7 @@ router.post('/products',  upload.single('imagen'), controller.store) //  Recibe 
 /* Editar productos */
 
 router.get('/products/edit/:id', controller.edit);
-router.put('/products/detail/:id', upload.single('imagen'), controller.update);
+router.put('/products/detail/:id', controller.update);
 
  
 /* Eliminar productos */

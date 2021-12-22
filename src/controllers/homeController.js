@@ -46,6 +46,17 @@ let controller = {
 
     sobreNosotros: (req,res) => {
         res.render('footerViews/sobreNosotros')
+    },
+
+    preguntasFrecuentes: (req,res) => {
+        res.render('footerViews/preguntasFrecuentes')
+    },
+
+    terminosYcondiciones: (req,res) => {
+        res.render('footerViews/terminosyCondiciones')
+    },
+    trabajaConNosotros: (req,res) => {
+        res.render('footerViews/trabajaConNosotros')
     }
 
 
