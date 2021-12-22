@@ -1,12 +1,13 @@
 .formproduct {
     background-color: rgb(247, 247, 247);
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
     justify-content: center;
+    z-index: 90;
 }
 
 
@@ -17,9 +18,8 @@
 
 }
 .formproduct input {
-    width: 200px;
-    height: 20px;
-    border:none;
+    border:1px solid rgba(47, 0, 255, 0.37);
+    border-radius: 5px;
 }
 
 .formproduct button {
@@ -81,8 +81,6 @@
 
 }
 
-.centerdiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.imgfile {
+    margin: 40px;
 }

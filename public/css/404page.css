@@ -1,0 +1,40 @@
+.errordiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn404home {
+    font-size: 14px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 13px 30px;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #1381B2;
+    min-width: 200px;
+    text-align: center;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    margin-top: 30px;
+}
+
+.btn404home:hover {
+    color:black;
+    background-color: white;
+    border:1px solid grey;
+}
+
+.oopsh1 {
+    font-size:35px;
+    font-weight: bold;
+}
+
+.imgpandita {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}

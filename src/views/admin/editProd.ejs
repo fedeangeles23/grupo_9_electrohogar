@@ -15,7 +15,7 @@
                     <div class="centerdiv ">
 
                         <div class="formmain">
-                            <form action="/admin/products/edit/<%- product.id %>?_method=PUT" method="POST">
+                            <form action="/admin/products/edit/<%- product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                                 <div class="formproduct">
 
@@ -30,7 +30,8 @@
 
                                     <label for="descripcion">Descripcion: </label>
                                     <textarea name="descripcion" id="descripcionid" cols="30" rows="10"></textarea>
-                                    <input type="file" name="imagen" id="imagen">
+
+                                    <input type="file" name="imagen" id="imagen" class="imgfile">
 
 
                                     <label for="nombre">Categoria:</label>
@@ -41,16 +42,10 @@
                                 </div>
                             </form>
                         </div>
-
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
                 
                     </main>
 
-
+                    <div class="whitespace"></div>
 
                 <%- include ('../partials/footer.ejs') %>
 
