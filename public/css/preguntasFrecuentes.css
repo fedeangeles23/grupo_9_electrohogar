@@ -52,3 +52,7 @@ h2.mb-0{
     left: 30px;
     top: 46px;
 }
+
+button.btn.btn-link {
+    color: red;
+}
