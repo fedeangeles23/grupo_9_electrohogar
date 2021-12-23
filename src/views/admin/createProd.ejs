@@ -9,43 +9,55 @@
 
             <%- include ('../partials/nav.ejs') %>
 
-                <main>
-                    <div class="centerdiv ">
+                <main class="creat">
+                   
+                    <h3 class="h3creatproduct">Creando un producto</h3>
+                        <div class="formmain-create">
 
-                        <div class="formmain">
+                            <form class="form-create" action="/admin/products" method="POST" enctype="multipart/form-data">
 
-                            <form action="/admin/products" method="POST" enctype="multipart/form-data">
-
-                                <div class="formproduct">
+                                <div class="formproduct-create">
 
                                     <label for="nombre">Nombre del producto:</label>
-                                    <input type="text" name="nombre" id="nombre">
+                                    <input class="create" type="text" name="nombre" id="nombre"  >
 
                                     <label for="nombre">Marca:</label>
-                                    <input type="text" name="marca" id="marca">
+                                    <input class="create" type="text" name="marca" id="marca" >
 
                                     <label for="nombre">Precio:</label>
-                                    <input type="text" name="precio" id="precio">
+                                    <input class="create" type="text" name="precio" id="precio" >
 
                                     <label for="descripcion">Descripcion: </label>
-                                    <textarea name="descripcion" id="descripcionid" cols="30" rows="10"></textarea>
+                                    <textarea class="text-creat" name="descripcion" id="descripcionid" cols="30" rows="10"></textarea>
 
-                                    <input type="file" name="imagen" id="imagen">
+                                    <div class="div-file-create">
+                                        <p class="text-create">Agregar archivo</p>
+                                        <input class="file-creat" type="file" name="imagen" id="imagen" />
+                                      </div>
 
-                                    <label for="nombre">Categoria:</label>
-                                    <input type="text" name="categoria" id="categoria">
+                                    <div class="select-create">
+                                        <select name="category" id="category-creat" class="form-input">
+                                          <option hidden>Elegí</option>
+                                          <option>Electro</option>
+                                          <option>TV & Audio</option>
+                                          <option>Cocinas</option>
+                                          <option>Celulares</option>
+                                          <option>Computacion</option>
+                                          <option>Gaming</option>
+                                        </select>
+                                      </div>
 
 
-                                    <button type="submit"> Cargar producto </button>
+                                    <button class="but-creat" type="submit"> Cargar producto </button>
 
                                 </div>
+                                </form>
+                            </div>
+                        </main>
+                                
+                        
 
-                            </form>
-
-                        </div>
-
-                </main>
-
+                <%- include ('../partials/footer.ejs') %>
                     <%- include ('../partials/scripts.ejs') %>
 
     </body>
