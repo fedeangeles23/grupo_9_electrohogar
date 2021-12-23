@@ -93,9 +93,8 @@ let controller = {
         })
 
         writeJson(products)
-        res.send(`Has eliminado el producto con id ${productId}`)
-/*         res.redirect("products/allProducts")
- */
+         res.redirect("products/allProducts")
+ 
     }
 
 };
