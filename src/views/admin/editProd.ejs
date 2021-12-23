@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
-<input type="checkbox" id="check">
+<input type="checkbox" id="check" />
 <%- include('../partials/head.ejs') %>
 
-    <body>
+  <body>
+    <%- include('../partials/header.ejs') %>
+      <%- include ('../partials/nav.ejs') %>
 
-        <%- include('../partials/header.ejs') %>
+        <main class="edit">
+          
+          <h3 class="h3editprod">Estás editando el producto:<p class="produ-titulo"><%- product.nombre %></p></h3>
 
-            <%- include ('../partials/nav.ejs') %>
+          <div class="formmain">
+            <form class="editprod" action="/admin/products/edit/<%- product.id %>?_method=PUT" method="POST"
+              enctype="multipart/form-data">
+              <div class="formproduct">
+                <label for="nombre">Nombre del producto:</label>
+                <input class="edit" type="text" name="nombre" id="nombre" value="<%- product.nombre %>" />
 
-                <main>
-                    <h3 class="h3editprod">Estas editando el producto <p><%- product.nombre %></p>  <style> .h3editprod p{ color: rgb(0, 26, 255);} </style></h3>
+                <label for="nombre">Marca:</label>
+                <input class="edit" type="text" name="marca" id="marca" value="<%- product.marca %>" />
 
-                    <div class="centerdiv ">
+                <label for="nombre">Precio:</label>
+                <input class="edit" type="text" name="precio" id="precio" value="<%- product.precio %>" />
 
-                        <div class="formmain">
-                            <form action="/admin/products/detail/<%- product.id %>?_method=PUT" method="POST" >
-                                <!-- FALTA MULTER ENCTYPE EN EL FORM -->
+                <label for="descripcion">Descripcion: </label>
+                <textarea class="text" name="descripcion" id="descripcionid" cols="30" rows="10"></textarea>
 
-                                <div class="formproduct">
+                <div class="div-file">
+                  <p class="texto">Agregar archivo</p>
+                  <input class="file" type="file" name="imagen" id="imagen" />
+                </div>
 
-                                    <label for="nombre">Nombre del producto:</label>
-                                    <input type="text" name="nombre" id="nombre" value="<%- product.nombre %>">
+                <label for="category" class="form-label">Categoría:</label>
+                <div class="select">
+                  <select name="category" id="category" class="form-input">
+                    <option hidden>Elegí</option>
+                    <option>Electro</option>
+                    <option>TV & Audio</option>
+                    <option>Cocinas</option>
+                    <option>Celulares</option>
+                    <option>Computacion</option>
+                    <option>Gaming</option>
+                  </select>
+                </div>
 
-                                    <label for="nombre">Marca:</label>
-                                    <input type="text" name="marca" id="marca" value="<%- product.marca %>">
-
-                                    <label for="nombre">Precio:</label>
-                                    <input type="text" name="precio" id="precio" value="<%- product.precio %>">
-
-                                    <label for="descripcion">Descripcion: </label>
-                                    <textarea name="descripcion" id="descripcionid" cols="30" rows="10"></textarea>
-
-                                    <input type="file" name="imagen" id="imagen" class="imgfile">
+                <button class="but" type="submit">Guardar producto</button>
+              </div>
+            </form>
+          </div>
+        </main>
 
 
-                                    <label for="nombre">Categoria:</label>
-                                    <input type="text" name="categoria" id="categoria" value="<%- product.categoria %>">
 
-
-                                    <button type="submit"> Editar producto </button>
-                                </div>
-                            </form>
-                        </div>
-                
-                    </main>
-
-                    <div class="whitespace"></div>
-
-                <%- include ('../partials/footer.ejs') %>
-
-                    <%- include ('../partials/scripts.ejs') %>
-
-    </body>
+        <%- include ('../partials/footer.ejs') %>
+          <%- include ('../partials/scripts.ejs') %>
+  </body>
 
 </html>
