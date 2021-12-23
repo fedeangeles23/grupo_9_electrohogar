@@ -21,7 +21,7 @@ router.put('/products/detail/:id', controller.update);
  
 /* Eliminar productos */
 
-router.delete('/products/delete/:id', controller.del);
+router.delete('/products/:id', controller.del);
 
 
 module.exports = router // Exportamos el let router

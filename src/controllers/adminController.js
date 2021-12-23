@@ -7,8 +7,8 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 // parsea y lee el JSON productsfilepath
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 // Para que los miles tengan punto y se pueda entender el precio
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
+/* const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+ */
 const writeJson = (database) => fs.writeFileSync(productsFilePath, JSON.stringify(database), 'utf-8')
 
 let controller = {
@@ -36,7 +36,7 @@ let controller = {
             descripcion,
             categoria,
             marca,
-            imagen : req.file ? req.file.filename : ("default-imagen.png")
+            imagen: req.file ? req.file.filename : ("default-imagen.png")
         }
 
         products.push(newProduct)
@@ -75,7 +75,8 @@ let controller = {
         })
 
         writeJson(products)
-        res.rediect('/')
+
+        res.redirect('/')
 
     },
 
@@ -85,15 +86,16 @@ let controller = {
         products.forEach(product => {
             if (product.id === productId) {
                 let productDestroyI = products.indexOf(product)
-                productDestroyI !== -1 ? product.splice(productDestroyI, 1)
+                productDestroyI !== -1 ?
+                    products.splice(productDestroyI, 1)
                     : console.log('No encontre el producto chee')
-
             }
         })
 
         writeJson(products)
-        res.redirect("products/allProducts")
-
+        res.send(`Has eliminado el producto con id ${productId}`)
+/*         res.redirect("products/allProducts")
+ */
     }
 
 };
