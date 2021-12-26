@@ -28,36 +28,26 @@ app.use(express.json());
 app.use(method0verride('_method'));
 
 
-
 /*-------------------Enrutadores--------------- */
 
-let login = require('./routes/loginRouter')
-let registro = require('./routes/registroRouter') 
+let users = require('./routes/usersRouter')
 let home = require('./routes/homeRouter')
-
-let perfil = require('./routes/perfilRouter')
-let detail = require('./routes/productRouter')
-
 let admin = require('./routes/adminRouter')
-
 let carrito = require ('./routes/cartRouter')
+let products = require ('./routes/productRouter')
+
 
 /* ----------------Routes------------------------- */
+
 app.use('/', home);
 
 app.use('/carrito', carrito)
 
-app.use('/login', login);
+app.use('/users', users);
  
-app.use('/registro', registro);
-
-app.use('/productDetail', detail)
-
-app.use('/perfil', perfil)
-
 app.use('/admin', admin);
 
-
+app.use('/products', products);
 
 
 

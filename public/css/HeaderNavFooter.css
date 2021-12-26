@@ -29,28 +29,28 @@ header .headernav {
 }
 
 header .iconcarrito {
-    width: 26px;
+    width: 35px;
     position:relative;
-    bottom:20px;
-    left:27px;
+    bottom:23px;
+    left:30px;
     opacity:70%;
 }
 
 header .iconcuenta {
-    width: 26px;
+    width: 35px;
     position:relative;
-    bottom:20px;
-    left:37px;
+    bottom:26px;
+    left:40px;
     opacity:70%
    
 }
 
 
 header .iconfav {
-    width: 26px;
+    width: 35px;
     position:relative;
-    bottom:20px;
-    left:34px;
+    bottom:25px;
+    left:38px;
     opacity: 60%;
 }
 
@@ -64,7 +64,7 @@ header .iconfav {
 header ul {
     display: flex;
     list-style: none;
-    margin: auto 0;
+    margin:40px;
     list-style: none;
     z-index: 1;
 }

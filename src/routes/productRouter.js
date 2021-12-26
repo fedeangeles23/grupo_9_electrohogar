@@ -1,11 +1,13 @@
 let express = require('express')
 let router = express.Router()
-let controller = require('../controllers/productController')
+let controller = require('../controllers/productController.js')
 
 
-router.get('/', controller.detail)
 
-router.get('/products/detail/:id', controller.detail) // 
+router.get('/detail/:id', controller.detail)
+ // 
+router.get('/gaming', controller.gaming) // 
+
 
 
 module.exports = router;
