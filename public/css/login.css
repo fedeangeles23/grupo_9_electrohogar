@@ -55,7 +55,7 @@ a.cuenta {
 
 /*para q no se vean los errores*/
 .error {
-    display: none;
+    display: block;
     color: red;
 }
 
@@ -179,14 +179,6 @@ span.cuenta2 button:hover {
 
 
 
-
-
-
-
-
-
-
-
 @media(min-width:370px) {
     .container {
         width: 100%;
@@ -285,3 +277,24 @@ span.cuenta2 button:hover {
         box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
         margin-bottom: 20px;
 }
+
+input.input-style:focus {
+    transition:  0.3s;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(136, 135, 135);
+}
+
+
+input#remember {
+    display: block;
+    -webkit-appearance: checkbox;
+}
+
+.input-check {
+    display: flex;
+    align-items: center;
+}
+
+.input-check input {
+    margin: 10px 5px;
+}
+

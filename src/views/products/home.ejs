@@ -82,11 +82,14 @@
                                     
                                     <div class="description">
                                         <h1>
-                                            <%- product.nombre %>
-                                        </h1>
+                                            <% if (product.nombre.length > 30) { %>
+                                                <%- `${product.nombre.slice(0,30)}...` %>
+                                            <% } else { %>
+                                                <%= product.nombre %>
+                                            <% } %>                                        </h1>
                                         <span>$<%- product.precio %></span>
                                     </div>
-                                    <small class="cuotas"> 12 cuotas x <%- /* toThousand */((product.precio)) %> </small>
+                                    <small class="cuotas"> 12 cuotas x <%- product.precio * product.cuotas  %> </small>
                                       </a>
                                     <div class="button-group">
                                         <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>

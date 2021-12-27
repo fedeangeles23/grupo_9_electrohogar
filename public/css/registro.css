@@ -47,12 +47,6 @@ span a.link:hover {
     margin-bottom: 40px;
 }
 
-/*para q no se vean los errores*/
-.error {
-    display: none;
-    color:red;
-}
-
 
 .form input { 
     margin-bottom: 10px;

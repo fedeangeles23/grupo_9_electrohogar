@@ -6,6 +6,7 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 // parsea y lee el JSON productsfilepath
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 // Para que los miles tengan punto y se pueda entender el precio
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
  
