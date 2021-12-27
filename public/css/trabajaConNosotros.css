@@ -50,7 +50,7 @@ body.body-trabaja-con-nosotros {
   @media(max-width:900px) {
      
       .texto {
-          color:white
+          color:rgb(12, 9, 9)
       }
 
       .subtitulo {

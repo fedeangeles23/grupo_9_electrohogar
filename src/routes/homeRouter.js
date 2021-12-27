@@ -17,6 +17,7 @@ router.get('/sobre-nosotros', controller.sobreNosotros) //
 router.get('/preguntas-frecuentes', controller.preguntasFrecuentes) // 
 router.get('/terminos-y-condiciones', controller.terminosYcondiciones) // 
 router.get('/trabaja-con-nosotros', controller.trabajaConNosotros) // 
+router.get('/boton-de-arrepentimiento', controller.botonDeArrepentimiento) //
 
 
 

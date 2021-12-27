@@ -57,6 +57,9 @@ let controller = {
     },
     trabajaConNosotros: (req,res) => {
         res.render('footerViews/trabajaConNosotros')
+    },
+    botonDeArrepentimiento: (req,res) => {
+        res.render('footerViews/botonDeArrepentimiento')
     }
 
 

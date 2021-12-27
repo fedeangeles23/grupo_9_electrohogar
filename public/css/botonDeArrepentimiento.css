@@ -1,0 +1,111 @@
+.titulo-bd {
+    text-align: center;
+    font-size: 38px;
+}
+
+.titulo-bot, h2, h3 {
+    font-size: 15px;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.por-favor {
+    font-size: 30px;
+    padding-left: 80px;
+}
+
+h4 {
+    padding-left: 80px;
+}
+
+.contenedorDeCaja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.caja3-1 {
+    background-color: rgb(231, 231, 243);
+    width: 85%;
+    height: 650px;
+}
+
+.error {
+    display: none;
+}
+
+ .linkBotonDe {
+    color: black;
+    font-size: 19px;
+}
+
+.botonDeArrepentimiento {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   width: 100%;
+   text-align: center;
+}
+
+.cuentaBoton1 {
+    width: 90%;
+}
+
+.btn-B-continueBoton1 {
+    width: 90%;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(5, 5, 189);
+    margin-bottom: 30px;
+}
+   
+.formBoton input { 
+    padding-left: 15px;
+    align-items: center;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    height: 35px;
+}
+
+.formBoton {
+    text-align: center;
+}
+
+.padreBoton{
+    width: 82%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+input.inputs-style1 {
+height: 30px;
+border-radius: 10px;
+border: none;
+margin-bottom: 20px;
+padding-left: 20px;
+}
+
+.padreBoton .box-111{
+    width: 50%;
+}
+
+.padreBoton .box-211{
+    width: 50%;
+}
+
+.padreBoton .box-111 input {
+    width: 90%;
+}
+
+.padreBoton .box-211 input {
+    width: 94%;
+}
