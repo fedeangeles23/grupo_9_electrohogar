@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-
-
-/*cambie el tamaño de las letras*/
-
-
     .container-perfil {
         display: flex;
         width: 100%;
@@ -81,24 +76,27 @@ p.bienvenido b {
     color:rgb(0, 26, 255);
     margin: 0 5px;
 }
-/*para el titulo mis datos*/
+
+/*para el titulo mis compras*/
 .datos {
     display: flex;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    font-size: 25px;
-    text-transform: uppercase;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-style: italic;
 }
 
-/*para el botones naranja*/
+/*para el boton */
 span.cuenta button{
     background-color: rgb(17, 0, 255);
     color: white;
-    font-size: 13px;
-    width: 130px;
-    height: 25px;
-    border-radius: 5px;
-    margin: 15px 0 200px;
+
+    font-size: 17px;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 540px;
     
 }
 
@@ -156,7 +154,7 @@ span.cuenta button{
     font-size: 23px;
 }
 
-/*para el botones naranja*/
+/*para el boton*/
 span.cuenta button{
     display: inline-block;
     padding: 8px 7px;
