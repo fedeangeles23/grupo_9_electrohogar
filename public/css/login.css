@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Roboto:wght@300&family=Work+Sans:wght@100;300;700&display=swap');
+
+
+
+.logregistermain {
+    height: 900px;
+    background-color:rgb(231, 231, 231) ;
+}
+
+.logoLogin img{
+    width: 150px;
+    height: 150px;
+}
+
+.containerregistro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.datos-login {
+    display: flex;
+    flex-direction: row-reverse; 
+    margin-left: 30px;
+  
+}
+
+ /*para separar la caja no tengo cuenta con olvide mi contraseña, le dio color a olvide mi contraseña*/
+ span a.link-login {
+     margin: 25px;   
+     font-size: 14px;
+}
+
+a.cuenta {
+   margin:21px;
+     font-size: 15px;
+   
+
+}
+
+/*para mover la caja de olvide mi contraseña*/
+.olvide {
+    padding-top: 10px; 
+}
+
+/*ingresa los datos de tu cuenta*/
+.ingreso {
+
+    font-size: 19px;
+    margin-bottom: 40px;
+}
+
+/*para q no se vean los errores*/
+.error {
+    display: block;
+    color: red;
+}
+
+/*el espacio entrer las cajas de email y contraseña*/
+.login2 input{
+    margin-bottom: 15px;
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+}
+
+/*para los botones n*/
+span.cuenta2 button{
+    background-color: rgb(13, 40, 197);
+    color: rgb(255, 255, 255);
+    font-size: 39px;
+    width: 140px;
+    height: 42px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: none;
+    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
+    font-weight: lighter;
+    font-family: 'Work-Sans', sans-serif;
+}
+
+span.cuenta2 button:hover {
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+
+
+
+
+/* Boton de google */
+.google-btn {
+    width: 184px;
+    height: 42px;
+    background-color: #4285f4;
+    border-radius: 30px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    margin-bottom: 20px;
+  }
+
+
+  
+  .google-btn:hover {
+      background-color: #1669F2;
+  }
+
+
+  .google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: white;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn-text {
+    float: right;
+    margin: 11px 11px 0 0;
+    color: white;
+    font-size: 14px;
+    font-weight:lighter;
+    letter-spacing: 0.2px;
+    font-family: "Lato";
+  }
+
+/*tamaño escritorio*/
+@media(min-width:770px) {
+   
+    p.ingreso {
+        font-size: 19px;
+    }
+    .login2 input {
+        margin-bottom: 30px;
+        width: 350px;
+        height: 45px;
+        padding-left: 10px;
+        border-radius: 10px;
+        border:grey;
+    }
+    input.input-style {
+        font-size: 13px;
+    }
+    button.btn.btn-continue {
+        width: 180px;
+        height: 40px;
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        font-weight: lighter;
+         font-size: 14px;
+         margin-right: 10px;
+    }
+
+    .olvide {
+       font-size: 25px;
+    }
+
+    a.link {
+        font-size: 14px;
+    }
+    .logoLogin img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+@media(min-width:370px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        }
+        p.ingreso {
+            font-size: 19px;
+        }
+        .form input {
+            margin-bottom: 30px;
+            width: 350px;
+            height: 45px;
+            padding-left: 10px;
+            border-radius: 10px;
+            border:grey;
+        }
+        input.input-style {
+            font-size: 13px;
+        }
+        button.btn.btn-continue, .btn.btn-cuenta {
+            width: 180px;
+            height: 40px;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            font-weight: lighter;
+             font-size: 14px;
+       
+        }
+    
+    
+        .olvide {
+           font-size: 25px;
+        }
+    
+        a.link {
+            font-size: 14px;
+        }
+        .logoLogin img{
+            width: 150px;
+            height: 150px;
+        }
+
+}
+
+
+@media(max-width:370px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        }
+        p.ingreso {
+            font-size: 19px;
+        }
+        .form input {
+            margin-bottom: 30px;
+            width: 200px;
+            height: 45px;
+            padding-left: 10px;
+            border-radius: 10px;
+            border:grey;
+        }
+        input.input-style {
+            font-size: 13px;
+        }
+        button.btn.btn-continue, .btn.btn-cuenta {
+            width: 180px;
+            height: 40px;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            font-weight: lighter;
+             font-size: 14px;
+       
+        }
+    
+    
+        .olvide {
+           font-size: 25px;
+        }
+    
+        a.link {
+            font-size: 14px;
+        }
+        .logoLogin img{
+            width: 150px;
+            height: 150px;
+        }
+
+}
+
+
+.google-btnlogin {
+        width: 180px ;
+        height: 42px;
+        background-color: #4285f4;
+        border-radius: 30px;
+        box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
+        margin-bottom: 20px;
+}
+
+input.input-style:focus {
+    transition:  0.3s;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(136, 135, 135);
+}
+
+
+input#remember {
+    display: block;
+    -webkit-appearance: checkbox;
+}
+
+.input-check {
+    display: flex;
+    align-items: center;
+}
+
+.input-check input {
+    margin: 10px 5px;
+}
+
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

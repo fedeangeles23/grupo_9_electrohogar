@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("variables.css");
+@import url("general.css");
+@import url("carrito.css");
+@import url("HeaderNavFooter.css");
+@import url("carrusel.css");
+@import url("home.css");
+@import url("login.css");
+@import url("perfil.css");
+@import url("registro.css");
+@import url("sobreNosotros.css");
+@import url("trabajaConNosotros.css");
+@import url("terminosyCondiciones.css");
+@import url("editarprod.css");
+@import url("productDetail.css");
+@import url("allproducts.css");
+@import url("404page.css");
+@import url('createprod.css');
+@import url('botonDeArrepentimiento.css');
+@import url('preguntasFrecuentes.css');
+

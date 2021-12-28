@@ -1,0 +1,345 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+ 
+  
+ /* PRODUCT CARDS --------------------------------------------*/
+
+ .section{
+     width: 100%;
+     min-height: 40vh;
+     background-color:#eee;
+ }
+
+ .cards{
+     width: 100%;
+     display:flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     margin:40px;
+ }
+
+ .cards .new-arrival{
+     width: 100%;
+     margin-top:20px;
+ }
+ .cards .new-arrival h3{
+     text-align: center;
+     font-size:34px;
+     color:#323232;
+     font-weight:700;
+     letter-spacing: 1px;
+ }
+
+ .cards .new-arrival span {
+     color:rgb(4, 0, 255);
+ }
+
+ .cards .new-arrival h1:after{
+     content: "";
+     height: 5px;
+     width: 325px;
+     background-color: #222;
+     border-radius:5px;
+     display:block;
+     margin:auto;
+ }
+
+ 
+ 
+ 
+ .card{
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction:column;
+     box-shadow: 0px 2px 4px rgb(0, 0, 0,25%);
+     width: 300px;
+     text-align: center;
+     margin:25px;
+     cursor:pointer;
+     background-color: #fff; 
+     height: 600px;
+ }
+
+
+ .card:hover{
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.66);
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.66);
+    transition: 0.2s all; 
+      }
+
+ .image-section{
+     width: 100%;
+     height:400px;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .image-section img {
+     width: 100%;
+     height: 100%;
+     object-fit:contain;
+     border-bottom:1px solid rgba(104, 104, 104, 0.5);
+ }
+
+ .description{
+     text-align: center;
+ }
+ .description h1{
+     font-size:20px;
+     text-transform: uppercase;
+     color:#222;
+     margin-bottom: 15px;
+     margin-top: 15px;
+     font-weight: 400;
+     font-family: 'Roboto';
+
+ }
+
+ .description span {
+     font-size:21px;
+     letter-spacing: 1.5px;
+     margin-top: 8px;
+     margin-left: 8px;
+     font-weight: 500;
+     font-family: 'Lato';
+ }
+
+ .card .cuotas {
+    color: rgb(19, 54, 255);
+    font-size: 19px;
+    margin-top:7px;
+    font-family: 'Roboto';
+ }
+
+ .button-group{
+     margin-top:30px;
+ }
+
+ .button-group .buy{
+     background-color: #2726d2;
+     font-size: 14px;
+     padding: 8px 20px;
+     border-radius:5px;
+     text-decoration: none;
+     letter-spacing: 1px;
+     color:#fff;
+     margin-bottom: 5px;
+ }
+
+ .button-group .buy:hover{
+    transition: 0.6s ease;
+    
+ }
+
+
+ .button-group .cart {
+     background-color:none;
+     font-size:14px;
+     padding:8px 28px;
+     border-radius:5px;
+     border: 1px solid black;
+     text-decoration:none;
+     letter-spacing:1px;
+     color:rgb(0, 0, 0);
+     font-weight: lighter;
+ }
+
+ .button-group .cart:hover{
+    background-color: rgb(3, 3, 3);
+    transition: 0.3s ease;
+    color:#fff;
+}
+
+.fav i{
+   font-size: 25px;
+   position: relative;
+   bottom: 550px;
+   left: 120px;
+   transition: 0.5ms;
+   color:rgba(155, 153, 153, 0.411);
+     
+}
+
+
+
+.fav i:hover{
+    color: rgb(6, 2, 219);
+}
+
+
+.carrousel img{
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width: 700px) /*De este ancho para abajo se va a ver asi:*/ {
+    
+    
+    .cards .new-arrival h3 {
+        font-size: 22px;
+    }
+
+    .button-group .buy {
+        background-color: #2726d2;
+        font-size: 14px;
+        padding: 8px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        letter-spacing: 1px;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+
+    
+    .card .cuotas {
+        margin-bottom:5px;
+    }
+}
+
+
+/* LINEA BAJO CAROUSEL */
+
+.lineabajocarousel {
+    width: 100%; 
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lineabajocarousel .col1linea .imgtrucklinea{
+    width: 45px;
+    height: 45px;
+
+}
+
+.lineabajocarousel .col1linea span {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 8px;
+}
+
+.lineabajocarousel .col1linea {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.lineabajocarousel .col2linea a {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+.lineabajocarousel .col2linea .tarjetaslinea {
+    width: auto;
+    height: 30px;
+}
+
+.lineabajocarousel .col3linea span {
+    margin-left: 5px;
+
+}
+
+.lineabajocarousel .col3linea .envioslinea {
+    width: 45px;
+    height: 45px;
+}
+
+.col3linea {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:1246px) {
+    
+    
+    .lineabajocarousel .col1linea span {
+        font-size: 14px;
+    }
+
+
+    
+    .lineabajocarousel .col2linea .tarjetaslinea {
+        width: 240px;
+        height: 30px;
+    }
+
+
+}
+
+
+
+/* CATEGORIAS IMAGENES GAMING,COCINA RESPONSIVE */
+
+.imgcategorias {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #eeeeee;
+    justify-content: center ;
+}
+
+.imgcategorias img {
+    margin: 10px;
+    width: 670px;
+}
+
+@media screen and (max-width: 720px) /*De este ancho para abajo se va a ver asi:*/ {
+        
+        
+    .imgcategorias img {
+        width: 450px;
+        margin: 10px;
+
+    }
+
+    .lineabajocarousel {
+
+            font-size: 11px;
+        }
+
+        .lineabajocarousel .col3linea .envioslinea {
+            width: 20px;
+            height: 20px;
+        }
+
+        .lineabajocarousel .col2linea .tarjetaslinea {
+            width: 0px;
+            height: 30px;
+        }
+
+        .lineabajocarousel .col1linea .imgtrucklinea {
+            width: 25px;
+            height: 25px;
+            margin-left: 3px;
+        }
+
+
+
+}
+
+@media screen and (max-width: 496px) /*De este ancho para abajo se va a ver asi:*/ {
+ 
+    
+    .imgcategorias img {
+        width: 300px;
+        margin: 10px;
+
+    }
+
+}
+
+
+/* LINE BAJO CAROUSEL RESPONSIVE */
+

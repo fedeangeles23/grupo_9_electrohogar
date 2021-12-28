@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
+
+/*cambia el tamaño de las letras*/
+body.body-terminos-y-condiciones {
+ background-color: rgb(241, 242, 243);
+  font-size: 17px;
+}
+
+/*modificaciones del titulo*/
+.titulo {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-align: center;
+}
+
+/*modificaciones de los subtitulos*/
+.subtitulo {
+    margin-top:30px;
+    margin-bottom: 20px;
+    font-size: 23px;
+    font-family: initial;
+}
+
+/*cambia el tipo de letra para ell texto*/
+.texto {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+}
+
+
+
+/*para todos los tamaños menos compu*/
+@media(max-width:900px) {
+     
+ 
+  .titulo {
+      color:white;
+  }
+  
+
+  .subtitulo {
+     color:white;
+  }
+  
+
+  .texto {
+     color:white;
+  } 
+}

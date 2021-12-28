@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<input type="checkbox" id="check">
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/header.ejs') %>
+
+            <%- include ('../partials/nav.ejs') %>
+
+                <main class="creat">
+                   
+                    <h3 class="h3creatproduct">Creando un producto</h3>
+                        <div class="formmain-create">
+
+                            <form class="form-create" action="/admin/products" method="POST" enctype="multipart/form-data">
+
+                                <div class="formproduct-create">
+
+                                    <label for="nombre">Nombre del producto:</label>
+                                    <input class="create" type="text" name="nombre" id="nombre"  >
+
+                                    <label for="nombre">Marca:</label>
+                                    <input class="create" type="text" name="marca" id="marca" >
+
+                                    <label for="nombre">Precio:</label>
+                                    <input class="create" type="text" name="precio" id="precio" >
+
+                                    <label for="descripcion">Descripcion: </label>
+                                    <textarea class="text-creat" name="descripcion" id="descripcionid" cols="30" rows="10"></textarea>
+
+                                    <div class="div-file-create">
+                                        <p class="text-create">Agregar archivo</p>
+                                        <input class="file-creat" type="file" name="imagen" id="imagen" />
+                                      </div>
+
+
+                                    <label for="nombre">Categoria:</label>
+                                    <input type="text" name="categoria" id="categoria">
+
+
+                                    <button class="but-creat" type="submit"> Cargar producto </button>
+
+                                </div>
+                                </form>
+                            </div>
+                        </main>
+                                
+                        
+
+                <%- include ('../partials/footer.ejs') %>
+                    <%- include ('../partials/scripts.ejs') %>
+
+    </body>
+
+</html>

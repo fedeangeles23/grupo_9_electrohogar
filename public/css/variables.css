@@ -1,0 +1,25 @@
+/* Colores de la tienda */
+:root {
+    --color-especial1: #fcfc42;
+    --color-especial2: #f3f35f;
+    --color-white1: #FAFAFA;
+    --color-white-gray: #EDEDED;
+    --color-white-gray2:#E2E2E2;
+    --color-gray: #919191;
+    --color-gray1:#828282;
+    --color-gray2:#797373;
+    --color-black-gray: #2D2D2D;
+    --color-black1: #202020;
+    --color-black2: #111111;
+}
+
+/* Bordes de la tienda */
+:root {
+    --fine-border1: #919191 #919191 #919191 #919191;
+    --fine-border1lr: #919191 #b9b6b6 #919191 #b9b6b6;
+    --fine-border1l: #919191 #919191 #919191 #919191;
+ 
+    --fine-border: #EDEDED #2D2D2D #2D2D2D #2D2D2D;
+    --fine-border2: #2D2D2D #2D2D2D #EDEDED #2D2D2D;
+    --fine-border3: #EDEDED #2D2D2D #EDEDED #2D2D2D;
+}

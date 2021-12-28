@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
+
+.small-container {
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+.roww {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.small-img-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding:50px 0;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+    border: 1px solid lightgrey;
+}
+
+.single-product .col-2 img {
+    padding:0;
+}
+.single-product .col-2 {
+    padding:20px;
+}
+
+.col2 {
+    margin-left: 30px;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+    border-right: 1px solid lightgrey;
+}
+.col-2 h3 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.single-product select {
+    display: block;
+    padding:10px;
+    margin-top: 20px;
+}
+
+.single-product h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.prodenvioicon {
+    display: flex;
+}
+
+.prodenvioicon img {
+    width: 40px;
+    height: 40px;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.prodesucursalicon {
+    display: flex;
+}
+
+.prodesucursalicon img{
+    width: 40px;
+    height: 40px;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+.tituloprod {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.precioprod {
+    color: rgb(3, 3, 187);
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+.cuotaprod {
+    color: blue;
+}
+.single-product input {
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    border: 1px solid black;
+    display: block;
+}
+
+input:focus{
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+.single-product .fa {
+    color: rgb(33, 33, 34);
+    margin-left: 10px;
+}
+
+.p {
+    color: rgb(12, 12, 12);
+}
+
+.enrutador {
+    margin: 20px;
+}
+.btncart { 
+    display: inline-block;
+    background: none;
+    color: rgb(7, 7, 7);
+    border:1px solid black;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btncomprar {
+    display: inline-block;
+    background: rgb(24, 23, 23);
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btncart:hover {
+    background: rgb(5, 5, 121);
+    color:#fff;
+}
+
+.btncomprar:hover {
+    background: rgb(12, 12, 12);
+}
+
+.greelineprod {
+    color: rgb(0, 145, 0);
+    text-decoration: underline;
+}
+
+.prodenvio {
+    margin: 30px 0;
+}
+
+.detalleproductocol1 {
+    color: blue;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    text-align:justify;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.especificacionestecnicas {
+    color: blue;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    text-align:justify;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.descripcionprod {
+    color:rgb(70, 70, 70);
+    margin-left: 40px;
+}
+
+.detalleyinfo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.detalleyinfo h4{
+    cursor: pointer;
+}
+
+.detalleyinfo h4 {
+    display: inline-block;
+    position: relative;
+    color: #001eca;
+  }
+  
+  .detalleyinfo h4:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #001eca;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .detalleyinfo h4:hover:after {
+    transform: scaleX(1);
+    transform-origin:center;
+  }
+
+  /* ADMIN BUTTONS */
+  .btneditprodform {
+    width: 140px;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 16);
+    border: 8px solid rgb(255, 255, 16);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+  .btndeleteprod {
+    background-color: red;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin: 10px;
+  }
+
+@media screen and (max-width: 725px) {
+    
+    .roww{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

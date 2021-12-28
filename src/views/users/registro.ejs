@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <input type="checkbox" id="check">
+
+  <%- include('../partials/head.ejs')  %> 
+
+ <body class= "body-registro"> 
+  
+  <%- include('../partials/header.ejs')  %> 
+
+
+  <%- include('../partials/nav.ejs')  %> 
+
+
+  <main class="logregistermain">
+    <div class="container">
+      
+        <div class="container-registro">
+          <div class="logo-registro">
+            <div>
+              <img src="/images/logo.jpg">
+            </div>
+          </div>
+  
+          <p class="ingreso">Ingresa los datos de tu cuenta</p>
+  
+  
+  
+          <div class="padre">
+  
+            <div class="box-1">
+  
+              <div class="form">
+                <input class="input-style" type="nombre" name="name" placeholder="Nombre:">
+                <span class="error">Debes ingresar tu Nombre</span>
+              </div>
+  
+              <div class="form">
+                <input class="input-style" type="Email" name="name" placeholder="Email:">
+                <span class="error">Debes ingresar tu Email</span>
+              </div>
+  
+              <div class="form">
+                <input class="input-style" type="Email" name="name" placeholder="confirmar Email:">
+                <span class="error">Debes re-ingresar tu Email</span>
+              </div>
+  
+            </div>
+  
+            <div class="box-2">
+              <div class="form">
+                <input class="input-style" type="Apellido" name="name" placeholder="Apellido:">
+                <span class="error">Debes ingresar tu Apellido</span>
+              </div>
+  
+              <div class="form">
+                <input class="input-style" type="Contraseña" name="name" placeholder="Contraseña:">
+                <span class="error">Debes ingresar tu Contraseña</span>
+              </div>
+  
+              <div class="form">
+                <input class="input-style" type="Email" name="name" placeholder="Confirmar Contraseña:">
+                <span class="error">Debes re-ingresar tu Contraseña</span>
+              </div>
+  
+            </div>
+  
+          </div>
+          <div class="botonesregister">
+            <span class="cuenta"> <button type="continue" class="btn btn-continue">Registrarse</button></span>
+  
+            <div class="google-btn">
+              <div class="google-icon-wrapper">
+                <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+              </div>
+              <a href="#"> <p class="btn-text"><b>Registrarse con google</b></p></a>    
+            </div>
+    
+          </div>
+          
+          <span> <a href="/" class="link">Volver al menú de inicio</a> </span>
+        </div>
+  
+      </div>
+  </main>
+
+
+  <%- include('../partials/footer.ejs')  %> 
+  <%- include('../partials/scripts.ejs')  %> 
+
+
+</body>
+
+</html>

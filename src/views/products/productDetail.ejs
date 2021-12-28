@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<input type="checkbox" id="check">
+
+
+
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/header.ejs') %>
+
+            <%- include('../partials/nav.ejs') %>
+
+                <main>
+                    <p class="enrutador"> Inicio > Tecnologia > <%- product.categoria %> > <%- product.marca %></p>
+
+                    <div class="small-container single-product">
+                        <div class="roww">
+                            <div class="col-2">
+                                <img src="/images/products/<%- product.imagen %>" alt="" id="ProductImg">
+                                <div class="small-img-row">
+                                    <div class="small-img-col">
+                                        <img class="small-img" src="/images/products/<%- product.imagen %> " alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col2">
+                                <p class="p"><%- product.marca %>  </p>
+                                <h3 class="tituloprod"><%- product.nombre %>  </h3>
+                                <h4 class="precioprod">$<%- product.precio %> </h4>
+                                <p class="cuotaprod">6 Cuotas sin interes x $<%- product.precio %> </p>
+                               
+                                <input type="number" value="1">
+                                <a href="#" class="btncomprar">Comprar</a>
+                                <a href="#" class="btncart"> Agregar al carrito</a>
+                                <div class="prodenvioicon">
+                                    <img src="/images/delivery-truck (1).png" alt="">
+                                    <p class="prodenvio"> Retiro gratis por sucursal
+                                        <br><a class="greelineprod" href="#">Ver sucursales</a>
+                                    </p>
+                                </div>
+
+                                <div class="prodesucursalicon">
+                                    <img src="/images/tienda.png" alt="">
+                                    <p class="prodenvio">Envio a domicilio a todo el pais
+                                       <br> <a class="greelineprod" href="#">Ver costos de envio</a>
+                                    </p>
+                                </div>
+                                
+                                <div class="adminbtn">
+                                    <a class="btneditprodform" href="/admin/products/edit/<%- product.id %> ">Editar producto</a>
+                                </div>
+                                <form action="/admin/products/detail/<%- product.id %>?_method=DELETE"  method="POST">
+                                    <button class="btndeleteprod" type="submit">Eliminar Producto</button>
+                                </form>
+
+
+                                
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detalleprod">
+                        <div class="infoprod">
+                            <div class="detalleyinfo">
+                                <h4 class="detalleproductocol1">Detalle de producto</h4>
+
+                            </div>
+                            <br>
+
+                            <div class="descripcionprod" id="dpDescripcion" style="display: block;">
+                                <%- product.descripcion %> 
+                        </div>
+
+                       
+                    </div>
+                    <br>
+
+                </main>
+
+                <!-- Este script hace que las imagenes al hacer click se puedan visualizar como imagen principal en detail product -->
+                <script>
+                    var Productimg = document.getElementById("ProductImg");
+                    var SmallImg = document.getElementsByClassName("small-img")
+
+                    SmallImg[0].onclick = function () {
+                        Productimg.src = SmallImg[0].src;
+                    }
+
+                    SmallImg[1].onclick = function () {
+                        Productimg.src = SmallImg[1].src;
+                    }
+                    SmallImg[2].onclick = function () {
+                        Productimg.src = SmallImg[2].src;
+                    }
+                    SmallImg[3].onclick = function () {
+                        Productimg.src = SmallImg[3].src;
+                    }
+
+                </script>
+
+                <%- include('../partials/footer.ejs') %>
+
+                    <%- include('../partials/scripts.ejs') %>
+                  
+                        
+    </body>
+
+</html>

@@ -1,0 +1,35 @@
+body.body-sobre-nosotros {
+    background-color: rgb(231, 228, 228);
+   
+}
+
+.tituloSN {
+   margin:30px 15px;
+   font-size: 40px;
+   text-align: left;
+   font-weight: 600;
+   text-transform: uppercase;
+   color: rgb(63, 63, 63);
+
+}
+
+.subtituloSN {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color:rgb(27, 27, 247);
+    text-align: center;
+    text-align: left;
+
+}
+
+.textoSN {
+    margin-bottom: 30px;
+   font-size: 21px;
+}
+
+
+.whitespace {
+    width: 100%;
+    height: 480px;
+    display: block;
+}

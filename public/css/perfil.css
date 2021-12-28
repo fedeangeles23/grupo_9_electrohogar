@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+
+/*cambie el tamaño de las letras*/
+
+
+    .container-perfil {
+        display: flex;
+        width: 100%;
+        height: 100%;
+     
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .perfil2 p {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-size: 25px;
+        width: 100%;
+    }
+
+    p.datosP{
+     font-size: 16px;
+    }
+
+    .perfil2 {
+        font-size: 17px;
+        text-align: left;
+        margin:15px;
+
+    }
+
+    /*parte de la tabla de aca... */
+
+    .conte-tabla {
+   width: 490px;
+   display: flex;
+   justify-content: center;
+   
+    }
+.tabla {
+    width: 100px;
+}
+table {
+  width: 100px;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #B7B7A4;
+    border: 1px solid #B7B7A4;
+    padding-top: 15px;
+    border-collapse: collapse;
+    font-size: 17px;
+}
+
+td {
+    background-color: white;
+    border: 2px solid white;
+    padding-left: 10px;
+   font-size: 16px;
+}
+/*hasta aca*/
+
+/*titulo bienvenido cosme fulanito....*/
+p.bienvenido {
+    color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: center;
+    font-size: 20px;  
+    margin-bottom: 20px;
+    margin-top:100px;
+}
+
+
+p.bienvenido b {
+    color:rgb(0, 26, 255);
+    margin: 0 5px;
+}
+/*para el titulo mis datos*/
+.datos {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+/*para el botones naranja*/
+span.cuenta button{
+    background-color: rgb(17, 0, 255);
+    color: white;
+    font-size: 13px;
+    width: 130px;
+    height: 25px;
+    border-radius: 5px;
+    margin: 15px 0 200px;
+    
+}
+
+
+
+
+/*tamaño escritorio */
+@media (min-whith:480px) {
+
+
+    
+    .logo img {
+        width: 140px;
+        height: 140px;
+    }
+.container-perfil {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/*titulo bienvenido cosme fulanito....*/
+.bienvenido {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 45px;
+    font-size: 16px;
+    /*para resaltar la palabra*/
+    /*font-weight: bold;*/   
+}
+
+
+
+.bienvenido b {
+    color:red;
+    margin: 0px 5px;
+}
+
+
+
+
+/*para el titulo mis compras*/
+.datos {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+
+/*para el botones naranja*/
+span.cuenta button{
+    display: inline-block;
+    padding: 8px 7px;
+    border-radius:5px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    background-color:transparent;
+    text-align:center;
+    transition: all 0.2s;
+    width: 140px;
+    font-weight: 700;
+    
+}
+
+span.cuenta button:hover{
+    background-color:#1d1d1ce5;
+    color:#fff;
+}
+
+/*parte de la tabla de aca... */
+table {
+    margin-bottom:40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #242424;
+    color: #fff;
+    border: 1px solid #B7B7A4;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 15px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    background-color: white;
+    border: 2px solid white;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+.perfil2  {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 20px;
+    margin: 5px 5px;
+}
+.perfil2 span {
+    margin: 3px;
+}
+
+.tabladatos {
+    margin-bottom: 20px;
+}
+
+}

@@ -1,0 +1,93 @@
+.creat {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    position: relative;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.h3creatproduct {
+    text-align: center;
+}
+
+.form-create {
+    position: relative;
+    
+}
+
+.formproduct-create {
+    background-color: #E2E2E2;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    z-index: 90;
+}
+
+.formproduct-create .create {
+    border:1px solid rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+    width: 40rem;
+    height: 3rem;
+    margin: 12px;
+}
+
+.formproduct-create .text-creat {
+    border:1px solid rgba(0, 0, 0, 0.37);
+     width: 40rem;
+     height: 10rem;
+     border-radius: 10px;
+     margin: 12px;
+}
+
+.select-create #category-creat {
+    background-color: white;
+    border:1px solid rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+    width: 40rem;
+    height: 3rem;
+}
+
+.formproduct-create .but-creat {
+    background-color: #0b16b3;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    color:white;
+    margin-top: 12px;
+    border:none;
+    cursor: pointer;
+}
+
+/* Input file */
+
+.text-create {
+    text-align: center;
+    color: white;
+}
+
+.div-file-create {
+    position: relative;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #0b16b3;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.file-creat {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
