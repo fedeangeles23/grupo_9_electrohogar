@@ -298,3 +298,9 @@ input#remember {
     margin: 10px 5px;
 }
 
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

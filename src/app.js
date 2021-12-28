@@ -6,6 +6,7 @@ const method0verride =  require('method-override'); // Pasar poder usar los mét
 const session = require('express-session')
 
 
+
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}
 http://localhost:${PORT}
 `));
@@ -48,7 +49,6 @@ app.use('/users', users);
 app.use('/admin', admin);
 
 app.use('/products', products);
-
 
 
 

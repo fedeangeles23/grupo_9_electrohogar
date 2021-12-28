@@ -12,55 +12,66 @@
 
       <%- include('../partials/nav.ejs') %>
 
-      <main class="logregistermain"> 
-        <div class="containerregistro">
-          <div class="logoLogin">
-            <img src="/images/electrohogarlogo.png">
-          </div>
-
-          <p class="ingreso">Ingresa los datos de tu cuenta</p>
-
-          <div class="login2">
-            <input class="input-style" type="Email" name="name" placeholder="Email:">
-            <span class="error">Debes ingresar tu Email</span>
-          </div>
-
-          <div class="login2">
-            <input class="input-style" type="Contraseña" name="name" placeholder="Contraseña:">
-            <span class="error">Debes ingresar tu Contraseña</span>
-          </div>
-
-          <div class="input-check">
-            <input type="checkbox" name="remember" id="remember"><label for="check">Recordar</label>
-
-        </div>
-
-
-          <span class="cuenta2"> <button type="continue" class="btn btn-continue">Continuar </button> </span>
-
-
-          <div class="google-btnlogin">
-            <div class="google-icon-wrapper">
-              <img class="google-icon"
-                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+        <main class="logregistermain">
+          <div class="containerregistro">
+            <div class="logoLogin">
+              <img src="/images/electrohogarlogo.png">
             </div>
-            <a href="#">
-              <p class="btn-text"><b>Ingresa con google</b></p>
-            </a>
-          </div>
+            
 
-          <div class="datos-login">
-            <div class="olvide"> <span class="centro"><a href="#" class="link-login"> Olvidé mi contraseña</a></span>
+            <p class="ingreso">Ingresa los datos de tu cuenta</p>
+
+        
+            <form action="/users/login" method="POST" class="form-login">
+              <div class="login2">
+                <input class="input-style" type="email" name="email" placeholder="Email:">
+                <% if (locals.errors && errors.email) { %>
+                  <span class="error">
+                    <% errors.email.msg %>
+                  </span>
+                  <% } %>
+              </div>
+
+              <div class="login2">
+                <input class="input-style" type="password" name="pass" placeholder="Contraseña:">
+                <% if (locals.errors && errors.pass) { %>
+                  <span class="error">
+                    <% errors.pass.msg %>
+                  </span>
+                  <% } %>
+              </div>
+
+              <div class="input-check">
+                <input type="checkbox" name="remember" id="remember"><label for="check">Recordar</label>
+
+              </div>
+
+
+              <span class="cuenta2"><button type="submit" class="btn btn-continue">Continuar</button></span>
+
+            </form>
+            <div class="google-btnlogin">
+              <div class="google-icon-wrapper">
+                <img class="google-icon"
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+              </div>
+              <a href="#">
+                <p class="btn-text"><b>Ingresa con google</b></p>
+              </a>
             </div>
-            <a span class="cuenta">No tengo cuenta </a> </span>
+
+            <div class="datos-login">
+              <div class="olvide"> <span class="centro"><a href="#" class="link-login"> Olvidé mi contraseña</a></span>
+              </div>
+              <span> <a href="/users/registro/" class="link-login"> No tengo cuenta</a> </span>
+            </div>
+
+            <span> <a href="/" class="link-login"> Volver al menú de inicio</a> </span>
           </div>
 
-          <span> <a href="/" class="link-login"> Volver al menú de inicio</a> </span>
-        </div>
+        </main>
 
-      </main>
 
-       
 
         <%- include('../partials/footer.ejs') %>
           <%- include('../partials/scripts.ejs') %>
