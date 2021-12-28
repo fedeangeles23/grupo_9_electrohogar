@@ -6,6 +6,7 @@ const method0verride =  require('method-override'); // Pasar poder usar los mét
 const session = require('express-session')
 
 
+
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}
 http://localhost:${PORT}
 `));
@@ -28,37 +29,26 @@ app.use(express.json());
 app.use(method0verride('_method'));
 
 
-
 /*-------------------Enrutadores--------------- */
 
-let login = require('./routes/loginRouter')
-let registro = require('./routes/registroRouter') 
+let users = require('./routes/usersRouter')
 let home = require('./routes/homeRouter')
-
-let perfil = require('./routes/perfilRouter')
-let detail = require('./routes/productRouter')
-
 let admin = require('./routes/adminRouter')
-
 let carrito = require ('./routes/cartRouter')
+let products = require ('./routes/productRouter')
+
 
 /* ----------------Routes------------------------- */
+
 app.use('/', home);
 
 app.use('/carrito', carrito)
 
-app.use('/login', login);
+app.use('/users', users);
  
-app.use('/registro', registro);
-
-app.use('/productDetail', detail)
-
-app.use('/perfil', perfil)
-
 app.use('/admin', admin);
 
-
-
+app.use('/products', products);
 
 
 
@@ -66,4 +56,6 @@ app.use('/admin', admin);
 app.use((req, res, next) => {
 res.status(404).render('404-page') //le tira al cliente el status de la peticion realizada
 })
+
+
 

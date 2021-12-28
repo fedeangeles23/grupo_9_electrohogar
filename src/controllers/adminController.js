@@ -93,7 +93,7 @@ let controller = {
         })
 
         writeJson(products)
-         res.redirect("products/allProducts")
+         res.redirect("/")
  
     }
 

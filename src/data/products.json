@@ -3,11 +3,10 @@
         "id": 1,
         "imagen": "ASPROBOTAMA.jpg",
         "cuotas": 12,
-        "nombre": "Aspiradora Smart TEK Robot ",
+        "nombre": "Smart TEK Limpiadora",
         "precio": "25.000",
         "descripcion": "",
-        "categoria": "Electro",
-        "marca": "Smart TEK"
+        "marca": "Smart TEK "
     },
     {
         "id": 2,
@@ -15,7 +14,7 @@
         "precio": 27.999,
         "imagen": "aurisbudpro.jpg",
         "categoria": "TV & Audio",
-        "cuotas": 12,
+        "cuotas": 0,
         "marca": "Ava mini",
         "descripcion": "El diseño atractivo de los Galaxy Buds Live se ajusta de manera perfecta a tu oído. Los auriculares reflejan las curvas de tu rostro y oído para lograr un aspecto natural. Tienen una apariencia brillante para acompañar tu estilo y vienen en una caja de joyería, para que los puedas llevar cuando estés en movimiento., Acompañá tu estilo, Disponibles en tres colores: Mystic Bronze, Mystic White y Mystic Black para agregar un toque llamativo a tu estilo y que amarás llevar con vos., Hecho para tus oídos, Los Galaxy Buds Live se adaptan suavemente al oído y te dan comodidad todo el día. El diseño ergonómico permite que los auriculares se mantengan dentro del oído sin ser invasivos. Con dos tamaños de aletas de fijación para una mayor comodidad, con estos auriculares vas a poder realizar todo tipo de actividad."
     },
@@ -25,7 +24,7 @@
         "precio": 20.999,
         "imagen": "aurisinalambricos.jpg",
         "categoria": "TV & Audio",
-        "cuotas": 12,
+        "cuotas": 0,
         "marca": "Samsung",
         "descripcion": "Cancelación de ruido a tu alcance, La cancelación de ruido de los Galaxy Buds Pro elimina el 99% del ruido de fondo. Los micrófonos internos y externos controlan el sonido en tiempo real. Elegí el nivel de cancelación de ruido activa para ajustar el ruido externo con un algoritmo inteligente que cancela el ruido. Configurala en modo Alto cuando viajes en autobús o en modo Bajo cuando vayas a la biblioteca; no necesitás ajustar el volumen."
     },
@@ -35,7 +34,7 @@
         "precio": 11.999,
         "imagen": "BATSMART.jpg",
         "categoria": "Cocinas",
-        "cuotas": 12,
+        "cuotas": 9,
         "marca": "Ava mini",
         "descripcion": "Bowl desmontable de acero inoxidable con capacidad para 1,5 kg de preparación, Su batidor de acero inoxidable permite batir todo tipo de preparaciones, 6 Niveles de velocidad y función Pulso, Potencia 450 Watts, Cabezal con bisagra metálica y botón ejector que permite elevarlo fácilmente, Motor silencioso."
     },
@@ -45,7 +44,7 @@
         "precio": 12.799,
         "imagen": "BATDEPIESMART.jpg",
         "categoria": "Cocinas",
-        "cuotas": 12,
+        "cuotas": 3,
         "marca": "Ava mini",
         "descripcion": "Bowl desmontable de acero inoxidable con capacidad para 1,5 kg de preparación. Su batidor de acero inoxidable permite batir todo tipo de preparaciones., 6 Niveles de velocidad y función Pulso., Potencia 450 Watts, Cabezal con bisagra metálica y botón ejector que permite elevarlo fácilmente, Motor silencioso."
     },
@@ -75,7 +74,7 @@
         "precio": 20.999,
         "imagen": "auriculares.jpg",
         "categoria": "TV & Audio",
-        "cuotas": 12,
+        "cuotas": 0,
         "marca": "Samsung",
         "descripcion": "Auriculares diseñados para cada momento. Gracias a su forma icónica y su diseño ergonómico, se adaptan de forma natural a tu entorno. Además, su altavoz optimizado te permite disfrutar una mejor experiencia. Sonido hecho para tus oídos. La nueva forma de auriculares verdaderamente inalámbricos. El diseño atractivo de los Galaxy Buds Live se ajusta de manera perfecta a tu oído. Los auriculares reflejan las curvas de tu rostro y oído para lograr un aspecto natural. Tienen una apariencia brillante para acompañar tu estilo y vienen en una caja de joyería, para que los puedas llevar cuando estés en movimiento. Los Galaxy Buds Live se adaptan suavemente al oído y te dan comodidad todo el día. El diseño ergonómico permite que los auriculares se mantengan dentro del oído sin ser invasivos. Con dos tamaños de aletas de fijación para una mayor comodidad, con estos auriculares vas a poder realizar todo tipo de actividad."
     },
@@ -115,7 +114,7 @@
         "precio": 48.399,
         "imagen": "Impresora Multifuncional HP.jpg",
         "categoria": "Computacion",
-        "cuotas": 12,
+        "cuotas": 6,
         "marca": "Neverstop",
         "descripcion": "La primera impresora multifuncional láser HP con tanque de Tóner recargable. Máxima libertad de impresión. Tu haz lo tuyo. Nosotros lo imprimimos. Reduce tus costos con la nueva tecnología de tóner recargable de HP. Escáner de superficie plana para escaneo y copias."
     },
@@ -125,7 +124,7 @@
         "precio": 1.599,
         "imagen": "Mouse Gaming Xtrike-Me GM-216.jpg",
         "categoria": "Gaming",
-        "cuotas": 12,
+        "cuotas": 6,
         "marca": "Xtrike-Me",
         "descripcion": "Diseño de alto perfil con soporte completo para la palma y el pulgar. Rueda de desplazamiento retroiluminada con agarre mejorado 7 colores de luz de fondo con efecto de respiración. "
     },
@@ -135,7 +134,7 @@
         "precio": 11.999,
         "imagen": "Consola Retro Play LT Level Up.jpg",
         "categoria": "Gaming",
-        "cuotas": 12,
+        "cuotas": 6,
         "marca": "Arcade Games",
         "descripcion": "Calidad 4K - HDMI. Android™ TV. Convierte tu TV o Monitor a través de conexión HDMI. Acceso completo a la Web. Producto disponible con Joysticks inalámbricos o Joysticks alámbricos."
     },
@@ -145,7 +144,7 @@
         "precio": 3.999,
         "imagen": "Consola Level up Retroboy plug and play.jpg",
         "categoria": "Gaming",
-        "cuotas": 12,
+        "cuotas": 6,
         "marca": "Arcade Games",
         "descripcion": "Retroboy Plug & Play. Consola de 8 bits. Batería recargable 5hs de autonomía. Consola portable. Conectalo a tu TV y juga! Video Game Console. Conectividad mediante RCA. Sonido estéreo. 7 botones con pad direccional de 8 posiciones."
     },
@@ -155,7 +154,7 @@
         "precio": 10.625,
         "imagen": "Auricular gamer Razer Kraken multi-plataforma.jpg",
         "categoria": "Gaming",
-        "cuotas": 12,
+        "cuotas": 6,
         "marca": "Arcade Games",
         "descripcion": "LOS AURICULARES PARA JUEGOS MÁS ICÓNICOS HAN EVOLUCIONADO Desde su creación, los Razer Kraken han forjado su reputación como un clásico de culto en la comunidad gamer. Ha dejado su huella como un básico en innumerables eventos de juegos, convenciones y torneos. Ahora hemos mejorado las prestaciones de este ídolo de masas y no solo le hemos dado un impulso a la calidad de sonido, sino que además los hemos hecho más cómodos para que puedas jugar todo el día con los auriculares que tanto adoras. Estos son los nuevos Razer Kraken"
     },
@@ -165,7 +164,7 @@
         "precio": 3.901,
         "imagen": "Combo gamer 3 en 1 Greenfox GFC6000.jpg",
         "categoria": "Gaming",
-        "cuotas": 12,
+        "cuotas": 6,
         "marca": "Grenfox",
         "descripcion": "Mouse premium para juegos. Resoluciones: 1200/1600/2400/3200DPI. Iluminación colorida, programable. Cable trenzado de 1,5 m. Material ABS, aceite de caucho. Teclado USB de membrana con diseño de marco delgado. Iluminación tonalizada. Detalles y terminaciones de calidad. Velocidad de respuesta. Altura regulable. Pad para juegos. Diseño optimizado para máximo rendimiento del mouse. Fabricado con Multispandex para velocidad y control.Para todos los sensores de mouse. Medidas 70x30cm. Espesor 3mm."
     },
@@ -174,38 +173,18 @@
         "nombre": "Microondas Grill Atma MD1723GN 23LTS",
         "precio": 3.901,
         "imagen": "Microondas Grill Atma MD1723GN 23LTS.jpg",
-        "categoria": "Cocina",
-        "cuotas": 12,
+        "categoria": "Cocinas",
+        "cuotas": 6,
         "marca": "Atma",
         "descripcion": ""
     },
     {
         "id": 19,
         "nombre": "Microondas Atma MD1720N 20LTS",
-        "precio": 21.999,
+        "precio": "21.999",
         "imagen": "Microondas Atma MD1720N 20LTS.jpg",
-        "categoria": "Cocina",
-        "cuotas": 12,
+        "cuotas": 6,
         "marca": "Atma",
-        "descripcion": ""
-    },
-    {
-        "id": 20,
-        "nombre": "Pava Eléctrica Smartlife 1,7L",
-        "precio": 4.749,
-        "imagen": "Pava Eléctrica Smartlife 1,7L.jpg",
-        "categoria": "Cocina",
-        "cuotas": 12,
-        "marca": "Smartlife",
-        "descripcion": ""
-    },
-    {
-        "id": 22,
-        "nombre": "Hola esta funcionando ",
-        "precio": "AAA",
-        "descripcion": "",
-        "categoria": "asdasd",
-        "marca": "AAA",
-        "imagen": "1640211787856_img_.png"
+        "descripcion": "AAAAAAAAAAAA"
     }
 ]
