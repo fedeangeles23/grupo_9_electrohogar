@@ -66,7 +66,11 @@ span.cuenta button{
     border-radius: 20px;
     margin-bottom: 30px;
     border: none;
-    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
+}
+
+/* centra el boton registrarse */
+span.cuenta {
+    padding-right: 515px;
 }
 
 span.cuenta button:hover {
