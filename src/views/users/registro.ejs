@@ -25,7 +25,7 @@
           <p class="ingreso">Ingresa los datos de tu cuenta</p>
   
   
-  
+            <form action="/users/registro" method="POST" class="form-registro">
           <div class="padre">
   
             <div class="box-1">
@@ -36,12 +36,12 @@
               </div>
   
               <div class="form">
-                <input class="input-style" type="Email" name="name" placeholder="Email:">
+                <input class="input-style" type="Email" name="email" placeholder="Email:">
                 <span class="error">Debes ingresar tu Email</span>
               </div>
   
               <div class="form">
-                <input class="input-style" type="Email" name="name" placeholder="confirmar Email:">
+                <input class="input-style" type="Email" name="email" placeholder="confirmar Email:">
                 <span class="error">Debes re-ingresar tu Email</span>
               </div>
   
@@ -49,17 +49,17 @@
   
             <div class="box-2">
               <div class="form">
-                <input class="input-style" type="Apellido" name="name" placeholder="Apellido:">
+                <input class="input-style" type="Apellido" name="last" placeholder="Apellido:">
                 <span class="error">Debes ingresar tu Apellido</span>
               </div>
   
               <div class="form">
-                <input class="input-style" type="Contraseña" name="name" placeholder="Contraseña:">
+                <input class="input-style" type="Contraseña" name="pass" placeholder="Contraseña:">
                 <span class="error">Debes ingresar tu Contraseña</span>
               </div>
   
               <div class="form">
-                <input class="input-style" type="Email" name="name" placeholder="Confirmar Contraseña:">
+                <input class="input-style" type="Email" name="pass" placeholder="Confirmar Contraseña:">
                 <span class="error">Debes re-ingresar tu Contraseña</span>
               </div>
   
@@ -67,8 +67,8 @@
   
           </div>
           <div class="botonesregister">
-            <span class="cuenta"> <button type="continue" class="btn btn-continue">Registrarse</button></span>
-  
+            <span class="cuenta"> <button type="submit" class="btn btn-continue">Registrarse</button></span>
+            </form>
             <div class="google-btn">
               <div class="google-icon-wrapper">
                 <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
