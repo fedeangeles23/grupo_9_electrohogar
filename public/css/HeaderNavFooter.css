@@ -252,91 +252,9 @@ nav ul li {
 }
 
 
-/* FOOTER ---------------------------------------------------------------------------------*/
-
-
-.footerlinealtop {
-    font-family: 'Lato', sans-serif;
-    background-color: #EEEEEE;
-    height: 70px;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: flex-start;
-    align-items: center;
-    border-top: 1px solid #c4c1c1;
-}
-
-
-.footerlinealtop span {
-    color: black;
-    max-width: 270px;
-        font-size: 13px;
-        line-height: 17px;
-        margin: 0 15px;
-        opacity: .8;
-    
-}
-
-
-.footerlinealtop img {
-    width: 40px;
-    height: 40px;
-
-}
-
-
-.newsletter span {
-    margin-top: 15px;
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
-}
-.newsletter {
-    display: flex;
-}
 
 
 
-
-.footercentral {
-   background-color: rgb(35, 23, 143);
-   height: 250px;
-}
-
-
-
-.footercentral {
-    font-family: 'Lato', sans-serif;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-
-.footercentral h3 {
-    color: rgba(184, 184, 184, 0.562);
-    font-size: 20px;
-    padding-left: 30px;
-}
-
-
-.footercolumna3Row ul li{
-    list-style: none;
-    color: white;
-    font-weight: 300;
-    margin:5px;
-
-}
-
-footer ul {
-    margin-bottom: 0;
-}
-
-.footerul a {
-    color: white;
-}
 
 .listinlinediv {
     width:215px;
@@ -364,42 +282,6 @@ margin: 0 5px 5px 0;
 
 
 }
-.imglogofooter {
-    margin-left: 30px;
-}
-
-.footer-datos img {
-    width: 17px;
-    height: 17px;
-
-}
-
-.footer-datos li a{
-    color:white;
-    margin-left: 10px;
-}
-
-.footer-datos li {
-    list-style: none;
-    margin:10px;
-}
-
-.footer-datos a:hover {
-    color: rgb(128, 126, 126);
-    text-decoration: underline;
-    transition: 0.3s;
-}
-
-
-    
-    .footerul a:hover {
-        color: rgb(128, 126, 126);
-        text-decoration: underline;
-        transition: 0.3s;
-
-    }
-
-    
 
 
 .emailsub .inputemail{
@@ -422,14 +304,10 @@ margin-left: 2px;
 cursor:pointer;
 }
 
-
 .emailsub .confirmaremail:hover {
     background-color: rgb(106, 20, 163);
     transition: 0.5s;
 }
-
-
-
 
 .contenedorventatelefonica {
     display: flex;
@@ -447,74 +325,32 @@ flex-direction: column;
      .contenedorventatelefonica .numerotel {
         color: rgb(253, 253, 253);
         font-weight: bold;
-    
     }
 
     .contenedorclietne {
         color:white
     }
 
-
     @media screen and (max-width:1056px) {
-
-
-
 
                 .social {
                     display: flex;
                     cursor:pointer;
-                    flex-wrap: wrap;
-                    
+                    flex-wrap: wrap;     
                 }
-
-
-                
-                .footercolumna3Row {
-                    font-size: 15px;
-                }
-
-
                 
                 .contenedorventatelefonica {
                     font-size: 14px;
                 }
     }
-    
        
-    
-    @media screen and (max-width: 643px) /*De este ancho para abajo se va a ver asi:*/ {
-
-        
-        .footerlinealtop {
-
-            flex-direction: column;
-            height: 130px;
-        }
-
-        
-     
-
-    }
-
-
-
-
-
 /* NAV RESPONSIVE ------------------------*/
-
-
-
-
 
 
 /*HEADER RESPONSIVE----------------------*/
 
 
 @media screen and (max-width: 576px) /*De este ancho para abajo se va a ver asi:*/ {
-    
-    .footerlinealtop .social img {
-       margin-top: 28px;
-     }    
 
     .button-group {
         margin-top: 30px;
@@ -526,7 +362,6 @@ flex-direction: column;
         align-items: stretch;
 }
 
-
 .contenedorventatelefonica .bRED{
     font-size: 13px;
 }
@@ -535,24 +370,13 @@ flex-direction: column;
     font-size: 12px;
 }
 
-
-
-.footercentral h3 {
-    font-size: 13px;
-}
-
 @media screen and (max-width: 577) /*De este ancho para abajo se va a ver asi:*/ {
 
-   
     header {
         width: 100%;
     }
-    .footercentral h3 {
-        font-size: 20px;
-        text-align: center;
-    }
 
-    }
+}
 /*  Por alguna extraña razon, al aplicar este media screen el header deja de romperse, volviendose totalmente responsive. */
     @media screen and (min-width: 1336) {
 
@@ -653,23 +477,12 @@ flex-direction: column;
             display: flex;
             flex-direction: column;
         }
-
-        footer{
-            background-color: #EDEDED;
-            height: 100%;
-            width:100%;
-            
-        }
-
-
         .iconcarrito {
             position: relative;
             display: flex;
             flex-direction: column;
             top:23px;
         }
-
-    
 
         .iconfav {
             position: relative;
@@ -690,14 +503,8 @@ flex-direction: column;
             height: 180px;
         }
 
-       
-
-     
-
     } /*END RESPONSIVE*/ 
   
-
-
 
     /*SCROLL*/
 
