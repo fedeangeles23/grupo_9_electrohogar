@@ -14,7 +14,7 @@ body{
 }
 
 footer{
-  position: fixed;
+  /* position: fixed; */
   background: #140B5C;
   width: 100%;
   bottom: 0;
@@ -51,7 +51,7 @@ footer .content .top{
 
 .content .top .logo-details .logo_name{
   position: relative;
-  top: -6px;
+ 
 }
 
 .content .top .logo-details img{
@@ -59,7 +59,7 @@ footer .content .top{
   height: 40px;
   border-radius: 50%;
   position: relative;
-  top: 5px;
+  top: -4px;
 }
 
 .content .top .media-icons{
