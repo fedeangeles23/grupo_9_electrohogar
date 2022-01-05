@@ -82,7 +82,7 @@ span.cuenta button:hover {
 
 /* Boton de google */
 .google-btn {
-    width: 210px;
+    width: 225px;
     height: 42px;
     background-color: #4285f4;
     border-radius: 30px;
@@ -141,17 +141,10 @@ span.cuenta button:hover {
     width: 50%;
 }
 
-.padre .box-2{
-    width: 50%;
-}
-
 .padre .box-1 input {
-    width: 90%;
+    width: 100%;
 }
 
-.padre .box-2 input {
-    width: 94%;
-}
 
 
 /*tamaño chico*/

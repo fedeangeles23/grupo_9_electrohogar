@@ -1,7 +1,10 @@
 let express = require('express')
 let router = express.Router()
 let controller = require('../controllers/usersController');
-const loginValidator = require('../validations/loginValidator');
+const { single } = require('../middlewares/uploadAvatar');
+const uploadFile = require('../middlewares/uploadAvatar');
+let loginValidator = require('../validations/loginValidator');
+let registerValidator = require('../validations/registerValidator');
 
 
 
@@ -14,7 +17,7 @@ router.post('/login', loginValidator ,controller.processLogin)
 // Muestra el registro
 router.get('/registro', controller.registro);
 // POST - Recibe datos del registro
-router.post('/registro', controller.processLogin)
+router.post('/registro',registerValidator, controller.processRegistro)
 
 
 

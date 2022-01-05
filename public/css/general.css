@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,4 +9,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden; /* Hide scrollbars */
+
 }
+
