@@ -26,17 +26,17 @@
               <div class="login2">
                 <input class="input-style" type="email" name="email" placeholder="Email:">
                 <% if (locals.errors && errors.email) { %>
-                  <span class="error">
+                  <span class="error"> Requerido
                     <% errors.email.msg %>
                   </span>
                   <% } %>
               </div>
 
               <div class="login2">
-                <input class="input-style" type="password" name="pass" placeholder="Contraseña:">
-                <% if (locals.errors && errors.pass) { %>
-                  <span class="error">
-                    <% errors.pass.msg %>
+                <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
+                <% if (locals.errors && errors.pass1) { %>
+                  <span class="error">Requerido
+                    <% errors.pass1.msg %>
                   </span>
                   <% } %>
               </div>

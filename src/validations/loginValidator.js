@@ -9,7 +9,7 @@ module.exports = [
     .isEmail()
     .withMessage("Ingresa un email valido"),
 
-    check('pass')
+    check('pass1')
     .notEmpty()
     .withMessage("Debes escribir la contraseña")
 ]

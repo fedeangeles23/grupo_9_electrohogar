@@ -57,6 +57,8 @@ a.cuenta {
 .error {
     display: block;
     color: red;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 /*el espacio entrer las cajas de email y contraseña*/

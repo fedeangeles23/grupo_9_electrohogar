@@ -8,8 +8,6 @@ const upload = require('../middlewares/uploadProductFiles')
 let userAdminCheck = require('../middlewares/userAdminCheck')
 
 
-
-
 /* Crear productos */
 router.get('/products/create', userAdminCheck , controller.create) // Envia los datos
 router.post('/products',  upload.single('imagen'), controller.store) //  Recibe los datos
