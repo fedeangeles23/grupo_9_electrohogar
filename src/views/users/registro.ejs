@@ -32,9 +32,9 @@
 
                     <div class="form">
                       <input class="input-style" type="text" name="name" placeholder="Nombre:">
-                      <% if (locals.errors && errors.nombre) { %>
+                      <% if (locals.errors && errors.name) { %>
                         <span class="error">
-                          <%= errors.nombre.msg %>
+                          <%= errors.name.msg %>
                         </span>
                         <% } %>
                     </div>
@@ -69,9 +69,9 @@
 
                       <div class="form">
                         <input class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
-                        <% if (locals.errors && errors.pass2) { %>
+                        <% if (locals.errors && errors.pass1) { %>
                           <span class="error">
-                            <%= errors.pass2.msg %>
+                            <%= errors.pass1.msg %>
                           </span>
                           <% } %>
                       </div>

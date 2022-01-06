@@ -14,7 +14,9 @@ let controller = {
         let product = products.find(product => product.id === productId)
 
         res.render('products/productDetail', {
-            product
+            product,
+            session: req.session
+
 
         })
     },
@@ -27,6 +29,8 @@ let controller = {
 
         res.render('products/home', {
             productsGaming,
+            session: req.session
+
         })
     }
 

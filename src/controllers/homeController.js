@@ -19,7 +19,9 @@ let controller = {
 
         res.render('products/home', {
             products12cuotas,
-             toThousand 
+             toThousand,
+             session: req.session
+
         })
     },
 

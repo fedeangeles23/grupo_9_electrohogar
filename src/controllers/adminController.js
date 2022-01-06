@@ -14,7 +14,9 @@ const writeJson = (database) => fs.writeFileSync(productsFilePath, JSON.stringif
 let controller = {
 
     create: (req, res) => {
-        res.render('admin/createProd')
+        res.render('admin/createProd', {
+            session: req.session
+        })
     },
 
     store: (req, res) => {
@@ -51,7 +53,8 @@ let controller = {
         let productToEdit = products.find(product => product.id === productId)
 
         res.render('admin/editProd', {
-            product: productToEdit
+            product: productToEdit,
+            session: req.session
         })
     },
 

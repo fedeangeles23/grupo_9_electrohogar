@@ -15,24 +15,44 @@ function writeUsersJSON(a) {
 
 const controller = {
     login: (req, res) => {
-        res.render('users/login')
+        res.render('users/login',{
+            session: req.session
+        } )
     },
 
     processLogin: (req, res) => {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            res.send('Logueado')
+            //Busca al usuario, si el email es igual al que pasa en el req
+            let user = users.find(user => user.id === req.session.user.id)
+            
+            req.session.user = {
+                id: user.id,
+                name: user.name,
+                last_name: user.last_name,
+                email:user.email,
+                avatar: user.avatar,
+                rol: user.rol
+            }
+
+            res.locals.user = req.session.user;
+
+            res.redirect('/')
+
         } else {
             res.render('users/login', {
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                session: req.session
             })
         }
     },
 
 
     registro: (req, res) => {
-        res.render('users/registro')
+        res.render('users/registro', {
+            session: req.session
+      })
     },
 
     processRegistro: (req, res) => {
@@ -73,7 +93,9 @@ const controller = {
         } else {
 
              res.render('users/registro', {
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                session: req.session
+
             }) 
         }
     },
