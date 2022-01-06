@@ -18,6 +18,7 @@ let controller = {
 
         })
     },
+    
 
     //----------------------- Categorias ---------------------------//
 
@@ -28,9 +29,19 @@ let controller = {
         res.render('products/home', {
             productsGaming,
         })
-    }
+    },
+     search: (req, res) => {
+        let keywords = req.query.keywords.trim().toLowerCase()
 
-  
+        let result = products.filter(product => product.nameincludes(keywords))
+        
+        res.render('searchResult', {
+            result,
+            search: keywords,
+            session: req.session
+        }) 
+
+    }
 };
 
 module.exports = controller
