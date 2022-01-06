@@ -21,16 +21,6 @@ footer{
   left: 0;
 }
 
-footer::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 100px;
-  height: 1px;
-  width: 100%;
-  background: #AFAFB6;
-}
-
 footer .content{
   max-width: 1250px;
   margin: auto;
@@ -298,9 +288,7 @@ footer .bottom-details .bottom_text{
 
 @media (max-width: 520px){
 
-  footer::before{
-    top: 145px;
-  }
+
 
   footer .content .top{
     flex-direction: column;

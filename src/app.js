@@ -27,8 +27,12 @@ app.use(express.urlencoded({ extended: false }));
 //para trabajar con forms
 app.use(express.json());
 app.use(method0verride('_method'));
-
-
+app.use(session({
+    secret: "secret",
+    resave: false,
+    saveUnitialized: true,
+    cookie: {secure: true}
+}))
 /*-------------------Enrutadores--------------- */
 
 let users = require('./routes/usersRouter')
