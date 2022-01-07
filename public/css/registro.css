@@ -30,11 +30,13 @@ body.body-registro {
 
  /* volver a menú de inicio*/
 span a.link {
-    margin-top: 25px;
+    position: relative;
+    top: 11rem;
+    right: 22.5rem;
     color: #383737;
     font-weight: lighter;
     font-size: 17px;
-text-transform: none;}
+    text-transform: none;}
 
 span a.link:hover {
     text-decoration: underline;
@@ -87,7 +89,8 @@ span.cuenta button:hover {
     background-color: #4285f4;
     border-radius: 30px;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
-    margin-bottom: 20px;
+    position: relative;
+    right: 1rem;
   }
 
 
@@ -128,7 +131,7 @@ span.cuenta button:hover {
 
 
 .padre{
-    width: 75%;
+    width: 100%;
     height: 170px;
     display: flex;
     flex-direction: row;
@@ -143,6 +146,15 @@ span.cuenta button:hover {
 
 .padre .box-1 input {
     width: 100%;
+    text-align: start;
+}
+
+.botonesregister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 22rem;
 }
 
 
@@ -166,10 +178,29 @@ span.cuenta button:hover {
     font-size: 19px;
 }
 
+.google-btn {
+    width: 225px;
+    height: 42px;
+    background-color: #4285f4;
+    border-radius: 30px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    position: relative;
+    right: 7rem;
+  }
+
+.botonesregister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 19rem;
+}
+
 /*volver al menú de inicio*/
 span a.link {
-    margin-left: 85px;
-    font-size: 17px;
+    position: relative;
+    top: 2rem;
+    right: 0.7rem;
 }
 }
 
@@ -193,9 +224,9 @@ span.cuenta {
 
 /*volver al menú de inicio*/
 span a.link {
-    margin-left: 45px;
-    font-size: 17px;
-    margin-right: 40px;
+    position: relative;
+    top: 2rem;
+    right: 0.8rem;
 }
 
 .padre{
@@ -207,13 +238,22 @@ span a.link {
     flex-wrap: wrap;
     justify-content: center;
 }
-
-}
+.google-btn {
+    width: 225px;
+    height: 42px;
+    background-color: #4285f4;
+    border-radius: 30px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    position: relative;
+    right: 1.5rem;
+  }
 
 .botonesregister {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 10px;
+    position: relative;
+    left: 16rem;
 }
+}
+

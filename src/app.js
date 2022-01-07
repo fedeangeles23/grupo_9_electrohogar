@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const PORT = 5000;
 const path = require('path')
-const method0verride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const method0verride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
 const session = require('express-session')
 
 

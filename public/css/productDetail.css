@@ -17,6 +17,12 @@
 .small-img-row{
     display: flex;
     justify-content: space-around;
+  
+}
+
+img.small-img{
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .col-2 img {
@@ -25,10 +31,10 @@
 }
 
 .small-img-col {
-    flex-basis: 24%;
+    flex-direction: row;
+    display: flex;
+    flex-basis: 51%;
     cursor: pointer;
-    border: 1px solid lightgrey;
-   
 }
 
 .single-product .col-2 img {
