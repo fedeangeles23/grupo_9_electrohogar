@@ -35,8 +35,8 @@
               <div class="login2">
                 <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
                 <% if (locals.errors && errors.pass1) { %>
-                  <span class="error">Requerido
-                    <% errors.pass1.msg %>
+                  <span class="error">
+                    <% errors.pass1.msg %>Requerido
                   </span>
                   <% } %>
               </div>

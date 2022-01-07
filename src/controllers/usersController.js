@@ -22,11 +22,10 @@ const controller = {
 
     processLogin: (req, res) => {
         let errors = validationResult(req);
-
         if (errors.isEmpty()) {
-            //Busca al usuario, si el email es igual al que pasa en el req
-            let user = users.find(user => user.id == req.session.user.id)
             
+            let user = users.find(user => user.email == req.body.email)
+
             req.session.user = {
                 id: user.id,
                 name: user.name,
@@ -36,13 +35,18 @@ const controller = {
                 rol: user.rol
             }
             res.locals.user = req.session.user;
+
             res.redirect('/')
+
         } else {
             res.render('users/login', {
                 errors: errors.mapped(),
                 session: req.session
             })
         }
+
+        console.log(req.body)
+        console.log(user)
     },
 
 
