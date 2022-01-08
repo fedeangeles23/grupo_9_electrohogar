@@ -68,6 +68,10 @@ header ul li {
    
 }
 
+button {
+    border: none;
+}
+
 header ul li a {
     color:grey;
     font-size: 11px;

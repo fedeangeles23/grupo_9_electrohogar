@@ -15,24 +15,39 @@ function writeUsersJSON(a) {
 
 const controller = {
     login: (req, res) => {
-        res.render('users/login')
+        res.render('users/login', {
+         session: req.session
+        })
+
     },
 
     processLogin: (req, res) => {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            res.send('Logueado')
+            /*res.send('Logueado') */
+            res.redirect('/')
         } else {
             res.render('users/login', {
-                errors: errors.mapped()
+                errors: errors.mapped(),
+                session: req.session
+            })
+        }
+        if(req.body.remember){
+            const TIME_IN_MILISECONS = 60000;
+            res.cookie("userElectrohogar", req.session.user, {
+             expires: new Data(Data.now() + TIME_IN_MILISECONS), 
+             httpOnly: true,
+             secure:true
             })
         }
     },
 
 
     registro: (req, res) => {
-        res.render('users/registro')
+        res.render('users/registro'), {
+            session: req.session
+        }
     },
 
     processRegistro: (req, res) => {
@@ -73,7 +88,8 @@ const controller = {
         } else {
 
              res.render('users/registro', {
-                errors: errors.mapped()
+                errors: errors.mapped(), 
+                session: req.session
             }) 
         }
     },
