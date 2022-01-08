@@ -19,8 +19,6 @@ module.exports = [
     body('pass1')
         .custom((value, {req}) => {
             let user = users.find(user => user.email == req.body.email);
-            console.log(req.body)
-            console.log(user)
             if(user){
                 if(user.pass === req.body.pass1){
                     return true

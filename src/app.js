@@ -31,7 +31,6 @@ app.use(session({
     secret: "secret",
     resave: false,
     saveUnitialized: true,
-    cookie: {secure: true}
 }))
 /*-------------------Enrutadores--------------- */
 

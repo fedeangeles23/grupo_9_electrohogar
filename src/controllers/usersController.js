@@ -11,8 +11,6 @@ function writeUsersJSON(a) {
     fs.writeFileSync(dbroute, userJSON, 'utf-8')
 }
 
-
-
 const controller = {
     login: (req, res) => {
         res.render('users/login',{
@@ -104,6 +102,8 @@ const controller = {
 
     perfil: (req, res) => {
         res.render('users/perfil')
+        session: req.session
+
     },
 
 

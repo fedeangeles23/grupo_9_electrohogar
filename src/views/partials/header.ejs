@@ -12,7 +12,6 @@
 
     <!-- Logo -->
     <div class="logomain">
-
         <a href="/"><img class="logo" src="/images/electrohogarlogo2resuelto.png" alt=""></a>
     </div>
 
@@ -31,8 +30,12 @@
             <li><a href="./carrito"><img class="iconcarrito" src="/icons/shopping-cart.png" alt="Carrito">Carrito</a>
             </li>
             <li><a href="#"><img class="iconfav" src="/icons/favorite.png" alt="Favoritos">Favoritos</a></li>
-            <li><a href="/users/registro"><img class="iconcuenta" src="/icons/perfil.png" alt="Mi cuenta">Mi
-                    cuenta</a></li>
+            <li>
+                    <% if (typeof session.user !== "undefined") { %>
+                         <a href="/users/registro"><img class="iconcuenta" src="/icons/perfil.png" alt="Mi cuenta"><%= session.user.name %></a> <% } else { %>
+                         <a href="/users/registro"><img class="iconcuenta" src="/icons/perfil.png" alt="Mi cuenta">Mi
+                    cuenta</a>
+                       <% } %></li>
         </ul>
 
 
