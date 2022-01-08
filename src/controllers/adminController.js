@@ -14,9 +14,9 @@ const writeJson = (database) => fs.writeFileSync(productsFilePath, JSON.stringif
 let controller = {
 
     create: (req, res) => {
-        res.render('admin/createProd'),{
-        session: req.session
-        }
+        res.render('admin/createProd', {
+            session: req.session
+        })
     },
 
     store: (req, res) => {

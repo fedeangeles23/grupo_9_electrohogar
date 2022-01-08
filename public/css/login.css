@@ -57,6 +57,8 @@ a.cuenta {
 .error {
     display: block;
     color: red;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 /*el espacio entrer las cajas de email y contraseña*/
@@ -85,6 +87,7 @@ span.cuenta2 button{
 span.cuenta2 button:hover {
     color: rgb(255, 255, 255);
     background-color: black;
+
 }
 
 
@@ -162,6 +165,10 @@ span.cuenta2 button:hover {
         font-weight: lighter;
          font-size: 14px;
          margin-right: 10px;
+    }
+
+    button.btn.btn-continue:hover {
+       text-decoration: none;
     }
 
     .olvide {
@@ -270,7 +277,7 @@ span.cuenta2 button:hover {
 
 
 .google-btnlogin {
-        width: 180px ;
+        width: 200px ;
         height: 42px;
         background-color: #4285f4;
         border-radius: 30px;

@@ -11,43 +11,47 @@ function writeUsersJSON(a) {
     fs.writeFileSync(dbroute, userJSON, 'utf-8')
 }
 
-
-
 const controller = {
     login: (req, res) => {
-        res.render('users/login', {
-         session: req.session
-        })
-
+        res.render('users/login',{
+            session: req.session
+        } )
     },
 
     processLogin: (req, res) => {
         let errors = validationResult(req);
-
         if (errors.isEmpty()) {
-            /*res.send('Logueado') */
+            
+            let user = users.find(user => user.email == req.body.email)
+
+            req.session.user = {
+                id: user.id,
+                name: user.name,
+                last_name: user.last_name,
+                email:user.email,
+                avatar: user.avatar,
+                rol: user.rol
+            }
+            res.locals.user = req.session.user;
+
             res.redirect('/')
+
         } else {
             res.render('users/login', {
                 errors: errors.mapped(),
                 session: req.session
             })
         }
-        if(req.body.remember){
-            const TIME_IN_MILISECONS = 60000;
-            res.cookie("userElectrohogar", req.session.user, {
-             expires: new Data(Data.now() + TIME_IN_MILISECONS), 
-             httpOnly: true,
-             secure:true
-            })
-        }
+
+        console.log(req.body)
+        console.log(user)
     },
 
 
     registro: (req, res) => {
-        res.render('users/registro'), {
+        res.render('users/registro', {
             session: req.session
-        }
+      })
     },
 
     processRegistro: (req, res) => {
@@ -88,8 +92,9 @@ const controller = {
         } else {
 
              res.render('users/registro', {
-                errors: errors.mapped(), 
+                errors: errors.mapped(),
                 session: req.session
+
             }) 
         }
     },
@@ -97,6 +102,8 @@ const controller = {
 
     perfil: (req, res) => {
         res.render('users/perfil')
+        session: req.session
+
     },
 
 

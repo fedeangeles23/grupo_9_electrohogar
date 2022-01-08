@@ -17,9 +17,7 @@
 
             <div class="container-registro">
               <div class="logo-registro">
-                <div>
                   <img src="/images/logo.jpg">
-                </div>
               </div>
 
               <p class="ingreso">Ingresa los datos de tu cuenta</p>
@@ -32,9 +30,9 @@
 
                     <div class="form">
                       <input class="input-style" type="text" name="name" placeholder="Nombre:">
-                      <% if (locals.errors && errors.nombre) { %>
+                      <% if (locals.errors && errors.name) { %>
                         <span class="error">
-                          <%= errors.nombre.msg %>
+                          <%= errors.name.msg %>
                         </span>
                         <% } %>
                     </div>
@@ -69,9 +67,9 @@
 
                       <div class="form">
                         <input class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
-                        <% if (locals.errors && errors.pass2) { %>
+                        <% if (locals.errors && errors.pass1) { %>
                           <span class="error">
-                            <%= errors.pass2.msg %>
+                            <%= errors.pass1.msg %>
                           </span>
                           <% } %>
                       </div>
@@ -92,13 +90,11 @@
                   <p class="btn-text"><b>Registrarse con google</b></p>
                 </a>
               </div>
-
+              
             </div>
 
-            <span> <a href="/" class="link">Volver al menú de inicio</a> </span>
           </div>
 
-          </div>
         </main>
 
 

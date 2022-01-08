@@ -27,8 +27,9 @@ let controller = {
     products: (req, res) => {
         res.render('products/allProducts', {
             products,
-            toThousand,
+            toThousand ,
             session: req.session
+
         })
     },
 

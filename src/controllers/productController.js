@@ -35,7 +35,7 @@ let controller = {
      search: (req, res) => {
         let keywords = req.query.keywords.trim().toLowerCase()
 
-        let result = products.filter(product => product.nameincludes(keywords))
+        let result = products.filter(product => product.name.includes(keywords))
         
         res.render('searchResult', {
             result,
