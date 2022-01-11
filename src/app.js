@@ -5,7 +5,7 @@ const path = require('path')
 const method0verride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
-const cookieSession = require('./middlewares/cookieSession')
+const cookie = require('./middlewares/cookie')
 
 
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}
@@ -34,7 +34,7 @@ app.use(session({
     saveUnitialized: true,
 }))
 app.use(cookieParser())
-
+app.use(cookie)
 /*-------------------Enrutadores--------------- */
 
 let users = require('./routes/usersRouter')

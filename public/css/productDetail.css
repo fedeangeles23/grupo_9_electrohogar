@@ -17,12 +17,18 @@
 .small-img-row{
     display: flex;
     justify-content: space-around;
+    width: 100%;
   
 }
 
 img.small-img{
     margin-top: 10px;
-    margin-left: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+div.small-cuadrado {
+    margin-left: 20px;
 }
 
 .col-2 img {

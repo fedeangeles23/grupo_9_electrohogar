@@ -21,7 +21,6 @@ let controller = {
             products12cuotas,
              toThousand,
              session: req.session
-
         })
     },
 
