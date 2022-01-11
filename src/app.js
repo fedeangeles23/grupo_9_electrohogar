@@ -4,7 +4,8 @@ const PORT = 5000;
 const path = require('path')
 const method0verride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
 const session = require('express-session')
-
+const cookieParser = require('cookie-parser')
+const cookieSession = require('./middlewares/cookieSession')
 
 
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}
@@ -32,6 +33,8 @@ app.use(session({
     resave: false,
     saveUnitialized: true,
 }))
+app.use(cookieParser())
+
 /*-------------------Enrutadores--------------- */
 
 let users = require('./routes/usersRouter')
@@ -59,6 +62,4 @@ app.use('/products', products);
 app.use((req, res, next) => {
 res.status(404).render('404-page') //le tira al cliente el status de la peticion realizada
 })
-
-
 

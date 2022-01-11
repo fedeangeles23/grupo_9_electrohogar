@@ -19,6 +19,7 @@ router.get('/registro', controller.registro);
 // POST - Recibe datos del registro
 router.post('/registro',registerValidator, controller.processRegistro)
 
+router.get('/logout', controller.logout)
 
 
 router.get('/perfil', controller.perfil)
