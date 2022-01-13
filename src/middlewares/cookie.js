@@ -1,6 +1,6 @@
 function cookie (req, res, next) {
-    if(req.cookies.userElectrogar){
-        req.session.user = req.cookies.userElectrogar; 
+    if(req.cookies.userElectroHogar){
+        req.session.user = req.cookies.userElectroHogar; 
         res.locals.user = req.session.user; 
     }
     next()

@@ -56,8 +56,8 @@ const controller = {
             })
         }
 
-        console.log(req.body)
-        console.log(user)
+       // console.log(req.body)
+       // console.log(user)
     },
 
 
