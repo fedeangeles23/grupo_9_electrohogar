@@ -31,7 +31,7 @@ app.use(method0verride('_method'));
 app.use(session({
     secret: "secret",
     resave: false,
-    saveUnitialized: true,
+    saveUninitialized: true,
 }))
 app.use(cookieParser())
 app.use(cookie)

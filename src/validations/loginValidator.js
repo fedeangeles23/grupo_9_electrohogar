@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 let dbroute = path.join(__dirname, '../data/users.json')
 let users = JSON.parse(fs.readFileSync(dbroute, 'utf-8'))
+const bcrypt = require("bcryptjs");
 
 module.exports = [ 
     check('email')
@@ -20,7 +21,7 @@ module.exports = [
         .custom((value, {req}) => {
             let user = users.find(user => user.email == req.body.email);
             if(user){
-                if(user.pass === req.body.pass1){
+                if(bcrypt.compareSync(value, user.pass)){
                     return true
                 }else{
                     return false

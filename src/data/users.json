@@ -167,5 +167,18 @@
         "address": "",
         "city": "",
         "province": ""
+    },
+    {
+        "id": 14,
+        "name": "karen Daiana Gonzalez ",
+        "last_name": "Gonzalez ",
+        "email": "Karengonza2001@gmail.com",
+        "pass": "$2a$10$U8WrC0d4zjn.bacGLam3A..d0Cc8M./NH/a9rdImKo4s9qUdEAYSK",
+        "avatar": "default-image.png",
+        "rol": "ROL_USER",
+        "tel": "",
+        "address": "",
+        "city": "",
+        "province": ""
     }
 ]
