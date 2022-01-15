@@ -6,11 +6,13 @@ const bcrypt = require('bcryptjs')
 let dbroute = path.join(__dirname, '../data/users.json')
 let users = JSON.parse(fs.readFileSync(dbroute, 'utf-8'))
 
+
 function writeUsersJSON(a) {
     let userJSON = JSON.stringify(a)
     fs.writeFileSync(dbroute, userJSON, 'utf-8')
 }
 
+ 
 const controller = {
     login: (req, res) => {
         res.render('users/login',{
@@ -68,7 +70,6 @@ const controller = {
     },
 
     processRegistro: (req, res) => {
-
 
         let errors = validationResult(req);
 

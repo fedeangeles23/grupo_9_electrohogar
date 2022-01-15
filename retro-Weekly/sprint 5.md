@@ -1,4 +1,4 @@
-Retrospectiva del sprint 4
+Retrospectiva del sprint 5
 
 COMENZAR A HACER: Recurrir a nuevas fuentes de conocimiento para mejorar el aprendizaje y complementarlo con lo que aprendemos en la cursada.
 
