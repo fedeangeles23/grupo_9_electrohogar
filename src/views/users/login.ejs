@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<input type="checkbox" id="check">
 
 <%- include('../partials/head.ejs') %>
 
@@ -24,10 +23,10 @@
         
             <form action="/users/login" method="POST" class="form-login">
               <div class="login2">
-                <input class="input-style" type="email" name="email" placeholder="Email:">
+                <input class="input-style" type="email" name="email" placeholder="Email:" value="<%= locals.old && old.email %>">
                 <% if (locals.errors && errors.email) { %>
-                  <span class="error"> Requerido
-                    <% errors.email.msg %>
+                  <span class="error">
+                    <%= errors.email.msg %>
                   </span>
                   <% } %>
               </div>
@@ -36,7 +35,7 @@
                 <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
                 <% if (locals.errors && errors.pass1) { %>
                   <span class="error">
-                    <% errors.pass1.msg %>
+                    <%= errors.pass1.msg %>
                   </span>
                   <% } %>
               </div>

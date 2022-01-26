@@ -9,7 +9,7 @@
             <!-- Logo -->
             <div class="logomain">
 
-                <a href="/"><img class="logo" src="/img/logoelectrogarPNG3.png" alt=""></a>
+                <a href="/"><img class="logo" src="/images/electrohogarlogo2resuelto.png" alt=""></a>
             </div>
 
 
@@ -26,12 +26,17 @@
             <div class="headernav">
                 <div class="licontainer">
                     <ul>
-                        <li class="menu-button"><a href="/users/registro"><img class="imgusuario" src="/img/usuario.png"
-                                    alt="">Mi
-                                cuenta</a></i>
-                        
-                            </li>
 
+                        <% if (typeof session.user != "undefined") { %>
+                            <li class="menu-button"><a href="/users/registro"><img class="imgusuario" src="/img/usuario.png" alt=""><%= session.user.name %></a> </i> </li>
+                        <% } else {%>
+                            <li class="menu-button"><a href="/users/registro"><img class="imgusuario" src="/img/usuario.png" alt="">Mi cuenta  </a> </i> </li>
+                        <% } %>
+
+
+                      
+                        
+            
                         <li><a href="#"><img class="carritoyfav" src="/img/carrito-de-compras.png"
                                     alt="Carrito de compras"></a></li>
 

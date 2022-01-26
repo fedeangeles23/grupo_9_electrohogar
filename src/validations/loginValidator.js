@@ -21,7 +21,7 @@ module.exports = [
         .custom((value, {req}) => {
             let user = users.find(user => user.email == req.body.email);
             if(user){
-                if(bcrypt.compareSync(value, user.pass)){
+                if(user.pass === req.body.pass1){ 
                     return true
                 }else{
                     return false

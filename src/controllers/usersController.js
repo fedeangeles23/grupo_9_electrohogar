@@ -22,8 +22,8 @@ const controller = {
 
     processLogin: (req, res) => {
         let errors = validationResult(req);
+
         if (errors.isEmpty()) {
-            
             let user = users.find(user => user.email == req.body.email)
 
             req.session.user = {
@@ -34,7 +34,6 @@ const controller = {
                 avatar: user.avatar,
                 rol: user.rol
             }
-
             
             
             if(req.body.remember){
@@ -70,7 +69,8 @@ const controller = {
     },
 
     processRegistro: (req, res) => {
-
+        
+    
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
@@ -83,6 +83,7 @@ const controller = {
             });
 
             let { name, last_name, email, pass1 } = req.body
+            
             let newUser = {
                 id: lastId + 1,
                 name,
@@ -107,6 +108,7 @@ const controller = {
 
              res.render('users/registro', {
                 errors: errors.mapped(),
+                old: req.body,
                 session: req.session
 
             }) 

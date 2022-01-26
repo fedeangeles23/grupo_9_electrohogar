@@ -44,6 +44,12 @@ footer .content .top{
  
 }
 
+.logo_name:hover{
+  color:rgb(136, 136, 136);
+  transition: 0.3s ease-in-out;
+  user-select: none;
+}
+
 .content .top .logo-details img{
   width: 40px;
   height: 40px;
@@ -105,11 +111,11 @@ footer .content .top{
 }
 
 .top .media-icons a:nth-child(5){
-  background: #FF0000;
+  background: #379221;
 }
 
 .top .media-icons a:nth-child(5):hover{
-  color: #FF0000;
+  color: #0f8f0b;
   background: #fff;
 }
 

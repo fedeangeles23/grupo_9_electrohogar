@@ -43,6 +43,10 @@ span a.link:hover {
 
 }
 
+.a_inicio{
+    margin-top: 400px;
+}
+
 /*para el ingresa los datos de tu cuenta*/
 .ingreso {
     font-size: 19px;

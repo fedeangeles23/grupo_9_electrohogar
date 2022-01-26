@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<input type="checkbox" id="check">
 
 <%- include('../partials/head.ejs') %>
 
@@ -29,7 +28,7 @@
                   <div class="box-1">
 
                     <div class="form">
-                      <input class="input-style" type="text" name="name" placeholder="Nombre:">
+                      <input class="input-style" type="text" name="name" placeholder="Nombre:"  value="<%= locals.old && old.name %>" >
                       <% if (locals.errors && errors.name) { %>
                         <span class="error">
                           <%= errors.name.msg %>
@@ -38,9 +37,9 @@
                     </div>
 
                     <div class="form">
-                      <input class="input-style" type="email" name="email" placeholder="Email:">
+                      <input class="input-style" type="email" name="email" placeholder="Email:" value="<%= locals.old && old.email %>"  >
                       <% if (locals.errors && errors.email) { %>
-                        <span class="error">
+                        <span class="error">                         
                           <%= errors.email.msg %>
                         </span>
                         <% } %>
@@ -48,7 +47,7 @@
 
                     <div class="box-2">
                       <div class="form">
-                        <input class="input-style" type="text" name="last_name" placeholder="Apellido:">
+                        <input class="input-style" type="text" name="last_name" placeholder="Apellido:"  value="<%= locals.old && old.last_name %>">
                         <% if (locals.errors && errors.last_name) { %>
                           <span class="error">
                             <%= errors.last_name.msg %>
@@ -57,19 +56,20 @@
                       </div>
 
                       <div class="form">
-                        <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
+                        <input class="input-style" type="password" name="pass1" placeholder="Contraseña:"  >
                         <% if (locals.errors && errors.pass1) { %>
                           <span class="error">
                             <%= errors.pass1.msg %>
+
                           </span>
                           <% } %>
                       </div>
 
                       <div class="form">
                         <input class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
-                        <% if (locals.errors && errors.pass1) { %>
+                        <% if (locals.errors && errors.pass2) { %>
                           <span class="error">
-                            <%= errors.pass1.msg %>
+                            <%= errors.pass2.msg %>
                           </span>
                           <% } %>
                       </div>
@@ -94,6 +94,8 @@
             </div>
 
           </div>
+
+            <a class="a_inicio" href="/">Volver al menu de inicio</a>
 
         </main>
 

@@ -36,21 +36,32 @@ let controller = {
    
 // Footer views 
     sobreNosotros: (req,res) => {
-        res.render('footerViews/sobreNosotros')
+        res.render('footerViews/sobreNosotros',{
+            session: req.session
+        })
+        
+
     },
 
     preguntasFrecuentes: (req,res) => {
-        res.render('footerViews/preguntasFrecuentes')
+        res.render('footerViews/preguntasFrecuentes',{
+            session: req.session
+        })
+
     },
 
     terminosYcondiciones: (req,res) => {
-        res.render('footerViews/terminosyCondiciones')
+        res.render('footerViews/terminosyCondiciones',{session: req.session})
+
     },
     trabajaConNosotros: (req,res) => {
-        res.render('footerViews/trabajaConNosotros')
+        res.render('footerViews/trabajaConNosotros',{session: req.session})
+
     },
     botonDeArrepentimiento: (req,res) => {
-        res.render('footerViews/botonDeArrepentimiento')
+        res.render('footerViews/botonDeArrepentimiento',{session: req.session
+        })
+
     }
 
 

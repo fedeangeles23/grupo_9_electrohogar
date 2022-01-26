@@ -37,9 +37,9 @@ body {
 }
 
 .logomain img {
-    width: 180px;
-    height: 180px;
-    margin-top: 15px;
+    width: 110px;
+    height: 105px;
+    margin-top: -15px;
 }
 
 
@@ -58,7 +58,7 @@ body {
 
 
 .headercontainer .buscar input {
-    border:1px solid hsl(237deg 88% 42%);
+    border:1px solid rgb(51 160 175);
     border-right:none;
     outline: none;
     background: #fff;
@@ -134,7 +134,7 @@ header .buscar {
 }
 
 header .buscar input {
-    border:1px solid hsl(0, 7%, 81%);
+    border:1px solid rgb(51 160 175);
     border-right:none;
     outline: none;
     background: #fff;
@@ -151,13 +151,13 @@ header .buscar input::placeholder{
 }
 
 header .buscar i {
-    background-color: rgb(10, 10, 190);
+    background-color: rgb(51 160 175);
     color: white;
     width: 40px;
     height: 40px;
     padding: 10px;
     border: 1px
- solid hsl(237deg 88% 42%);
+ solid rgb(51 160 175);
 border-top-right-radius: 3px;
 border-bottom-right-radius: 3px;
 
