@@ -72,7 +72,16 @@ span.cuenta button{
     border-radius: 20px;
     margin-bottom: 30px;
     border: none;
+    text-decoration: none;
+    position: relative;
+    left: 250px;
 }
+
+button.btn.btn-continue {
+    position: relative;
+    left: -5px;
+}
+
 
 /* centra el boton registrarse */
 span.cuenta {

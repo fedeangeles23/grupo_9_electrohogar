@@ -6,9 +6,9 @@
         "email": "admin@gmail.com",
         "pass": "admin",
         "avatar": "default-image.png",
-        "rol": "ROL_USER",
-        "tel": "",
-        "address": "",
+        "rol": "ROL_ADMIN",
+        "tel": "2213144543",
+        "address": "Carlos Paz",
         "city": "",
         "province": ""
     },

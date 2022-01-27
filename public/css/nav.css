@@ -73,6 +73,11 @@ margin-top: 15px;
 }
 
 
+.nav__listitemdropdiv:hover{
+    color:white;
+    background-color: blue;
+}
+
 
 .lidrop:hover{
     background-color: #0a07da;

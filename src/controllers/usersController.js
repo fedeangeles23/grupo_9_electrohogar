@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator')
 const fs = require('fs');
 const path = require('path');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 
 let dbroute = path.join(__dirname, '../data/users.json')
 let users = JSON.parse(fs.readFileSync(dbroute, 'utf-8'))
@@ -117,8 +117,14 @@ const controller = {
 
 
     perfil: (req, res) => {
-        res.render('users/perfil')
-        session: req.session
+        
+        if(req.session.user){
+            res.render('users/perfil', {
+            session: req.session
+        })}
+            else{
+                res.redirect('/users/login')
+            }
 
     },
 

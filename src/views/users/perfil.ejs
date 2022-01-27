@@ -14,22 +14,26 @@
    <main>
     <div class="container-perfil">
 
-
-
-        <p class="bienvenido">BIENVENIDO <b> Cosme Fulanito </b> A LA FECHA CONTAS CON: </p>
-
-        <p class="datos"> Mis datos </p>
+        <p class="bienvenido">Bienvenido <b> <% if (typeof session.user != "undefined") { %>
+        <span> <%= session.user.name %> </span>  
 
         <div class="perfil2">
+          <p class="perfil2">Nombre: <%= session.user.name %> </p>
+          <p class="perfil2">Apellido: <%= session.user.last_name %> </p>
+          <p class="perfil2">Email: <%= session.user.email %></p>
+          <p class="perfil2">Telefono: <%= session.user.tel %></p>
+          <p class="perfil2">Direccion: <%= session.user.address %></p>
+    
+          </div>
+
+      <% } else {%>
+        Usuario
+      <% } %> 
+
+
+        
       
-        <p class="perfil2">Nombre y apellido: Cosme Fulanito</p>
-        <p class="datosP">Email: CosmeFulanitoRockstar23@gmail.com</p>
-        <p class="datosP">Telefono: +542213144243</p>
-        <p class="datosP">DNI:4323323540</p>
-      
-        </div>
-      
-             <span class="cuenta"> <button type="continue" class="btn btn-continue">Editar mis datos</button></span>
+             <span class="cuenta"> <button type="continue" class="btn-continuee">Editar mis datos</button></span>
       
              <p class="datos"> Mis compras </p>
       

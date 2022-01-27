@@ -8,6 +8,7 @@ let registerValidator = require('../validations/registerValidator');
 
 
 
+
 // Muestra el login
 router.get('/login', controller.login);
 // POST - Recibe datos del login
@@ -22,7 +23,7 @@ router.post('/registro',registerValidator, controller.processRegistro)
 router.get('/logout', controller.logout)
 
 
-router.get('/perfil', controller.perfil)
+router.get('/perfil',controller.perfil)
 
 
 module.exports = router;

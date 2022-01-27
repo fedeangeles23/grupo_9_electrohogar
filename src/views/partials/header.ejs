@@ -1,54 +1,72 @@
- <header>
-        <div class="headercontainer">
+<header>
+    <div class="headercontainer">
 
-            <div class="burguermenu">
-                <i class="fas fa-bars" ></i>
-            </div>
-
-
-            <!-- Logo -->
-            <div class="logomain">
-
-                <a href="/"><img class="logo" src="/images/electrohogarlogo2resuelto.png" alt=""></a>
-            </div>
-
-
-            <!-- Barra de busqueda -->
-            <div class="buscar">
-                <form action="">
-                    <input type="search" placeholder="Buscar productos..">
-                    <button class="btnsearch" type="submit"> <i class="fas fa-search"></i></button>
-                </form>
-            </div>
-
-
-            <!-- Botones laterales -->
-            <div class="headernav">
-                <div class="licontainer">
-                    <ul>
-
-                        <% if (typeof session.user != "undefined") { %>
-                            <li class="menu-button"><a href="/users/registro"><img class="imgusuario" src="/img/usuario.png" alt=""><%= session.user.name %></a> </i> </li>
-                        <% } else {%>
-                            <li class="menu-button"><a href="/users/registro"><img class="imgusuario" src="/img/usuario.png" alt="">Mi cuenta  </a> </i> </li>
-                        <% } %>
-
-
-                      
-                        
-            
-                        <li><a href="#"><img class="carritoyfav" src="/img/carrito-de-compras.png"
-                                    alt="Carrito de compras"></a></li>
-
-                        <li><a href="#"><img class="carritoyfav" src="/img/favorito.png" alt="Favoritos"></a></i>
-                        </li>
-
-                    </ul>
-
-                </div>
-            </div>
-
-              
-
+        <div class="burguermenu">
+            <i class="fas fa-bars"></i>
         </div>
-    </header>
+
+
+        <!-- Logo -->
+        <div class="logomain">
+
+            <a href="/"><img class="logo" src="/images/electrohogarlogo2resuelto.png" alt=""></a>
+        </div>
+
+
+        <!-- Barra de busqueda -->
+        <div class="buscar">
+            <form action="">
+                <input type="search" placeholder="Buscar productos..">
+                <button class="btnsearch" type="submit"> <i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+
+        <!-- Botones laterales -->
+        <div class="headernav">
+            <div class="licontainer">
+                <ul>
+
+                    <% if (typeof session.user !="undefined" ) { %>
+                        <li class="menu-button"><a href="/users/perfil"><img class="imgusuario" src="/img/usuario.png"
+                                    alt="">
+                                <%= session.user.name %>
+                            </a> </i>
+                            <ul>
+                                <div class="hovercuenta">
+                                    <li> <a href="/users/perfil">Mi perfil</a></li>
+                                    <li> <a href="/users/logout">Cerrar sesion</a></li>
+                                </div>
+                            </ul>
+
+                        </li>
+                        <% } else {%>
+                            <li class="menu-button"><a href="/users/registro"><img class="imgusuario"
+                                        src="/img/usuario.png" alt="">Mi cuenta </a> </i>
+                                <ul>
+                                    <div class="hovercuenta">
+                                        <li> <a href="/users/login">Iniciar sesion</a></li>
+                                        <li> <a href="/users/registro">Registrarse</a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <% } %>
+
+                                <li><a href="#"><img class="carritoyfav" src="/img/carrito-de-compras.png"
+                                            alt="Carrito de compras"></a></li>
+
+                                <li><a href="#"><img class="carritoyfav" src="/img/favorito.png"
+                                            alt="Favoritos"></a></i>
+                                </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</header>
+
+
