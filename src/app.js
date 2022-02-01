@@ -43,11 +43,10 @@ let admin = require('./routes/adminRouter')
 let carrito = require ('./routes/cartRouter')
 let products = require ('./routes/productRouter')
 
-
 /* ----------------Routes------------------------- */
 
-app.use('/', home);
-
+ app.use('/', home);
+ 
 app.use('/carrito', carrito)
 
 app.use('/users', users);

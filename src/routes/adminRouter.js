@@ -7,6 +7,9 @@ const AdminCheck = require('../middlewares/AdminCheck')
 
 //Las rutas llevan /admin/produ... al inicio
 
+router.get('/', controller.dashboard) // Envia los datos
+
+
 /* Crear productos */
 router.get('/products/create', AdminCheck , controller.create) // Envia los datos
 router.post('/products',  upload.single('imagen'), controller.store) //  Recibe los datos

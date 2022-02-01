@@ -23,6 +23,7 @@ position:relative;
 cursor:pointer;
 padding: 1rem;
 margin-top: 15px;
+font-size: 15px;;
 }
 
 .nav__listitem:hover{

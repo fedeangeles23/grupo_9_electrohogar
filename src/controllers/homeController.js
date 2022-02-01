@@ -1,4 +1,4 @@
-//Requerimos modulo fs y path
+ //Requerimos modulo fs y path
 const fs = require('fs');
 const path = require('path');
 
@@ -9,7 +9,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // Para que los miles tengan punto y se pueda entender el precio
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
- 
+
 const writeJson = (database) => fs.writeFileSync(productsFilePath, JSON.stringify(database), 'utf-8')
 
 let controller = {
@@ -19,47 +19,48 @@ let controller = {
 
         res.render('products/home', {
             products12cuotas,
-             toThousand,
-             session: req.session
+            toThousand,
+            session: req.session
         })
     },
 
     products: (req, res) => {
         res.render('products/allProducts', {
             products,
-            toThousand ,
+            toThousand,
             session: req.session
 
         })
     },
 
-   
-// Footer views 
-    sobreNosotros: (req,res) => {
-        res.render('footerViews/sobreNosotros',{
-            session: req.session
-        })
-        
 
-    },
-
-    preguntasFrecuentes: (req,res) => {
-        res.render('footerViews/preguntasFrecuentes',{
+    // Footer views 
+    sobreNosotros: (req, res) => {
+        res.render('footerViews/sobreNosotros', {
             session: req.session
         })
 
-    },
-
-    terminosYcondiciones: (req,res) => {
-        res.render('footerViews/terminosyCondiciones',{session: req.session})
 
     },
-    trabajaConNosotros: (req,res) => {
-        res.render('footerViews/trabajaConNosotros',{session: req.session})
+
+    preguntasFrecuentes: (req, res) => {
+        res.render('footerViews/preguntasFrecuentes', {
+            session: req.session
+        })
 
     },
-    botonDeArrepentimiento: (req,res) => {
-        res.render('footerViews/botonDeArrepentimiento',{session: req.session
+
+    terminosYcondiciones: (req, res) => {
+        res.render('footerViews/terminosyCondiciones', { session: req.session })
+
+    },
+    trabajaConNosotros: (req, res) => {
+        res.render('footerViews/trabajaConNosotros', { session: req.session })
+
+    },
+    botonDeArrepentimiento: (req, res) => {
+        res.render('footerViews/botonDeArrepentimiento', {
+            session: req.session
         })
 
     }
@@ -74,10 +75,4 @@ const express = require('express');
 const router = express.Router();
 
 
-/* 
-
-sobreNosotros: (req,res) => {
-        
-} 
-
-*/
+ 

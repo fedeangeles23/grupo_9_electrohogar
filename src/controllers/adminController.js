@@ -101,6 +101,14 @@ let controller = {
         writeJson(products)
          res.redirect("/")
  
+    },
+
+    /* Perfil admin */
+
+    dashboard: (req, res) => {
+        res.render('admin/adminsettings', {
+            session: req.session
+        })
     }
 
 };

@@ -45,14 +45,24 @@ div.small-cuadrado {
 
 .single-product .col-2 img {
     padding:0;
+    border: 1px solid silver;
 }
+
+
 .single-product .col-2 {
-    padding:20px;
+    padding: 20px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .col2 {
     margin-left: 30px;
 }
+
 
 .col-2 {
     flex-basis: 50%;
@@ -72,7 +82,7 @@ div.small-cuadrado {
 }
 
 .single-product h4 {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -100,8 +110,10 @@ div.small-cuadrado {
 }
 
 .tituloprod {
-    font-size: 24px;
+    font-size: 20px;
+    font-family: 'Lato';
     margin: 10px 0;
+    text-align: start;
 }
 
 .precioprod {
@@ -156,7 +168,7 @@ a {
 
 .btncomprar {
     display: inline-block;
-    background: rgb(24, 23, 23);
+    background: #700184;
     color: white;
     padding: 8px 30px;
     margin: 30px 0;
@@ -164,9 +176,17 @@ a {
     transition: background 0.5s;
 }
 
+
+.btncomprar:hover{
+    color:white;
+    background: #5b016b;
+
+}
+
 .btncart:hover {
-    background: rgb(5, 5, 121);
+    background: #700184;
     color:#fff;
+    border: 1px solid #700184;
 }
 
 
@@ -220,25 +240,9 @@ a {
 .detalleyinfo h4 {
     display: inline-block;
     position: relative;
-    color: #001eca;
+    color: #700184;;
   }
   
-  .detalleyinfo h4:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #001eca;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .detalleyinfo h4:hover:after {
-    transform: scaleX(1);
-    transform-origin:center;
-  }
 
   /* ADMIN BUTTONS */
   .btneditprodform {
@@ -268,4 +272,47 @@ a {
         flex-direction: column;
     }
 
+}
+
+
+/* Imagenes cuadrados de product detail */
+
+.imgcontainercol2 {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+}
+
+.imgcontainercol2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.small-cuadrado img:hover{
+    border:1px solid rgb(25, 0, 255);
+    transition: 5ms ease-in-out;
+}
+
+
+.small-img-col img:hover{
+    border:1px solid rgb(25, 0, 255);
+    transition: 0.2s ease-in-out;
+
+}
+
+
+.favdetail {
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.favdetail .fa{
+    color:rgb(25, 0, 255);
+    cursor: pointer;
+}
+
+.descripcionprod {
+    padding:20px
 }
