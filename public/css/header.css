@@ -185,10 +185,12 @@ form {
 /* Botones laterales */
 
 .imgusuario {
-    width: 23px;
-    position: relative;
-    left: -10px;
-    opacity: 80%;
+        width: 23px;
+        position: relative;
+        left: -29px;
+        bottom: -20px;
+        opacity: 80%;
+    
 }
 
 .ulusuario{
@@ -228,18 +230,26 @@ color: white;
 
 
 .carritoyfav {
-    width: 23px;
-    opacity: 50%;
+    width: 22px;
+    opacity: 70%;
     position: relative;
+    top:20px;
+}
+
+.carritoyfavv{
+    margin-left: 10px;
+    width: 20px;
+    opacity: 65%;
+    position: relative;
+    top:22px;
+
 }
 
 .licontainer {
     display: flex;
 }
 
-li.menu-button {
-    border-right: 1px solid #08080836;
-}
+
 
 .headernav a {
     color: rgb(58 58 58);
@@ -371,7 +381,8 @@ li{
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
-    z-index: 10;
+    z-index: 9999;
+    display: none;
   }
 
   .hovercuenta li{
@@ -383,7 +394,9 @@ li{
   }
 
   
-
+.headernav .licontainer .menu-button:hover .hovercuenta {
+    display: block;
+}
  
 
   
