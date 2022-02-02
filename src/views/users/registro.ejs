@@ -36,21 +36,21 @@
                         <% } %>
                     </div>
 
-                    <div class="form">
-                      <input class="input-style" type="email" name="email" placeholder="Email:" value="<%= locals.old && old.email %>"  >
-                      <% if (locals.errors && errors.email) { %>
-                        <span class="error">                         
-                          <%= errors.email.msg %>
-                        </span>
-                        <% } %>
-                    </div>
-
                     <div class="box-2">
                       <div class="form">
                         <input class="input-style" type="text" name="last_name" placeholder="Apellido:"  value="<%= locals.old && old.last_name %>">
                         <% if (locals.errors && errors.last_name) { %>
                           <span class="error">
                             <%= errors.last_name.msg %>
+                          </span>
+                          <% } %>
+                      </div>
+
+                      <div class="form">
+                        <input class="input-style" type="email" name="email" placeholder="Email:" value="<%= locals.old && old.email %>"  >
+                        <% if (locals.errors && errors.email) { %>
+                          <span class="error">                         
+                            <%= errors.email.msg %>
                           </span>
                           <% } %>
                       </div>
