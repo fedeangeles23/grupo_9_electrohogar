@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
 
     }
     let config = {
-        tableName: "orders",
+        tableName: "order",
         timestamps: true
     }
 
@@ -37,5 +37,3 @@ module.exports = (sequelize, dataTypes) => {
 
     return Order;
 }
-
-
