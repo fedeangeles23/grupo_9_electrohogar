@@ -1,8 +1,8 @@
 module.exports = {
   "development": {
-    "username": "electrohogarDB",
+    "username": "root",
     "password": null,
-    "database": "database_development",
+    "database": "electrohogardb2",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -21,3 +21,5 @@ module.exports = {
     "dialect": "mysql"
   }
 }
+
+

@@ -11,28 +11,23 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(11).UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
-            allowNull: false,
-        
+            allowNull: false,        
         },
 
         name: {
             type: dataTypes.STRING(45),
             allowNull: false,
-
-
         }, 
 
         last_name: {
             type: dataTypes.STRING(45),
             allowNull: false,
-
         }, 
 
         email: {
             type: dataTypes.STRING(60),
             allowNull: false,
             unique: true,
-
         }, 
 
         pass: {
@@ -41,17 +36,13 @@ module.exports = (sequelize, dataTypes) => {
         }, 
 
         phone: {
-            type: dataTypes.STRING(70),
-            
-
+            type: dataTypes.STRING(70),            
         }, 
 
         rol:{
 
-            type: dataTypes.INTEGER(60).UNSIGNED,
-            allowNull: false,
-            
-
+            type: dataTypes.INTEGER(2).UNSIGNED,
+            allowNull: false,            
         },
 
         avatar: {
