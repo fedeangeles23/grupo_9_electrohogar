@@ -28,8 +28,8 @@ module.exports = (sequelize, dataTypes) => {
 
     const Order_item = sequelize.define(alias, cols, config)
 
-    Order_items.associate = models => {
-        Order_items.belongsTo(models.Order, {
+    Order_item.associate = models => {
+        Order_item.belongsTo(models.Order, {
             as:"order",
             foreignKey: "orderId"
         })
