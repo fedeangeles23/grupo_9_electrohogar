@@ -2,10 +2,10 @@
  const fs = require('fs');
  const path = require('path');
 
-/*  const db = require('../database/models');
- */
+ /*  const db = require('../database/models');
+  */
 
-const db = require('../database/models');
+ const db = require('../database/models');
 
 
 
@@ -18,9 +18,11 @@ const db = require('../database/models');
          db.Product.findAll()
              .then((products) => {
                  res.send(products)
-             })
 
+             })
      }
+
+
 
 
      //Filtrando productos que contengan la palabra "Electro"
