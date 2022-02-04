@@ -10,11 +10,8 @@ module.exports = (sequelize, dataTypes) => {
         name: {
             type: dataTypes.STRING,
             allowNull: false
-        },
-        banner: {
-            type: dataTypes.STRING,
-            allowNull: false
         }
+      
     }
     
     let config = {

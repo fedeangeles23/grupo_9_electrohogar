@@ -24,7 +24,11 @@ module.exports = (sequelize, dataTypes) => {
         subcategoryId: {
             type: dataTypes.INTEGER,
             allowNull: false
-        }
+        },
+        cuotes: {
+            type: dataTypes.DECIMAL,
+            allowNull: true
+        },
         
     }
     let config = {

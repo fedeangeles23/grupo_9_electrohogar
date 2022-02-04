@@ -1,25 +1,32 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
 
 
 let controller = { 
 
     // Detalle de producto
     detail: (req, res) => {
-
-
-        let productId = +req.params.id;
-        let product = products.find(product => product.id === productId)
-
-        res.render('products/productDetail', {
-            product,
-            session: req.session
-
+        db.Product.findOne({
+            where: {
+                id: req.params.id
+            },
+            include: [{association: 'productImages'}]
         })
-    },
-    
+           .then((product => {
+               db.Product.findAll({
+                   where: {
+                       subcategoryId: product.subcategoryId
+                   }
+               })
+               .then((relatedProducts) => {
+                   res.render('products/productDetail', {
+                       product,
+                       session: req.session
+                   })
+               })
+           }))
+       },
 
     //----------------------- Categorias ---------------------------//
 

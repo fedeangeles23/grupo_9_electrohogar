@@ -1,8 +1,6 @@
 let { check, body } = require('express-validator')
 const fs = require('fs');
 const path = require('path');
-let dbroute = path.join(__dirname, '../data/users.json')
-let users = JSON.parse(fs.readFileSync(dbroute, 'utf-8'))
 const bcrypt = require("bcryptjs");
 
 module.exports = [ 

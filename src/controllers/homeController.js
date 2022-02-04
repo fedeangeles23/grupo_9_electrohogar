@@ -1,11 +1,9 @@
  //Requerimos modulo fs y path
  const fs = require('fs');
  const path = require('path');
-
- /*  const db = require('../database/models');
-  */
-
  const db = require('../database/models');
+ const { Op } = require('sequelize')
+
 
 
 
@@ -15,11 +13,25 @@
 
  let controller = {
      home: (req, res) => {
-         db.Product.findAll()
-             .then((products) => {
-                 res.send(products)
+         // Filtrando productos con descuento de 10%
+         db.Product.findAll({
+             include: [{ association: 'productImages'}],
+             where: {
+                 discount: {
+                     [Op.gte]: 1
+                 }
+             }
+         })
+             .then((products12cuotas) => {
+                 res.render('products/home', {
+                    products12cuotas,
+                    toThousand,
+                    session: req.session
+                 })
 
              })
+             .catch(error => console.log(error))
+
      }
 
 

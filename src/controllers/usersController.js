@@ -2,15 +2,8 @@ const { validationResult } = require('express-validator')
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
+const db = require('../database/models');
 
-let dbroute = path.join(__dirname, '../data/users.json')
-let users = JSON.parse(fs.readFileSync(dbroute, 'utf-8'))
-
-
-function writeUsersJSON(a) {
-    let userJSON = JSON.stringify(a)
-    fs.writeFileSync(dbroute, userJSON, 'utf-8')
-}
 
  
 const controller = {
@@ -73,7 +66,7 @@ const controller = {
     
         let errors = validationResult(req);
 
-        if(errors.isEmpty()){
+       /*  if(errors.isEmpty()){
             let lastId = 1;
 
             users.forEach(user => {
@@ -112,7 +105,7 @@ const controller = {
                 session: req.session
 
             }) 
-        }
+        } */
     },
 
 
