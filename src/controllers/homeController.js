@@ -2,8 +2,12 @@
  const fs = require('fs');
  const path = require('path');
 
- const db = require('../database/models');
- const Products = db.Product;
+/*  const db = require('../database/models');
+ */
+
+const db = require('../database/models');
+
+
 
  // Para que los miles tengan punto y se pueda entender el precio
  const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -11,7 +15,7 @@
 
  let controller = {
      home: (req, res) => {
-         Products.findAll()
+         db.Product.findAll()
              .then((products) => {
                  res.send(products)
              })
