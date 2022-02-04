@@ -353,14 +353,17 @@ li{
     .burguermenu{
         display: block;
         font-size: 27px;
-        color: white;
+        color: #121212;
     }
 
     .carritoversmobile{
         display: block;
     }
 
-    
+    .col-2 {
+        padding:0;
+        border: none;
+    }
 
 
     

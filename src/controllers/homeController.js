@@ -32,31 +32,20 @@
              })
              .catch(error => console.log(error))
 
-     }
+     },
 
 
-
-
-     //Filtrando productos que contengan la palabra "Electro"
-     /*   let products12cuotas = products.filter(product => product.cuotas == "12")
-
-       res.render('products/home', {
-           products12cuotas,
-           toThousand,
-           session: req.session
-       }) */
-
-
-     /* 
+     
          products: (req, res) => {
              res.render('products/allProducts', {
-                 products,
+                 Product,
                  toThousand,
                  session: req.session
 
              })
-         },
+         }
 
+         /* 
 
          // Footer views 
          sobreNosotros: (req, res) => {

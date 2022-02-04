@@ -11,22 +11,23 @@
             <%- include('../partials/nav.ejs') %>
 
                 <main>
-                    <p class="enrutador"> Inicio > Tecnologia > <%- product.categoria %> > <%- product.marca %></p>
+                    <p class="enrutador"> Inicio > Tecnologia > <%- Categories.name  %> > <%- Subcategories.name %></p>
 
                     <div class="small-container single-product">
                         <div class="roww">
                             <div class="col-2">
                                 <div class="imgcontainercol2">
-                                    <img src="/images/products/<%- product.imagen %>" alt="" id="ProductImg">
-                                </div>
+                                    <img src="/images/productsDB/<%-productdetail.productImages[0].image%>" alt="" id="ProductImg">
+                               </div>
                                 <div class="small-img-row">
                                     <div class="small-img-col">
                                         <div>
-                                        <img class="small-img" src="/images/products/<%- product.imagen %> " alt="">
-                                        </div>
+                                        <img class="small-img" src="/images/productsDB/<%-productdetail.productImages[0].image  %>  " alt="">
+                                         </div>
                                         <div class="small-cuadrado">
-                                        <img class="small-img" src="/images/products/<%- product.imagen2 %> " alt="">
-                                       </div>
+                                            <img class="small-img" src="/images/productsDB/<%-productdetail.productImages[0].image  %>  " alt="">
+
+                                     </div>
 
                                     </div>
                                 </div>
@@ -34,11 +35,11 @@
                             <div class="col2"><div class="favdetail">
                                 <i class="fa">&#xf004;</i>
                             </div>
-                                <p class="p"><%- product.marca %>  </p>
+                                <p class="p"><%- productdetail.brand %>  </p>
                                 
-                                <h3 class="tituloprod"><%- product.nombre %>  </h3>
-                                <h4 class="precioprod">$<%- product.precio %> </h4>
-                                <p class="cuotaprod">6 Cuotas sin interes x $<%- product.precio %> </p>
+                                <h3 class="tituloprod"><%- productdetail.name %>  </h3>
+                                <h4 class="precioprod">$<%- productdetail.price %> </h4>
+                                <p class="cuotaprod"><%- productdetail.cuotes  %> Cuotas sin interes x $<%- productdetail.price / productdetail.cuotes  %> </p>
                                
                                 <input type="number" value="1">
                                 <a href="#" class="btncomprar">Comprar</a>
@@ -57,12 +58,7 @@
                                     </p>
                                 </div>
                                 
-                                <div class="adminbtn">
-                                    <a class="btneditprodform" href="/admin/products/edit/<%- product.id %> ">Editar producto</a>
-                                </div>
-                                <form action="/admin/products/detail/<%- product.id %>?_method=DELETE"  method="POST">
-                                    <button class="btndeleteprod" type="submit">Eliminar Producto</button>
-                                </form>
+                                
 
 
                                 
@@ -80,7 +76,7 @@
                             <br>
 
                             <div class="descripcionprod" id="dpDescripcion" style="display: block;">
-                                <%- product.descripcion %> 
+                                <%- productdetail.description %> 
                         </div>
 
                        
