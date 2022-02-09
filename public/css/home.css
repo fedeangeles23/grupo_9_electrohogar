@@ -61,7 +61,7 @@
      margin:25px;
      cursor:pointer;
      background-color: #fff; 
-     height: 590px;
+     height: 510px;
  }
 
 
@@ -159,7 +159,7 @@
 .fav i{
    font-size: 20px;
    position: relative;
-   bottom: 550px;
+   bottom: 480px;
    left: 110px;
    transition: 0.5ms;
    color:rgba(155, 153, 153, 0.411);
