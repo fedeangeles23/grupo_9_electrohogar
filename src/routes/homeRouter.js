@@ -6,18 +6,18 @@ let controller = require('../controllers/homeController.js') // Requerimos el co
 // GET - Listado de productos
 router.get('/', controller.home) // buscamos en el objeto controller el HOME
 
-/* router.get('/products', controller.products) // Va hacia la ruta /products y consume el controlador products para mostrar todos los productos en la DB
- */
+router.get('/products', controller.products) // Va hacia la ruta /products y consume el controlador products para mostrar todos los productos en la DB
+ 
 
 /* Footer vistas */
-/* 
+
 router.get('/sobre-nosotros', controller.sobreNosotros) // 
 router.get('/preguntas-frecuentes', controller.preguntasFrecuentes) // 
 router.get('/terminos-y-condiciones', controller.terminosYcondiciones) // 
 router.get('/trabaja-con-nosotros', controller.trabajaConNosotros) // 
 router.get('/boton-de-arrepentimiento', controller.botonDeArrepentimiento) //
 
- */
+
 
 
 
