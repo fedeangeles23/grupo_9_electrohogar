@@ -43,13 +43,25 @@ let controller = {
             include: [{ association: 'subcategories',include: [{ association: 'products', include: [{ association: 'productImages'}] }] }] })
             .then((category) => {
                 let subcategories = category.subcategories;
-                subcategories.forEach((subcategory
-                    ))
+                let products = [];
+                subcategories.forEach((subcategory) => {
+                    subcategory.products.forEach((product) =>{
+                        products.push(product)
+                    });
+                });
+                res.render('products/productsCategorys', {
+                    products,
+                    category,
+                    subcategories,
+                    session: req.session
+                });
             })
+            .catch(error => console.log(error))
+    
         },
 
 
-
+/* 
     gaming: (req, res) => {
         //Filtrando productos que contengan la palabra "Gaming"
         let productsGaming = products.filter(product => product.categoria === "Gaming")
@@ -73,7 +85,7 @@ let controller = {
             session: req.session
         })
 
-    }
+    } */
 };
 
 module.exports = controller
