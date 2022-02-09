@@ -3,85 +3,81 @@
 
 <%- include('../partials/head.ejs') %>
 
-  <body class="body-registro">
+<body class="body-registro">
 
-    <%- include('../partials/header.ejs') %>
-
-
-      <%- include('../partials/nav.ejs') %>
+  <%- include('../partials/header.ejs') %>
 
 
-        <main class="logregistermain">
-          <div class="container">
+  <%- include('../partials/nav.ejs') %>
 
-            <div class="container-registro">
-              <div class="logo-registro">
-                  <img src="/images/logo.jpg">
+
+  <main class="logregistermain">
+    <div class="container">
+
+      <div class="container-registro">
+        <div class="logo-registro">
+          <img src="/images/logo.jpg">
+        </div>
+
+        <p class="ingreso">Ingresa los datos de tu cuenta</p>
+
+
+        <div class="formcenter">
+
+        <form action="/users/registro" method="POST" class="form-registro">
+
+              <div class="form">
+                <input class="input-style" type="text" name="name" placeholder="Nombre:"
+                  value="<%= locals.old && old.name %>">
+                <% if (locals.errors && errors.name) { %>
+                <span class="error">
+                  <%= errors.name.msg %>
+                </span>
+                <% } %>
               </div>
 
-              <p class="ingreso">Ingresa los datos de tu cuenta</p>
+              <div class="form">
+                <input class="input-style" type="email" name="email" placeholder="Email:"
+                  value="<%= locals.old && old.email %>">
+                <% if (locals.errors && errors.email) { %>
+                <span class="error">
+                  <%= errors.email.msg %>
+                </span>
+                <% } %>
+              </div>
 
+                <div class="form">
+                  <input class="input-style" type="text" name="last_name" placeholder="Apellido:"
+                    value="<%= locals.old && old.last_name %>">
+                  <% if (locals.errors && errors.last_name) { %>
+                  <span class="error">
+                    <%= errors.last_name.msg %>
+                  </span>
+                  <% } %>
+                </div>
 
-              <form action="/users/registro" method="POST" class="form-registro">
-                <div class="padre">
+                <div class="form">
+                  <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
+                  <% if (locals.errors && errors.pass1) { %>
+                  <span class="error">
+                    <%= errors.pass1.msg %>
 
-                  <div class="box-1">
+                  </span>
+                  <% } %>
+                </div>
 
-                    <div class="form">
-                      <input class="input-style" type="text" name="name" placeholder="Nombre:"  value="<%= locals.old && old.name %>" >
-                      <% if (locals.errors && errors.name) { %>
-                        <span class="error">
-                          <%= errors.name.msg %>
-                        </span>
-                        <% } %>
-                    </div>
+                <div class="form">
+                  <input class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
+                  <% if (locals.errors && errors.pass2) { %>
+                  <span class="error">
+                    <%= errors.pass2.msg %>
+                  </span>
+                  <% } %>
+                </div>
 
-                    <div class="form">
-                      <input class="input-style" type="email" name="email" placeholder="Email:" value="<%= locals.old && old.email %>"  >
-                      <% if (locals.errors && errors.email) { %>
-                        <span class="error">                         
-                          <%= errors.email.msg %>
-                        </span>
-                        <% } %>
-                    </div>
+               <button type="submit" class="btnregistr">Registrarse</button>
 
-                    <div class="box-2">
-                      <div class="form">
-                        <input class="input-style" type="text" name="last_name" placeholder="Apellido:"  value="<%= locals.old && old.last_name %>">
-                        <% if (locals.errors && errors.last_name) { %>
-                          <span class="error">
-                            <%= errors.last_name.msg %>
-                          </span>
-                          <% } %>
-                      </div>
-
-                      <div class="form">
-                        <input class="input-style" type="password" name="pass1" placeholder="Contraseña:"  >
-                        <% if (locals.errors && errors.pass1) { %>
-                          <span class="error">
-                            <%= errors.pass1.msg %>
-
-                          </span>
-                          <% } %>
-                      </div>
-
-                      <div class="form">
-                        <input class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
-                        <% if (locals.errors && errors.pass2) { %>
-                          <span class="error">
-                            <%= errors.pass2.msg %>
-                          </span>
-                          <% } %>
-                      </div>
-
-                    </div>
-
-                  </div>
-                  <div class="botonesregister">
-                    <span class="cuenta"> <button type="submit" class="btn btn-continue">Registrarse</button></span>
-              </form>
-
-              <div class="google-btn">
+               <div class="google-btn">
                 <div class="google-icon-wrapper">
                   <img class="google-icon"
                     src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
@@ -90,20 +86,26 @@
                   <p class="btn-text"><b>Registrarse con google</b></p>
                 </a>
               </div>
-              
-            </div>
 
-          </div>
+          </form>
 
-            <a class="a_inicio" href="/">Volver al menu de inicio</a>
+       
 
-        </main>
+          
+      </div>
+
+      <a class="a_inicio" href="/">Volver al menu de inicio</a>
+
+    </div>
 
 
-        <%- include('../partials/footer.ejs') %>
-          <%- include('../partials/scripts.ejs') %>
+  </main>
 
 
-  </body>
+  <%- include('../partials/footer.ejs') %>
+  <%- include('../partials/scripts.ejs') %>
+
+
+</body>
 
 </html>

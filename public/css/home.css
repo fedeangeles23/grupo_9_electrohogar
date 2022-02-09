@@ -216,6 +216,10 @@
     align-items: center;
 }
 
+.lineabajocarousel span {
+    font-size: 13px;
+}
+
 .lineabajocarousel .col1linea .imgtrucklinea{
     width: 35px;
     height: 35px;
@@ -298,10 +302,10 @@
             height: 20px;
         }
 
-        .lineabajocarousel .col2linea .tarjetaslinea {
-            width: 0px;
-            height: 20px;
+       .col2linea {
+            display: none;
         }
+
 
         .lineabajocarousel .col1linea .imgtrucklinea {
             width: 25px;
@@ -327,3 +331,10 @@
 
 /* LINE BAJO CAROUSEL RESPONSIVE */
 
+
+/* Swiper  */
+
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
