@@ -22,12 +22,13 @@ let controller = {
                 }]
             })
             .then((productdetail) => {
+               /* res.send(productdetail) */
                 res.render('products/productDetail', {
                     productdetail,
                     Categories,
                     Subcategories,
                     session: req.session
-                })
+                }) 
             })
             .catch(error => console.log(error))
     },
