@@ -60,6 +60,35 @@ let controller = {
     
         },
 
+        
+    subcategory: (req, res) => {
+        Subcategories.findByPk(req.params.subcategory, {
+                include: [{
+                    association: 'products',
+                    include: [{
+                        association: 'productImages'
+                    }]
+                }]
+            })
+            .then((subcategory) => {
+                Categories.findByPk(req.params.categoryId, {
+                        include: [{
+                            association: 'subcategories'
+                        }]
+                    })
+                    .then((category) => {
+                        res.render('products/productsCategorys', {
+                                products: subcategory.products,
+                                category,
+                                subcategories: category.subcategories,
+                                session: req.session
+                            })
+                            .catch(error => console.log(error))
+                    })
+            })
+    },
+
+
     gaming: (req, res) => {
         //Filtrando productos que contengan la palabra "Gaming"
         let productsGaming = products.filter(product => product.categoria === "Gaming")
@@ -105,21 +134,5 @@ let controller = {
 
 
 };
-    /* 
-        gaming: (req, res) => {
-            //Filtrando productos que contengan la palabra "Gaming"
-            let productsGaming = products.filter(product => product.categoria === "Gaming")
-
-        let result = products.filter(product => product.name.includes(keywords))
-
-        res.render('searchResult', {
-            result,
-            search: keywords,
-            session: req.session,
-            session: req.session
-        })
-
-    } */
-
 
 module.exports = controller
