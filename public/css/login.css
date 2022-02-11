@@ -8,8 +8,8 @@
 }
 
 .logoLogin img{
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
 }
 
 .containerregistro {
@@ -195,7 +195,6 @@ button.btncontinuar:hover{
         }
         p.ingreso {
             font-size: 19px;
-            padding-bottom: 40px;
         }
         .form input {
             margin-bottom: 30px;
@@ -227,9 +226,8 @@ button.btncontinuar:hover{
             font-size: 14px;
         }
         .logoLogin img{
-            width: 250px;
-            height: 250px;
-            margin-top: 20px;
+            width: 150px;
+            height: 150px;
         }
 
 }

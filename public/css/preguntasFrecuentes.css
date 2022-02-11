@@ -16,7 +16,7 @@ h2.mb-01{
 .cardFAQ {
     box-shadow: 0 6px 20px rgba(5, 16, 59, 0.18) ;
     text-align: justify;
-    outline: 1px solid;
+    border-style: solid rgb(226, 223, 223);
 }
 
 .cardFAQ-header1 {
@@ -42,9 +42,9 @@ h2.mb-01{
 }
 
 button#\#btnFAQ {
-    color: rgb(24, 21, 21);
+    color: red;
 }
 
 .containerbstrap {
-    background-color: rgb(248, 241, 241);
+    background-color: red;
 }
