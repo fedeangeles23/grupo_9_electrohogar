@@ -120,7 +120,17 @@ let controller = {
                 })
             })
 
-    }
+    },
+
+    carrito: (req,res) => {
+        res.render('products/carrito', {
+            session: req.session
+        })
+}
+
+
+
+
 };
     /* 
         gaming: (req, res) => {

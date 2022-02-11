@@ -1,4 +1,4 @@
-const USER_ROL = "USER_ADMIN";
+/* const USER_ROL = "USER_ADMIN";
 
 function userAdminCheck(req,res, next) {
     
@@ -10,4 +10,4 @@ function userAdminCheck(req,res, next) {
 
 }
 
-module.exports = userAdminCheck
+module.exports = userAdminCheck */

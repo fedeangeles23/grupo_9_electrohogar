@@ -15,6 +15,9 @@ router.get('/subcategory/:subcategory/:categoryId', controller.subcategory)
 // Search products
 router.get('/search', controller.search)
 
+// Carrito
+router.get('/carrito', controller.carrito)
+
 
 
 

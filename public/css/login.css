@@ -59,6 +59,8 @@ a.cuenta {
     color: red;
     text-align: center;
     margin-bottom: 10px;
+    font-size: 14px;
+    text-decoration: underline;
 }
 
 /*el espacio entrer las cajas de email y contraseña*/
@@ -287,9 +289,13 @@ button.btncontinuar:hover{
         margin-bottom: 20px;
 }
 
+input.input-style{
+    margin-bottom: 20px;
+}
+
 input.input-style:focus {
-    transition:  0.3s;
-    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(26, 7, 197);
+    transition:  0.5s;
+    border: 1px solid blue;
 }
 
 

@@ -1,7 +1,7 @@
 .searchresulth2{
     color: #700184;
-    font-size: 21px;
-    margin: 40px 0px 20px 0px;
+    font-size: 19px;
+    margin-left: 20px;
 }
 
 .searchresulth2 b {
@@ -10,14 +10,14 @@
 
 }
 
-main.mainsearch{
-    height: 100vh;
-}
+
 
 .noResults{
     display:flex;
+    margin: 23px;
     background-color: white;
     flex-wrap: wrap;
+    border:13px solid white;
     box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.45);
 -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.45);
 -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.45);
@@ -50,4 +50,21 @@ main.mainsearch{
     justify-content: center;
     margin-left: 10px;
     
+}
+
+.divsearchresults{
+    display: flex;
+}
+
+.boxarea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEEEEE;
+    font-size: 17px;
+}
+
+.boxarearightbtn{
+    display: flex;
+    align-items: center;
 }
