@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<input type="checkbox" id="check">
 <%- include('../partials/head.ejs') %>
 
     <body>
@@ -9,6 +8,7 @@
             <%- include ('../partials/nav.ejs') %>
 
                 <main>
+                    
                     <!-- Carrousel -->
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -73,27 +73,29 @@
 
                             <!-- Cards de productos -->
 
-                            <% products12cuotas.forEach(product=> { %>
+                            <% products12cuotas.forEach(Product=> { %>
                                 <div class="card">
-                                    <a href="/products/detail/<%- product.id %>">
+                                    <a href="/products/detail/<%- Product.id %>">
                                     <div class="image-section">
-                                        <img src="/images/products/<%- product.imagen %>" alt="">
+                                        <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
                                     </div>
                                     
                                     <div class="description">
                                         <h1>
-                                            <% if (product.nombre.length > 30) { %>
-                                                <%- `${product.nombre.slice(0,30)}...` %>
+                                            <% if (Product.name.length > 30) { %>
+                                                <%- `${Product.name.slice(0,90)}...` %>
                                             <% } else { %>
-                                                <%= product.nombre %>
+                                                <%= Product.name %>
                                             <% } %>                                        </h1>
-                                        <span>$<%- product.precio %></span>
+                                        <span>$<%- Product.price %></span>
                                     </div>
-                                    <small class="cuotas"> 12 cuotas x <%- product.precio * product.cuotas  %> </small>
+                                    <small class="cuotas"> <%- Product.cuotes %>  cuotas x <%- Product.price / Product.cuotes  %> </small>
+                                    
+                                    <span>  </span>
                                       </a>
                                     <div class="button-group">
-                                        <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
-                                        <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>
+                                        <a href="/products/detail/<%- Product.id %>" class="buy">Comprar</a>
+                                        <a href="/products/detail/<%- Product.id %>" class="cart">Agregar al carrito</a>
                                     </div>
 
                                     <div class="fav">

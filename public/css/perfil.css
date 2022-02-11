@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-<<<<<<< HEAD
-
-
 /*cambie el tamaño de las letras*/
 
 
-=======
->>>>>>> 97e4b24a23662553804df4b3cd4bd1c65c062ad2
     .container-perfil {
         display: flex;
         width: 100%;
-        height: 100%;
-     
+        height: 70vh;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -21,9 +15,8 @@
     .perfil2 p {
         display: flex;
         flex-direction: column;
-        text-align: left;
-        font-size: 25px;
-        width: 100%;
+        font-size: 20px;
+        font-weight:lighter ;
     }
 
     p.datosP{
@@ -35,6 +28,13 @@
         text-align: left;
         margin:15px;
 
+    }
+
+    .btn-continuee{
+        position: relative;
+    left: 250
+px
+;
     }
 
     /*parte de la tabla de aca... */
@@ -84,7 +84,6 @@ p.bienvenido b {
     color:rgb(0, 26, 255);
     margin: 0 5px;
 }
-<<<<<<< HEAD
 /*para el titulo mis datos*/
 .datos {
     display: flex;
@@ -103,29 +102,6 @@ span.cuenta button{
     height: 25px;
     border-radius: 5px;
     margin: 15px 0 200px;
-=======
-
-/*para el titulo mis compras*/
-.datos {
-    display: flex;
-    margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-style: italic;
-}
-
-/*para el boton */
-span.cuenta button{
-    background-color: rgb(17, 0, 255);
-    color: white;
-
-    font-size: 17px;
-    width: 150px;
-    height: 40px;
-    border-radius: 20px;
-    margin-left: 540px;
->>>>>>> 97e4b24a23662553804df4b3cd4bd1c65c062ad2
     
 }
 
@@ -183,11 +159,7 @@ span.cuenta button{
     font-size: 23px;
 }
 
-<<<<<<< HEAD
 /*para el botones naranja*/
-=======
-/*para el boton*/
->>>>>>> 97e4b24a23662553804df4b3cd4bd1c65c062ad2
 span.cuenta button{
     display: inline-block;
     padding: 8px 7px;
@@ -253,4 +225,8 @@ td {
     margin-bottom: 20px;
 }
 
+}
+button.btn.btn-continuee {
+    left: 250px;
+    position: relative;
 }

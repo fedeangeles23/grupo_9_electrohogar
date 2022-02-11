@@ -8,6 +8,7 @@ router.get('/detail/:id', controller.detail)
  // 
 router.get('/gaming', controller.gaming) // 
 
-
+/* GET - Search products */
+router.get('/search', controller.search) 
 
 module.exports = router;

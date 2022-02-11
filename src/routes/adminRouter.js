@@ -2,28 +2,28 @@ let express = require('express')
 let router = express.Router()
 let controller = require('../controllers/adminController')
 const upload = require('../middlewares/uploadProductFiles')
+const AdminCheck = require('../middlewares/AdminCheck')
 
 
-//se requiere el middleware
-let userAdminCheck = require('../middlewares/userAdminCheck')
+//Las rutas llevan /admin/produ... al inicio
 
-
+router.get('/', controller.dashboard) // Envia los datos
 
 
 /* Crear productos */
-router.get('/products/create', userAdminCheck , controller.create) // Envia los datos
+router.get('/products/create', AdminCheck , controller.create) // Envia los datos
 router.post('/products',  upload.single('imagen'), controller.store) //  Recibe los datos
 
 
 /* Editar productos */
 
-router.get('/products/edit/:id', controller.edit);
+router.get('/products/edit/:id', AdminCheck, controller.edit);
 router.put('/products/detail/:id', controller.update);
 
  
 /* Eliminar productos */
 
-router.delete('/products/detail/:id', controller.del);
+router.delete('/products/detail/:id', AdminCheck, controller.del);
 
 
 module.exports = router // Exportamos el let router

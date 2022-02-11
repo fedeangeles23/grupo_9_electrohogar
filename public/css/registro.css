@@ -30,15 +30,21 @@ body.body-registro {
 
  /* volver a menú de inicio*/
 span a.link {
-    margin-top: 25px;
+    position: relative;
+    top: 11rem;
+    right: 22.5rem;
     color: #383737;
     font-weight: lighter;
     font-size: 17px;
-text-transform: none;}
+    text-transform: none;}
 
 span a.link:hover {
     text-decoration: underline;
 
+}
+
+.a_inicio{
+    margin-top: 400px;
 }
 
 /*para el ingresa los datos de tu cuenta*/
@@ -66,7 +72,20 @@ span.cuenta button{
     border-radius: 20px;
     margin-bottom: 30px;
     border: none;
-    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
+    text-decoration: none;
+    position: relative;
+    left: 250px;
+}
+
+button.btn.btn-continue {
+    position: relative;
+    left: -5px;
+}
+
+
+/* centra el boton registrarse */
+span.cuenta {
+    padding-right: 515px;
 }
 
 span.cuenta button:hover {
@@ -78,12 +97,13 @@ span.cuenta button:hover {
 
 /* Boton de google */
 .google-btn {
-    width: 210px;
+    width: 225px;
     height: 42px;
     background-color: #4285f4;
     border-radius: 30px;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
-    margin-bottom: 20px;
+    position: relative;
+    right: 1rem;
   }
 
 
@@ -124,7 +144,7 @@ span.cuenta button:hover {
 
 
 .padre{
-    width: 75%;
+    width: 100%;
     height: 170px;
     display: flex;
     flex-direction: row;
@@ -137,17 +157,18 @@ span.cuenta button:hover {
     width: 50%;
 }
 
-.padre .box-2{
-    width: 50%;
-}
-
 .padre .box-1 input {
-    width: 90%;
+    width: 100%;
 }
 
-.padre .box-2 input {
-    width: 94%;
+.botonesregister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 17rem;
 }
+
 
 
 /*tamaño chico*/
@@ -169,10 +190,29 @@ span.cuenta button:hover {
     font-size: 19px;
 }
 
+.google-btn {
+    width: 225px;
+    height: 42px;
+    background-color: #4285f4;
+    border-radius: 30px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    position: relative;
+    right: 7rem;
+  }
+
+.botonesregister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 19rem;
+}
+
 /*volver al menú de inicio*/
 span a.link {
-    margin-left: 85px;
-    font-size: 17px;
+    position: relative;
+    top: 2rem;
+    right: 0.7rem;
 }
 }
 
@@ -196,9 +236,9 @@ span.cuenta {
 
 /*volver al menú de inicio*/
 span a.link {
-    margin-left: 45px;
-    font-size: 17px;
-    margin-right: 40px;
+    position: relative;
+    top: 2rem;
+    right: 0.8rem;
 }
 
 .padre{
@@ -210,13 +250,22 @@ span a.link {
     flex-wrap: wrap;
     justify-content: center;
 }
-
-}
+.google-btn {
+    width: 225px;
+    height: 42px;
+    background-color: #4285f4;
+    border-radius: 30px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    position: relative;
+    right: 1.5rem;
+  }
 
 .botonesregister {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 10px;
+    position: relative;
+    left: 16rem;
 }
+}
+

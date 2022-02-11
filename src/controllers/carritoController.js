@@ -1,3 +1,6 @@
+const db = require('../database/models');
+
+
 
 let controller = {
        carrito: (req,res) => {

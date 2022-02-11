@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-    <input type="checkbox" id="check">
 
   <%- include('../partials/head.ejs')  %> 
 
 
 <body>
-    <input type="checkbox" id="check">
 
     <%- include('../partials/header.ejs')  %> 
 
@@ -16,62 +14,57 @@
    <main>
     <div class="container-perfil">
 
-
-
-        <p class="bienvenido">BIENVENIDO <b> Cosme Fulanito </b> A LA FECHA CONTAS CON: </p>
-
-        <p class="datos"> Mis compras </p>
-
-        <table class="tabladatos">
-
-            <tr>
-                <th>Orden</th>
-                <th>Pedido</th>
-                <th>Fecha</th>
-                <th>Estado</th>
-                <th>Pago</th>
-                <th>Estado de envio</th>
-                <th>Total</th>
-
-            </tr>
-
-            <tr>
-                <td>#8222</td>
-                <td>Celular Moto G60</td>
-                <td> 11/6/2021</td>
-                <td>Abierta</td>
-                <td>Pagado</td>
-                <td>Envíado</td>
-                <td>$1.449,55</td>
-                <td><a href="www.correoargentino.com.ar/4945942/">Segui tu orden</a></td>
-            </tr>
-
-        </table>
-        <p class="datos"> Mis datos </p>
+        <p class="bienvenido">Bienvenido <b> <% if (typeof session.user != "undefined") { %>
+        <span> <%= session.user.name %> </span>  
 
         <div class="perfil2">
-            <span> <b>Nombre:</b> Cosme</span>
-            <span> <b>Apellido:</b> Fulanito</span>
-            <span> <b>Email:</b> HankScorpio@gmail77.com</span>
-            <span> <b>Contraseña:</b>*******</span>
-            <span> <b>Telefono:</b> +221395930</span>
-            <span> <b>DNI:</b> 43396920</span>
-            <span> <b>Direccion:</b> Calle falsa 123</span>
-            <span> <b>Codigo Postal:</b>1925</span>
+          <p class="perfil2">Nombre: <%= session.user.name %> </p>
+          <p class="perfil2">Apellido: <%= session.user.last_name %> </p>
+          <p class="perfil2">Email: <%= session.user.email %></p>
+          <p class="perfil2">Telefono: <%= session.user.tel %></p>
+          <p class="perfil2">Direccion: <%= session.user.address %></p>
+    
+          </div>
 
-
-        </div>
-
-        <span class="cuenta"> <button type="continue" class="btn btn-continue">Editar mis datos</button></span>
-
-
-
-
+      <% } else {%>
+        Usuario
+      <% } %> 
 
 
         
-    </div>
-   </main>
+      
+             <span class="cuenta"> <button type="continue" class="btn-continuee">Editar mis datos</button></span>
+      
+             <p class="datos"> Mis compras </p>
+      
+             <table>
+      
+               <tr>
+                 <th>Orden</th>
+                 <th>Fecha</th>
+                 <th>Estado</th>
+                 <th>Pago</th>
+                 <th>Envío</th>
+                 <th>Total</th>
+                 
+               </tr>
+      
+              <tr>
+                 <td>#8222</td>
+                 <td> 11/6/2021</td>
+                 <td>Abierta</td>
+                 <td>Pagado</td>
+                 <td>Envíado</td>
+                 <td>$1.449,55</td>
+                 <td>Seguí tu orden</td>
+              
+              </tr>
+              
+             </table>
+      
+                  
+          </div>
+      
    
    <%- include('../partials/footer.ejs')  %> 
    <%- include('../partials/scripts.ejs')  %> 

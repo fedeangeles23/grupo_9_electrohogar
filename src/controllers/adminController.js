@@ -1,25 +1,26 @@
 //Requerimos modulo fs y path
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
 
-// Mete la ruta del JSON en una var para poder acceder a el 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-// parsea y lee el JSON productsfilepath
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 // Para que los miles tengan punto y se pueda entender el precio
 /* const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
  */
-const writeJson = (database) => fs.writeFileSync(productsFilePath, JSON.stringify(database), 'utf-8')
+
 
 let controller = {
 
     create: (req, res) => {
-        res.render('admin/createProd')
+        res.render('admin/createProd', {
+            session: req.session
+        })
     },
 
     store: (req, res) => {
 
-        const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
+       /*  const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
 
         let lastId = 0
 
@@ -42,7 +43,7 @@ let controller = {
         products.push(newProduct)
 
         writeJson(products)
-        res.redirect('/products')
+        res.redirect('/products') */
     },
 
 
@@ -51,12 +52,13 @@ let controller = {
         let productToEdit = products.find(product => product.id === productId)
 
         res.render('admin/editProd', {
-            product: productToEdit
+            product: productToEdit,
+            session: req.session
         })
     },
 
     update: (req, res) => {
-        let productId = +req.params.id
+      /*   let productId = +req.params.id
 
         const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
 
@@ -76,12 +78,12 @@ let controller = {
 
         writeJson(products)
 
-        res.redirect('/')
+        res.redirect('/') */
 
     },
 
     del: (req, res) => {
-        let productId = +req.params.id;
+        /* let productId = +req.params.id;
 
         products.forEach(product => {
             if (product.id === productId) {
@@ -93,8 +95,16 @@ let controller = {
         })
 
         writeJson(products)
-         res.redirect("/")
+         res.redirect("/") */
  
+    },
+
+    /* Perfil admin */
+
+    dashboard: (req, res) => {
+        res.render('admin/adminsettings', {
+            session: req.session
+        })
     }
 
 };
