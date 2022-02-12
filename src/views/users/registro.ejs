@@ -3,13 +3,23 @@
 
 <%- include('../partials/head.ejs') %>
 
+<<<<<<< HEAD
   <body class="body-registro">
 
     <%- include('../partials/header.ejs') %>
 
+=======
+<body class="body-registro">
+
+  <%- include('../partials/header.ejs') %>
+
+
+  <%- include('../partials/nav.ejs') %>
+>>>>>>> 3f2cb477d02d028832dd235941f938e8e014e6fc
 
       <%- include('../partials/nav.ejs') %>
 
+<<<<<<< HEAD
 
         <main class="logregistermain">
           <div class="container">
@@ -82,6 +92,75 @@
               </form>
 
               <div class="google-btn">
+=======
+  <main class="logregistermain">
+    <div class="container">
+
+      <div class="container-registro">
+        <div class="logo-registro">
+          <img src="/images/electrohogarlogo.png">
+        </div>
+
+        <p class="ingreso">Ingresa los datos de tu cuenta</p>
+
+
+        <div class="formcenter">
+
+        <form action="/users/registro" method="POST" class="form-registro">
+
+              <div class="form">
+                <input class="input-style" type="text" name="name" placeholder="Nombre:"
+                  value="<%= locals.old && old.name %>">
+                <% if (locals.errors && errors.name) { %>
+                <span class="error">
+                  <%= errors.name.msg %>
+                </span>
+                <% } %>
+              </div>
+
+                <div class="form">
+                  <input id="#email" class="input-style email" type="text" name="last_name" placeholder="Apellido:"
+                    value="<%= locals.old && old.last_name %>">
+                  <% if (locals.errors && errors.last_name) { %>
+                  <span class="error">
+                    <%= errors.last_name.msg %>
+                  </span>
+                  <% } %>
+                </div>
+
+                <div class="form">
+                  <input class="input-style" type="email" name="email" placeholder="Email:"
+                    value="<%= locals.old && old.email %>">
+                  <% if (locals.errors && errors.email) { %>
+                  <span class="error">
+                    <%= errors.email.msg %>
+                  </span>
+                  <% } %>
+                </div>
+
+                <div class="form">
+                  <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
+                  <% if (locals.errors && errors.pass1) { %>
+                  <span class="error">
+                    <%= errors.pass1.msg %>
+
+                  </span>
+                  <% } %>
+                </div>
+
+                <div class="form">
+                  <input class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
+                  <% if (locals.errors && errors.pass2) { %>
+                  <span class="error">
+                    <%= errors.pass2.msg %>
+                  </span>
+                  <% } %>
+                </div>
+
+               <button type="submit" class="btnregistr">Registrarse</button>
+
+               <div class="google-btn">
+>>>>>>> 3f2cb477d02d028832dd235941f938e8e014e6fc
                 <div class="google-icon-wrapper">
                   <img class="google-icon"
                     src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
@@ -90,6 +169,7 @@
                   <p class="btn-text"><b>Registrarse con google</b></p>
                 </a>
               </div>
+<<<<<<< HEAD
               
             </div>
 
@@ -102,6 +182,26 @@
 
         <%- include('../partials/footer.ejs') %>
           <%- include('../partials/scripts.ejs') %>
+=======
+
+          </form>
+
+       
+
+          
+      </div>
+
+      <a class="a_inicio" href="/">Volver al menu de inicio</a>
+
+    </div>
+
+
+  </main>
+
+
+  <%- include('../partials/footer.ejs') %>
+  <%- include('../partials/scripts.ejs') %>
+>>>>>>> 3f2cb477d02d028832dd235941f938e8e014e6fc
 
 
   </body>

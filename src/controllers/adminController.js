@@ -20,6 +20,9 @@ let controller = {
 
     store: (req, res) => {
 
+
+
+
        /*  const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
 
         let lastId = 0

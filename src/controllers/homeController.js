@@ -43,9 +43,9 @@
                  session: req.session
 
              })
-         }
+         },
 
-         /* 
+         
 
          // Footer views 
          sobreNosotros: (req, res) => {
@@ -78,7 +78,7 @@
 
          }
 
-      */
+      
 
  };
 
