@@ -83,8 +83,9 @@ let controller = {
                                 subcategories: category.subcategories,
                                 session: req.session
                             })
-                            .catch(error => console.log(error))
+                            
                     })
+                    .catch(error => console.log(error))
             })
     },
 
