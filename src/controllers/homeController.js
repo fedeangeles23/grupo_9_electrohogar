@@ -17,8 +17,8 @@
          db.Product.findAll({
              include: [{ association: 'productImages'}],
              where: {
-                 discount: {
-                     [Op.gte]: 1
+                 cuotes: {
+                     [Op.eq]: 12
                  }
              }
          })

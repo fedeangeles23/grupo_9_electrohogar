@@ -14,7 +14,7 @@ router.get('/', controller.dashboard) // Envia los datos
 /* Crear productos */
 router.get('/products/create', controller.create) // Envia los datos
 
-router.post('/products/store',  upload.single('imagen'), productFormValidator , controller.store) //  Recibe los datos
+router.post('/products/store',  upload.single('imagen'), productFormValidator, controller.store) //  Recibe los datos
 
 
 /* Editar productos */

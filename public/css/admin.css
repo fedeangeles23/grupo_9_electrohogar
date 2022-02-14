@@ -79,10 +79,11 @@
     text-align: center;
     margin: 25px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #f6f6f6;
     align-content: center;
     border-radius: 5px;
-        padding: 5px;
+    padding: 5px;
+    BORDER: 1px solid #bcbcbc;
 
  }
 

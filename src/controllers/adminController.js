@@ -71,7 +71,6 @@ let controller = {
                     res.render('admin/adminSettings', {
                         categories,
                         Products,
-                        
                         subcategories,
                         errors: errors.mapped(),
                         old: req.body,

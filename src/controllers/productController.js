@@ -22,6 +22,7 @@ let controller = {
                 }]
             })
             .then((productdetail) => {
+                
                 res.render('products/productDetail', {
                     productdetail,
                     Categories,
