@@ -3,6 +3,7 @@ let router = express.Router()
 let controller = require('../controllers/adminController')
 const upload = require('../middlewares/uploadProductFiles')
 const AdminCheck = require('../middlewares/AdminCheck')
+let productFormValidator = require('../middlewares/ProductFormValidator')
 
 
 //Las rutas llevan /admin/produ... al inicio
@@ -11,8 +12,9 @@ router.get('/', controller.dashboard) // Envia los datos
 
 
 /* Crear productos */
-router.get('/products/create', AdminCheck , controller.create) // Envia los datos
-router.post('/products',  upload.single('imagen'), controller.store) //  Recibe los datos
+router.get('/products/create', controller.create) // Envia los datos
+
+router.post('/products/store',  upload.single('imagen'), productFormValidator , controller.store) //  Recibe los datos
 
 
 /* Editar productos */

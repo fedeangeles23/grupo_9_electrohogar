@@ -23,12 +23,22 @@ aside{
     display: flex;
 }
 
+.boxarearightbtn {
+    display: flex;
+    align-items: center;
+}
+
 .boxarea {
     display: flex;
-    justify-content: flex-end;
+    justify-content:space-between;
     align-items: center;
     background-color: #EEEEEE;
     font-size: 17px;
+    margin-left: 15px;
+}
+
+.boxareachild2{
+    display: flex;
 }
 
 .boxareachild1, 
@@ -82,4 +92,21 @@ aside{
 
 .boxareachild3 {
     margin-right: 30px;
+}
+
+
+/* Vista categorias boxarea */
+
+.boxarea1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;}
+
+.namecategory {
+    margin-left: 15px;
+}
+
+.containerCategory{
+    display: flex;
+    align-items: center;
 }

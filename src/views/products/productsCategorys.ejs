@@ -10,23 +10,30 @@
 
     <main>
 
-        <div class="boxarea">
-            <div class="boxareachild1">
-                <span><b><%- category.length %> </b>Productos</span>
+        <div class="boxarea1">
+            <div class="namecategory">
+               <span> Estas en la categoria <b> <%= category.name %> </b> </span>   
             </div>
 
-            <div class="boxareachild2">
-               <span>Vista:</span>  
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"></path></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z"></path></svg>
+            <div class="containerCategory">
+                <div class="boxareachild1">
+                    <span><b><%- products.length %> </b>Productos</span>
+                </div>
+    
+                <div class="boxareachild2">
+                   <span>Vista:</span>  
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z"></path></svg>
+                </div>
+    
+                <div class="boxareachild3">
+                    Filtrar por: <select class="selectprecio" name="selectprecio" id="">
+                            <option value="menorprecio">Menor precio</option>
+                            <option value="menorprecio">Mayor precio</option>
+                        </select>
+                </div>
             </div>
-
-            <div class="boxareachild3">
-                Filtrar por: <select class="selectprecio" name="selectprecio" id="">
-                        <option value="menorprecio">Menor precio</option>
-                        <option value="menorprecio">Mayor precio</option>
-                    </select>
-            </div>
+  
             </div>
 
         <div class="section">

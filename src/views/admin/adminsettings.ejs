@@ -2,22 +2,45 @@
 <html lang="es">
 <%- include('../partials/head.ejs') %>
 
-    <body>
-        <%- include ('../partials/adminheader.ejs') %>
+<body>
+    <%- include ('../partials/adminheader.ejs') %>
 
-        
-        <%- include ('../partials/adminnav.ejs') %>
+    <main>
 
-        <main>
-
-            
-
-        </main>
+        <div class="containerproductsAdmin">
 
 
-                <%- include ('../partials/footer.ejs') %>
-                    <%- include ('../partials/scripts.ejs') %>
 
-    </body>
+            <% products.forEach(Product=> { %>
+            <div class="cardAdmin">
+                <a href="/products/detail/<%- Product.id %>">
+
+
+                    <div class="descriptionAdmin">
+                        <h1> <%= Product.name %> </h1>
+                        <span>$<%- Product.price %></span>
+                    </div>
+
+                </a>
+                <div class="button-groupAdmin">
+                    <a href="/products/detail/<%- Product.id %>" class="cart">Editar</a>
+                    <a href="/products/detail/<%- Product.id %>" class="buy">Eliminar</a>
+                </div>
+
+
+            </div>
+
+            <% }) %>
+
+        </div>
+
+
+    </main>
+
+
+    <%- include ('../partials/footer.ejs') %>
+    <%- include ('../partials/scripts.ejs') %>
+
+</body>
 
 </html>

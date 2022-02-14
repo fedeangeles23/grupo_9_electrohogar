@@ -1,52 +1,85 @@
-//Requerimos modulo fs y path
-const fs = require('fs');
-const path = require('path');
+//let { products, writeProductsJSON, categories } = require('../database/dataBase')
+let fs = require('fs')
+//let subcategories = products.map(product => product.subcategory)
+// let uniqueSubcategories = subcategories.filter((x, i, a) => a.indexOf(x) == i)
+let { validationResult } = require('express-validator')
+
 const db = require('../database/models');
 
+const Products = db.Product;
+const Categories = db.Category;
+const Subcategories = db.Subcategory;
+const ProductImages = db.ProductImage
 
-
-// Para que los miles tengan punto y se pueda entender el precio
-/* const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
- */
 
 
 let controller = {
 
-    create: (req, res) => {
-        res.render('admin/createProd', {
-            session: req.session
+    dashboard: (req, res) => {
+        Products.findAll()
+        .then(products => {
+            res.render('admin/adminSettings', {
+                products,
+                session: req.session
+            })
         })
+       
     },
 
+
+
+    create: (req, res) => { 
+        let allCategories = Categories.findAll()
+        let allSubcategories = Subcategories.findAll()
+
+        Promise.all([allCategories, allSubcategories])
+            .then(([categories, subcategories]) => {
+                res.render('admin/createProd', {
+                    categories,
+                    subcategories,
+                    session: req.session
+                })
+            })
+
+        },
     store: (req, res) => {
-
-
-
-
-       /*  const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
-
-        let lastId = 0
-
-        products.forEach(product => {
-            if (product.id > lastId) {
-                lastId = product.id
-            }
-        });
-
-        let newProduct = {
-            id: lastId + 1,
-            nombre,
-            precio,
-            descripcion,
-            categoria,
-            marca,
-            imagen: req.file ? req.file.filename : ("default-imagen.png")
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            const { name, price, subcategory, description, discount } = req.body
+            Products.create({
+                name,
+                price,
+                description,
+                discount,
+                subcategoryId: subcategory,
+            })
+                .then((product) => {
+                    ProductImages.create({
+                        image: req.file ? req.file.filename : 'default-image.png',
+                        productId: product.id
+                    })
+                        .then(() => {
+                            res.redirect('admin/adminSettings')
+                        })
+                })
+                .catch(error => console.log(error))
+        } else {
+            let allCategories = Categories.findAll();
+            let allSubcategories = Subcategories.findAll();
+            Promise.all([allCategories, allSubcategories])
+                .then(([categories, subcategories]) => {
+                    res.render('admin/adminSettings', {
+                        categories,
+                        Products,
+                        
+                        subcategories,
+                        errors: errors.mapped(),
+                        old: req.body,
+                        session: req.session
+                    })
+                })
         }
 
-        products.push(newProduct)
-
-        writeJson(products)
-        res.redirect('/products') */
     },
 
 
@@ -104,11 +137,7 @@ let controller = {
 
     /* Perfil admin */
 
-    dashboard: (req, res) => {
-        res.render('admin/adminsettings', {
-            session: req.session
-        })
-    }
+   
 
 };
 
