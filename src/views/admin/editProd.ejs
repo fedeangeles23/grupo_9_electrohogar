@@ -12,42 +12,95 @@
           <h3 class="h3editprod">Estás editando el producto:<p class="produ-titulo"><%- product.nombre %></p></h3>
 
           <div class="formmain">
-            <form action="/admin/products/detail/<%- product.id %>?_method=PUT" method="POST" >
-              <div class="formproduct">
-                <label for="nombre">Nombre del producto:</label>
-                <input class="edit" type="text" name="nombre" id="nombre" value="<%- product.nombre %>" />
+              <div class="formmain-create">
+                <form class="col-md-9 ms-sm-auto col-lg-10 px-md-4 row p-3 justify-content-center" action="/admin/product/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                  <div class="col-12 col-md-6">
+                        <div class="col-12 mb-3">
+                            <label for="inputName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="inputName" name="name" value="<%= locals.old && old.name %>">
+                            <% if (locals.errors && errors.name) { %>
+                                <small class="text-danger"><%= errors.name.msg %> REQUERIDISIMO </small>
+                            <% } %>
+                        </div>
 
-                <label for="nombre">Marca:</label>
-                <input class="edit" type="text" name="marca" id="marca" value="<%- product.marca %>" />
 
-                <label for="nombre">Precio:</label>
-                <input class="edit" type="text" name="precio" id="precio" value="<%- product.precio %>" />
+                        <div class="col-12 mb-3">
+                            <label for="inputName" class="form-label">Marca</label>
+                            <input type="text" class="form-control" id="inputBrand" name="brand" value="<%= locals.old && old.brand %>">
+                            <% if (locals.errors && errors.name) { %>
+                                <small class="text-danger"><%= errors.name.msg %> </small>
+                            <% } %>
+                        </div>
 
-                <label for="descripcion">Descripcion: </label>
-                <textarea class="text" name="descripcion" id="descripcionid" cols="30" rows="10"></textarea>
+        
+                        <div class="col-12 mb-3">
+                            <select class="form-select categorySelect" id="specificSizeSelect" name="category">
+                              <option selected hidden value="">Categorias</option>
+                            <% categories.forEach(category => { %>
+                                <option value="<%- category.id %>" <%= locals.old && old.category == category.id ? "selected" : "" %> ><%- category.name %> </option>
+                            <% }) %>
+                            </select>
+                            <% if (locals.errors && errors.category) { %>
+                                <small class="text-danger"><%= errors.category.msg %> </small>
+                            <% } %>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <select class="form-select subcategorySelect" id="specificSizeSelect" name="subcategory">
+                              <option selected hidden value="">Subcategorias</option>
+                              <% subcategories.forEach(subcategory => { %>
+                                <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory.id == subcategory.id ? "selected" : ""  %> ><%- subcategory.name %> </option>
+                                <% }) %>
+                            </select>
+                            <% if (locals.errors && errors.subcategory) { %>
+                                <small class="text-danger"><%= errors.subcategory.msg %> </small>
+                            <% } %>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="inputPrice" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="inputPrice" name="price" value="<%= locals.old && old.price %>">
+                            <% if (locals.errors && errors.price) { %>
+                                <small class="text-danger"><%= errors.price.msg %> </small>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="col-12 mb-3">
+                            <label for="inputDiscount" class="form-label">Descuento</label>
+                            <input type="number" class="form-control" id="inputDiscount" name="discount" value="<%= locals.old ? old.discount : 0 %>">
+                            <% if (locals.errors && errors.discount) { %>
+                                <small class="text-danger"><%= errors.discount.msg %> </small>
+                            <% } %>
+                        </div> 
 
-                <div class="div-file">
-                  <p class="textoo">Agregar archivo</p>
-                  <input class="file" type="file" name="imagen" id="imagen" />
+                        <div class="col-12 mb-3">
+                            <label for="inputDiscount" class="form-label">Cuotas</label>
+                            <input type="number" class="form-control" id="inputCuotes" name="cuotes" value="<%= locals.old ? old.discount : 0 %>">
+                            <% if (locals.errors && errors.discount) { %>
+                                <small class="text-danger"><%= errors.discount.msg %> </small>
+                            <% } %>
+                        </div> 
+
+                        <div class="col-12 mb-3">
+                            <label for="inputImage" class="form-label">Imagen</label>
+                            <input type="file" name="image" class="form-control" aria-label="file example" id="inputImage" multiple>
+                            <% if (locals.errors && errors.image) { %>
+                                <small class="text-danger"><%= errors.image.msg %> </small>
+                            <% } %>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="validationTextarea" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="validationTextarea" name="description"> <%= locals.old && old.description %> </textarea>
+                            <% if (locals.errors && errors.description) { %>
+                                <small class="text-danger"><%= errors.description.msg %> </small>
+                            <% } %>
+                        </div>
+                    </div>
+        
+                    <button type="submit" class="btn btn-outline-primary col-3 mt-3">
+                        CREAR
+                    </button>
+                </form>
                 </div>
-
-                <label for="category" class="form-label">Categoría:</label>
-                <div class="select">
-                  <select name="category" id="category" class="form-input">
-                    <option hidden>Elegí</option>
-                    <option>Electro</option>
-                    <option>TV & Audio</option>
-                    <option>Cocinas</option>
-                    <option>Celulares</option>
-                    <option>Computacion</option>
-                    <option>Gaming</option>
-                  </select>
-                </div>
-
-                <button class="but" type="submit">Guardar producto</button>
-              </div>
-            </form>
-          </div>
         </main>
 
 

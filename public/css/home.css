@@ -51,6 +51,25 @@
  
  
  .card{
+    display:flex  !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction:column !important;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0,25%) !important;
+    width: 275px !important;
+    text-align: center !important;
+    margin:25px !important;
+    cursor:pointer !important;
+    background-color: #fff !important; 
+    height: 510px !important;
+}
+
+
+
+
+
+
+ .cardSlider{
      display:flex  !important;
      justify-content: center !important;
      align-items: center !important;
@@ -62,6 +81,7 @@
      cursor:pointer !important;
      background-color: #fff !important; 
      height: 510px !important;
+     user-select: none;
  }
 
 
@@ -189,13 +209,7 @@
     width: 100%;
 }
 
-  /* boostrap carousel circulitos */
-  .carousel-indicators [data-bs-target] {
-    width: 10px !important;
-    height: 10px !important;
-    
-}
-
+ 
 
 
 @media screen and (max-width: 700px) /*De este ancho para abajo se va a ver asi:*/ {
@@ -221,6 +235,43 @@
         margin-bottom:5px;
     }
 }
+
+
+
+ /* Carrousel INICIO */
+
+ .swiper1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 
 
 /* LINEA BAJO CAROUSEL */
@@ -420,4 +471,8 @@ span.discountCard {
 
 .cuotasSlider{
     font-size: 11px;
+}
+
+.sectionSwiper{
+    background-color: #eeeeee;
 }

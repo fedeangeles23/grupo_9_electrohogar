@@ -2,30 +2,33 @@ let express = require('express')
 let router = express.Router()
 let controller = require('../controllers/adminController')
 const upload = require('../middlewares/uploadProductFiles')
-const AdminCheck = require('../middlewares/AdminCheck')
 let productFormValidator = require('../middlewares/ProductFormValidator')
+const userSessionCheck = require('../middlewares/userSessionCheck')
 
 
 //Las rutas llevan /admin/produ... al inicio
 
-router.get('/', controller.dashboard) // Envia los datos
+router.get('/', userSessionCheck , controller.dashboard) // Envia los datos
 
 
 /* Crear productos */
-router.get('/products/create', controller.create) // Envia los datos
+router.get('/products/create', userSessionCheck, controller.create) // Envia los datos
 
-router.post('/products/store',  upload.single('imagen'), productFormValidator, controller.store) //  Recibe los datos
+router.post('/products/create',  upload.single('image'), productFormValidator, controller.store) //  Recibe los datos
 
 
 /* Editar productos */
 
-router.get('/products/edit/:id', AdminCheck, controller.edit);
-router.put('/products/detail/:id', controller.update);
+router.get('/products/edit/:id', userSessionCheck,  controller.edit);
+
+router.put('/products/detail/:id', userSessionCheck, controller.update);
 
  
 /* Eliminar productos */
 
-router.delete('/products/detail/:id', AdminCheck, controller.del);
+router.delete('/products/detail/:id', userSessionCheck, controller.del);
+
+/* AdminCheck NO TE OLVIDES JOAQUIN AAAAAAAAAAAAAAAAAA */
 
 
 module.exports = router // Exportamos el let router

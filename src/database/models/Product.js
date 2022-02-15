@@ -28,6 +28,10 @@ module.exports = (sequelize, dataTypes) => {
         cuotes: {
             type: dataTypes.DECIMAL,
             allowNull: true
+        }, 
+        brand: {
+            type: dataTypes.STRING(45),
+            allowNull: true
         },
         
     }

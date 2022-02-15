@@ -11,37 +11,17 @@
     <main>
 
         <!-- Carrousel -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/images/carr1.jpg" class="d-block w-100" alt="imgcarousel">
-                </div>
-                <div class="carousel-item">
-                    <img src="/images/carr2.jpg" class="d-block w-100" alt="carousel">
-                </div>
-                <div class="carousel-item">
-                    <img src="/images/carr3.jpg" class="d-block w-100" alt="carousel">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        <div class="swiper mySwiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="/images/bannerEG.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="/images/BANNEREG1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="/images/BANNEREG2.jpg" alt=""></div>
+                         </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+
+
         <!-- End Carrousel -->
 
         <!-- Linea bajo carusel -->
@@ -67,19 +47,21 @@
         <!-- End Linea bajo carusel -->
 
         <div class="SectionTittle">
+            <div class="separadorh3">
+            </div>
             <H3>Ofertas imperdibles en <b> 12 cuotas sin interes! </b></H3>
+            <div class="separadorh3">
+            </div>
         </div>
 
-        <div class="section">
-           
-
-            <!-- Swiper -->
+        <div class="sectionSwiper">        
+            <!-- Swiper / 12 Cuotas -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
 
                     <% products12cuotas.forEach(Product=> { %>
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="cardSlider">
                             <a href="/products/detail/<%- Product.id %>">
                                 <div class="image-section">
                                     <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
@@ -124,9 +106,11 @@
 
 
         <div class="imgcategorias">
-            <a href="/products/gaming"> <img src="/images/512.jpg" alt=""></a>
-            <a href="#"> <img src="/images/513.jpg" alt=""></a>
+            <a href="/products/category/5"> <img src="/images/512.jpg" alt=""></a>
+            <a href="/products/category/3"> <img src="/images/513.jpg" alt=""></a>
         </div>
+
+
 
 
     </main>
@@ -138,9 +122,8 @@
 
     <%- include ('../partials/scripts.ejs') %>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+   <!-- Google login script -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 

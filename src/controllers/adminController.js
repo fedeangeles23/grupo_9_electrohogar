@@ -31,11 +31,12 @@ let controller = {
     create: (req, res) => { 
         let allCategories = Categories.findAll()
         let allSubcategories = Subcategories.findAll()
-
-        Promise.all([allCategories, allSubcategories])
-            .then(([categories, subcategories]) => {
+        let products = Products.findAll
+        Promise.all([allCategories, allSubcategories, products])
+            .then(([categories, subcategories, products]) => {
                 res.render('admin/createProd', {
                     categories,
+                    products,
                     subcategories,
                     session: req.session
                 })
@@ -45,12 +46,14 @@ let controller = {
     store: (req, res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
-            const { name, price, subcategory, description, discount } = req.body
+            const { name, price, subcategory, description, discount, brand, cuotes } = req.body
             Products.create({
                 name,
                 price,
                 description,
                 discount,
+                brand,
+                cuotes,
                 subcategoryId: subcategory,
             })
                 .then((product) => {
@@ -59,7 +62,7 @@ let controller = {
                         productId: product.id
                     })
                         .then(() => {
-                            res.redirect('admin/adminSettings')
+                            res.send('falta la fotito chabon xD')
                         })
                 })
                 .catch(error => console.log(error))
@@ -71,6 +74,7 @@ let controller = {
                     res.render('admin/adminSettings', {
                         categories,
                         Products,
+                        products,
                         subcategories,
                         errors: errors.mapped(),
                         old: req.body,
@@ -83,54 +87,78 @@ let controller = {
 
 
     edit: (req, res) => {
-        let productId = +req.params.id
-        let productToEdit = products.find(product => product.id === productId)
+        const productPromise = Products.findByPk(req.params.id);
+        const categoriesPromise = Categories.findAll();
+        const subcategoriesPromise = Subcategories.findAll();
 
+        
+        let product = products.find(product => product.id === productId)
         res.render('admin/editProd', {
-            product: productToEdit,
+            Products,
+            product,
+            categories,
             session: req.session
         })
+        .catch(error => console.log(error))
+
     },
 
     update: (req, res) => {
-      /*   let productId = +req.params.id
-
-        const { nombre, precio, imagen, descripcion, categoria, marca } = req.body
-
-        products.forEach(product => {
-
-            if (product.id === productId) {
-                product.id = product.id,
-                    product.nombre = nombre,
-                    product.precio = precio,
-                    product.descripcion = descripcion,
-                    product.categoria = categoria,
-                    product.marca = marca,
-                    product.imagen = req.file ? req.file.filename : product.imagen
-            }
-
-        })
-
-        writeJson(products)
-
-        res.redirect('/') */
+        
+            const { name, price, category, subcategory, description, discount } = req.body
+    
+            Products.update({
+                name,
+                price,
+                description,
+                discount,
+                subcategoryId: subcategory,
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            })
+                .then((result) => {
+                    if (result) {
+                        ProductImage.findAll({
+                            where: {
+                                productId: req.params.id
+                            }
+                        })
+                        .then((images) => {
+                            images.forEach((image) => 
+                            fs.existsSyncs('./public/images/productos/', image.image)
+                            ? fs.unlinkSync(`'./public/images/productos/${image.image}`)
+                            : console.log(' No se encontro el archivo')
+                        )})
+                        ProductImages.destroy({
+                            where: {
+                                productId: req.params.id
+                            }
+                        })
+                    }
+                })
+    
+            res.redirect('/admin')
 
     },
 
     del: (req, res) => {
-        /* let productId = +req.params.id;
-
-        products.forEach(product => {
-            if (product.id === productId) {
-                let productDestroyI = products.indexOf(product)
-                productDestroyI !== -1 ?
-                    products.splice(productDestroyI, 1)
-                    : console.log('No encontre el producto chee')
-            }
-        })
-
-        writeJson(products)
-         res.redirect("/") */
+        {
+            ProductImages.findAll({
+                where : {
+                    productId: req.params.id,
+                }
+            })
+            .then((image) => {
+             images.forEach((image) => {
+                 fs.existsSyncs('./public/images/productos/', image.image)
+                  ? fs.unlinkSync(`'./public/images/productos/${image.image}`)
+                   : console.log(' No se encontro el archivo')
+             }
+            )}).then()
+     
+     }
  
     },
 
@@ -141,6 +169,3 @@ let controller = {
 };
 
 module.exports = controller
-
-const express = require('express');
-const router = express.Router();

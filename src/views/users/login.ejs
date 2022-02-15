@@ -4,77 +4,95 @@
 <%- include('../partials/head.ejs') %>
 
 
-  <body>
+<body>
 
-    <%- include('../partials/header.ejs') %>
-
-
-      <%- include('../partials/nav.ejs') %>
-
-        <main class="logregistermain">
-          <div class="containerregistro">
-            <div class="logoLogin">
-              <img src="/images/electrohogarlogo.png">
-            </div>
-            
-
-            <p class="ingreso">Ingresa los datos de tu cuenta</p>
-
-        
-            <form action="/users/login" method="POST" class="form-login">
-              <div class="login2">
-                <input class="input-style" type="email" name="email" placeholder="Email:" value="<%= locals.old && old.email %>">
-                <% if (locals.errors && errors.email) { %>
-                  <span class="error">
-                    <%= errors.email.msg %>
-                  </span>
-                  <% } %>
-              </div>
-
-              <div class="login2">
-                <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
-                <% if (locals.errors && errors.pass1) { %>
-                  <span class="error">
-                    <%= errors.pass1.msg %>
-                  </span>
-                  <% } %>
-              </div>
-
-              <div class="input-check">
-                <input type="checkbox" name="remember" id="remember"><label for="check">Recordar</label>
-
-              </div>
+  <%- include('../partials/header.ejs') %>
 
 
-              <span class="cuenta2"><button type="submit" class="btncontinuar">Continuar</button></span>
+  <%- include('../partials/nav.ejs') %>
 
-            </form>
-            <div class="google-btnlogin">
-              <div class="google-icon-wrapper">
-                <img class="google-icon"
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
-              </div>
-              <a href="#">
-                <p class="btn-text"><b>Ingresa con google</b></p>
-              </a>
-            </div>
-
-            <div class="datos-login">
-          
-              <span> <a href="/users/registro/" class="link-login"> No tengo cuenta</a> </span>
-              <span> <a href="/" class="link-login"> Volver al menú de inicio</a> </span>
-
-            </div>
-
-          </div>
-
-        </main>
+  <main class="logregistermain">
+    <div class="containerregistro">
+      <div class="logoLogin">
+        <img src="/images/electrohogarlogo.png">
+      </div>
 
 
+      <p class="ingreso">Ingresa los datos de tu cuenta</p>
 
-        <%- include('../partials/footer.ejs') %>
-          <%- include('../partials/scripts.ejs') %>
 
-  </body>
+      <form action="/users/login" method="POST" class="form-login">
+        <div class="login2">
+          <input class="input-style" type="email" name="email" placeholder="Email:"
+            value="<%= locals.old && old.email %>">
+          <% if (locals.errors && errors.email) { %>
+          <span class="error">
+            <%= errors.email.msg %>
+          </span>
+          <% } %>
+        </div>
+
+        <div class="login2">
+          <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
+          <% if (locals.errors && errors.pass1) { %>
+          <span class="error">
+            <%= errors.pass1.msg %>
+          </span>
+          <% } %>
+        </div>
+
+        <div class="input-check">
+          <input type="checkbox" name="remember" id="remember"><label for="check">Recordar</label>
+
+        </div>
+
+
+        <span class="cuenta2"><button type="submit" class="btncontinuar">Continuar</button></span>
+
+      </form>
+      <div class="google-btnlogin">
+
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+      </div>
+
+      <div class="datos-login">
+
+        <span> <a href="/users/registro/" class="link-login"> No tengo cuenta</a> </span>
+        <span> <a href="/" class="link-login"> Volver al menú de inicio</a> </span>
+        <a href="#" onclick="signOut();">Sign out</a>
+
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <%- include('../partials/footer.ejs') %>
+  <%- include('../partials/scripts.ejs') %>
+  <script>
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+      var id_token = googleUser.getAuthResponse().id_token;
+    }
+  </script>
+
+  <script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+  </script>
+
+</body>
 
 </html>
