@@ -8,20 +8,32 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false 
         },
         userId: {
-            type: dataTypes.INTEGER(11),
+            type: dataTypes.INTEGER(11).UNSIGNED,
             allowNull: false 
         },
         state: {
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING,
             allowNull: false 
         },
+
     }
-    const config = {
-        tableName: "orders"
+    let config = {
+        tableName: "order",
+        timestamps: true
     }
 
     const Order = sequelize.define(alias, cols, config)
 
+    Order.associate = models => {
+        Order.belongsTo(models.User, {
+            as:"users",
+            foreignKey: "userId"
+        })
+        Order.hasMany(models.Order_item, {
+            as: "order_items",
+            foreignKey: "orderId"
+        })
+    }
 
     return Order;
 }

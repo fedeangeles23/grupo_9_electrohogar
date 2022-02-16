@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
@@ -59,6 +59,8 @@ a.cuenta {
     color: red;
     text-align: center;
     margin-bottom: 10px;
+    font-size: 14px;
+    text-decoration: underline;
 }
 
 /*el espacio entrer las cajas de email y contraseña*/
@@ -69,27 +71,22 @@ a.cuenta {
     padding-left: 10px;
 }
 
-/*para los botones n*/
-span.cuenta2 button{
-    background-color: rgb(13, 40, 197);
-    color: rgb(255, 255, 255);
-    font-size: 39px;
-    width: 140px;
-    height: 42px;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    border: none;
-    box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
-    font-weight: lighter;
-    font-family: 'Work-Sans', sans-serif;
+button.btncontinuar {
+    background-color: #0b16b3;
+    width: 120px;
+    height: 34px;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
+    font-size: 13px;
+    border-radius: 15px;
+    font-weight: 300;
 }
 
-span.cuenta2 button:hover {
-    color: rgb(255, 255, 255);
-    background-color: black;
-
+button.btncontinuar:hover{
+    background-color: #0a138d;
+    transition: 0.8ms all;
 }
-
 
 
 
@@ -157,18 +154,25 @@ span.cuenta2 button:hover {
     input.input-style {
         font-size: 13px;
     }
-    button.btn.btn-continue {
-        width: 180px;
-        height: 40px;
-        font-size: 18px;
-        color: rgb(255, 255, 255);
-        font-weight: lighter;
-         font-size: 14px;
-         margin-right: 10px;
+    .btncontinuar{
+        
+            background-color: #0b16b3;
+            width: 120px;
+            height: 34px;
+            border-radius: 5px;
+            color: white;
+            margin: 10px;
+            font-size: 13px;
+            border-radius: 15px;
+            font-weight: 300;
+        
     }
 
-    button.btn.btn-continue:hover {
-       text-decoration: none;
+    .btncontinuar {
+        background-color: #0a138d;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 13px;
     }
 
     .olvide {
@@ -277,17 +281,16 @@ span.cuenta2 button:hover {
 
 
 .google-btnlogin {
-        width: 200px ;
-        height: 42px;
-        background-color: #4285f4;
-        border-radius: 30px;
-        box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
-        margin-bottom: 20px;
+       margin: 10px;
+}
+
+input.input-style{
+    margin-bottom: 20px;
 }
 
 input.input-style:focus {
-    transition:  0.3s;
-    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(26, 7, 197);
+    transition:  0.5s;
+    border: 1px solid blue;
 }
 
 

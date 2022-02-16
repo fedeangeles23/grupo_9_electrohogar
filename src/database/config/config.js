@@ -1,8 +1,8 @@
-module.exports = {
+module.exports ={
   "development": {
     "username": "root",
     "password": null,
-    "database": "database_development",
+    "database": "electrohogardb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -21,3 +21,4 @@ module.exports = {
     "dialect": "mysql"
   }
 }
+

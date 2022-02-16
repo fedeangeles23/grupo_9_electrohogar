@@ -20,11 +20,16 @@ body {
     font-family: 'Lato', sans-serif;
     overflow-x: hidden; /* Hide scrollbars */
 
-}
+    }
 
-   .burguermenu {
+.burguermenu {
        display: none;
-   }
+ }
+
+ .headermobile{
+     display: none;
+ }
+
 
 .headercontainer {
     width: 100%;
@@ -37,9 +42,9 @@ body {
 }
 
 .logomain img {
-    width: 110px;
-    height: 105px;
-    margin-top: -15px;
+    width: 70px;
+    height: 70px;
+    
 }
 
 
@@ -53,6 +58,14 @@ body {
 .headernav i{
    background-color: red;
 }
+
+ /* CARRITO MOBILE */
+
+ .carritoversmobile {
+    display:none; 
+ }
+
+
 
 /* Search */
 
@@ -107,6 +120,7 @@ svg.svg-inline--fa.fa-search.fa-w-16 {
 .buscar {
     display: flex;
     align-items: center;
+;
 }
 
 
@@ -171,10 +185,12 @@ form {
 /* Botones laterales */
 
 .imgusuario {
-    width: 23px;
-    position: relative;
-    left: -10px;
-    opacity: 80%;
+        width: 23px;
+        position: relative;
+        left: -29px;
+        bottom: -20px;
+        opacity: 80%;
+    
 }
 
 .ulusuario{
@@ -214,18 +230,26 @@ color: white;
 
 
 .carritoyfav {
-    width: 23px;
-    opacity: 50%;
+    width: 22px;
+    opacity: 70%;
     position: relative;
+    top:20px;
+}
+
+.carritoyfavv{
+    margin-left: 10px;
+    width: 20px;
+    opacity: 65%;
+    position: relative;
+    top:22px;
+
 }
 
 .licontainer {
     display: flex;
 }
 
-li.menu-button {
-    border-right: 1px solid #08080836;
-}
+
 
 .headernav a {
     color: rgb(58 58 58);
@@ -234,7 +258,7 @@ li.menu-button {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     position: relative;
-    font-size: 20px;
+    font-size: 15px;
 
 }
 
@@ -304,101 +328,64 @@ li{
 
 
 @media screen and (max-width: 769px) {
-  
 
-
-    .burguermenu {
-        display: block;
-        font-size: 30px;
-        color:#717171
+    .headercontainer{
+        display: none;
     }
- 
+  
+    .headermobile{
+        display: flex;
+        height: 78px;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
 
-.licontainer {
+
+    .logomain img {
+        width:55px;
+        height:55px;
+        margin: 10px;
+    }
+
+    .burguermenu{
+        display: block;
+        font-size: 27px;
+        color: #121212;
+    }
+
+    .carritoversmobile{
+        display: block;
+    }
+
+    .col-2 {
+        padding:0;
+        border: none;
+    }
+
+/* Linea nav bajo carousel tablet */
+.col2linea {
     display: none;
 }
-    
   }
 
 
   /* Media queries : PHONE */
-@media screen and (max-width: 600px) {
- 
- 
-
-    .headercontainer .buscar input{
-        width: 180px;
-    }
-
-    
-  }
-
-  /* Small phones */
-
-  @media screen and (max-width: 481px) {
-   
-
- 
-
-    .headercontainer .buscar input{
-        width: 180px;
-    }
 
 
-    .headercontainer {
-        height: 90px;
-        flex-direction: column;
-    }
-
-    .burguermenu {
-        display: block;
-        font-size: 30px;
-        color: #717171;
-        margin-top: 10px;
-   
-    }
-
-    .logomain img {
-        display: none
-    }
-
-    .burguermenu {
-        display: block;
-        font-size: 30px;
-        color: #717171;
-        margin-top: 10px;
-        position: relative;
-        left: -140px;
-        top: 16px;
-    
-  } 
-
-  header .buscar {
-    display: flex;
-    height: 35px;
-    line-height: 35px;
-    margin-top: 30px;
-    position: relative;
-    top: -28px;
-
-
-}
-
-
-
-}
 
 
 
 .hovercuenta {
     background-color: white;
-    width: 200px;
-    height: 100px;
     position: absolute;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
-    
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.05);
+    z-index: 9999;
+    display: none;
   }
 
   .hovercuenta li{
@@ -408,6 +395,12 @@ li{
   .hovercuenta a:hover{
       color:rgb(4, 0, 255);
   }
+
+  
+.headernav .licontainer .menu-button:hover .hovercuenta {
+    display: block;
+}
+ 
 
   
 

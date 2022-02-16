@@ -8,19 +8,27 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false 
         },
         image: {
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
-        col_61: {
-            type: dataTypes.INTEGER(11),
+        productId: {
+            type: dataTypes.INTEGER,
             allowNull: false
         },
     }
-    const config = {
-        tableName: "products_images"
+    let config = {
+        tableName: "products_images",
+        timestamps: false
     }
 
     const ProductImage = sequelize.define(alias, cols, config)
+
+    ProductImage.associate = models => {
+        ProductImage.belongsTo(models.Product, {
+            as: "product",
+            foreignKey:"productId"
+        })
+    }
 
     return ProductImage;
 }

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Adress";
+    let alias = "Address";
     let cols = {
         id: {
             type: dataTypes.INTEGER(11).UNSIGNED,
@@ -8,31 +8,39 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false 
         },
         street: {
-            type: dataTypes.VARCHAR(150).NULL
+            type: dataTypes.STRING(100)
         },
         city: {
-            type: dataTypes.VARCHAR(150)
+            type: dataTypes.STRING(100)
         },
         province: {
-            type: dataTypes.VARCHAR(150)
+            type: dataTypes.STRING(100)
         },
         number: {
-            type: dataTypes.INTEGER(11)
+            type: dataTypes.INTEGER
         },
         postal_code: {
-            type: dataTypes.INTEGER(11)
+            type: dataTypes.INTEGER
         },
         userId: {
-            type: dataTypes.INTEGER(11),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
     }
     
-    const config = {
-        tableName: "adresses"
+    let config = {
+        tableName: "addresses",
+        timestamps: false
     }
 
-    const Adress = sequelize.define(alias, cols, config)
+    const Address = sequelize.define(alias, cols, config)
 
-    return Adress;
+    Address.associate = (models) => {
+        Address.belongsTo(models.User, {
+            as: 'user',
+            foreignKey: 'userId'
+        })
+    }
+
+    return Address;
 }

@@ -12,20 +12,32 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false 
         },
         productId: {
-            type: dataTypes.INTEGER(11),
+            type: dataTypes.INTEGER(11).UNSIGNED,
             allowNull: false 
         },
         quantity: {
-            type: dataTypes.INTEGER(11),
+            type: dataTypes.INTEGER(11).UNSIGNED,
             allowNull: false 
         },
 
     }
-    const config = {
-        tableName: "order_items"
+    let config = {
+        tableName: "order_item",
+        timestamps: true
     }
 
-    const Order_items = sequelize.define(alias, cols, config)
+    const Order_item = sequelize.define(alias, cols, config)
 
-    return Order_items;
+    Order_item.associate = models => {
+        Order_item.belongsTo(models.Order, {
+            as:"order",
+            foreignKey: "orderId"
+        })
+        Order_item.belongsTo(models.Product, {
+            as:"products",
+            foreignKey: "productId"
+        })
+    }
+
+    return Order_item;
 }

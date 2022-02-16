@@ -1,67 +1,43 @@
 body.body-trabaja-con-nosotros {
-    background-color: rgb(240, 233, 233);
+background-color: rgb(237, 239, 241);
 }
 
-.titulo {
-    text-align: center;
-    font-size: 25px;
+.titulo, .subtitulo {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1em;
     text-transform: uppercase;
-    margin-top: 100px;
+    font-weight:bolder;
+    color:  #140B5C;
+    margin-top: 10px;
+    margin-left: 15px;
 }
 
 .texto {
-  margin-bottom: 15px;
-    font-size: 19px;
+    font-size: 23px;
     text-align: center;
 }
 .cv {
     text-align: center;
-    font-size: 19px;
-    margin-bottom: 80px;
+    font-size: 17px;
+    margin-bottom: 40px;
 }
-
 
 .error-message {
     display: none;
-    font-family:cursive;
     font-size: 19px;
+    color: red;
   }
 
   .datosTrabajaCon {
     text-align: center;
-    margin-bottom: 20px;
-    margin-left: 30px;
+    margin-bottom: 10px;
   }
 
-.subtitulo {
-    font-size: 27px;
-    text-align: center;
-}
-
   .input-style {
-      border-radius: 20px;
       width: 50%;
       height: 30px;
       text-align: center;
       border: none;
-      font-size: 17px;
-  }
-
-  @media(max-width:900px) {
-     
-      .texto {
-          color:rgb(12, 9, 9)
-      }
-
-      .subtitulo {
-        color: rgb(44, 44, 170)
-      }
-
-      .cv {
-          color:white;
-      }
-
-      .titulo {
-          color:orange;
-      }
+      font-size: 17px;;
   }

@@ -40,16 +40,12 @@ app.use(cookie)
 let users = require('./routes/usersRouter')
 let home = require('./routes/homeRouter')
 let admin = require('./routes/adminRouter')
-let carrito = require ('./routes/cartRouter')
 let products = require ('./routes/productRouter')
-
 
 /* ----------------Routes------------------------- */
 
-app.use('/', home);
-
-app.use('/carrito', carrito)
-
+ app.use('/', home);
+ 
 app.use('/users', users);
  
 app.use('/admin', admin);

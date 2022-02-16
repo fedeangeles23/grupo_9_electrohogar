@@ -25,6 +25,9 @@ router.get('/logout', controller.logout)
 
 router.get('/perfil',controller.perfil)
 
+router.get('/loginGoogle', controller.loginGoogle);
+
+
 
 module.exports = router;
 
