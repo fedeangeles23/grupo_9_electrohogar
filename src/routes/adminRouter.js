@@ -8,6 +8,9 @@ const userSessionCheck = require('../middlewares/userSessionCheck')
 
 //Las rutas llevan /admin/produ... al inicio
 
+router.get('/',  controller.indexAdmin) // Envia los datos
+
+
 router.get('/products',  controller.dashboard) // Envia los datos
 
 

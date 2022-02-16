@@ -145,11 +145,6 @@
 
 .btneliminarprod{
     background-color: red;
-
-}
-
-svg.bi.bi-trash {
-    background-color: red;
     color: white;
     font-size: 15px;
     height: 30px;
@@ -158,4 +153,19 @@ svg.bi.bi-trash {
     position: relative;
     left: 70px;
     top: -2px;
+}
+
+.btneliminarprod svg.bi.bi-trash {
+    background-color: red;
+    color: white;
+    height: 30px;
+    width: 23px;
+    border-radius: 5px;
+ 
+}
+.navAdminBtn {
+    padding: 10px;
+}
+.numeroProds {
+    margin-top: 10px;
 }
