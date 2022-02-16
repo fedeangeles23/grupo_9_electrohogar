@@ -8,32 +8,31 @@ const userSessionCheck = require('../middlewares/userSessionCheck')
 
 //Las rutas llevan /admin/produ... al inicio
 
-router.get('/', userSessionCheck , controller.dashboard) // Envia los datos
+router.get('/products',  controller.dashboard) // Envia los datos
 
 
 /* Crear productos */
-router.get('/products/create', userSessionCheck, controller.create) // Envia los datos
+router.get('/products/create',  controller.create) // Envia los datos
 
-router.post('/products/create',  upload.single('image'), productFormValidator, controller.store) //  Recibe los datos
+router.post('/products/create',  upload.array('image'), productFormValidator, controller.store) //  Recibe los datos
 
 
 /* Editar productos */
 
-router.get('/products/edit/:id', userSessionCheck,  controller.edit);
+router.get('/products/edit/:id', controller.edit);
 
-router.put('/products/detail/:id', userSessionCheck, controller.update);
+router.put('/products/edit/:id', upload.array('image'), controller.update);
 
  
 /* Eliminar productos */
 
-router.delete('/products/detail/:id', userSessionCheck, controller.del);
+router.delete('/products/:id', controller.del);
 
-/* AdminCheck NO TE OLVIDES JOAQUIN AAAAAAAAAAAAAAAAAA */
+/* AdminCheck NO TE OLVIDES JOAQUIN AAAAAAAAAAAAAAAAAA 
+Pasar userSessionCheck
+*/
 
 
-module.exports = router // Exportamos el let router
-
-// Esta es la estructura principal del routes en nuestro proyecto
-
-// Con esto creamos el enrutador, 1 para detalle de prod, otra para carrito, etc.
+module.exports = router 
+// Esta es la estructura principal del routes en nuestro proyecto, con esto creamos el enrutador, 1 para detalle de prod, otra para carrito, etc.
 

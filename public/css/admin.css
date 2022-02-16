@@ -142,3 +142,20 @@
     color: #198754;
     border: 1px solid #198754;
 }
+
+.btneliminarprod{
+    background-color: red;
+
+}
+
+svg.bi.bi-trash {
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 23px;
+    border-radius: 5px;
+    position: relative;
+    left: 70px;
+    top: -2px;
+}
