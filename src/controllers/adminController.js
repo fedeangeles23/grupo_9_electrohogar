@@ -1,7 +1,5 @@
 let fs = require('fs')
-let {
-    validationResult
-} = require('express-validator')
+let { validationResult } = require('express-validator')
 
 const db = require('../database/models');
 
@@ -13,7 +11,7 @@ const Users = db.User
 
 
 let controller = {
-
+/* Inicio panel admin */
     indexAdmin: (req, res) => {
         Users.findAll()
             .then(user => {
@@ -23,8 +21,21 @@ let controller = {
                 })
             })
     },
+/* Crud usuarios */
+    dashboardUsers: (req, res) => {
+        Users.findAll()
+            .then(user => {
+                res.render('admin/adminUserIndex', {
+                    user,
+                    session: req.session
+                })
+            })
+    },
 
-    dashboard: (req, res) => {
+
+
+    /* End crud usuarios */
+    dashboardProducts: (req, res) => {
         Products.findAll()
             .then(products => {
                 res.render('admin/adminSettings', {
@@ -34,7 +45,9 @@ let controller = {
             })
 
     },
+/* Fin panel admin */
 
+/* ---- CRUD --- */
 
     create: (req, res) => {
         let allCategories = Categories.findAll()
@@ -53,6 +66,7 @@ let controller = {
     },
     store: (req, res) => {
         let errors = validationResult(req)
+        console.log(errors)
         if (errors.isEmpty()) {
             const {
                 name,
@@ -78,16 +92,17 @@ let controller = {
                             productId: product.id
                         })
                         .then(() => {
-                            res.send('falta la fotito chabon xD')
+                            res.redirect('/admin/products')
                         })
                 })
                 .catch(error => console.log(error))
         } else {
             let allCategories = Categories.findAll();
             let allSubcategories = Subcategories.findAll();
-            Promise.all([allCategories, allSubcategories])
-                .then(([categories, subcategories]) => {
-                    res.render('admin/adminSettings', {
+            let allProducts = Products.findAll()
+            Promise.all([allCategories, allSubcategories, allProducts])
+                .then(([categories, subcategories, products]) => {
+                    res.render('admin/createProd', {
                         categories,
                         Products,
                         products,
@@ -120,7 +135,7 @@ let controller = {
 
     update: (req, res) => {
         // No guarda la categoria ni subcategoria, tampoco la imagen a actualizar
-
+        console.log(req.file)
         Products.update({
                 name: req.body.name,
                 price: req.body.price,
@@ -136,7 +151,6 @@ let controller = {
 
             })
             .then((result) => {
-                res.send(result)
                 if (result) {
                     ProductImage.findAll({
                         where: {
@@ -154,6 +168,8 @@ let controller = {
                                     productId: req.params.id
                                 })
                                 .then(() => res.redirect('/admin/products'))
+                                .catch(error => console.log(error))
+
                         })
                 }
             })

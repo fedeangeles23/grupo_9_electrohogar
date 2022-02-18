@@ -13,13 +13,13 @@
         <!-- Carrousel -->
         <div class="swiper mySwiper1">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="/images/bannerEG.jpg" alt=""></div>
-              <div class="swiper-slide"><img src="/images/BANNEREG1.jpg" alt=""></div>
-              <div class="swiper-slide"><img src="/images/BANNEREG2.jpg" alt=""></div>
-                         </div>
+                <div class="swiper-slide"><img src="/images/bannerEG.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/BANNEREG1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="/images/BANNEREG2.jpg" alt=""></div>
+            </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-          </div>
+        </div>
 
 
         <!-- End Carrousel -->
@@ -46,6 +46,8 @@
         </div>
         <!-- End Linea bajo carusel -->
 
+        <!-- Swiper / 12 Cuotas -->
+
         <div class="SectionTittle">
             <div class="separadorh3">
             </div>
@@ -54,7 +56,7 @@
             </div>
         </div>
 
-        <div class="sectionSwiper">        
+        <div class="sectionSwiper">
             <!-- Swiper / 12 Cuotas -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
@@ -66,33 +68,39 @@
                                 <div class="image-section">
                                     <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
                                 </div>
-
                                 <div class="descriptionSlider">
                                     <h1>
-                                        <% if (Product.name.length > 30) { %>
-                                        <%- `${Product.name.slice(0,90)}...` %>
+                                        <% if (Product.name.length > 10) { %>
+                                        <%- `${Product.name.slice(0,90)}` %>
                                         <% } else { %>
                                         <%= Product.name %>
                                         <% } %> </h1>
                                     <span>$<%- Product.price %></span>
+                                    <div class="discountCardPrice">
+
+                                        <div class="discountPricediv">
+                                            <% if (Product.discount > 0) { %>
+                                            <span class="discountPrice">
+                                                <%-   (Product.price * Product.discount) / 100 %> </span>
+                                            <span class="discountCard"> <%- Product.discount%> %OFF </span>
+                                            <% } else { %>
+
+                                            <% } %>
+                                        </div>
+
+                                    </div>
+
                                 </div>
                                 <small class="cuotasSlider"> <%- Product.cuotes %> cuotas x
                                     <%- Product.price / Product.cuotes  %>
                                 </small>
 
-                            
-                                <div>
-                                    <% if (Product.discount > 0) { %>
-                                        <span class="discountCard"> <%- Product.discount%> %OFF </span>
-                                         <% } else { %>
-                                            
-                                        <% } %> 
-                                </div>
-                              
+
+
 
                             </a>
 
-                    
+
                         </div>
                     </div>
 
@@ -100,15 +108,103 @@
 
                 </div>
                 <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
+        <!-- END Swiper / 12 Cuotas -->
 
 
         <div class="imgcategorias">
             <a href="/products/category/5"> <img src="/images/512.jpg" alt=""></a>
             <a href="/products/category/3"> <img src="/images/513.jpg" alt=""></a>
         </div>
+
+
+        <!-- Swiper / Notebookss -->
+
+        <div class="SectionTittle">
+            <div class="separadorh3">
+            </div>
+            <H3> Las mejores notebooks para<b> estudiar </b></H3>
+            <div class="separadorh3">
+            </div>
+        </div>
+
+        <div class="sectionSwiper">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <% productscomputacion.forEach(Product=> { %>
+                    <div class="swiper-slide">
+                        <div class="cardSlider">
+                            <a href="/products/detail/<%- Product.id %>">
+                                <div class="image-section">
+                                    <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
+                                </div>
+                                <div class="descriptionSlider">
+                                    <h1>
+                                        <% if (Product.name.length > 10) { %>
+                                        <%- `${Product.name.slice(0,90)}` %>
+                                        <% } else { %>
+                                        <%= Product.name %>
+                                        <% } %> </h1>
+                                    <span>$<%- Product.price %></span>
+                                    <div class="discountCardPrice">
+
+                                        <div class="discountPricediv">
+                                            <% if (Product.discount > 0) { %>
+                                            <span class="discountPrice">
+                                                <%-   (Product.price * Product.discount) / 100 %> </span>
+                                            <span class="discountCard"> <%- Product.discount%> %OFF </span>
+                                            <% } else { %>
+
+                                            <% } %>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <small class="cuotasSlider"> <%- Product.cuotes %> cuotas x
+                                    <%- Product.price / Product.cuotes  %>
+                                </small>
+
+
+
+
+                            </a>
+
+
+                        </div>
+                    </div>
+
+                    <% }) %>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <!-- END Swiper / Notebookss -->
+
+        <div class="containeHomerMarcas">
+            <div class="titulohomemarcas">
+                <h3> Hecha un vistazo a nuestras marcas destacadas</h3>
+                <div class="marcasimg">
+                    <img class="brderimgcarousel" src="/images/carouselMarcas1.jpg" alt="">
+                    <img class="brderimgcarousel" src="/images/carouselMarcas2.jpg" alt="">
+                    <img class="brderimgcarousel" src="/images/carouselMarcas3.jpg" alt="">
+                    <img class="brderimgcarousel" src="/images/carousel2marcas1.jpg" alt="">
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
 
 
 
@@ -122,10 +218,12 @@
 
     <%- include ('../partials/scripts.ejs') %>
 
-   <!-- Google login script -->
+    <!-- Google login script -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="/js/oscuro.js"></script>
 
 
 </body>

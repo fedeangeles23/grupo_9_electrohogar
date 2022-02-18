@@ -329,6 +329,13 @@ li{
 
 @media screen and (max-width: 769px) {
 
+    .brderimgcarousel {
+        border-radius: 3px;
+        margin: 5px;
+        width: 226px;
+        height: 200px;
+    }
+
     .headercontainer{
         display: none;
     }

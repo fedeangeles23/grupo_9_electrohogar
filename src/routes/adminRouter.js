@@ -11,7 +11,11 @@ const userSessionCheck = require('../middlewares/userSessionCheck')
 router.get('/',  controller.indexAdmin) // Envia los datos
 
 
-router.get('/products',  controller.dashboard) // Envia los datos
+router.get('/products',  controller.dashboardProducts) // Envia los datos
+
+/* Usuarios CRUD */
+router.get('/users',  controller.dashboardUsers) // 
+
 
 
 /* Crear productos */
