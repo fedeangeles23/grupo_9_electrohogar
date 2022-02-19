@@ -1,5 +1,5 @@
 window.onload = function(){
-//header  #140B5C  azul = #2d00f7 violeta = #a100f2
+//header  #140B5C  azul = #2d00f7 violeta = #a100f2  negro = #0b090a
 //fondo del header
 let headerContainer = document.querySelector('.headercontainer');
 headerContainer.style.backgroundColor = '#0b090a';
@@ -35,10 +35,10 @@ a_drop.style.color = 'blue';
 //home
 //Debajo del carrousel 
 //funciona 
-/*
+
 let lineabajocarousel = document.querySelector('.lineabajocarousel');
 lineabajocarousel.style.backgroundColor = '#0b090a' 
-*/
+
 //envios a todo el pais
 let col1linea = document.querySelector('.col1linea span');
 col1linea.style.color = '#a100f2';
@@ -50,5 +50,26 @@ col2linea.style.color = '#a100f2';
 //cosulta tus dudas al...
 let col3linea = document.querySelector('.col3linea span');
 col3linea.style.color = '#a100f2';
+
+//OFERTAS INPERDIBLES EN
+let H3 = document.querySelector('H3');
+H3.style.color = '#a100f2';
+
+
+let SectionTittle = document.querySelector('.SectionTittle');
+SectionTittle.style.backgroundColor = '#0b090a';
+
+
+let swiper = document.querySelector('.imgcategorias');
+swiper.style.backgroundColor = '#0b090a';
+
+
+
+
+//login
+
+
+let logregistermain = document.querySelector('.logregistermain');
+logregistermain.style.backgroundColor = '#0b090a';
 } 
 
