@@ -24,7 +24,7 @@
                 <ul>
 
                     <% if (typeof session.user !="undefined" ) { %>
-                        <li class="menu-button"><a href="/users/perfil"><img class="imgusuario" src="/img/usuario.png"
+                        <li class="menu-button"><a href="/users/perfil"><img class="imgusuario" src="/img/usuarioNuevo.png"
                                     alt="">
                                 <%= session.user.name %>
                             </a> </i>
@@ -38,7 +38,7 @@
                         </li>
                         <% } else {%>
                             <li class="menu-button"><a href="/users/registro"><img class="imgusuario"
-                                        src="/img/usuario.png" alt="">Mi cuenta </a> </i>
+                                        src="/img/usuarioNuevo.png" alt="">Mi cuenta </a> </i>
                                 <ul>
                                     <div class="hovercuenta">
                                         <li> <a href="/users/login">Iniciar sesion</a></li>
@@ -48,13 +48,12 @@
                             </li>
                             <% } %>
 
-                                <li><a href="#"><img class="carritoyfav" src="/img/carrito-de-compras.png"
+                                <li><a href="#"><img class="carritoyfav" src="/img/carrito-de-comprasNuevo.png"
                                             alt="Carrito de compras"></a></li>
 
-                                <li><a href="#"><img class="carritoyfavv" src="/img/favorito.png"
+                                <li><a href="#"><img class="carritoyfavv" src="/img/favoritoNuevo.png"
                                             alt="Favoritos"></a></i>
                                 </li>
-
                 </ul>
 
             </div>
@@ -96,5 +95,5 @@
 
 
     </div>
-
+<script src="/js/modoOscu.js"></script>
 </header>
