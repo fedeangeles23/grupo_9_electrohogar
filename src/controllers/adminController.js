@@ -92,7 +92,8 @@ let controller = {
                             productId: product.id
                         })
                         .then(() => {
-                            res.redirect('/admin/products')
+                            res.send(req.file)
+                            console.log(req.file)
                         })
                 })
                 .catch(error => console.log(error))

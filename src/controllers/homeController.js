@@ -43,16 +43,7 @@
              .catch(error => console.log(error))
 
      },
-    
-     products: (req, res) => {
-             res.render('products/allProducts', {
-                 Product,
-                 toThousand,
-                 session: req.session
-             })
-         },
-
-         
+             
 
          // Footer views 
          sobreNosotros: (req, res) => {

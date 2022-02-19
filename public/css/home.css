@@ -529,8 +529,8 @@ a:hover{
 .brderimgcarousel{
         border-radius: 3px;
         margin: 5px;
-        width: 300px;
-        height: 270px;
+        width: 260px;
+        height: 230px;
 
 }
 
@@ -540,4 +540,35 @@ a:hover{
     align-items: flex-start;
     margin: 50px;
     color: #700184;
+}
+
+.cardmarcas{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+    overflow: hidden;
+    margin: 10px 30px;
+}
+
+.contentmarcas{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0, .4);
+    opacity: 0;
+    transition: .5s
+}
+
+.contentmarcas h2, a {
+    color:white
+}
+
+.cardmarcas:hover .contentmarcas {
+    opacity:1;
 }

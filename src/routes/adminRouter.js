@@ -2,33 +2,34 @@ let express = require('express')
 let router = express.Router()
 let controller = require('../controllers/adminController')
 const upload = require('../middlewares/uploadProductFiles')
-let productFormValidator = require('../middlewares/ProductFormValidator')
+let productFormValidator = require('../validations/ProductFormValidator')
 const userSessionCheck = require('../middlewares/userSessionCheck')
+const userAdminCheck = require('../middlewares/userAdminCheck')
 
 
 //Las rutas llevan /admin/produ... al inicio
 
-router.get('/',  controller.indexAdmin) // Envia los datos
+router.get('/', userAdminCheck, controller.indexAdmin) // Envia los datos
 
 
-router.get('/products',  controller.dashboardProducts) // Envia los datos
+router.get('/products',  userAdminCheck, controller.dashboardProducts) // Envia los datos
 
 /* Usuarios CRUD */
-router.get('/users',  controller.dashboardUsers) // 
+router.get('/users', userAdminCheck, controller.dashboardUsers) // 
 
 
 
 /* Crear productos */
-router.get('/products/create',  controller.create) // Envia los datos
+router.get('/products/create',  userAdminCheck, controller.create) // Envia los datos
 
-router.post('/products/create',  upload.array('image'), productFormValidator, controller.store) //  Recibe los datos
+router.post('/products/create',  userAdminCheck, upload.array('image'), productFormValidator, controller.store) //  Recibe los datos
 
 
 /* Editar productos */
 
-router.get('/products/edit/:id', controller.edit);
+router.get('/products/edit/:id',userAdminCheck, controller.edit);
 
-router.put('/products/edit/:id', upload.array('image'), controller.update);
+router.put('/products/edit/:id', userAdminCheck, upload.array('image'), controller.update);
 
  
 /* Eliminar productos */
