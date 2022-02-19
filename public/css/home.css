@@ -538,20 +538,21 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 50px;
-    color: #700184;
+    margin: 30px;
+        color: #700184;
 }
 
 .cardmarcas{
-    width: 200px;
+    width: 250px;
     height: 300px;
     border-radius: 5px;
     background: var(--i);
     background-size: cover;
-    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+    box-shadow: 0px 0px 1px 1px rgb(144 151 155 / 80%);
     overflow: hidden;
     margin: 10px 30px;
 }
+
 
 .contentmarcas{
     width: 100%;
@@ -562,13 +563,57 @@ a:hover{
     justify-content: center;
     background: rgba(0,0,0, .4);
     opacity: 0;
-    transition: .5s
+    transition: .3s
 }
 
 .contentmarcas h2, a {
     color:white
 }
 
+.contentmarcas a {
+    color:white;
+    text-decoration: underline;
+}
+
 .cardmarcas:hover .contentmarcas {
+    opacity:1;
+}
+
+
+.cardmarcas1{
+    width: 560px;
+    height: 300px;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: 0px 0px 1px 1px rgb(144 151 155 / 80%);
+    overflow: hidden;
+    margin: 10px 30px;
+}
+
+
+.contentmarcas1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0, .4);
+    opacity: 0;
+    transition: .3s
+}
+
+
+.contentmarcas1 h2, a {
+    color:white
+}
+
+.contentmarcas1 a {
+    color:white;
+    text-decoration: underline;
+}
+
+.cardmarcas1:hover .contentmarcas1 {
     opacity:1;
 }
