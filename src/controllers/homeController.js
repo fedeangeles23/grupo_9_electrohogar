@@ -13,8 +13,8 @@
 
  let controller = {
      home: (req, res) => {
-         // Filtrando productos con descuento de 10%
-         db.Product.findAll({
+         // Filtrando productos con cuotas de 12
+        let products12cuotas = db.Product.findAll({
              include: [{ association: 'productImages'}],
              where: {
                  cuotes: {
@@ -22,9 +22,19 @@
                  }
              }
          })
-             .then((products12cuotas) => {
+         let productscomputacion = db.Product.findAll({
+            include: [{ association: 'productImages'}],
+            where: {
+                subcategoryId: {
+                    [Op.eq]: 10
+                }
+            }
+        })
+        Promise.all([products12cuotas, productscomputacion])
+             .then(([products12cuotas, productscomputacion]) => {
                  res.render('products/home', {
                     products12cuotas,
+                    productscomputacion,
                     toThousand,
                     session: req.session
                  })
@@ -33,19 +43,7 @@
              .catch(error => console.log(error))
 
      },
-
-
-     
-         products: (req, res) => {
-             res.render('products/allProducts', {
-                 Product,
-                 toThousand,
-                 session: req.session
-
-             })
-         },
-
-         
+             
 
          // Footer views 
          sobreNosotros: (req, res) => {

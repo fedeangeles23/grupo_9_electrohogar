@@ -1,3 +1,4 @@
+/* Swiper de cards */
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 5,
   spaceBetween: 5,
@@ -13,8 +14,17 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    640: {
+    320: {
       slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    520: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    
+    640: {
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     768: {
@@ -23,16 +33,17 @@ var swiper = new Swiper(".mySwiper", {
     },
     1024: {
       slidesPerView: 5,
-      spaceBetween: 50,
+      spaceBetween: 20,
 },
   }  
 });
 
+/* Swiper de carousel */
 var swiper1 = new Swiper(".mySwiper1", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
-    delay: 2500,
+    delay: 6000,
     disableOnInteraction: false,
   },
   pagination: {
@@ -44,3 +55,4 @@ var swiper1 = new Swiper(".mySwiper1", {
     prevEl: ".swiper-button-prev",
   },
 });
+

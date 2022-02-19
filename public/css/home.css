@@ -80,7 +80,7 @@
      margin:25px !important;
      cursor:pointer !important;
      background-color: #fff !important; 
-     height: 510px !important;
+     height: 380px !important;
      user-select: none;
  }
 
@@ -94,7 +94,6 @@
 
  .image-section{
      width: 100%;
-     height:300px;
      display:flex;
      justify-content: center;
      align-items: center;
@@ -388,7 +387,13 @@
 
 @media screen and (max-width: 496px) /*De este ancho para abajo se va a ver asi:*/ {
  
-    
+    .brderimgcarousel {
+        border-radius: 3px;
+        margin: 5px;
+        width: 126px;
+        height: 100px;
+    }
+
     .imgcategorias img {
         width: 300px;
         margin: 10px;
@@ -403,10 +408,15 @@
 
 /* Swiper JS */
 .swiper {
-    width: 100%;
+    width: 80%;
     height: 100%;
   }
 
+.mySwiper1{
+    width: 100%;
+    height: 100%;
+}
+  
   .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -475,4 +485,90 @@ span.discountCard {
 
 .sectionSwiper{
     background-color: #eeeeee;
+}
+
+.discountCardPrice {
+    display: flex;
+    justify-content: center;
+}
+
+.discountCardPrice .discountPrice{
+    font-size: 11px;
+    margin-right: 5px;  
+    text-decoration: line-through;
+    color: #878d8d;
+}
+
+.discountPricediv {
+    display: flex;
+    align-items: center;
+}
+
+a:hover{
+    color:rgb(13, 13, 233);
+}
+
+
+/* Marcas home */
+
+.containeHomerMarcas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marcasimg {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10px;
+}
+
+.brderimgcarousel{
+        border-radius: 3px;
+        margin: 5px;
+        width: 260px;
+        height: 230px;
+
+}
+
+.titulohomemarcas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px;
+    color: #700184;
+}
+
+.cardmarcas{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+    overflow: hidden;
+    margin: 10px 30px;
+}
+
+.contentmarcas{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0, .4);
+    opacity: 0;
+    transition: .5s
+}
+
+.contentmarcas h2, a {
+    color:white
+}
+
+.cardmarcas:hover .contentmarcas {
+    opacity:1;
 }
