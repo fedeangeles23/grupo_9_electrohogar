@@ -56,20 +56,48 @@ let H3 = document.querySelector('H3');
 H3.style.color = '#a100f2';
 
 
+
+let swiperSlide = document.querySelector('.swiper-slide');
+swiperSlide.style.backgroundColor = '#0b090a';
+
+let sectionSwiper = document.querySelector('.sectionSwiper');
+sectionSwiper.style.backgroundColor = '#0b090a';
+
+let containeHomerMarcas = document.querySelector('.containeHomerMarcas ');
+containeHomerMarcas.style.backgroundColor = '#0b090a';
+
 let SectionTittle = document.querySelector('.SectionTittle');
 SectionTittle.style.backgroundColor = '#0b090a';
-
 
 let swiper = document.querySelector('.imgcategorias');
 swiper.style.backgroundColor = '#0b090a';
 
 
-
+ let separadorh3 = document.querySelector('.separadorh3 H3');
+ separadorh3.style.color = '#a100f2';
+}
 
 //login
+{
+
+let ingreso = document.querySelector('.ingreso');
+ingreso.style.color = '#a100f2';
 
 
-let logregistermain = document.querySelector('.logregistermain');
-logregistermain.style.backgroundColor = '#0b090a';
-} 
+
+}
+
+//registro
+{
+    let logregistermain = document.querySelector('.logregistermain');
+    logregistermain.style.backgroundColor = '#0b090a';
+
+    let ingreso = document.querySelector('.ingreso');
+     ingreso.style.color = '#a100f2';
+
+    
+     let inputStyle = document.querySelector('.input-style placeholder');
+     inputStyle.style.backgroundColor = '#0b090a';
+ }
+
 
