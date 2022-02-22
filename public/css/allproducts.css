@@ -113,3 +113,22 @@ aside{
     display: flex;
     align-items: center;
 }
+
+.containersectioncards {
+    display: flex;
+}
+
+aside {
+    background-color: #f6f6f6;    
+    display: flex;
+    width: 260px;
+    height: 700px;
+    color: white;
+    padding: 20px;
+    font-size: 13px;
+    margin-left: 13px;
+    margin-top: 0px;
+}
+
+
+

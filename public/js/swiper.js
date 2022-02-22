@@ -54,5 +54,9 @@ var swiper1 = new Swiper(".mySwiper1", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
+
+
+  
 });
 

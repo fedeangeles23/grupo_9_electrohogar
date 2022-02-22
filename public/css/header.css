@@ -329,6 +329,10 @@ li{
 
 @media screen and (max-width: 769px) {
 
+    .containersectionperfil {
+       flex-direction: column;
+    }
+
     .brderimgcarousel {
         border-radius: 3px;
         margin: 5px;

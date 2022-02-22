@@ -107,6 +107,14 @@ const controller = {
         })
 
     },
+
+    editProfile: (req, res) => {
+        Users.findByPk(req.session.user.id, {
+            include: [{association: 'addresses'}]
+        })
+
+    },
+
     logout: (req, res) => {
         req.session.destroy();
         if (req.cookies.userElectroHogar) {

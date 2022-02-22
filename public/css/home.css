@@ -18,7 +18,6 @@
      flex-wrap: wrap;
      justify-content: center;
      align-items: center;
-     margin:40px;
  }
 
  .cards .new-arrival{
@@ -505,7 +504,7 @@ span.discountCard {
 }
 
 a:hover{
-    color:rgb(13, 13, 233);
+    color:rgb(16, 16, 182);
 }
 
 
@@ -616,4 +615,12 @@ a:hover{
 
 .cardmarcas1:hover .contentmarcas1 {
     opacity:1;
+}
+
+
+
+
+.dellikeform{
+    display: flex;
+    margin-top: 0px;
 }
