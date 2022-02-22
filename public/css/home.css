@@ -1,7 +1,7 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
  
   
  /* PRODUCT CARDS --------------------------------------------*/
@@ -47,9 +47,6 @@
      margin:auto;
  }
 
- 
- 
- 
  .card{
     display:flex  !important;
     justify-content: center !important;
@@ -63,11 +60,6 @@
     background-color: #fff !important; 
     height: 510px !important;
 }
-
-
-
-
-
 
  .cardSlider{
      display:flex  !important;
@@ -83,7 +75,6 @@
      height: 380px !important;
      user-select: none;
  }
-
 
  .card:hover{
     box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.66);
@@ -117,7 +108,6 @@
      margin-top: 15px;
      font-weight: 400;
      font-family: 'Roboto';
-
  }
 
 .descriptionSlider h1 {
@@ -168,7 +158,6 @@
     
  }
 
-
  .button-group .cart {
      background-color:none;
      font-size:12px;
@@ -194,22 +183,15 @@
    left: 110px;
    transition: 0.5ms;
    color:rgba(155, 153, 153, 0.411);
-     
 }
-
-
 
 .fav i:hover{
     color: rgb(6, 2, 219);
 }
 
-
 .carrousel img{
     width: 100%;
 }
-
- 
-
 
 @media screen and (max-width: 700px) /*De este ancho para abajo se va a ver asi:*/ {
     
@@ -228,14 +210,11 @@
         color: #fff;
         margin-bottom: 30px;
     }
-
     
     .card .cuotas {
         margin-bottom:5px;
     }
 }
-
-
 
  /* Carrousel INICIO */
 
@@ -271,8 +250,6 @@
     object-fit: cover;
   }
 
-
-
 /* LINEA BAJO CAROUSEL */
 
 .lineabajocarousel {
@@ -291,7 +268,6 @@
 .lineabajocarousel .col1linea .imgtrucklinea{
     width: 35px;
     height: 35px;
-
 }
 
 .lineabajocarousel .col1linea span {
@@ -303,15 +279,12 @@
 .lineabajocarousel .col1linea {
     display: flex;
     align-items: center;
-
 }
-
 
 .lineabajocarousel .col2linea a {
     color: blue;
     text-decoration: underline;
 }
-
 
 .lineabajocarousel .col2linea .tarjetaslinea {
     width: 170px;
@@ -320,7 +293,6 @@
 
 .lineabajocarousel .col3linea span {
     margin-left: 5px;
-
 }
 
 .lineabajocarousel .col3linea .envioslinea {
@@ -332,9 +304,6 @@
     display: flex;
     align-items: center;
 }
-
-
-
 
 /* CATEGORIAS IMAGENES GAMING,COCINA RESPONSIVE */
 
@@ -357,7 +326,6 @@
     .imgcategorias img {
         width: 450px;
         margin: 10px;
-
     }
 
     .lineabajocarousel {
@@ -374,15 +342,11 @@
             display: none;
         }
 
-
         .lineabajocarousel .col1linea .imgtrucklinea {
             width: 25px;
             height: 25px;
             margin-left: 3px;
         }
-
-
-
 }
 
 @media screen and (max-width: 496px) /*De este ancho para abajo se va a ver asi:*/ {
@@ -397,7 +361,6 @@
     .imgcategorias img {
         width: 300px;
         margin: 10px;
-
     }
 
 }
@@ -443,7 +406,6 @@
     object-fit: contain;
   }
 
-
 .SectionTittle {
     background-color: #eeeeee;
     padding: 20px;
@@ -463,12 +425,12 @@
 /* Cards de Slider */
 
 .favSlider i {
-        font-size: 20px;
-        position: relative;
-        bottom: 450px;
-        left: 110px;
-        transition: 0.5ms;
-        color:rgba(155, 153, 153, 0.411);        
+    font-size: 20px;
+    position: relative;
+    bottom: 450px;
+    left: 110px;
+    transition: 0.5ms;
+    color:rgba(155, 153, 153, 0.411);        
 }
 
 span.discountCard {
@@ -511,77 +473,75 @@ a:hover{
 
 /* Marcas home */
 
-.containeHomerMarcas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.contenedores-grid .titulo-marcas h3{
+    font-size: 25px;
+    text-decoration: solid;
+    font-family: 'Poppins',sans-serif;
+    color: #222;
+    text-align: center;
 }
 
-.marcasimg {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    margin-top: 10px;
-}
-
-.brderimgcarousel{
-        border-radius: 3px;
-        margin: 5px;
-        width: 260px;
-        height: 230px;
-
-}
-
-.titulohomemarcas {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 30px;
-        color: #700184;
-}
-
-.cardmarcas{
+.caja {
     width: 250px;
     height: 300px;
+    margin: 15px; /* Separación entre cajas */
     border-radius: 5px;
     background: var(--i);
     background-size: cover;
     box-shadow: 0px 0px 1px 1px rgb(144 151 155 / 80%);
     overflow: hidden;
-    margin: 10px 30px;
 }
 
-
-.contentmarcas{
+.caja .contenido-caja {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0, .4);
-    opacity: 0;
-    transition: .3s
+    flex-direction: column; /* Encolumna el contenido */
+    justify-content: center; /* Coloca en el centro el contendo que al ser en columna lo baja de arriba al centro */
+    align-items: center; /* Alínea el contenido al centro desde la izquierda por estar en columna */
+    background: rgba(0,0,0, .4); /* Fondo del contenido */
+    opacity: 0; /* Opacidad a 0 para dar efecto "oculto" */
+    transition: .3s  /* Para el efecto de transición al pasar el mouse */
 }
-
-.contentmarcas h2, a {
+/* Color del texto */
+.caja .contenido-caja h2,a{
     color:white
 }
-
-.contentmarcas a {
-    color:white;
+/* Estilo del enlace */
+.caja .contenido-caja a {
     text-decoration: underline;
 }
-
-.cardmarcas:hover .contentmarcas {
-    opacity:1;
+/* Efecto de oscurecimiento al mover el mouse */
+.caja:hover .contenido-caja {
+    opacity: 1;
 }
 
+/* Utilización de grid para acomodar cajas */
+.grid-marcas{
+    width: 90%;
+    margin: 0 auto;
+    background-color: gray;
+    padding: 20px;
+    display: grid; /* activo la grilla */
+    grid-template-columns: auto auto auto; /* Dispongo la cantidad de columnas */
+    justify-content: center; /* Centro las columnas */
+    grid-template-rows: auto;
+}
 
-.cardmarcas1{
-    width: 560px;
+/* Utilización de grid para encajar la última caja */
+.grid-marcas2{
+    width: 90%;
+    margin: -25px auto;
+    background-color: gray;
+    padding: 20px;
+    display: grid; /* activo la grilla */
+    grid-template-columns: auto auto auto; /* Dispongo la cantidad de columnas */
+    justify-content: center; /* Centro las columnas */
+    grid-template-rows: auto;
+}
+
+.caja-adaptable{
+    width: 600px;
     height: 300px;
     border-radius: 5px;
     background: var(--i);
@@ -589,10 +549,10 @@ a:hover{
     box-shadow: 0px 0px 1px 1px rgb(144 151 155 / 80%);
     overflow: hidden;
     margin: 10px 30px;
+    justify-content: center;
 }
 
-
-.contentmarcas1{
+.contenido-caja-adap{
     width: 100%;
     height: 100%;
     display: flex;
@@ -604,16 +564,41 @@ a:hover{
     transition: .3s
 }
 
-
-.contentmarcas1 h2, a {
+/* Color del texto */
+.caja-adaptable .contenido-caja-adap h2,a{
     color:white
 }
-
-.contentmarcas1 a {
-    color:white;
+/* Estilo del enlace */
+.caja-adaptable .contenido-caja-adap a {
     text-decoration: underline;
 }
+/* Efecto de oscurecimiento al mover el mouse */
+.caja-adaptable:hover .contenido-caja-adap {
+    opacity: 1;
+}
 
-.cardmarcas1:hover .contentmarcas1 {
-    opacity:1;
+@media screen and (max-width: 900px) {
+    
+    .grid-marcas{
+        grid-template-columns: auto auto;
+    }
+
+    .caja-adaptable{
+        width: 530px;
+        height: 250px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    
+    .grid-marcas{
+        grid-template-columns: auto;
+    }
+
+    .caja-adaptable{
+        width: 290px;
+        height: 190px;
+    }
+
 }
