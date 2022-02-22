@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url("variables.css");
 @import url("general.css");
 @import url("footer.css");
 @import url("carrito.css");
-@import url("HeaderNavFooter.css");
 @import url("carrusel.css");
 @import url("home.css");
 @import url("login.css");
@@ -22,5 +20,9 @@
 @import url('header.css');
 @import url('nav.css');
 @import url('admin.css');
+<<<<<<< HEAD
 @import url('wsp.css');
+=======
+@import url('searchresult.css');
+>>>>>>> 6a7354421e3756b0904a06739cdc32f8337e2f86
 

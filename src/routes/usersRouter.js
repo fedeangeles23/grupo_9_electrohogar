@@ -5,7 +5,7 @@ const { single } = require('../middlewares/uploadAvatar');
 const uploadFile = require('../middlewares/uploadAvatar');
 let loginValidator = require('../validations/loginValidator');
 let registerValidator = require('../validations/registerValidator');
-
+let userSessionCheck = require('../middlewares/userSessionCheck')
 
 
 
@@ -23,7 +23,10 @@ router.post('/registro',registerValidator, controller.processRegistro)
 router.get('/logout', controller.logout)
 
 
-router.get('/perfil',controller.perfil)
+router.get('/perfil', userSessionCheck ,controller.perfil)
+
+router.get('/loginGoogle', controller.loginGoogle);
+
 
 
 module.exports = router;

@@ -51,17 +51,37 @@
  
  
  .card{
-     display:flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction:column;
-     box-shadow: 0px 2px 4px rgb(0, 0, 0,25%);
-     width: 275px;
-     text-align: center;
-     margin:25px;
-     cursor:pointer;
-     background-color: #fff; 
-     height: 510px;
+    display:flex  !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction:column !important;
+    box-shadow: 0px 2px 4px rgb(0, 0, 0,25%) !important;
+    width: 275px !important;
+    text-align: center !important;
+    margin:25px !important;
+    cursor:pointer !important;
+    background-color: #fff !important; 
+    height: 510px !important;
+}
+
+
+
+
+
+
+ .cardSlider{
+     display:flex  !important;
+     justify-content: center !important;
+     align-items: center !important;
+     flex-direction:column !important;
+     box-shadow: 0px 2px 4px rgb(0, 0, 0,25%) !important;
+     width: 275px !important;
+     text-align: center !important;
+     margin:25px !important;
+     cursor:pointer !important;
+     background-color: #fff !important; 
+     height: 380px !important;
+     user-select: none;
  }
 
 
@@ -74,7 +94,6 @@
 
  .image-section{
      width: 100%;
-     height:340px;
      display:flex;
      justify-content: center;
      align-items: center;
@@ -100,6 +119,18 @@
      font-family: 'Roboto';
 
  }
+
+.descriptionSlider h1 {
+    font-size:12px;
+    text-transform: uppercase;
+    color:#222;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: 400;
+    font-family: 'Roboto';
+
+}
+
 
  .description span {
      font-size:16px;
@@ -159,7 +190,7 @@
 .fav i{
    font-size: 20px;
    position: relative;
-   bottom: 480px;
+   bottom: 450px;
    left: 110px;
    transition: 0.5ms;
    color:rgba(155, 153, 153, 0.411);
@@ -177,7 +208,7 @@
     width: 100%;
 }
 
-
+ 
 
 
 @media screen and (max-width: 700px) /*De este ancho para abajo se va a ver asi:*/ {
@@ -203,6 +234,43 @@
         margin-bottom:5px;
     }
 }
+
+
+
+ /* Carrousel INICIO */
+
+ .swiper1 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 
 
 /* LINEA BAJO CAROUSEL */
@@ -319,7 +387,13 @@
 
 @media screen and (max-width: 496px) /*De este ancho para abajo se va a ver asi:*/ {
  
-    
+    .brderimgcarousel {
+        border-radius: 3px;
+        margin: 5px;
+        width: 126px;
+        height: 100px;
+    }
+
     .imgcategorias img {
         width: 300px;
         margin: 10px;
@@ -332,9 +406,214 @@
 /* LINE BAJO CAROUSEL RESPONSIVE */
 
 
-/* Swiper  */
-
+/* Swiper JS */
 .swiper {
-    width: 600px;
-    height: 300px;
+    width: 80%;
+    height: 100%;
   }
+
+.mySwiper1{
+    width: 100%;
+    height: 100%;
+}
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: #eeeeee;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+
+.SectionTittle {
+    background-color: #eeeeee;
+    padding: 20px;
+}
+
+.SectionTittle h3 {
+    color: black;
+    font-size: 19px;
+    font-family: 'Poppins';
+    user-select: none;
+}
+
+.SectionTittle b {
+    color: blue;
+}
+
+/* Cards de Slider */
+
+.favSlider i {
+        font-size: 20px;
+        position: relative;
+        bottom: 450px;
+        left: 110px;
+        transition: 0.5ms;
+        color:rgba(155, 153, 153, 0.411);        
+}
+
+span.discountCard {
+    background-color: #1a1ab3;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.cuotasSlider{
+    font-size: 11px;
+}
+
+.sectionSwiper{
+    background-color: #eeeeee;
+}
+
+.discountCardPrice {
+    display: flex;
+    justify-content: center;
+}
+
+.discountCardPrice .discountPrice{
+    font-size: 11px;
+    margin-right: 5px;  
+    text-decoration: line-through;
+    color: #878d8d;
+}
+
+.discountPricediv {
+    display: flex;
+    align-items: center;
+}
+
+a:hover{
+    color:rgb(13, 13, 233);
+}
+
+
+/* Marcas home */
+
+.containeHomerMarcas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marcasimg {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10px;
+}
+
+.brderimgcarousel{
+        border-radius: 3px;
+        margin: 5px;
+        width: 260px;
+        height: 230px;
+
+}
+
+.titulohomemarcas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px;
+        color: #700184;
+}
+
+.cardmarcas{
+    width: 250px;
+    height: 300px;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: 0px 0px 1px 1px rgb(144 151 155 / 80%);
+    overflow: hidden;
+    margin: 10px 30px;
+}
+
+
+.contentmarcas{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0, .4);
+    opacity: 0;
+    transition: .3s
+}
+
+.contentmarcas h2, a {
+    color:white
+}
+
+.contentmarcas a {
+    color:white;
+    text-decoration: underline;
+}
+
+.cardmarcas:hover .contentmarcas {
+    opacity:1;
+}
+
+
+.cardmarcas1{
+    width: 560px;
+    height: 300px;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: 0px 0px 1px 1px rgb(144 151 155 / 80%);
+    overflow: hidden;
+    margin: 10px 30px;
+}
+
+
+.contentmarcas1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0, .4);
+    opacity: 0;
+    transition: .3s
+}
+
+
+.contentmarcas1 h2, a {
+    color:white
+}
+
+.contentmarcas1 a {
+    color:white;
+    text-decoration: underline;
+}
+
+.cardmarcas1:hover .contentmarcas1 {
+    opacity:1;
+}

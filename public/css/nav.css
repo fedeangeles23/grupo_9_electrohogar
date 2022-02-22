@@ -70,6 +70,7 @@ font-size: 15px;;
     background-color: #ffffff;
     list-style: none;
     z-index: 10;
+
 }
 
 
@@ -80,10 +81,9 @@ font-size: 15px;;
 
 
 .lidrop:hover{
-    background-color: #0a07da;
+    background-color: #0613ca;
     color: rgb(255, 255, 255); 
     border-radius: 5px;
-    transition: 0.3s;
 }
 
 
@@ -103,14 +103,13 @@ font-size: 15px;;
 
 .a_drop {
 color:black;
-    text-decoration: none;
 }
 
+.lidrop:hover .a_drop {
+    color: rgb(255, 255, 255);
+ 
+    }
 
-.a_drop:hover{
-    color:rgb(255, 255, 255);
-
-}
 
 
 @media screen and (max-width:845px) {
@@ -126,7 +125,9 @@ color:black;
 
 @media screen and (max-width:769px) {
     .nav {
-        display: none;
+        display: none !important;
     }
  
  }
+
+ 

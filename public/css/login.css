@@ -285,12 +285,7 @@ button.btncontinuar:hover{
 
 
 .google-btnlogin {
-        width: 200px ;
-        height: 42px;
-        background-color: #4285f4;
-        border-radius: 30px;
-        box-shadow: 0 3px 4px 0 rgb(0 0 0 / 25%);
-        margin-bottom: 20px;
+       margin: 10px;
 }
 
 input.input-style{

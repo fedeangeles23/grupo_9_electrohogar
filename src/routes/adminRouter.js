@@ -2,33 +2,45 @@ let express = require('express')
 let router = express.Router()
 let controller = require('../controllers/adminController')
 const upload = require('../middlewares/uploadProductFiles')
-const AdminCheck = require('../middlewares/AdminCheck')
+let productFormValidator = require('../validations/ProductFormValidator')
+const userSessionCheck = require('../middlewares/userSessionCheck')
+const userAdminCheck = require('../middlewares/userAdminCheck')
 
 
 //Las rutas llevan /admin/produ... al inicio
 
-router.get('/', controller.dashboard) // Envia los datos
+router.get('/', userAdminCheck, controller.indexAdmin) // Envia los datos
+
+
+router.get('/products',  userAdminCheck, controller.dashboardProducts) // Envia los datos
+
+/* Usuarios CRUD */
+router.get('/users', userAdminCheck, controller.dashboardUsers) // 
+
 
 
 /* Crear productos */
-router.get('/products/create', AdminCheck , controller.create) // Envia los datos
-router.post('/products',  upload.single('imagen'), controller.store) //  Recibe los datos
+router.get('/products/create',  userAdminCheck, controller.create) // Envia los datos
+
+router.post('/products/create',  userAdminCheck, upload.array('image'), productFormValidator, controller.store) //  Recibe los datos
 
 
 /* Editar productos */
 
-router.get('/products/edit/:id', AdminCheck, controller.edit);
-router.put('/products/detail/:id', controller.update);
+router.get('/products/edit/:id',userAdminCheck, controller.edit);
+
+router.put('/products/edit/:id', userAdminCheck, upload.array('image'), controller.update);
 
  
 /* Eliminar productos */
 
-router.delete('/products/detail/:id', AdminCheck, controller.del);
+router.delete('/products/:id', controller.del);
+
+/* AdminCheck NO TE OLVIDES JOAQUIN AAAAAAAAAAAAAAAAAA 
+Pasar userSessionCheck
+*/
 
 
-module.exports = router // Exportamos el let router
-
-// Esta es la estructura principal del routes en nuestro proyecto
-
-// Con esto creamos el enrutador, 1 para detalle de prod, otra para carrito, etc.
+module.exports = router 
+// Esta es la estructura principal del routes en nuestro proyecto, con esto creamos el enrutador, 1 para detalle de prod, otra para carrito, etc.
 

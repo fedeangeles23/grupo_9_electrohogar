@@ -14,26 +14,39 @@
    <main>
     <div class="container-perfil">
 
-        <p class="bienvenido">Bienvenido <b> <% if (typeof session.user != "undefined") { %>
+      <p class="bienvenido">Bienvenido <b> <% if (typeof session.user != "undefined") { %>
         <span> <%= session.user.name %> </span>  
 
+      <div class="containersectionperfil">
+
+          <div class="misDatosdiv">
         <div class="perfil2">
-          <p class="perfil2">Nombre: <%= session.user.name %> </p>
-          <p class="perfil2">Apellido: <%= session.user.last_name %> </p>
+          <span>Mis datos:</span>
+          <p class="perfil2">Usuario: <b> <%= session.user.name  %> <%= session.user.last_name %></b></p>
           <p class="perfil2">Email: <%= session.user.email %></p>
           <p class="perfil2">Telefono: <%= session.user.tel %></p>
           <p class="perfil2">Direccion: <%= session.user.address %></p>
-    
+    <div class="btndatossesion">
+      <a href="#">Editar mis datos</a><a href="/users/logout">Cerrar sesion</a>
+
+    </div>
+
           </div>
+
+        </div>
+
+         
 
       <% } else {%>
         Usuario
       <% } %> 
 
 
-        
+      <p class="datos"> Mis favoritos </p>
+
+      <h3>Aun no tienes favoritos..</h3>
+
       
-             <span class="cuenta"> <button type="continue" class="btn-continuee">Editar mis datos</button></span>
       
              <p class="datos"> Mis compras </p>
       
@@ -64,7 +77,9 @@
       
                   
           </div>
-      
+          
+        </div>
+
    
    <%- include('../partials/footer.ejs')  %> 
    <%- include('../partials/scripts.ejs')  %> 

@@ -14,6 +14,12 @@ const controller = {
         })
     },
 
+    loginGoogle: (req, res) => {
+        res.render('users/loginGoogle', {
+            session: req.session
+        })
+    },
+
     processLogin: (req, res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
