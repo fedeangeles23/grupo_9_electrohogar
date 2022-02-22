@@ -44,7 +44,6 @@ footer .content .top{
  
 }
 
-
 .logo_name:hover{
   color:rgb(136, 136, 136);
   transition: 0.3s ease-in-out;
@@ -189,7 +188,7 @@ footer .content .link-boxes .box{
   font-size: 16px;
 }
 
-.link-boxes .input-box input[type="button"]{
+.link-boxes .input-box input[type="submit"]{
   background: #fff;
   color: #140B5C;
   border: none;
@@ -201,8 +200,12 @@ footer .content .link-boxes .box{
   transition: all 0.4s ease;
 }
 
-.input-box input[type="button"]:hover{
+.input-box input[type="submit"]:hover{
   opacity: 1;
+}
+
+.input-box input[type="submit"]:active{
+  background: #fff;
 }
 
 footer .bottom-details{

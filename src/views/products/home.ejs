@@ -2,235 +2,135 @@
 <html lang="es">
 <%- include('../partials/head.ejs') %>
 
-<body>
-    <%- include('../partials/header.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
 
-    <%- include ('../partials/nav.ejs') %>
-
-
-    <main>
-
-       
-
-          
-        <!-- Carrousel -->
-        <div class="swiper mySwiper1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="/images/bannerEG.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="/images/BANNEREG1.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="/images/BANNEREG2.jpg" alt=""></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
+            <%- include ('../partials/nav.ejs') %>
 
 
-        <!-- End Carrousel -->
+                <main>
 
-        <!-- Linea bajo carusel -->
+                    <!-- Carrousel -->
+                    <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="/images/bannerEG.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/images/BANNEREG1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="/images/BANNEREG2.jpg" alt=""></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
 
-        <div class="lineabajocarousel">
-            <div class="col1linea">
-                <img class="imgtrucklinea" src="/images/delivery-truck (1).png" alt="">
-                <span>ENVÍOS A <b> TODO EL PAÍS </b> </span>
-            </div>
 
-            <div class="col2linea">
-                <img class="tarjetaslinea" src="/images/549d2cb2275c2ae398b2f7bd1450.png" alt="">
-                <span>Pagá con crédito y débito
-                    <a href="#">Ver promociones</a></span>
-            </div>
+                    <!-- End Carrousel -->
 
-            <div class="col3linea">
-                <img class="envioslinea" src="/images/ayudar.png" alt="">
-                <span>Consulta tus dudas al <b>0810-1111-4444</b> </span>
+                    <!-- Linea bajo carusel -->
 
-            </div>
-        </div>
-        <!-- End Linea bajo carusel -->
+                    <div class="lineabajocarousel">
+                        <div class="col1linea">
+                            <img class="imgtrucklinea" src="/images/delivery-truck (1).png" alt="">
+                            <span>ENVÍOS A <b> TODO EL PAÍS </b> </span>
+                        </div>
 
-        <!-- Swiper / 12 Cuotas -->
+                        <div class="col2linea">
+                            <img class="tarjetaslinea" src="/images/549d2cb2275c2ae398b2f7bd1450.png" alt="">
+                            <span>Pagá con crédito y débito
+                                <a href="#">Ver promociones</a></span>
+                        </div>
 
-        <div class="SectionTittle">
-            <div class="separadorh3">
-            </div>
-            <H3>Ofertas imperdibles en <b> 12 cuotas sin interes! </b></H3>
-            <div class="separadorh3">
-            </div>
-        </div>
+                        <div class="col3linea">
+                            <img class="envioslinea" src="/images/ayudar.png" alt="">
+                            <span>Consulta tus dudas al <b>0810-1111-4444</b> </span>
 
-        <div class="sectionSwiper">
-            <!-- Swiper / 12 Cuotas -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
+                        </div>
+                    </div>
+                    <br>
+                    <!-- End Linea bajo carusel -->
 
-                    <% products12cuotas.forEach(Product=> { %>
-                    <div class="swiper-slide">
-                        <div class="cardSlider">
-                            <a href="/products/detail/<%- Product.id %>">
-                                <div class="image-section">
-                                    <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
-                                </div>
-                                <div class="descriptionSlider">
-                                    <h1>
-                                        <% if (Product.name.length > 10) { %>
-                                        <%- `${Product.name.slice(0,90)}` %>
-                                        <% } else { %>
-                                        <%= Product.name %>
-                                        <% } %> </h1>
-                                    <span>$<%- Product.price %></span>
-                                    <div class="discountCardPrice">
+                    <!-- Swiper / 12 Cuotas -->
 
-                                        <div class="discountPricediv">
-                                            <% if (Product.discount > 0) { %>
-                                            <span class="discountPrice">
-                                                <%-   (Product.price * Product.discount) / 100 %> </span>
-                                            <span class="discountCard"> <%- Product.discount%> %OFF </span>
-                                            <% } else { %>
+                    <div class="SectionTittle">
+                        <div class="separadorh3">
+                        </div>
+                        <H3>Ofertas imperdibles en <b> 12 cuotas sin interes! </b></H3>
+                        <div class="separadorh3">
+                        </div>
+                    </div>
 
-                                            <% } %>
+                    <div class="sectionSwiper">
+                        <!-- Swiper / 12 Cuotas -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+
+                                <% products12cuotas.forEach(Product=> { %>
+                                    <div class="swiper-slide">
+                                        <div class="cardSlider">
+                                            <a href="/products/detail/<%- Product.id %>">
+                                                <div class="image-section">
+                                                    <img src="/images/productsDB/<%- Product.productImages[0].image %>"
+                                                        alt="">
+                                                </div>
+                                                <div class="descriptionSlider">
+                                                    <h1>
+                                                        <% if (Product.name.length> 10) { %>
+                                                            <%- `${Product.name.slice(0,90)}` %>
+                                                                <% } else { %>
+                                                                    <%= Product.name %>
+                                                                        <% } %>
+                                                    </h1>
+                                                    <span>$<%- Product.price %></span>
+                                                    <div class="discountCardPrice">
+
+                                                        <div class="discountPricediv">
+                                                            <% if (Product.discount> 0) { %>
+                                                                <span class="discountPrice">
+                                                                    <%- (Product.price * Product.discount) / 100 %>
+                                                                </span>
+                                                                <span class="discountCard">
+                                                                    <%- Product.discount%> %OFF
+                                                                </span>
+                                                                <% } else { %>
+
+                                                                    <% } %>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <small class="cuotasSlider">
+                                                    <%- Product.cuotes %> cuotas x
+                                                        <%- Product.price / Product.cuotes %>
+                                                </small>
+
+                                            </a>
+
                                         </div>
-
                                     </div>
 
-                                </div>
-                                <small class="cuotasSlider"> <%- Product.cuotes %> cuotas x
-                                    <%- Product.price / Product.cuotes  %>
-                                </small>
+                                    <% }) %>
 
-
-
-
-                            </a>
-
-
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
-
-                    <% }) %>
-
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-        <!-- END Swiper / 12 Cuotas -->
+                    <br>
+                    <!-- END Swiper / 12 Cuotas -->
 
 
-        <div class="imgcategorias">
-            <a href="/products/category/5"> <img src="/images/512.jpg" alt=""></a>
-            <a href="/products/category/3"> <img src="/images/513.jpg" alt=""></a>
-        </div>
-
-
-        <!-- Swiper / Notebookss -->
-
-        <div class="SectionTittle">
-            <div class="separadorh3">
-            </div>
-            <H3> Las mejores notebooks para<b> estudiar </b></H3>
-            <div class="separadorh3">
-            </div>
-        </div>
-
-        <div class="sectionSwiper">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-
-                    <% productscomputacion.forEach(Product=> { %>
-                    <div class="swiper-slide">
-                        <div class="cardSlider">
-                            <a href="/products/detail/<%- Product.id %>">
-                                <div class="image-section">
-                                    <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
-                                </div>
-                                <div class="descriptionSlider">
-                                    <h1>
-                                        <% if (Product.name.length > 10) { %>
-                                        <%- `${Product.name.slice(0,90)}` %>
-                                        <% } else { %>
-                                        <%= Product.name %>
-                                        <% } %> </h1>
-                                    <span>$<%- Product.price %></span>
-                                    <div class="discountCardPrice">
-
-                                        <div class="discountPricediv">
-                                            <% if (Product.discount > 0) { %>
-                                            <span class="discountPrice">
-                                                <%-   (Product.price * Product.discount) / 100 %> </span>
-                                            <span class="discountCard"> <%- Product.discount%> %OFF </span>
-                                            <% } else { %>
-
-                                            <% } %>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <small class="cuotasSlider"> <%- Product.cuotes %> cuotas x
-                                    <%- Product.price / Product.cuotes  %>
-                                </small>
-
-
-
-
-                            </a>
-
-
-                        </div>
+                    <div class="imgcategorias">
+                        <a href="/products/category/5"> <img src="/images/512.jpg" alt=""></a>
+                        <a href="/products/category/3"> <img src="/images/513.jpg" alt=""></a>
                     </div>
 
-                    <% }) %>
 
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
+                    <!-- Swiper / Notebookss -->
 
-        <!-- END Swiper / Notebookss -->
-
-        <div class="containeHomerMarcas">
-            <div class="titulohomemarcas">
-                <h3> Echa un vistazo a nuestras marcas destacadas</h3>
-                <div class="marcasimg">
-                    <div class="cardmarcas" style="--i:url(/images/carouselMarcas1.jpg)">
-                        <div class="contentmarcas">
-                            <h2>Samsung</h2>
-                            <a href="#">Ver productos Samsung</a>
+                    <div class="SectionTittle">
+                        <div class="separadorh3">
                         </div>
-                    </div>
-                    <div class="cardmarcas" style="--i:url(/images/carouselMarcas2.jpg)">
-                        <div class="contentmarcas">
-                            <h2>Apple</h2>
-                            <a href="#">Ver productos Apple</a>
-                        </div>
-                    </div>
-                    <div class="cardmarcas" style="--i:url(/images/carouselMarcas3.jpg)">
-                        <div class="contentmarcas">
-                            <h2>HP</h2>
-                            <a href="#">Ver productos HP</a>
-                        </div>
-                    </div> <div class="cardmarcas" style="--i:url(/images/carousel2marcas1.jpg)">
-                        <div class="contentmarcas">
-                            <h2>Xiaomi</h2>
-                            <a href="#">Ver productos Xiaomi</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="marcasimg">
-                    <div class="cardmarcas" style="--i:url(/images/carouselMarcas4.jpg)">
-                        <div class="contentmarcas">
-                            <h2>Motorola</h2>
-                            <a href="#">Ver productos Motorola</a>
-                        </div>
-                    </div>
-                   
-                    <div class="cardmarcas" style="--i:url(/images/drean.jpg)">
-                        <div class="contentmarcas">
-                            <h2>Drean</h2>
-                            <a href="#">Ver productos Drean</a>
+                        <H3> Las mejores notebooks para<b> estudiar </b></H3>
+                        <div class="separadorh3">
                         </div>
                     </div>
                     <div class="cardmarcas1" style="--i:url(/images/carouselMarcas6.jpg)">
@@ -240,39 +140,133 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
+                    <div class="sectionSwiper">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
 
+                                <% productscomputacion.forEach(Product=> { %>
+                                    <div class="swiper-slide">
+                                        <div class="cardSlider">
+                                            <a href="/products/detail/<%- Product.id %>">
+                                                <div class="image-section">
+                                                    <img src="/images/productsDB/<%- Product.productImages[0].image %>"
+                                                        alt="">
+                                                </div>
+                                                <div class="descriptionSlider">
+                                                    <h1>
+                                                        <% if (Product.name.length> 10) { %>
+                                                            <%- `${Product.name.slice(0,90)}` %>
+                                                                <% } else { %>
+                                                                    <%= Product.name %>
+                                                                        <% } %>
+                                                    </h1>
+                                                    <span>$<%- Product.price %></span>
+                                                    <div class="discountCardPrice">
 
+                                                        <div class="discountPricediv">
+                                                            <% if (Product.discount> 0) { %>
+                                                                <span class="discountPrice">
+                                                                    <%- (Product.price * Product.discount) / 100 %>
+                                                                </span>
+                                                                <span class="discountCard">
+                                                                    <%- Product.discount%> %OFF
+                                                                </span>
+                                                                <% } else { %>
 
-        </div>
+                                                                    <% } %>
+                                                        </div>
 
+                                                    </div>
 
+                                                </div>
+                                                <small class="cuotasSlider">
+                                                    <%- Product.cuotes %> cuotas x
+                                                        <%- Product.price / Product.cuotes %>
+                                                </small>
 
+                                            </a>
 
+                                        </div>
+                                    </div>
 
+                                    <% }) %>
 
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
 
-    </main>
+                    <!-- END Swiper / Notebookss -->
 
+                    <!-- Marcas destacadas -->
 
+                    <div class="contenedores-grid">
+                        <div class="titulo-marcas">
+                            <h3>¡Nuestras marcas destacadas!</h3>
+                        </div>
+                        <div class="grid-marcas">
 
+                            <div class="caja" style="--i:url(/images/carouselMarcas1.jpg)">
+                                <div class="contenido-caja">
+                                    <h2>Samsung</h2>
+                                    <a href="#">Ver productos Samsung</a>
+                                </div>
+                            </div>
+                            <div class="caja" style="--i:url(/images/carouselMarcas2.jpg)">
+                                <div class="contenido-caja">
+                                    <h2>Apple</h2>
+                                    <a href="#">Ver productos Apple</a>
+                                </div>
+                            </div>
+                            <div class="caja" style="--i:url(/images/carouselMarcas3.jpg)">
+                                <div class="contenido-caja">
+                                    <h2>HP</h2>
+                                    <a href="#">Ver productos HP</a>
+                                </div>
+                            </div>
+                            <div class="caja" style="--i:url(/images/Carousel2Marcas1.jpg)">
+                                <div class="contenido-caja">
+                                    <h2>Xiaomi</h2>
+                                    <a href="#">Ver productos Xiaomi</a>
+                                </div>
+                            </div>
+                            <div class="caja" style="--i:url(/images/carouselMarcas4.jpg)">
+                                <div class="contenido-caja">
+                                    <h2>Motorola</h2>
+                                    <a href="#">Ver productos Motorola</a>
+                                </div>
+                            </div>
+                            <div class="caja" style="--i:url(/images/drean.jpg)">
+                                <div class="contenido-caja">
+                                    <h2>Drean</h2>
+                                    <a href="#">Ver productos Drean</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-marcas2">
+                            <div class="caja-adaptable" style="--i:url(/images/carouselMarcas6.jpg)">
+                                <div class="contenido-caja-adap">
+                                    <h2>TCL</h2>
+                                    <a href="#">Ver productos TCL</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </main>
 
-    <%- include ('../partials/footer.ejs') %>
+                <%- include ('../partials/footer.ejs') %>
 
-    <%- include ('../partials/scripts.ejs') %>
+                    <%- include ('../partials/scripts.ejs') %>
 
-    <!-- Google login script -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+                        <!-- Google login script -->
+                        <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+                        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-    <script src="/js/oscuro.js"></script>
+                        <script src="/js/oscuro.js"></script>
 
-
-</body>
-
-
-
+    </body>
 
 </html>

@@ -175,6 +175,10 @@ button.btncontinuar:hover{
         font-size: 13px;
     }
 
+    button.btn.btn-continue:hover {
+       text-decoration: none;
+    }
+
     .olvide {
        font-size: 25px;
     }

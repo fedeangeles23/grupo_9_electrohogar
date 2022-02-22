@@ -6,6 +6,7 @@ const Products = db.Products;
 
 
 
+ 
 const controller = {
     login: (req, res) => {
         res.render('users/login', {
@@ -56,6 +57,9 @@ const controller = {
                 session: req.session
             })
         }
+
+       // console.log(req.body)
+       // console.log(user)
     },
 
 
