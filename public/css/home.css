@@ -411,7 +411,7 @@
 
 .SectionTittle h3 {
     color: black;
-    font-size: 19px;
+    font-size: 25px;
     font-family: 'Poppins';
     user-select: none;
 }
@@ -560,15 +560,15 @@ span.discountCard {
     justify-content: center;
     background: rgba(0,0,0, .4);
     opacity: 0;
-    transition: .3s
+    transition: .3s;
 }
 
 /* Color del texto */
 .caja-adaptable .contenido-caja-adap h2,a{
-    color:white
+    color:white;
 }
 .caja-adaptable .contenido-caja-adap a{
-    color:white
+    color:white;
 }
 /* Estilo del enlace */
 .caja-adaptable .contenido-caja-adap a {

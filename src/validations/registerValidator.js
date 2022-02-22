@@ -3,7 +3,6 @@ const db = require('../database/models')
 
 const Users = db.User 
 
-
 module.exports = [
     check('name')
     .notEmpty()
@@ -17,7 +16,6 @@ module.exports = [
     .isEmail()
     .withMessage('Debes ingresar un email válido'),
 
-   
     body('email').custom((value) => {
         return Users.findOne({
             where: {
