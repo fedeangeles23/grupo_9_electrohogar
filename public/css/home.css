@@ -100,6 +100,7 @@
  .description{
      text-align: center;
  }
+
  .description h1{
      font-size:16px;
      text-transform: uppercase;
@@ -118,9 +119,7 @@
     margin-top: 15px;
     font-weight: 400;
     font-family: 'Roboto';
-
 }
-
 
  .description span {
      font-size:16px;
@@ -154,8 +153,7 @@
  }
 
  .button-group .buy:hover{
-    transition: 0.6s ease;
-    
+    transition: 0.6s ease; 
  }
 
  .button-group .cart {
@@ -466,9 +464,9 @@ span.discountCard {
     align-items: center;
 }
 
-a:hover{
+/* a:hover{
     color:rgb(13, 13, 233);
-}
+} */
 
 
 /* Marcas home */
@@ -501,11 +499,14 @@ a:hover{
     align-items: center; /* Alínea el contenido al centro desde la izquierda por estar en columna */
     background: rgba(0,0,0, .4); /* Fondo del contenido */
     opacity: 0; /* Opacidad a 0 para dar efecto "oculto" */
-    transition: .3s  /* Para el efecto de transición al pasar el mouse */
+    transition: .3s;  /* Para el efecto de transición al pasar el mouse */
 }
 /* Color del texto */
 .caja .contenido-caja h2,a{
-    color:white
+    color:white;
+}
+.caja .contenido-caja a{
+    color:white;
 }
 /* Estilo del enlace */
 .caja .contenido-caja a {
@@ -520,7 +521,6 @@ a:hover{
 .grid-marcas{
     width: 90%;
     margin: 0 auto;
-    background-color: gray;
     padding: 20px;
     display: grid; /* activo la grilla */
     grid-template-columns: auto auto auto; /* Dispongo la cantidad de columnas */
@@ -532,7 +532,6 @@ a:hover{
 .grid-marcas2{
     width: 90%;
     margin: -25px auto;
-    background-color: gray;
     padding: 20px;
     display: grid; /* activo la grilla */
     grid-template-columns: auto auto auto; /* Dispongo la cantidad de columnas */
@@ -566,6 +565,9 @@ a:hover{
 
 /* Color del texto */
 .caja-adaptable .contenido-caja-adap h2,a{
+    color:white
+}
+.caja-adaptable .contenido-caja-adap a{
     color:white
 }
 /* Estilo del enlace */
