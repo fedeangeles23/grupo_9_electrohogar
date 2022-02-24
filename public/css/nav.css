@@ -153,6 +153,8 @@ color:black;
     border-radius: 6px ;
     padding-left: 20px;
     text-align: left;
+    font-size: 13px;
+    color: #2e2e2f;
 }
 
 .nav__link--inside:hover{

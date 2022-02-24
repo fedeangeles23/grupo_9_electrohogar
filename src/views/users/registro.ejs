@@ -10,7 +10,6 @@
 
   <%- include('../partials/nav.ejs') %>
 
-      <%- include('../partials/nav.ejs') %>
 
   <main class="logregistermain">
     <div class="container">
@@ -29,6 +28,7 @@
               <div class="form">
                 <input class="input-style" type="text" name="name" placeholder="Nombre:"
                   value="<%= locals.old && old.name %>">
+                  <small>Error msg</small>
                 <% if (locals.errors && errors.name) { %>
                 <span class="error">
                   <%= errors.name.msg %>
@@ -39,6 +39,8 @@
                 <div class="form">
                   <input id="#email" class="input-style email" type="text" name="last_name" placeholder="Apellido:"
                     value="<%= locals.old && old.last_name %>">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
                   <% if (locals.errors && errors.last_name) { %>
                   <span class="error">
                     <%= errors.last_name.msg %>
