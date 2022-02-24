@@ -135,7 +135,7 @@
                                     <% } %> </h1>
                                 <span>$<%- Product.price %></span>
                             </div>
-                            <small class="cuotas"> <%- Product.cuotes %> cuotas x <%- Product.price / Product.cuotes  %>
+                            <small class="cuotas"> <%- Product.cuotes %> cuotas x <%- (Math.ceil(Product.price / Product.cuotes))  %>
                             </small>
                             <span> </span>
                         </a>

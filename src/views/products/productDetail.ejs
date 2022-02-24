@@ -41,7 +41,7 @@
                                 
                                 <h3 class="tituloprod"><%- productdetail.name %>  </h3>
                                 <h4 class="precioprod">$<%- productdetail.price %> </h4>
-                                <p class="cuotaprod"><%- productdetail.cuotes  %> Cuotas sin interes x $<%- productdetail.price / productdetail.cuotes  %> </p>
+                                <p class="cuotaprod"><%- productdetail.cuotes  %> Cuotas sin interes x $<%- (Math.ceil(productdetail.price / productdetail.cuotes))  %> </p>
                                
                                 <input type="number" value="1">
                                 <a href="#" class="btncomprar">Comprar</a>
