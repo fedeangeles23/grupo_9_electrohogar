@@ -329,6 +329,10 @@ li{
 
 @media screen and (max-width: 769px) {
 
+    .containersectionperfil {
+       flex-direction: column;
+    }
+
     .brderimgcarousel {
         border-radius: 3px;
         margin: 5px;
@@ -372,10 +376,8 @@ li{
         border: none;
     }
 
-/* Linea nav bajo carousel tablet */
-.col2linea {
-    display: none;
-}
+
+    
   }
 
 
@@ -387,10 +389,12 @@ li{
 
 .hovercuenta {
     background-color: white;
+    width: 200px;
+    height: 100px;
     position: absolute;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.05);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.05);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.05);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
     z-index: 9999;
     display: none;
   }

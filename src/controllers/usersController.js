@@ -6,6 +6,7 @@ const Products = db.Products;
 
 
 
+ 
 const controller = {
     login: (req, res) => {
         res.render('users/login', {
@@ -56,6 +57,9 @@ const controller = {
                 session: req.session
             })
         }
+
+       // console.log(req.body)
+       // console.log(user)
     },
 
 
@@ -107,6 +111,14 @@ const controller = {
         })
 
     },
+
+    editProfile: (req, res) => {
+        Users.findByPk(req.session.user.id, {
+            include: [{association: 'addresses'}]
+        })
+
+    },
+
     logout: (req, res) => {
         req.session.destroy();
         if (req.cookies.userElectroHogar) {

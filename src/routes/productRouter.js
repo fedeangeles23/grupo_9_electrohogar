@@ -19,7 +19,8 @@ router.get('/search', controller.search)
 router.get('/carrito', controller.carrito)
 
 
-
+/* GET - Search products */
+router.get('/search', controller.search) 
 
 /* router.get('/gaming', controller.gaming) // 
  */

@@ -12,67 +12,147 @@
 
         <div class="boxarea1">
             <div class="namecategory">
-               <span> Estas en la categoria <b> <%= category.name %> </b> </span>   
+                <span> Estas en la categoria <b> <%= category.name %> </b> </span>
             </div>
 
             <div class="containerCategory">
                 <div class="boxareachild1">
                     <span><b><%- products.length %> </b>Productos</span>
                 </div>
-    
+
                 <div class="boxareachild2">
-                   <span>Vista:</span>  
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"></path></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z"></path></svg>
+                    <span>Vista:</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1);transform: msFilter">
+                        <path
+                            d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z">
+                        </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1);transform: msFilter">
+                        <path d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z">
+                        </path>
+                    </svg>
                 </div>
-    
+
                 <div class="boxareachild3">
                     Filtrar por: <select class="selectprecio" name="selectprecio" id="">
-                            <option value="menorprecio">Menor precio</option>
-                            <option value="menorprecio">Mayor precio</option>
-                        </select>
+                        <option value="menorprecio">Menor precio</option>
+                        <option value="menorprecio">Mayor precio</option>
+                    </select>
                 </div>
             </div>
-  
-            </div>
 
-        <div class="section">
+        </div>
+        <div class="containersectioncards">
+            <aside class="aside">
 
-            <!-- Cards de productos -->
+                <nav class="navcategory">
+                    <ul class="list">
 
-            <div class="cards">
-                <% products.forEach(Product => { %>
-                <div class="card">
-                    <a href="/products/detail/<%- Product.id %>">
-                        <div class="image-section">
-                            <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
+                        <li class="list__item">
+                            <div class="list__button">
+                                <a href="#" class="nav__link">Inicio</a>
+                            </div>
+                        </li>
+
+                        <li class="list__item list__item--click">
+                            <div class="list__button list__button--click">
+                                <a href="#" class="nav__link">Subcategorias</a>
+                                <img src="/images/angle-down-solid.svg" class="list__arrow">
+                            </div>
+
+                            <ul class="list__show">
+                              
+                                <% subcategories.forEach(subcategories => { %>
+                                    <a href="#" class="nav__link nav__link--inside"><%= subcategories.name %> </a>
+
+                                <% }) %>
+                               
+                            </ul>
+
+                        </li>
+
+
+                        <li class="list__item">
+                            <div class="list__button">
+                                <a href="#" class="nav__link">Estadisticas</a>
+                            </div>
+                        </li>
+
+                        <li class="list__item list__item--click">
+                            <div class="list__button list__button--click">
+                                <a href="#" class="nav__link">Notificaciones</a>
+                                <img src="/images/angle-down-solid.svg" class="list__arrow">
+                            </div>
+
+                            <ul class="list__show">
+                                <li class="list__inside">
+                                    <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                                </li>
+
+                                <li class="list__inside">
+                                    <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                                </li>
+
+                                <li class="list__inside">
+                                    <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                                </li>
+                            </ul>
+
+                        </li>
+
+
+                        <li class="list__item">
+                            <div class="list__button">
+                                <a href="#" class="nav__link">Contacto</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </aside>
+
+
+            <div class="section">
+
+                <!-- Cards de productos -->
+
+                <div class="cards">
+                    <% products.forEach(Product => { %>
+                    <div class="card">
+                        <a href="/products/detail/<%- Product.id %>">
+                            <div class="image-section">
+                                <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
+                            </div>
+                            <div class="description">
+                                <h1>
+                                    <% if (Product.name.length > 30) { %>
+                                    <%- `${Product.name.slice(0,90)}...` %>
+                                    <% } else { %>
+                                    <%= Product.name %>
+                                    <% } %> </h1>
+                                <span>$<%- Product.price %></span>
+                            </div>
+                            <small class="cuotas"> <%- Product.cuotes %> cuotas x <%- (Math.ceil(Product.price / Product.cuotes))  %>
+                            </small>
+                            <span> </span>
+                        </a>
+                        <div class="button-group">
+                            <a href="/products/detail/<%- Product.id %>" class="buy">Comprar</a>
+                            <a href="/products/detail/<%- Product.id %>" class="cart">Agregar al carrito</a>
                         </div>
-                        <div class="description">
-                            <h1>
-                                <% if (Product.name.length > 30) { %>
-                                <%- `${Product.name.slice(0,90)}...` %>
-                                <% } else { %>
-                                <%= Product.name %>
-                                <% } %> </h1>
-                            <span>$<%- Product.price %></span>
+                        <div class="fav">
+                            <i class="fa">&#xf004;</i>
                         </div>
-                        <small class="cuotas"> <%- Product.cuotes %> cuotas x <%- Product.price / Product.cuotes  %>
-                        </small>
-                        <span> </span>
-                    </a>
-                    <div class="button-group">
-                        <a href="/products/detail/<%- Product.id %>" class="buy">Comprar</a>
-                        <a href="/products/detail/<%- Product.id %>" class="cart">Agregar al carrito</a>
                     </div>
-                    <div class="fav">
-                        <i class="fa">&#xf004;</i>
-                    </div>
+                    <% }) %>
+
                 </div>
-                <% }) %>
-
             </div>
         </div>
-        </div>
+
 
 
 
@@ -87,6 +167,26 @@
     <%- include ('../partials/footer.ejs') %>
 
     <%- include ('../partials/scripts.ejs') %>
+
+    <script>
+        let listElements = document.querySelectorAll('.list__button--click');
+
+        listElements.forEach(listElement => {
+            listElement.addEventListener('click', () => {
+
+                listElement.classList.toggle('arrow');
+
+                let height = 0;
+                let menu = listElement.nextElementSibling;
+                if (menu.clientHeight == "0") {
+                    height = menu.scrollHeight;
+                }
+
+                menu.style.height = `${height}px`;
+
+            })
+        });
+    </script>
 
 
 

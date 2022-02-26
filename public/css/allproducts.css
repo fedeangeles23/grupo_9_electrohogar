@@ -39,7 +39,31 @@ aside{
 
 .boxareachild2{
     display: flex;
+
 }
+
+.boxareachild2 svg {
+    fill: rgb(154 154 154);
+    color: rgb(154 154 154);
+}
+
+.boxareachild2 path {
+    color: rgb(154 154 154);
+    fill: rgb(154 154 154);
+}
+
+.boxareachild2 svg:hover{
+    color: rgb(12, 12, 12);
+    fill:rgb(12, 12, 12);
+}
+
+
+.boxareachild2 path:hover{
+    color: rgb(12, 12, 12);
+    fill:rgb(12, 12, 12);
+}
+
+
 
 .boxareachild1, 
 .boxareachild2,
@@ -113,3 +137,22 @@ aside{
     display: flex;
     align-items: center;
 }
+
+.containersectioncards {
+    display: flex;
+}
+
+aside {
+    background-color: #f6f6f6;    
+    display: flex;
+    width: 260px;
+    height: 700px;
+    color: white;
+    padding: 20px;
+    font-size: 13px;
+    margin-left: 13px;
+    margin-top: 0px;
+}
+
+
+

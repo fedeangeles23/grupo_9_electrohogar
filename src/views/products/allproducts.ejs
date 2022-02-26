@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+
+            <%- include ('../partials/nav.ejs') %>
+
+                <main>
+
+
+
+                    
+
+                    <div class="boxarea">
+                        <div class="boxareachild1">
+                            <span><b>*N*</b>Productos</span>
+                        </div>
+
+                        <div class="boxareachild2">
+                            <b>Vista: <img class="vistagrid" src="/icons/grid-view-svgrepo-com.svg" alt=""> <img class="vistagrid" src="/icons/menu-hamburger-nav-svgrepo-com.svg" alt=""> </b> 
+                        </div>
+
+                        <div class="boxareachild3">
+                          <b>Filtrar por: <select class="selectprecio" name="selectprecio" id="">
+                              <option value="menorprecio">Menor precio</option>
+                              <option value="menorprecio">Mayor precio</option>
+                          </select></b>  
+                        </div>
+                    </div>
+
+                    <div class="section">
+                     
+                                            <!-- Cards de productos -->
+
+                        <div class="cards">
+                            <% products.forEach(product=> { %>
+                                <div class="card">
+                                    <a href="/products/detail/<%- product.id %>">
+                                    <div class="image-section">
+                                        <img src="/images/products/<%- product.imagen %>" alt="">
+                                    </div>
+                                    <div class="description">
+                                        <h1>
+                                            <%- product.nombre %>
+                                        </h1>
+                                        <span>$<%- product.precio %></span>
+                                    </div>
+                                    <small class="cuotas"> 12 cuotas x <%- /* toThousand */((product.precio)) %> </small>
+                                      </a>
+                                    <div class="button-group">
+                                        <a href="/products/detail/<%- product.id %>" class="buy">Comprar</a>
+                                        <a href="/products/detail/<%- product.id %>" class="cart">Agregar al carrito</a>
+                                    </div>
+
+                                    <div class="fav">
+                                        <i class="fa">&#xf004;</i>
+                                    </div>
+                                </div>
+
+                                <% }) %>
+
+                        </div>
+                    </div>
+                    </div>
+
+
+
+
+
+
+                </main>
+
+
+
+
+                <%- include ('../partials/footer.ejs') %>
+
+                    <%- include ('../partials/scripts.ejs') %>
+
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                            crossorigin="anonymous"></script>
+
+    </body>
+
+
+</html>

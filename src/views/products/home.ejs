@@ -44,6 +44,7 @@
 
             </div>
         </div>
+        <br>
         <!-- End Linea bajo carusel -->
 
         <!-- Swiper / 12 Cuotas -->
@@ -70,19 +71,23 @@
                                 </div>
                                 <div class="descriptionSlider">
                                     <h1>
-                                        <% if (Product.name.length > 10) { %>
+                                        <% if (Product.name.length> 10) { %>
                                         <%- `${Product.name.slice(0,90)}` %>
                                         <% } else { %>
                                         <%= Product.name %>
-                                        <% } %> </h1>
+                                        <% } %>
+                                    </h1>
                                     <span>$<%- Product.price %></span>
                                     <div class="discountCardPrice">
 
                                         <div class="discountPricediv">
-                                            <% if (Product.discount > 0) { %>
+                                            <% if (Product.discount> 0) { %>
                                             <span class="discountPrice">
-                                                <%-   (Product.price * Product.discount) / 100 %> </span>
-                                            <span class="discountCard"> <%- Product.discount%> %OFF </span>
+                                                <%- (Product.price * Product.discount) / 100 %>
+                                            </span>
+                                            <span class="discountCard">
+                                                <%- Product.discount%> %OFF
+                                            </span>
                                             <% } else { %>
 
                                             <% } %>
@@ -91,15 +96,12 @@
                                     </div>
 
                                 </div>
-                                <small class="cuotasSlider"> <%- Product.cuotes %> cuotas x
-                                    <%- Product.price / Product.cuotes  %>
+                                <small class="cuotasSlider">
+                                    <%- Product.cuotes %> cuotas x
+                                    <%-(Math.ceil(Product.price / Product.cuotes)) %>
                                 </small>
 
-
-
-
                             </a>
-
 
                         </div>
                     </div>
@@ -111,6 +113,7 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
+        <br>
         <!-- END Swiper / 12 Cuotas -->
 
 
@@ -144,19 +147,23 @@
                                 </div>
                                 <div class="descriptionSlider">
                                     <h1>
-                                        <% if (Product.name.length > 10) { %>
+                                        <% if (Product.name.length> 10) { %>
                                         <%- `${Product.name.slice(0,90)}` %>
                                         <% } else { %>
                                         <%= Product.name %>
-                                        <% } %> </h1>
+                                        <% } %>
+                                    </h1>
                                     <span>$<%- Product.price %></span>
                                     <div class="discountCardPrice">
 
                                         <div class="discountPricediv">
-                                            <% if (Product.discount > 0) { %>
+                                            <% if (Product.discount> 0) { %>
                                             <span class="discountPrice">
-                                                <%-   (Product.price * Product.discount) / 100 %> </span>
-                                            <span class="discountCard"> <%- Product.discount%> %OFF </span>
+                                                <%- (Product.price * Product.discount) / 100 %>
+                                            </span>
+                                            <span class="discountCard">
+                                                <%- Product.discount%> %OFF
+                                            </span>
                                             <% } else { %>
 
                                             <% } %>
@@ -165,14 +172,19 @@
                                     </div>
 
                                 </div>
+<<<<<<< HEAD
                                 <small class="cuotasSlider"> <%- Product.cuotes %> cuotas x
                                     <%- Product.price / Product.cuotes  %>
                                 </small>
 
 
+=======
+                                <small class="cuotasSlider">
+                                    <%- Product.cuotes %> cuotas x
+                                    <%-(Math.ceil(Product.price / Product.cuotes)) %> </small>
+>>>>>>> 81d92924abf7d254322e21d4cff247aaa6190b85
 
                             </a>
-
 
                         </div>
                     </div>
@@ -188,6 +200,7 @@
 
         <!-- END Swiper / Notebookss -->
 
+<<<<<<< HEAD
         <div class="containeHomerMarcas">
             <div class="titulohomemarcas">
                 <h3> Echa un vistazo a nuestras marcas destacadas</h3>
@@ -215,8 +228,23 @@
                             <a href="/products/search?keywords=xiaomi">Ver productos Xiaomi</a>
                         </div>
                     </div>
+=======
+        <!-- Marcas destacadas -->
+>>>>>>> 81d92924abf7d254322e21d4cff247aaa6190b85
 
+        <div class="contenedores-grid">
+            <div class="titulo-marcas">
+                <h3>¡Nuestras marcas destacadas!</h3>
+            </div>
+            <div class="grid-marcas">
+
+                <div class="caja" style="--i:url(/images/carouselMarcas1.jpg)">
+                    <div class="contenido-caja">
+                        <h2>Samsung</h2>
+                        <a href="#">Ver productos Samsung</a>
+                    </div>
                 </div>
+<<<<<<< HEAD
                 <div class="marcasimg">
                     <div class="cardmarcas" style="--i:url(/images/carouselMarcas4.jpg)">
                         <div class="contentmarcas">
@@ -235,14 +263,49 @@
                             <h2>Drean</h2>
                             <a href="/products/search?keywords=drean">Ver productos Drean</a>
                         </div>
+=======
+                <div class="caja" style="--i:url(/images/carouselMarcas2.jpg)">
+                    <div class="contenido-caja">
+                        <h2>Apple</h2>
+                        <a href="#">Ver productos Apple</a>
                     </div>
-
+                </div>
+                <div class="caja" style="--i:url(/images/carouselMarcas3.jpg)">
+                    <div class="contenido-caja">
+                        <h2>HP</h2>
+                        <a href="#">Ver productos HP</a>
+                    </div>
+                </div>
+                <div class="caja" style="--i:url(/images/Carousel2Marcas1.jpg)">
+                    <div class="contenido-caja">
+                        <h2>Xiaomi</h2>
+                        <a href="#">Ver productos Xiaomi</a>
+                    </div>
+                </div>
+                <div class="caja" style="--i:url(/images/carouselMarcas4.jpg)">
+                    <div class="contenido-caja">
+                        <h2>Motorola</h2>
+                        <a href="#">Ver productos Motorola</a>
+                    </div>
+                </div>
+                <div class="caja" style="--i:url(/images/drean.jpg)">
+                    <div class="contenido-caja">
+                        <h2>Drean</h2>
+                        <a href="#">Ver productos Drean</a>
+                    </div>
                 </div>
             </div>
-
-
-
+            <div class="grid-marcas2">
+                <div class="caja-adaptable" style="--i:url(/images/carouselMarcas6.jpg)">
+                    <div class="contenido-caja-adap">
+                        <h2>TCL</h2>
+                        <a href="#">Ver productos TCL</a>
+>>>>>>> 81d92924abf7d254322e21d4cff247aaa6190b85
+                    </div>
+                </div>
+            </div>
         </div>
+<<<<<<< HEAD
         <script src="/js/modoOscu.js"></script>
 
 
@@ -251,10 +314,10 @@
 
 
 
+=======
+        <br>
+>>>>>>> 81d92924abf7d254322e21d4cff247aaa6190b85
     </main>
-
-
-
 
     <%- include ('../partials/footer.ejs') %>
 
@@ -265,11 +328,12 @@
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
+<<<<<<< HEAD
     <script src="/js/modoOscu.js"></script>
+=======
+    <script src="/js/oscuro.js"></script>
+>>>>>>> 81d92924abf7d254322e21d4cff247aaa6190b85
 
 </body>
-
-
-
 
 </html>

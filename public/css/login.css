@@ -4,7 +4,11 @@
 
 .logregistermain {
     height: 900px;
-    background-color:rgb(231, 231, 231) ;
+    display: flex;
+    background-color: rgb(231, 231, 231);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .logoLogin img{
@@ -175,6 +179,10 @@ button.btncontinuar:hover{
         font-size: 13px;
     }
 
+    button.btn.btn-continue:hover {
+       text-decoration: none;
+    }
+
     .olvide {
        font-size: 25px;
     }
@@ -314,3 +322,4 @@ input#remember {
     flex-direction: column;
     align-items: center;
 }
+

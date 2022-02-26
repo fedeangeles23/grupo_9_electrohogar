@@ -14,10 +14,6 @@ router.get('/terminos-y-condiciones', controller.terminosYcondiciones) //
 router.get('/trabaja-con-nosotros', controller.trabajaConNosotros) // 
 router.get('/boton-de-arrepentimiento', controller.botonDeArrepentimiento) //
 
- 
-
-
-
 
 module.exports = router // Exportamos el let router
 

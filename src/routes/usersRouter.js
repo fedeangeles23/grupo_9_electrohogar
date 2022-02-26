@@ -23,7 +23,12 @@ router.post('/registro',registerValidator, controller.processRegistro)
 router.get('/logout', controller.logout)
 
 
+/* Seccion perfil CRUD */
 router.get('/perfil', userSessionCheck ,controller.perfil)
+
+router.get('/perfil/edit', userSessionCheck ,controller.editProfile)
+
+
 
 router.get('/loginGoogle', controller.loginGoogle);
 

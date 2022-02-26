@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <%- include('../partials/head.ejs')  %> 
-
+<%- include('../partials/head.ejs')  %>
 
 <body>
 
-    <%- include('../partials/header.ejs')  %> 
+  <%- include('../partials/header.ejs')  %>
 
 
-    <%- include('../partials/nav.ejs')  %> 
+  <%- include('../partials/nav.ejs')  %>
 
-   <main>
+  <main>
+   
     <div class="container-perfil">
-
-      <p class="bienvenido">Bienvenido <b> <% if (typeof session.user != "undefined") { %>
-        <span> <%= session.user.name %> </span>  
 
       <div class="containersectionperfil">
 
-          <div class="misDatosdiv">
-        <div class="perfil2">
-          <span>Mis datos:</span>
-          <p class="perfil2">Usuario: <b> <%= session.user.name  %> <%= session.user.last_name %></b></p>
-          <p class="perfil2">Email: <%= session.user.email %></p>
-          <p class="perfil2">Telefono: <%= session.user.tel %></p>
-          <p class="perfil2">Direccion: <%= session.user.address %></p>
-    <div class="btndatossesion">
-      <a href="#">Editar mis datos</a><a href="/users/logout">Cerrar sesion</a>
+        <div class="misDatosdiv">
+          <div class="perfil2">
+            <span>Mis datos:</span>
+            <p class="perfil2">Usuario: <b> <%= session.user.name  %> <%= session.user.last_name %></b></p>
+            <p class="perfil2">Email: <%= session.user.email %></p>
+            <p class="perfil2">Telefono: <%= session.user.tel %></p>
+            <p class="perfil2">Direccion: <%= session.user.address %></p>
+            <div class="btndatossesion">
+              <a href="#">Editar mis datos</a><a href="/users/logout">Cerrar sesion</a>
 
-    </div>
+            </div>
 
           </div>
 
         </div>
 
-         
+<<<<<<< HEAD
+        <div class="containerperfilorders">
+            <div class="wishlist">
+              <h2>Mis favortios</h2>
 
+              <div class="cardProfile"> 
+                  <a href="#">
+                    <div class="descriptionAdmin1"> 
+                      <div class="containerimgprofile">
+                        <img class="imglikesorder" src="/images/productsDB/Auricular Razer Kraken X para Consola con cable.jpg" alt="">
+                      </div>
+                      <div class="infoorders">
+                        <h1> Auricular Razer Kraken X para Consola con cable </h1>
+                        <span>$ 12950 </span>               
+                      </div>
+                                                         
+                    </div>
+                </a>
+                <div class="dellike">
+                  <form class="dellikeform" action="/users/perfil/">
+                    <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M175 175C184.4 165.7 199.6 165.7 208.1 175L255.1 222.1L303 175C312.4 165.7 327.6 165.7 336.1 175C346.3 184.4 346.3 199.6 336.1 208.1L289.9 255.1L336.1 303C346.3 312.4 346.3 327.6 336.1 336.1C327.6 346.3 312.4 346.3 303 336.1L255.1 289.9L208.1 336.1C199.6 346.3 184.4 346.3 175 336.1C165.7 327.6 165.7 312.4 175 303L222.1 255.1L175 208.1C165.7 199.6 165.7 184.4 175 175V175zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"/></svg>                        
+                    </button>
+                  </form>
+                </div>
+           
+                </div>
+=======
       <% } else {%>
         Usuario
       <% } %> 
@@ -45,9 +67,7 @@
       <p class="datos"> Mis favoritos </p>
 
       <h3>Aun no tienes favoritos..</h3>
-
-      
-      
+ 
              <p class="datos"> Mis compras </p>
       
              <table>
@@ -70,19 +90,42 @@
                  <td>Envíado</td>
                  <td>$1.449,55</td>
                  <td>Seguí tu orden</td>
+>>>>>>> 61ea28c13493f9713582c4382d78fcce7b38f21d
               
-              </tr>
-              
-             </table>
-      
-                  
-          </div>
-          
+            </div>
+
+            <div class="wishlist">
+              <h2>Mis compras</h2>
+              <div class="cardProfile">
+                <a href="#">
+                    <div class="descriptionAdmin">
+                      <div class="containerimgprofile">
+                        <img class="imglikesorder" src="/images/productsDB/Auricular Razer Kraken X para Consola con cable.jpg" alt="">
+                      </div>
+                      <div class="infoorders">
+                        <h1> Auricular Razer Kraken X para Consola con cable </h1>
+                        <span>$ 12950 </span>
+                      </div>
+                      
+                       
+                    </div>
+                </a>
+            </div>
+
+
+            
+            </div>
+
         </div>
 
-   
-   <%- include('../partials/footer.ejs')  %> 
-   <%- include('../partials/scripts.ejs')  %> 
+
+      </div>
+
+    </div>
+
+
+    <%- include('../partials/footer.ejs')  %>
+    <%- include('../partials/scripts.ejs')  %>
 
 </body>
 
