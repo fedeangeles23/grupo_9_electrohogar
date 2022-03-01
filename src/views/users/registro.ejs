@@ -26,42 +26,42 @@
         <form action="/users/registro" method="POST" class="form-registro">
 
               <div class="form">
-                <input class="input-style" type="text" name="name" placeholder="Nombre:"
+                <input id="name" class="input-style" type="text" name="name" placeholder="Nombre:"
                   value="<%= locals.old && old.name %>">
-                  <small>Error msg</small>
+                  
                 <% if (locals.errors && errors.name) { %>
-                <span class="error">
+                <span class="error" id="nameErrors">
                   <%= errors.name.msg %>
                 </span>
                 <% } %>
               </div>
 
                 <div class="form">
-                  <input id="#email" class="input-style email" type="text" name="last_name" placeholder="Apellido:"
+                  <input id="lastname" class="input-style email" type="text" name="last_name" placeholder="Apellido:"
                     value="<%= locals.old && old.last_name %>">
                     <i class="fa-regular fa-circle-check"></i>
                     <i class="fa-solid fa-circle-exclamation"></i>
                   <% if (locals.errors && errors.last_name) { %>
-                  <span class="error">
+                  <span class="error" id="lastErrors">
                     <%= errors.last_name.msg %>
                   </span>
                   <% } %>
                 </div>
 
                 <div class="form">
-                  <input class="input-style" type="email" name="email" placeholder="Email:"
+                  <input id="email" class="input-style" type="email" name="email" placeholder="Email:"
                     value="<%= locals.old && old.email %>">
                   <% if (locals.errors && errors.email) { %>
-                  <span class="error">
+                  <span class="error" id="emailErrors">
                     <%= errors.email.msg %>
                   </span>
                   <% } %>
                 </div>
 
                 <div class="form">
-                  <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
+                  <input id="pass" class="input-style" type="password" name="pass1" placeholder="Contraseña:">
                   <% if (locals.errors && errors.pass1) { %>
-                  <span class="error">
+                  <span class="error" id="passErrors">
                     <%= errors.pass1.msg %>
 
                   </span>
@@ -69,9 +69,9 @@
                 </div>
 
                 <div class="form">
-                  <input class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
+                  <input id="pass2" class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
                   <% if (locals.errors && errors.pass2) { %>
-                  <span class="error">
+                  <span class="error" id="pass2Errors">
                     <%= errors.pass2.msg %>
                   </span>
                   <% } %>
@@ -79,27 +79,27 @@
 
                     <div class="box-2">
                       <div class="form">
-                        <input class="input-style" type="text" name="last_name" placeholder="Apellido:"  value="<%= locals.old && old.last_name %>">
+                        <input id="lastname2" class="input-style" type="text" name="last_name" placeholder="Apellido:"  value="<%= locals.old && old.last_name %>">
                         <% if (locals.errors && errors.last_name) { %>
-                          <span class="error">
+                          <span class="error" id="lastname2Errors">
                             <%= errors.last_name.msg %>
                           </span>
                           <% } %>
                       </div>
 
                       <div class="form">
-                        <input class="input-style" type="email" name="email" placeholder="Email:" value="<%= locals.old && old.email %>"  >
+                        <input id="email2" class="input-style" type="email" name="email" placeholder="Email:" value="<%= locals.old && old.email %>"  >
                         <% if (locals.errors && errors.email) { %>
-                          <span class="error">                         
+                          <span class="error" id="email2Errors">                         
                             <%= errors.email.msg %>
                           </span>
                           <% } %>
                       </div>
 
                       <div class="form">
-                        <input class="input-style" type="password" name="pass1" placeholder="Contraseña:"  >
+                        <input id="pass3" class="input-style" type="password" name="pass1" placeholder="Contraseña:"  >
                         <% if (locals.errors && errors.pass1) { %>
-                          <span class="error">
+                          <span class="error" id="pass3Errors">
                             <%= errors.pass1.msg %>
 
                           </span>
@@ -107,9 +107,9 @@
                       </div>
 
                       <div class="form">
-                        <input class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
+                        <input id="pass4" class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
                         <% if (locals.errors && errors.pass2) { %>
-                          <span class="error">
+                          <span class="error" id="pass4Errors">
                             <%= errors.pass2.msg %>
                           </span>
                           <% } %>
@@ -149,7 +149,7 @@
 
   <script src="/js/modoOscu.js"></script>
 </body>
-
+<script src="/js/validacionRegistro.js"></script>
   </body>
 
 </html>

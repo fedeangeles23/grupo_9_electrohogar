@@ -3,37 +3,39 @@ function qs(element) {
 }
 
 window.addEventListener('load', function () {
-    $email = qs('#email'),
-    $emailErrors = qs('#emailErrors'),
-    $pass = qs('#pass'),
-    $passErrors = qs('#passErrors'),
-    regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+     $email = qs('#email');
+     $emailErrors = qs('#emailErrors');
+     $pass = qs('#pass');
+     $passErrors = qs('#passErrors');
+     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+     regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
 
+     
   let validationsErrors = false; 
 
   $pass.addEventListener('blur', function(e){
-      let value = e.target.value
+      let value = e.target.value;
     switch (true) {
         case !value.trim():
             $passErrors.innerHTML = 'La contraseña es obligatorio'
-            $pass.classList.add('is-invalid')
+            $pass.classList.add('is-invalid');
             validationsErrors = true
             break;
-        case !regExPass.test(value):
+      /*  case !regExPass.test(value):
             $passErrors.innerHTML = 'La contraseña debe tener: entre 6 o 12 caracteres, al menos una mayúscula, una minúscula y un número';
-            $pass.classList.add('is-invalid')
+            $pass.classList.add('is-invalid');
             validationsErrors = true
-            break;    
-        default:
+            break   */
+        default: 
             $pass.classList.remove("is-invalid");
-            $pass.classList.add('is-valid')
-            $passErrors.innerHTML = ""
+            $pass.classList.add('is-valid');
+            $passErrors.innerHTML = "";
             validationsErrors = false
             break;
     }
   })
-        /* $email.addEventListener('blur', function(e) { 
+         $email.addEventListener('blur', function(e) { 
             console.log(e) 
             switch (true) {
                 case !$email.value.trim():
@@ -52,9 +54,9 @@ window.addEventListener('load', function () {
                     $emailErrors.innerHTML = ""
                     validationsErrors = false
                     break;
-            }
+            };
         })
     
-    }) */
-})
+    }) 
+
  

@@ -54,7 +54,8 @@ const controller = {
         }else{
             res.render('users/login', {
                 errors: errors.mapped(),
-                session: req.session
+                session: req.session,
+                old: req.body
             })
         }
 

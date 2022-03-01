@@ -24,3 +24,6 @@
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15",
     "override": "^0.0.1",
+    "sequelize": "^6.17.0"
+  }
+}
