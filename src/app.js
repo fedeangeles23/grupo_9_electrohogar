@@ -43,6 +43,7 @@ let home = require('./routes/homeRouter')
 let admin = require('./routes/adminRouter')
 let products = require ('./routes/productRouter')
 
+
 /* ----------------Routes------------------------- */
 
  app.use('/', home);

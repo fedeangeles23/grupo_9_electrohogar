@@ -121,7 +121,7 @@
             <a href="/products/category/5"> <img src="/images/512.jpg" alt=""></a>
             <a href="/products/category/3"> <img src="/images/513.jpg" alt=""></a>
         </div>
-
+        
 
         <!-- Swiper / Notebookss -->
 
@@ -132,6 +132,7 @@
             <div class="separadorh3">
             </div>
         </div>
+        
 
         <div class="sectionSwiper">
             <div class="swiper mySwiper">
@@ -171,9 +172,11 @@
                                     </div>
 
                                 </div>
-                                <small class="cuotasSlider">
-                                    <%- Product.cuotes %> cuotas x
-                                    <%-(Math.ceil(Product.price / Product.cuotes)) %> </small>
+                                <small class="cuotasSlider"> <%- Product.cuotes %> cuotas x
+                                    <%- Product.price / Product.cuotes  %>
+                                </small>
+
+
 
                             </a>
 
@@ -187,10 +190,11 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
+        <script src="/js/modoOscu.js"></script>
 
         <!-- END Swiper / Notebookss -->
 
-        <!-- Marcas destacadas -->
+        <div class="containeHomerMarcas">
 
         <div class="contenedores-grid">
             <div class="titulo-marcas">
@@ -201,37 +205,37 @@
                 <div class="caja" style="--i:url(/images/carouselMarcas1.jpg)">
                     <div class="contenido-caja">
                         <h2>Samsung</h2>
-                        <a href="#">Ver productos Samsung</a>
+                        <a href="/products/search?keywords=samsung">Ver productos Samsung</a>
                     </div>
                 </div>
                 <div class="caja" style="--i:url(/images/carouselMarcas2.jpg)">
                     <div class="contenido-caja">
                         <h2>Apple</h2>
-                        <a href="#">Ver productos Apple</a>
+                        <a href="/products/search?keywords=app">Ver productos Apple</a>
                     </div>
                 </div>
                 <div class="caja" style="--i:url(/images/carouselMarcas3.jpg)">
                     <div class="contenido-caja">
                         <h2>HP</h2>
-                        <a href="#">Ver productos HP</a>
+                        <a href="/products/search?keywords=hp">Ver productos HP</a>
                     </div>
                 </div>
                 <div class="caja" style="--i:url(/images/Carousel2Marcas1.jpg)">
                     <div class="contenido-caja">
                         <h2>Xiaomi</h2>
-                        <a href="#">Ver productos Xiaomi</a>
+                        <a href="/products/search?keywords=xiaomi">Ver productos Xiaomi</a>
                     </div>
                 </div>
                 <div class="caja" style="--i:url(/images/carouselMarcas4.jpg)">
                     <div class="contenido-caja">
                         <h2>Motorola</h2>
-                        <a href="#">Ver productos Motorola</a>
+                        <a href="/products/search?keywords=motorola">Ver productos Motorola</a>
                     </div>
                 </div>
                 <div class="caja" style="--i:url(/images/drean.jpg)">
                     <div class="contenido-caja">
                         <h2>Drean</h2>
-                        <a href="#">Ver productos Drean</a>
+                        <a href="/products/search?keywords=drean">Ver productos Drean</a>
                     </div>
                 </div>
             </div>
@@ -239,12 +243,19 @@
                 <div class="caja-adaptable" style="--i:url(/images/carouselMarcas6.jpg)">
                     <div class="contenido-caja-adap">
                         <h2>TCL</h2>
-                        <a href="#">Ver productos TCL</a>
+                        <a href="/products/search?keywords=tcl">Ver productos TCL</a>
                     </div>
                 </div>
             </div>
         </div>
-        <br>
+        <script src="/js/modoOscu.js"></script>
+
+
+
+
+
+
+
     </main>
 
     <%- include ('../partials/footer.ejs') %>
@@ -256,7 +267,7 @@
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-    <script src="/js/oscuro.js"></script>
+    <script src="/js/modoOscu.js"></script>
 
 </body>
 

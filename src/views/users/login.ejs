@@ -20,25 +20,28 @@
       <p class="ingreso">Ingresa los datos de tu cuenta</p>
 
       <form action="/users/login" method="POST" class="form-login">
+       
         <div class="login2">
-          <input class="input-style" type="email" name="email" placeholder="Email:"
-            value="<%= locals.old && old.email %>">
-          <% if (locals.errors && errors.email) { %>
-          <span class="error">
-            <%= errors.email.msg %>
-          </span>
-          <% } %>
+          
+          <input id="email" class="input-style" type="email" name="email" placeholder="Email:"
+            value="<%= locals.old && old.email %>"/>
+          <span class="error" id="emailErrors" >
+            <%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : "" %>
+          </span>       
         </div>
+        
 
+        
         <div class="login2">
-          <input class="input-style" type="password" name="pass1" placeholder="Contraseña:">
-          <% if (locals.errors && errors.pass1) { %>
-          <span class="error">
-            <%= errors.pass1.msg %>
+          <input id="pass" class="input-style" type="password" name="pass1" placeholder="Contraseña:">
+         
+          <span class="error" id="passErrors">
+            <%= (typeof errors != 'undefined' && errors.pass1) ? errors.pass1.msg : "" %>
           </span>
-          <% } %>
+         
         </div>
-
+        
+        
         <div class="input-check">
           <input type="checkbox" name="remember" id="remember"><label for="check">Recordar</label>
 
@@ -62,7 +65,7 @@
       </div>
 
     </div>
-
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   </main>
 
   <%- include('../partials/footer.ejs') %>
@@ -86,7 +89,9 @@
       });
     }
   </script>
+<script src="/js/validacionLogin.js"></script>
 
+<script src="/js/modoOscu.js"></script>
 </body>
 
 </html>
