@@ -1,4 +1,4 @@
-window.onload = function(){
+/* window.onload = function(){
 
     //negro #0b090a  violeta #a100f2 
     //fondo del header
@@ -31,7 +31,7 @@ window.onload = function(){
 
     // nav 
   //fondo del nav
-  let nav = document.querySelector('.nav');
+  /* let nav = document.querySelector('.nav');
   nav.style.backgroundColor = '#0b090a';
   
   //letras del nav
@@ -156,7 +156,7 @@ linklogin.style.color = '#a100f2';
 
      //terminos y condiciones 
      /* let texto = document.querySelector('.texto);
-     texto.style.color = 'azul'; */ 
- }
+     texto.style.color = 'azul'; 
+ } */
 
 
