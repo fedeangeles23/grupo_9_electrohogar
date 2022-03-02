@@ -74,6 +74,9 @@
                  session: req.session
              })
 
+         },
+         politicaYprivacidad: (req, res) => {
+            res.render('footerViews/politicaYprivacidad', { session: req.session })
          }
 
       
