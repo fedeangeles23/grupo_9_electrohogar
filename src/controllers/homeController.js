@@ -77,6 +77,9 @@
          },
          politicaYprivacidad: (req, res) => {
             res.render('footerViews/politicaYprivacidad', { session: req.session })
+         },
+         contacto: (req, res) => {
+            res.render('footerViews/contacto', { session: req.session })
          }
 
       
