@@ -19,17 +19,51 @@ body::-webkit-scrollbar-thumb {
 body {
     font-family: 'Lato', sans-serif;
     overflow-x: hidden; /* Hide scrollbars */
-
     }
 
 .burguermenu {
        display: none;
+       cursor: pointer;
  }
+
+ #checkHambur{
+    display: none;
+ }
+
+ #checkHambur:checked ~ .hamburMenuOri {
+     margin: 0;
+ }
+
+ .headermobile label {
+     display: block;
+ }
+
 
  .headermobile{
      display: none;
  }
+ .headermobile label:hover {
+     cursor: pointer;
+ }
+ .hamburMenuOri {
+     position: absolute;
+     width: 20%;
+     background-color: red;
+     margin-left: -70%;
+     transition: all 1s;
+     padding-top: 110px;
+ }
 
+ .hamburMenuOri ul {
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .hamburMenuOri li a {
+     display: block;
+ }
 
 .headercontainer {
     width: 100%;
@@ -53,7 +87,6 @@ body {
     display: flex;
     align-items: center;
 }
-
 
 .headernav i{
    background-color: red;
