@@ -591,8 +591,18 @@ a:hover{
 
 }
 
+@media screen and (max-width: 600px) {
+    
+    .grid-marcas{
+        grid-template-columns: auto;
+    }
 
+    .caja-adaptable{
+        width: 290px;
+        height: 190px;
+    }
 
+}
 
 .dellikeform{
     display: flex;
