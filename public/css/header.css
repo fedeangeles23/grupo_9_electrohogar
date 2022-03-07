@@ -45,13 +45,15 @@ body {
  .headermobile label:hover {
      cursor: pointer;
  }
+ 
  .hamburMenuOri {
      position: absolute;
-     width: 20%;
-     background-color: red;
+     width: 25%;
+     background-color: #f6f6f6;
      margin-left: -70%;
-     transition: all 1s;
-     padding-top: 110px;
+     transition: all .5s;
+     top: 10%;
+     z-index: 999999;
  }
 
  .hamburMenuOri ul {
@@ -63,6 +65,8 @@ body {
 
  .hamburMenuOri li a {
      display: block;
+     padding-bottom: 10px;
+     margin-left: 20px
  }
 
 .headercontainer {
