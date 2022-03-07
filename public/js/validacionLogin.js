@@ -18,11 +18,11 @@ window.addEventListener('load', function () {
       let value = e.target.value;
     switch (true) {
         case !value.trim():
-            $passErrors.innerHTML = 'La contraseña es obligatorio'
+            $passErrors.innerHTML = 'La contraseña es obligatoria'
             $pass.classList.add('is-invalid');
             validationsErrors = true
             break;
-      /*  case !regExPass.test(value):
+      /*  case !regExAlpha.test($pass.value):
             $passErrors.innerHTML = 'La contraseña debe tener: entre 6 o 12 caracteres, al menos una mayúscula, una minúscula y un número';
             $pass.classList.add('is-invalid');
             validationsErrors = true
@@ -44,7 +44,7 @@ window.addEventListener('load', function () {
                     validationsErrors = true
                     break;
             case ! regExEmail.test($email.value):
-            $emailErrors.innerHTML = 'debe tener un @';
+            $emailErrors.innerHTML = 'Debe tener un @';
             $email.classList.add('is-invalid')
             validationsErrors = true
             break;

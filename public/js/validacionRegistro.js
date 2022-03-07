@@ -47,7 +47,7 @@ $lastname.addEventListener('blur', function(e){
     console.log(e)
     switch (true) {
         case !$lastname.value.trim():
-            $lastErrors.innerHTML = 'El campo apellido es obligatorio'
+            $lastErrors.innerHTML = 'El apellido es obligatorio'
             $lastname.classList.add('is-invalid')
             validationsErrors = true
             break;
@@ -74,7 +74,7 @@ $email.addEventListener('blur', function(e) {
             validationsErrors = true
             break;
     case ! regExEmail.test($email.value):
-    $emailErrors.innerHTML = 'debe tener un @';
+    $emailErrors.innerHTML = 'Debe tener un @';
     $email.classList.add('is-invalid')
     validationsErrors = true
     break;
@@ -92,7 +92,7 @@ $pass.addEventListener('blur', function(e){
     let value = e.target.value;
   switch (true) {
       case !value.trim():
-          $passErrors.innerHTML = 'La contraseña es obligatorio'
+          $passErrors.innerHTML = 'La contraseña es obligatoria'
           $pass.classList.add('is-invalid');
           validationsErrors = true
           break;
@@ -114,12 +114,12 @@ $pass2.addEventListener('blur', function(e){
     let value = e.target.value;
     switch (true) {
         case !$pass2.value.trim():
-            $pass2Errors.innerHTML = 'El campo contraseña es obligatorio'
+            $pass2Errors.innerHTML = 'La contraseña es obligatoria'
             $pass2.classList.add('is-invalid')
             validationsErrors = true
             break;
         case $pass2.value !== $pass.value:
-            $pass2Errors.innerHTML = 'Las contraseñas no coinciden';
+            $pass2Errors.innerHTML = 'Las contraseñas deben coincidir';
             $pass2.classList.add('is-invalid')
             validationsErrors = true
             break;    
