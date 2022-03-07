@@ -38,7 +38,7 @@
                         </li>
                         <% } else {%>
                             <li class="menu-button"><a href="/users/registro"><img class="imgusuario"
-                                        src="/img/usuarioNuevo.png" alt="">Mi cuenta </a> </i>
+                                        src="/img/usuario.png" alt="">Mi cuenta </a> </i>
                                 <ul>
                                     <div class="hovercuenta">
                                         <li> <a href="/users/login">Iniciar sesion</a></li>
@@ -66,10 +66,67 @@
     <div class="headermobile">
 
         <!-- Hamburguesa -->
-
+        
+        <input type="checkbox" id="checkHambur">
+        <label for="checkHambur">
         <div class="burguermenu">
             <i class="fas fa-bars"></i>
         </div>
+        </label>
+
+        <nav class="hamburMenuOri">
+
+
+            
+            <div class="menuburguerregister">
+                
+                <ul>
+
+                    <% if (typeof session.user !="undefined" ) { %>
+                        <li class="menu-button"><a href="/users/perfil"><img class="imgusuario" src="/img/usuario.png"
+                                    alt="">
+                                <%= session.user.name %>
+                            </a> </i>
+                            <ul>
+                                <div class="hovercuenta">
+                                    <li> <a href="/users/perfil">Mi perfil</a></li>
+                                    <li> <a href="/users/logout">Cerrar sesion</a></li>
+                                </div>
+                            </ul>
+
+                        </li>
+                        <% } else {%>
+                            <li class="menu-button"><a href="/users/registro"><img class="imgusuario"
+                                        src="/img/usuario.png" alt="">Mi cuenta </a> </i>
+                                <ul>
+                                    <div class="hovercuenta">
+                                        <li> <a href="/users/login">Iniciar sesion</a></li>
+                                        <li> <a href="/users/registro">Registrarse</a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <% } %>
+
+                              
+                </ul>
+            </div>
+
+            <div class="buscarMobile">
+                <form action="/products/search" method="GET" id="search">
+                    <input type="search" name="keywords" placeholder="Buscar productos..">
+                    <button class="btnsearch" type="submit"> <i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        <ul>
+            <li><a href="/products/category/1">Celulares</a></li>
+            <li><a href="/products/category/2">TV & Audio</a></li>
+            <li><a href="/products/category/3">Electro</a></li>
+            <li><a href="/products/category/4">Computación</a></li>
+            <li><a href="/products/category/5">Gaming</a></li>
+            <li><a href="/products/category/6">Climatización</a></li>
+            <li><a href="/products/category/7">Movilidad</a></li>
+        </ul>
+        </nav>
 
         <!-- Logo -->
         <div class="logomain">
@@ -79,7 +136,7 @@
 
         <!-- Carrito mobile -->
         <div class="carritoversmobile">
-            <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" alt="cart">
+            <a href="/products/carrito"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" alt="cart">
                     <g fill="none" fill-rule="evenodd">
                         <g fill="currentcolor">
                             <path

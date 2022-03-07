@@ -19,16 +19,75 @@ body::-webkit-scrollbar-thumb {
 body {
     font-family: 'Lato', sans-serif;
     overflow-x: hidden; /* Hide scrollbars */
-
     }
 
 .burguermenu {
        display: none;
+       cursor: pointer;
  }
+
+ #checkHambur{
+    display: none;
+ }
+ #checkHambur:checked ~ .hamburMenuOri {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+ .headermobile label {
+     display: block;
+ }
+
 
  .headermobile{
      display: none;
  }
+ .headermobile label:hover {
+     cursor: pointer;
+ }
+ nav.hamburMenuOri {
+    box-shadow: 10px 10px 5px 0px rgb(0 0 0 / 7%);
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(0 0 0 / 5%);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.07);
+}
+ 
+ .hamburMenuOri {
+     position: absolute;
+     width: 25%;
+     background-color: #f6f6f6;
+     margin-left: -70%;
+     transition: all .5s;
+     top: 10%;
+     z-index: 999999;
+ }
+
+ .hamburMenuOri ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+ .hamburMenuOri li a {
+     display: block;
+     padding-bottom: 10px;
+     margin-left: 20px
+ }
+ .menuburguerregister {
+    height: 50px;
+    background-color: white;
+    color: dimgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+ 
+
 
 
 .headercontainer {
@@ -53,7 +112,6 @@ body {
     display: flex;
     align-items: center;
 }
-
 
 .headernav i{
    background-color: red;
@@ -130,6 +188,25 @@ svg.svg-inline--fa.fa-search.fa-w-16 {
     opacity: none;
 }
 
+.buscarMobile {
+    display: flex;
+    height: 15px;
+}
+.buscarMobile input {
+    width: 100%;
+    background-color: #eeeeee;
+    border: 1px solid #afafaf;
+}
+
+.buscarMobile button {
+    color: white;
+    background-color: #700184;
+    width: 50px;
+}
+
+input[type="search"]::placeholder {
+    padding: 15px;
+}
 
 .headernav svg {
     width: 35px;
@@ -328,6 +405,21 @@ li{
 
 
 @media screen and (max-width: 769px) {
+
+    .searchresulth2{
+        font-size: 14px;
+    }
+
+    .boxarearightbtn{
+        font-size: 13px;
+    }
+    .boxarea{
+        flex-direction: column;
+    }
+
+    .boxarea1{
+        flex-direction: column;
+    }
 
     .containersectionperfil {
        flex-direction: column;

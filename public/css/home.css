@@ -191,26 +191,18 @@
 }
 
 @media screen and (max-width: 700px) /*De este ancho para abajo se va a ver asi:*/ {
-    
-    
-    .cards .new-arrival h3 {
-        font-size: 22px;
+
+    .description h1{
+        font-size: 13px;
     }
 
-    .button-group .buy {
-        background-color: #2726d2;
-        font-size: 14px;
-        padding: 8px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        letter-spacing: 1px;
-        color: #fff;
-        margin-bottom: 30px;
+    .button-group {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
     }
     
-    .card .cuotas {
-        margin-bottom:5px;
-    }
+
 }
 
  /* Carrousel INICIO */

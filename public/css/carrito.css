@@ -53,7 +53,7 @@
 }
 /* Estilos para las fuentes de los contenedores */
 .container-text p{
-    color: var(--color-white1);
+    color: white;
     font-family: Roboto,sans-serif;
     font-weight:500;
     text-align: center;
@@ -61,7 +61,7 @@
     margin-top: 11px;
 }
 /* Contenedor padre del producto */
-.box1{
+.box1 {
     background: var(--color-white1);
     margin-left: auto;
     margin-right: auto;
@@ -71,6 +71,9 @@
     border: 1px solid var(--color-white-gray);
     border-color: var(--fine-border1);
     box-shadow: 0px 0px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* Contenedor del producto y su información */
 .product-container{
@@ -145,18 +148,20 @@
 .extend-warranty p{
     text-transform: uppercase;
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    margin-top: 4px;
+   
 }
 
-.garantia label{
+/* .garantia label{
     margin-top: 4px;
-}
+} */
 
 .radio {
     display: inline-flex;
     align-items: center;
     cursor: pointer;
-    margin-right: 10px;
+    font-size: 16px;
 }
 
 .radio__input {
@@ -199,7 +204,8 @@
 .extend-warranty p{
     text-transform: uppercase;
     font-size: 14px;
-    margin-bottom: 15px;
+    
+    margin-top: 4px;
 }
 
 .garantia2 label{
@@ -208,9 +214,9 @@
 
 .radio-1 {
     display: inline-flex;
-    align-items: center;
+    
     cursor: pointer;
-    margin-right: 10px;
+    font-size: 16px;
 }
 
 .radio__input {
@@ -729,4 +735,8 @@
 .espacio-vacio{
     height: 40px;
     width: 100%;
+}
+
+.units {
+    margin: 30px;
 }
