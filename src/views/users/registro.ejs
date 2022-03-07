@@ -23,87 +23,74 @@
 
         <div class="formcenter">
 
-        <form action="/users/registro" method="POST" class="form-registro">
+          <form action="/users/registro" method="POST" class="form-registro">
 
-              <div class="form">
-                <input id="name" class="input-style" type="text" name="name" placeholder="Nombre:"
-                  value="<%= locals.old && old.name %>"/>
-                  
-                <span class="error" id="nameErrors">
-                  <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
-                </span>
-               
-              </div>
+            <div class="form">
+              <input id="name" class="input-style" type="text" name="name" placeholder="Nombre:"
+                value="<%= locals.old && old.name %>" />
 
-                <div class="form">
-                  <input id="lastname" class="input-style email" type="text" name="last_name" placeholder="Apellido:"
-                    value="<%= locals.old && old.last_name %>"/>
-                    <i class="fa-regular fa-circle-check"></i>
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                 
-                  <span class="error" id="lastErrors" >
-                    <%= (typeof errors != 'undefined' && errors.last_name) ? errors.last_name.msg : "" %>
-                  </span>
-                  
-                </div>
+              <span class="error" id="nameErrors">
+                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+              </span>
 
-                <div class="form">
-                  <input id="email" class="input-style" type="email" name="email" placeholder="Email:"
-                    value="<%= locals.old && old.email %>"/>
-                 
-                  <span class="error" id="emailErrors">
-                    <%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : "" %>
-                  </span>
-                  
-                </div>
+            </div>
 
-                <div class="form">
-                  <input id="pass" class="input-style" type="password" name="pass1" placeholder="Contraseña:">
-                  
-                  <span class="error" id="passErrors">
-                    <%= (typeof errors != 'undefined' && errors.pass1) ? errors.pass1.msg : "" %>
+            <div class="form">
+              <input id="lastname" class="input-style email" type="text" name="last_name" placeholder="Apellido:"
+                value="<%= locals.old && old.last_name %>" />
+              <i class="fa-regular fa-circle-check"></i>
+              <i class="fa-solid fa-circle-exclamation"></i>
 
-                  </span>
-                 
-                </div>
+              <span class="error" id="lastErrors">
+                <%= (typeof errors != 'undefined' && errors.last_name) ? errors.last_name.msg : "" %>
+              </span>
 
-                <div class="form">
-                  <input id="pass2" class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
-                 
-                  <span class="error" id="pass2Errors">
-                    <%= (typeof errors != 'undefined' && errors.pass2) ? errors.pass2.msg : "" %>
-                  </span>
-                 
-                </div>
+            </div>
 
-                    
+            <div class="form">
+              <input id="email" class="input-style" type="email" name="email" placeholder="Email:"
+                value="<%= locals.old && old.email %>" />
 
-                  </div>
-                  <div class="botonesregister">
-                    <span class="cuenta"> <button type="submit" class="btn btn-continue">Registrarse</button></span>
-              </form>
+              <span class="error" id="emailErrors">
+                <%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : "" %>
+              </span>
 
-              <div class="google-btn">
-                <div class="google-icon-wrapper">
-                  <img class="google-icon"
-                    src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
-                </div>
-                <a href="#">
-                  <p class="btn-text"><b>Registrarse con google</b></p>
-                </a>
-              </div>
+            </div>
+
+            <div class="form">
+              <input id="pass" class="input-style" type="password" name="pass1" placeholder="Contraseña:">
+
+              <span class="error" id="passErrors">
+                <%= (typeof errors != 'undefined' && errors.pass1) ? errors.pass1.msg : "" %>
+
+              </span>
+
+            </div>
+
+            <div class="form">
+              <input id="pass2" class="input-style" type="password" name="pass2" placeholder="Confirmar Contraseña:">
+
+              <span class="error" id="pass2Errors">
+                <%= (typeof errors != 'undefined' && errors.pass2) ? errors.pass2.msg : "" %>
+              </span>
+
+            </div>
+
+
+
+        </div>
+
+             <button type="submit" class="btnregistroo">Registrarse</button>
 
           </form>
-          
+
+
+        <a class="a_inicio" href="/">Volver al menu de inicio</a>
       </div>
 
-      <a class="a_inicio" href="/">Volver al menu de inicio</a>
-      <script src="/js/modoOscu.js"></script>
-    </div>
 
-    
   </main>
-  
+
 
   <%- include('../partials/footer.ejs') %>
   <%- include('../partials/scripts.ejs') %>
@@ -111,6 +98,6 @@
   <script src="/js/modoOscu.js"></script>
 </body>
 <script src="/js/validacionRegistro.js"></script>
-  </body>
+</body>
 
 </html>

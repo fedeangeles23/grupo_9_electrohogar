@@ -271,10 +271,8 @@
     border-radius: 10px;
 }
 /* Estilo Hover para el btn */
-.btn:hover{
-    font-family: Roboto,sans-serif;
-    text-decoration: underline;
-}
+
+
 .btn:active{
     text-decoration: none;
 }

@@ -76,15 +76,8 @@ span.cuenta button{
 
 
 
-/* centra el boton registrarse */
-span.cuenta {
-    padding-right: 515px;
-}
 
-span.cuenta button:hover {
-    color: rgb(255, 255, 255);
-    background-color: #a100f2;
-}
+
 
 
 
@@ -289,4 +282,17 @@ button.btnregistr {
 button.btnregistr:hover{
     background-color: #0a138d;
     transition: 0.8ms all;
+}
+
+
+button.btnregistroo {
+    background-color: #0b16b3;
+    width: 120px;
+    height: 34px;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
+    font-size: 13px;
+    border-radius: 15px;
+    font-weight: 300;
 }
