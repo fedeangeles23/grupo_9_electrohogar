@@ -80,6 +80,9 @@
          },
          contacto: (req, res) => {
             res.render('footerViews/contacto', { session: req.session })
+         },
+         ventana: (req, res) => {
+            res.render('footerViews/ventana', { session: req.session })
          }
 
       
