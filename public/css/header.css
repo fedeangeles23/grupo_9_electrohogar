@@ -34,7 +34,8 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 200px;
+    width: 300px;
+    align-items: stretch;
 }
 
  .headermobile label {
@@ -196,6 +197,10 @@ svg.svg-inline--fa.fa-search.fa-w-16 {
     width: 100%;
     background-color: #eeeeee;
     border: 1px solid #afafaf;
+}
+
+.buscarMobile form {
+    width: 100%;
 }
 
 .buscarMobile button {
