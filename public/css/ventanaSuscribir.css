@@ -1,0 +1,13 @@
+.ventanaSus {
+    background-color: #adadad;
+    width: 30%;
+    font-size: 19px;
+    text-align: center;
+    padding: 33px;
+    min-height: 250px;
+    border-radius: 22px;
+    position: absolute;
+    left: 34%;
+    top: 35%;
+    display: none;
+}

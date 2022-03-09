@@ -88,6 +88,16 @@ body {
     margin-bottom: 25px;
 }
  
+/*.cerrarEquis {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#cerrarHambur:checked ~ .burguermenu {
+    visibility: visible;
+} */
+
 
 
 

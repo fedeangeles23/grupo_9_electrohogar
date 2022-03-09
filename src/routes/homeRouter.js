@@ -15,6 +15,7 @@ router.get('/trabaja-con-nosotros', controller.trabajaConNosotros) //
 router.get('/boton-de-arrepentimiento', controller.botonDeArrepentimiento) //
 router.get('/politica-y-privacidad', controller.politicaYprivacidad) //
 router.get('/contacto', controller.contacto) //
+router.get('/ventana', controller.ventana) //
 
 module.exports = router // Exportamos el let router
 
