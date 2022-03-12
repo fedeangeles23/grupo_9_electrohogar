@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.26.0",
+    "axios": "^0.26.1",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "cookie-validator": "^0.0.3",
@@ -24,7 +24,7 @@
     "mysql2": "^2.3.3",
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15",
-    "override": "^0.0.1",
+    "override": "0.0.1",
     "sequelize": "^6.17.0"
   }
 }
