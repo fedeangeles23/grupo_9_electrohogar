@@ -1,32 +1,21 @@
-
-
-*{
-    
-    box-sizing: border-box;
-}
-
-/*cambie el tamaño de las letras*/
-body {
-
-  width: 100%;
-}
-
 .tarjeta img{
     justify-content: flex-end;
     width: 350px;
     height: 250px;
 }
-
+/* cuidado con esto, rompe el header, lo modifique en el html pero no se como se ve en su vista */
+/*
 header img{
     height: 200px;
 }
+*/
 
 .formularios {
     height: 250px;
     padding-bottom: 120px;
 }
 
-/*para q no se vean los errores*/
+
 .error {
   color: red;
   font-size: 20px;
@@ -48,8 +37,8 @@ span.pagar {
     width: .1%;
 }
 
-/*el espacio entrer las cajas y su forma*/
-.form input{
+/* el espacio entrer las cajas y su forma */
+.formTarjeta input{
     width: 120%;
     background: none;
     color: #706c6c;
@@ -60,7 +49,7 @@ span.pagar {
     border-bottom: 2px solid grey;
 }
 
-/*para el boton pagar*/
+/*para el boton pagar */
 span.pagar button{
     background-color: black;
     color: white;
@@ -74,11 +63,8 @@ span.pagar button{
 div.tarjeta {
     height: 1%;
 }
-.datos {
-    margin-top: 20px;
-}
 
-.padre {
+.padreTarje {
     display: flex;
     margin: 100px;
     flex-wrap: wrap;
@@ -90,41 +76,3 @@ div.tarjeta {
     margin-left: 250px;
     margin-top: 100px;
 }
-
-/*elimina los puntos y el espacio q aparecen por defecto DENTRO DEL MENU*/
-#menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/*para poner el menu orizontal*/
-li{
-   float: left;
-}
-
-/*quitar el color de las etiquetas*/
-#menu a{
-   color: white;
-   text-decoration: none;
-   display: flex;
-   padding: 10px 61px;
-   margin-bottom: 350px;
-   font-size: 18px;
-}
-
-
-/*para el rectangulo largo del menu*/
-#menu{
-
-     background-color: #52b788;
-    display: flex;
-    
-    padding-top: 200px;
-    margin-left: 320px;
-    margin-bottom: 120px;
-    align-items: center;
-    width: 730px;
-    height:27px;
-}
-
