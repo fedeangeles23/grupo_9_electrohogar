@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medio de pago</title>
+    <link rel="stylesheet" href="medioDePago.css">
+</head>
+<body>
+
+    <p class="ingresoDeTarjeta">Ingrese los datos de su tarjeta</p>
+
+<div class="padre">
+  
+    <div class="tarjeta"> 
+     <header>
+        <img src="img/tarjeta de credito.jpg">
+     </header>
+    </div>
+
+    <div class="formularios">
+      <div class="form">
+        <input id="numero" class="input-style" type="text" name="numero" placeholder="Número de tarjeta:" >
+        <span class="error" id="numeroErrors"></span>
+      </div>
+
+       <div class="form">
+        <input id="name" class="input-style" type="text" name="name" placeholder="Nombre:" >
+            <span class="error" id="nameErrors"></span>
+       </div>
+
+       <div class="form"> 
+       <input id="lastname" class="input-style" type="text" name="lastname" placeholder="Apellido:" >
+            <span class="error" id="lastnameErrors"></span>
+        </div>
+
+       <div class="form">
+        <input id="fecha" class="input-style" type="text" name="fecha" placeholder="fecha de expiración:" >
+            <span class="error" id="fechaErrors"></span>
+        </div>
+  
+         <div class="form">
+            <input id="codigo" class="input-style" type="text" name="codigo" placeholder="Codigo de seguridad:" >
+            <span class="error" id="codigoErrors"></span>
+         </div>
+
+         <div class="form">
+            <input id="dni" class="input-style" type="text" name="dni" placeholder="DNI del titular de la tarjeta:" >
+            <span class="error" id="dniErrors"></span>
+           </div>
+    </div>
+  
+    <div class="pagarPadre3"> 
+       
+        <span class="pagar"> <button type="dsff" class="btn">Pagar</button> </span>
+       
+    </div>
+
+ </div>
+
+ <script src="js/validacionesPagar.js"></script>
+</body>
+</html>
