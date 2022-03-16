@@ -18,6 +18,9 @@ router.get('/search', controller.search)
 // Carrito
 router.get('/carrito', controller.carrito)
 
+// Medio de pago
+router.get('/medioDePago', controller.medioDePago)
+
 
 /* GET - Search products */
 router.get('/search', controller.search) 

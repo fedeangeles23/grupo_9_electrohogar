@@ -129,6 +129,12 @@ let controller = {
         res.render('products/carrito', {
             session: req.session
         })
+},
+
+medioDePago: (req,res) => {
+    res.render('products/medioDePago', {
+        session: req.session
+    })
 }
 
 

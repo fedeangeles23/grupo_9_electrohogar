@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 
+    <%- include ('../partials/head.ejs') %>
+
+    <%- include ('../partials/header.ejs') %>
+
+    <%- include ('../partials/nav.ejs') %>
+
 <body>
 
     <p class="ingresoDeTarjeta">Ingrese los datos de su tarjeta</p>
@@ -9,7 +15,7 @@
   
     <div class="tarjeta"> 
      <header class="iMgCredito">
-        <img src="img/tarjeta de credito.jpg">
+        <img src="/img/tarjeta-de-credito.jpg">
      </header>
     </div>
 
@@ -53,6 +59,9 @@
 
  </div>
 
- <script src="js/validacionesPagar.js"></script>
+ <script src="/js/validacionesPagar.js"></script>
+
+ <%- include ('../partials/footer.ejs') %>
+    <%- include ('../partials/scripts.ejs') %>
 </body>
 </html>

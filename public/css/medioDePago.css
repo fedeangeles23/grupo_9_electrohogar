@@ -16,11 +16,6 @@ header img{
 }
 
 
-.error {
-  color: red;
-  font-size: 20px;
-}
-
 .ingresoDeTarjeta {
     text-align: center;
     font-size: 30px;
@@ -57,7 +52,7 @@ span.pagar button{
     width: 120px;
     height: 40px;
     border-radius: 10px;
-    /* margin-left: 625px; */
+    /* margin-bottom: 30px; */
 }
 
 div.tarjeta {
@@ -68,9 +63,9 @@ div.tarjeta {
     display: flex;
     margin: 100px;
     flex-wrap: wrap;
-    padding-top: 60px;
+    padding-top: 40px;
     justify-content: space-around;
-    height: 490px;
+    height: 570px;
     width: 850px;
     border: solid 1px black;
     margin-left: 250px;
