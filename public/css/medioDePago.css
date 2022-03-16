@@ -1,0 +1,73 @@
+.tarjeta img{
+    justify-content: flex-end;
+    width: 350px;
+    height: 250px;
+}
+/* cuidado con esto, rompe el header, lo modifique en el html pero no se como se ve en su vista */
+/*
+header img{
+    height: 200px;
+}
+*/
+
+.formularios {
+    height: 250px;
+    padding-bottom: 120px;
+}
+
+
+.ingresoDeTarjeta {
+    text-align: center;
+    font-size: 30px;
+}
+
+div.pagarPadre3 {
+    display: flex;
+    width: 1%;
+    height: 1%;
+}
+
+span.pagar {
+    height: 1%;
+    width: .1%;
+}
+
+/* el espacio entrer las cajas y su forma */
+.formTarjeta input{
+    width: 120%;
+    background: none;
+    color: #706c6c;
+    font-size: 25px;
+    padding: .7em .7em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid grey;
+}
+
+/*para el boton pagar */
+span.pagar button{
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    /* margin-bottom: 30px; */
+}
+
+div.tarjeta {
+    height: 1%;
+}
+
+.padreTarje {
+    display: flex;
+    margin: 100px;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    justify-content: space-around;
+    height: 570px;
+    width: 850px;
+    border: solid 1px black;
+    margin-left: 250px;
+    margin-top: 100px;
+}
