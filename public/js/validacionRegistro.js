@@ -14,9 +14,9 @@ window.addEventListener('load', function () {
     $pass2 = qs('#pass2'),
     $pass2Errors = qs('#pass2Errors'),
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
-
+    
     
 
  let validationsErrors = false; 
@@ -26,6 +26,11 @@ window.addEventListener('load', function () {
     switch (true) {
         case !$name.value.trim():
             $nameErrors.innerHTML = 'El campo nombre es obligatorio';
+            $name.classList.add('is-invalid');
+            validationsErrors = true
+            break;
+            case $name.value.length <2 :
+            $nameErrors.innerHTML = 'Debes ingresar al menos 2 caracteres';
             $name.classList.add('is-invalid');
             validationsErrors = true
             break;
@@ -51,6 +56,11 @@ $lastname.addEventListener('blur', function(e){
             $lastname.classList.add('is-invalid')
             validationsErrors = true
             break;
+            case $lastname.value.length < 2 :
+            $nameErrors.innerHTML = 'Debes ingresar al menos 2 caracteres';
+            $name.classList.add('is-invalid');
+            validationsErrors = true
+            break;
         case !regExAlpha.test($lastname.value):
             $lastErrors.innerHTML = 'Ingresa un apellido válido'
             $lastname.classList.add('is-invalid')
@@ -74,7 +84,7 @@ $email.addEventListener('blur', function(e) {
             validationsErrors = true
             break;
     case ! regExEmail.test($email.value):
-    $emailErrors.innerHTML = 'Debe tener un @';
+    $emailErrors.innerHTML = 'Debe ingresar un email valido';
     $email.classList.add('is-invalid')
     validationsErrors = true
     break;
@@ -87,7 +97,6 @@ $email.addEventListener('blur', function(e) {
     };
 })
 
-
 $pass.addEventListener('blur', function(e){
     let value = e.target.value;
   switch (true) {
@@ -96,11 +105,11 @@ $pass.addEventListener('blur', function(e){
           $pass.classList.add('is-invalid');
           validationsErrors = true
           break;
-    /*  case !regExPass.test(value):
-          $passErrors.innerHTML = 'La contraseña debe tener: entre 6 o 12 caracteres, al menos una mayúscula, una minúscula y un número';
-          $pass.classList.add('is-invalid');
-          validationsErrors = true
-          break   */
+          case value.trim().length <8 :
+            $passErrors.innerHTML = 'La contraseña debe tener un mínimo de 8 a 12 cararcteres, un número y una mayúscula'
+            $pass.classList.add('is-invalid');
+            validationsErrors = true
+            break;
       default: 
           $pass.classList.remove("is-invalid");
           $pass.classList.add('is-valid');

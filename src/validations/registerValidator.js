@@ -14,7 +14,8 @@ module.exports = [
 
     check('email')
     .isEmail()
-    .withMessage('Debes ingresar un email válido'),
+    .notEmpty()
+    .withMessage('El email es requerido').bail(),
 
     body('email').custom((value) => {
         return Users.findOne({
@@ -33,10 +34,10 @@ module.exports = [
     .notEmpty()
     .withMessage('Debes escribir tu contraseña')
     .isLength({
-        min: 5,
+        min: 8,
         max: 12
     })
-    .withMessage('La contraseña debe tener entre 5 y 12 caracteres'),
+    .withMessage('La contraseña debe tener entre 8 y 12 caracteres, 1 número y 1 mayúscula'),
 
 
     check('pass2')

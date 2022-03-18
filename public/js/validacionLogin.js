@@ -15,48 +15,47 @@ window.addEventListener('load', function () {
   let validationsErrors = false; 
 
   $pass.addEventListener('blur', function(e){
-      let value = e.target.value;
+    let value = e.target.value;
+  switch (true) {
+      case !value.trim():
+          $passErrors.innerHTML = 'La contraseña es obligatoria'
+          $pass.classList.add('is-invalid');
+          validationsErrors = true
+          break;
+          case value.trim().length <8 :
+            $passErrors.innerHTML = 'La contraseña debe tener un mínimo de 8 a 12 cararcteres, un número y una mayúscula'
+            $pass.classList.add('is-invalid');
+            validationsErrors = true
+            break;
+      default: 
+          $pass.classList.remove("is-invalid");
+          $pass.classList.add('is-valid');
+          $passErrors.innerHTML = "";
+          validationsErrors = false
+          break;
+  }
+})
+$email.addEventListener('blur', function(e) { 
+    console.log(e) 
     switch (true) {
-        case !value.trim():
-            $passErrors.innerHTML = 'La contraseña es obligatoria'
-            $pass.classList.add('is-invalid');
-            validationsErrors = true
-            break;
-      /*  case !regExAlpha.test($pass.value):
-            $passErrors.innerHTML = 'La contraseña debe tener: entre 6 o 12 caracteres, al menos una mayúscula, una minúscula y un número';
-            $pass.classList.add('is-invalid');
-            validationsErrors = true
-            break   */
-        default: 
-            $pass.classList.remove("is-invalid");
-            $pass.classList.add('is-valid');
-            $passErrors.innerHTML = "";
-            validationsErrors = false
-            break;
-    }
-  })
-         $email.addEventListener('blur', function(e) { 
-            console.log(e) 
-            switch (true) {
-                case !$email.value.trim():
-                    $emailErrors.innerHTML = 'El email es obligatorio';
-                    $email.classList.add('is-invalid')
-                    validationsErrors = true
-                    break;
-            case ! regExEmail.test($email.value):
-            $emailErrors.innerHTML = 'Debe tener un @';
+        case !$email.value.trim():
+            $emailErrors.innerHTML = 'El email es obligatorio';
             $email.classList.add('is-invalid')
             validationsErrors = true
             break;
-                default:
-                    $email.classList.remove('is-invalid');
-                    $email.classList.add('is-valid')
-                    $emailErrors.innerHTML = ""
-                    validationsErrors = false
-                    break;
-            };
-        })
-    
+    case ! regExEmail.test($email.value):
+    $emailErrors.innerHTML = 'Debe ingresar un email valido';
+    $email.classList.add('is-invalid')
+    validationsErrors = true
+    break;
+        default:
+            $email.classList.remove('is-invalid');
+            $email.classList.add('is-valid')
+            $emailErrors.innerHTML = ""
+            validationsErrors = false
+            break;
+    };
+})
     }) 
 
  
