@@ -555,7 +555,7 @@ a:hover{
 
 /* Color del texto */
 .caja-adaptable .contenido-caja-adap h2,a{
-    color:white;
+    color:rgb(2, 2, 2);
 }
 .caja-adaptable .contenido-caja-adap a{
     color:white;

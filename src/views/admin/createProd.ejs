@@ -16,20 +16,24 @@
                             <form class="col-md-9 ms-sm-auto col-lg-10 px-md-4 row p-3 justify-content-center" action="/admin/products/create" method="POST" enctype="multipart/form-data">
                                 <div class="col-12 col-md-6">
                                     <div class="col-12 mb-3">
-                                        <label for="inputName" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control" id="inputName" name="name" value="<%= locals.old && old.name %>">
-                                        <% if (typeof errors != 'undefined' && errors.name ) { %>
-                                            <small class="error"><%= errors.name.msg %> REQUERIDISIMO </small>
-                                        <% } %>
+                                        <label  for="inputName" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="inputName" name="inputName" value="<%= locals.old && old.name %>" />
+                                      
+                                            <small class="error" id="inputNameErrors"> 
+                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                             </small>
+                                       
                                     </div>
 
 
                                     <div class="col-12 mb-3">
                                         <label for="inputName" class="form-label">Marca</label>
-                                        <input type="text" class="form-control" id="inputBrand" name="brand" value="<%= locals.old && old.brand %>">
-                                        <% if (locals.errors && errors.name) { %>
-                                            <small class="error"><%= errors.name.msg %> </small>
-                                        <% } %>
+                                        <input type="text" class="form-control" id="inputBrand" name="inputBrand" value="<%= locals.old && old.brand %>" />
+                                       
+                                            <small class="error" id="inputBrandErrors">
+                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                             </small>
+                                       
                                     </div>
 
                     
@@ -43,9 +47,12 @@
                                         <% if (locals.errors && errors.category) { %>
                                             <small class="error"><%= errors.category.msg %> </small>
                                         <% } %>
+                                        <small class="error" id="categoryErrors"></small> 
                                     </div>
+
+
                                     <div class="col-12 mb-3">
-                                        <select class="form-select subcategorySelect" id="specificSizeSelect" name="subcategory">
+                                        <select class="form-select subcategorySelect" id="specificSizeSelectS" name="subcategory">
                                           <option selected hidden value="">Subcategorias</option>
                                           <% subcategories.forEach(subcategory => { %>
                                             <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory.id == subcategory.id ? "selected" : ""  %> ><%- subcategory.name %> </option>
@@ -54,45 +61,64 @@
                                         <% if (locals.errors && errors.subcategory) { %>
                                             <small class="error"><%= errors.subcategory.msg %> </small>
                                         <% } %>
+                                        <small class="error" id="subcaErrors"></small>
                                     </div>
+
+
                                     <div class="col-12 mb-3">
                                         <label for="inputPrice" class="form-label">Precio</label>
-                                        <input type="number" class="form-control" id="inputPrice" name="price" value="<%= locals.old && old.price %>">
-                                        <% if (locals.errors && errors.price) { %>
-                                            <small class="error"><%= errors.price.msg %> </small>
-                                        <% } %>
+                                        <input type="number" class="form-control" id="inputPrice" name="inputpPrice" value="<%= locals.old && old.price %>">
+                                        
+                                            <small class="error" id="inputPriceErrors">
+                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                            </small>
+                                       
                                     </div>
+
+
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="col-12 mb-3">
                                         <label for="inputDiscount" class="form-label">Descuento</label>
                                         <input type="number" class="form-control" id="inputDiscount" name="discount" value="<%= locals.old ? old.discount : 0 %>">
-                                        <% if (locals.errors && errors.discount) { %>
-                                            <small class="error"><%= errors.discount.msg %> </small>
-                                        <% } %>
+                                        
+                                            <small class="error" id="inputDiscountErrors">
+                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                                 </small>
+                                       
                                     </div> 
+
 
                                     <div class="col-12 mb-3">
                                         <label for="inputDiscount" class="form-label">Cuotas</label>
                                         <input type="number" class="form-control" id="inputCuotes" name="cuotes" value="<%= locals.old ? old.discount : 0 %>">
-                                        <% if (locals.errors && errors.discount) { %>
-                                            <small class="text-danger"><%= errors.discount.msg %> </small>
-                                        <% } %>
+                                        
+                                            <small class="text-danger" id="inputCuotesErrors">
+                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                            </small>
+                                        
                                     </div> 
+
 
                                     <div class="col-12 mb-3">
                                         <label for="inputImage" class="form-label">Imagen</label>
                                         <input type="file" name="image" class="form-control" aria-label="file example" id="inputImage" multiple>
-                                        <% if (locals.errors && errors.image) { %>
-                                            <small class="text-danger"><%= errors.image.msg %> </small>
-                                        <% } %>
+                                        
+                                            <small class="text-danger" id="inputImageErrors">
+                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                            </small>
+                                        
                                     </div>
+
+
                                     <div class="col-12 mb-3">
                                         <label for="validationTextarea" class="form-label">Descripción</label>
                                         <textarea class="form-control" id="validationTextarea" name="description"> <%= locals.old && old.description %> </textarea>
-                                        <% if (locals.errors && errors.description) { %>
-                                            <small class="text-danger"><%= errors.description.msg %> </small>
-                                        <% } %>
+                                        
+                                            <small class="text-danger" id="validationTextareaErrors">
+                                                  <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                            </small>
+                                       
                                     </div>
                                 </div>
                     
@@ -107,7 +133,7 @@
 
                 <%- include ('../partials/footer.ejs') %>
                     <%- include ('../partials/scripts.ejs') %>
-
+                    <script src="/js/validacionCreateProd.js"></script>
     </body>
 
     
