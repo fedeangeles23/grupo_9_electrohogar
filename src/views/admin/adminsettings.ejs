@@ -19,8 +19,7 @@
         <div class="containerproductsAdmin">
 
             <% products.forEach(Product=> { %>
-            <div class="cardAdmin">
-                <a href="/products/detail/<%- Product.id %>">
+            <div class="cardAdmin"><a href="/products/detail/<%- Product.id %>">
                     <div class="descriptionAdmin">
                         <h1> <%= Product.name %> </h1>
                         <span>$<%- Product.price %></span>

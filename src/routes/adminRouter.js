@@ -12,7 +12,7 @@ const userAdminCheck = require('../middlewares/userAdminCheck')
 router.get('/', userAdminCheck, controller.indexAdmin) // Envia los datos
 
 
-router.get('/products',  userAdminCheck, controller.dashboardProducts) // Envia los datos
+router.get('/products',  userAdminCheck, controller.dashboardProducts) 
 
 /* Usuarios CRUD */
 router.get('/users', userAdminCheck, controller.dashboardUsers) // 
@@ -36,9 +36,8 @@ router.put('/products/edit/:id', userAdminCheck, upload.array('image'), controll
 
 router.delete('/products/:id', controller.del);
 
-/* AdminCheck NO TE OLVIDES JOAQUIN AAAAAAAAAAAAAAAAAA 
-Pasar userSessionCheck
-*/
+// Pasar userSessionCheck
+
 
 
 module.exports = router 
