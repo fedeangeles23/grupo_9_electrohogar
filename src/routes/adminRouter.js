@@ -29,7 +29,7 @@ router.post('/products/create',  userAdminCheck, upload.array('image'), productF
 
 router.get('/products/edit/:id',userAdminCheck, controller.edit);
 
-router.put('/products/edit/:id', userAdminCheck, upload.array('image'), controller.update);
+router.put('/products/edit/:id', userAdminCheck, upload.array('image'), productFormValidator, controller.update);
 
  
 /* Eliminar productos */

@@ -45,8 +45,8 @@ window.addEventListener('load', function () {
             $name.classList.add('is-invalid');
             validationsErrors = true
             break;
-            case $name.value.length <2 :
-            $nameErrors.innerHTML = 'Debes ingresar al menos 2 caracteres';
+            case $name.value.length <4 :
+            $nameErrors.innerHTML = 'Debes ingresar al menos 4 caracteres';
             $name.classList.add('is-invalid');
             validationsErrors = true
             break;

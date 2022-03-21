@@ -105,7 +105,7 @@ $pass.addEventListener('blur', function(e){
           $pass.classList.add('is-invalid');
           validationsErrors = true
           break;
-          case value.trim().length <8 :
+          case !regExPass.test($pass.value):
             $passErrors.innerHTML = 'La contraseña debe tener un mínimo de 8 a 12 cararcteres, un número y una mayúscula'
             $pass.classList.add('is-invalid');
             validationsErrors = true

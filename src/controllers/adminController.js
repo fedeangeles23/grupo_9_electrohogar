@@ -98,6 +98,16 @@ let controller = {
                 })
                 .catch(error => console.log(error))
         } else {
+            errors = errors.mapped()
+            if(req.fileValidationError) {
+                //console.log(req.fileValidationError)
+                errors = {
+                    ...errors,
+                    image : {
+                        msg: req.fileValidationError
+                    }
+                }
+            }
             let allCategories = Categories.findAll();
             let allSubcategories = Subcategories.findAll();
             let allProducts = Products.findAll()
@@ -108,7 +118,7 @@ let controller = {
                         Products,
                         products,
                         subcategories,
-                        errors: errors.mapped(),
+                        errors,
                         old: req.body,
                         session: req.session
                     })
@@ -122,7 +132,11 @@ let controller = {
 
         let allCategories = Categories.findAll()
         let allSubcategories = Subcategories.findAll()
-        let products = Products.findByPk(req.params.id)
+        let products = Products.findByPk(req.params.id, {
+            include:[{
+                association:"subcategories"
+            }]
+        })
         Promise.all([allCategories, allSubcategories, products])
             .then(([categories, subcategories, product]) => {
                 res.render('admin/editProd', {
@@ -135,9 +149,9 @@ let controller = {
     },
 
     update: (req, res) => {
-        // No guarda la categoria ni subcategoria, tampoco la imagen a actualizar
-        console.log(req.file)
-        Products.update({
+        let errors = validationResult(req)
+        if(errors.isEmpty()) {
+            Products.update({
                 name: req.body.name,
                 price: req.body.price,
                 description: req.body.description,
@@ -179,7 +193,36 @@ let controller = {
             .catch(error => console.log(error))
 
         res.redirect('/admin/products')
+        }else {
+            errors = errors.mapped()
+            if(req.fileValidationError) {
+                //console.log(req.fileValidationError)
+                errors = {
+                    ...errors,
+                    image : {
+                        msg: req.fileValidationError
+                    }
+                }
+            }
 
+            let allCategories = Categories.findAll()
+            let allSubcategories = Subcategories.findAll()
+            let products = Products.findByPk(req.params.id)
+            Promise.all([allCategories, allSubcategories, products])
+                .then(([categories, subcategories, product]) => {
+                    res.render('admin/editProd', {
+                        categories,
+                        product,
+                        subcategories,
+                        old: req.body,
+                        errors,
+                        session: req.session
+                    })
+                })
+        }
+        // No guarda la categoria ni subcategoria, tampoco la imagen a actualizar
+        console.log(req.file)
+        
     },
 
     del: (req, res) => 
