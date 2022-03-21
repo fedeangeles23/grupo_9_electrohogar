@@ -31,6 +31,7 @@ body {
  }
  #checkHambur:checked ~ .hamburMenuOri {
     margin: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -40,6 +41,7 @@ body {
 
  .headermobile label {
      display: block;
+     z-index: 999999999999;
  }
 
 
@@ -61,7 +63,8 @@ body {
      background-color: #f6f6f6;
      margin-left: -70%;
      transition: all .5s;
-     top: 10%;
+     top: 1px;
+     left: 1px;
      z-index: 999999;
  }
 
@@ -79,7 +82,7 @@ body {
      margin-left: 20px
  }
  .menuburguerregister {
-    height: 50px;
+    height: 65px;
     background-color: white;
     color: dimgrey;
     display: flex;
@@ -520,5 +523,3 @@ li{
  
 
   
-
- 
