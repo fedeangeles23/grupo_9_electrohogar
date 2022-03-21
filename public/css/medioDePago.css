@@ -1,7 +1,5 @@
 .tarjeta img{
     justify-content: flex-end;
-    width: 350px;
-    height: 250px;
 }
 /* cuidado con esto, rompe el header, lo modifique en el html pero no se como se ve en su vista */
 /*
@@ -18,24 +16,22 @@ header img{
 
 .ingresoDeTarjeta {
     text-align: center;
-    font-size: 30px;
+    font-size: 17px;
+    padding-top: 30px;
 }
 
 div.pagarPadre3 {
     display: flex;
-    width: 1%;
-    height: 1%;
+    padding: 20px;
+ 
 }
 
-span.pagar {
-    height: 1%;
-    width: .1%;
-}
 
 /* el espacio entrer las cajas y su forma */
 .formTarjeta input{
-    width: 120%;
     background: none;
+    display: flex;
+    flex-wrap: wrap;
     color: #706c6c;
     font-size: 25px;
     padding: .7em .7em;
@@ -55,19 +51,22 @@ span.pagar button{
     /* margin-bottom: 30px; */
 }
 
-div.tarjeta {
-    height: 1%;
-}
+
 
 .padreTarje {
     display: flex;
-    margin: 100px;
     flex-wrap: wrap;
-    padding-top: 40px;
     justify-content: space-around;
     height: 570px;
-    width: 850px;
-    border: solid 1px black;
-    margin-left: 250px;
-    margin-top: 100px;
+    align-items: center;
+    flex-direction: column;
 }
+
+.containertarjetasform {
+    display: flex;
+}
+
+.tarjeta {
+    padding: 50px;
+}
+
