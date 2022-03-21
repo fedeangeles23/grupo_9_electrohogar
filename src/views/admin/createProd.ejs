@@ -28,10 +28,10 @@
 
                                     <div class="col-12 mb-3">
                                         <label for="inputName" class="form-label">Marca</label>
-                                        <input type="text" class="form-control" id="inputBrand" name="inputBrand" value="<%= locals.old && old.brand %>" />
+                                        <input type="text" class="form-control" id="inputBrand" name="brand" value="<%= locals.old && old.brand %>" />
                                        
                                             <small class="error" id="inputBrandErrors">
-                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                                <%= (typeof errors != 'undefined' && errors.brand) ? errors.brand.msg : "" %>
                                              </small>
                                        
                                     </div>
@@ -67,10 +67,10 @@
 
                                     <div class="col-12 mb-3">
                                         <label for="inputPrice" class="form-label">Precio</label>
-                                        <input type="number" class="form-control" id="inputPrice" name="inputpPrice" value="<%= locals.old && old.price %>">
+                                        <input type="number" class="form-control" id="inputPrice" name="price" value="<%= locals.old && old.price %>">
                                         
                                             <small class="error" id="inputPriceErrors">
-                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                                <%= (typeof errors != 'undefined' && errors.price) ? errors.price.msg : "" %>
                                             </small>
                                        
                                     </div>
@@ -83,7 +83,7 @@
                                         <input type="number" class="form-control" id="inputDiscount" name="discount" value="<%= locals.old ? old.discount : 0 %>">
                                         
                                             <small class="error" id="inputDiscountErrors">
-                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                                <%= (typeof errors != 'undefined' && errors.discount) ? errors.discount.msg : "" %>
                                                  </small>
                                        
                                     </div> 
@@ -94,7 +94,7 @@
                                         <input type="number" class="form-control" id="inputCuotes" name="cuotes" value="<%= locals.old ? old.discount : 0 %>">
                                         
                                             <small class="text-danger" id="inputCuotesErrors">
-                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                                <%= (typeof errors != 'undefined' && errors.cuotes) ? errors.cuotes.msg : "" %>
                                             </small>
                                         
                                     </div> 
@@ -105,7 +105,7 @@
                                         <input type="file" name="image" class="form-control" aria-label="file example" id="inputImage" multiple>
                                         
                                             <small class="text-danger" id="inputImageErrors">
-                                                <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                                <%= (typeof errors != 'undefined' && errors.image) ? errors.image.msg : "" %>
                                             </small>
                                         
                                     </div>
@@ -116,7 +116,7 @@
                                         <textarea class="form-control" id="validationTextarea" name="description"> <%= locals.old && old.description %> </textarea>
                                         
                                             <small class="text-danger" id="validationTextareaErrors">
-                                                  <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
+                                                  <%= (typeof errors != 'undefined' && errors.description) ? errors.description.msg : "" %>
                                             </small>
                                        
                                     </div>
@@ -133,7 +133,7 @@
 
                 <%- include ('../partials/footer.ejs') %>
                     <%- include ('../partials/scripts.ejs') %>
-                    <script src="/js/validacionCreateProd.js"></script>
+                   <script src="/js/validacionCreateProd.js"></script> 
     </body>
 
 </html>
