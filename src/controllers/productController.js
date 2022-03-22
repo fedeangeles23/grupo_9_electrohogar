@@ -144,6 +144,12 @@ let controller = {
                     res.render('products/medioDePago', {
                         session: req.session
                     })
+                },
+
+                EditarPerfil: (req, res) => {
+                    res.render('products/EditarPerfil', {
+                        session: req.session
+                    })
                 }
 
 

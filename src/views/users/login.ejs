@@ -40,7 +40,7 @@
           </span>
          
         </div>
-        
+        <spam><%= (typeof errors != 'undefined' && errors.undefined) ? errors.undefined.msg : "" %></spam>
         
         <div class="input-check">
           <input type="checkbox" name="remember" id="remember"><label for="check">Recordar</label>
@@ -92,7 +92,7 @@
       });
     }
   </script>
-<script src="/js/validacionLogin.js"></script>
+<script src="/js/validacionLogin.js"></script> 
 
 <script src="/js/modoOscu.js"></script>
 </body>
