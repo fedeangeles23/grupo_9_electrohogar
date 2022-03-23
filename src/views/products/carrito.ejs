@@ -3,182 +3,194 @@
 
 <%- include ('../partials/head.ejs', {title: 'Mi Carrito | ElectroHogar'}) %>
 
-    <body>
+<body>
 
-        <%- include ('../partials/header.ejs') %>
-            <%- include ('../partials/nav.ejs') %>
-                <main>
-                  
+    <%- include ('../partials/header.ejs') %>
+    <%- include ('../partials/nav.ejs') %>
+    <main>
 
-                    <!-- Contenedor triple que indica la sección actual -->
-                    <div class="container-text">
-                        <div class="container-text1">
-                            <p>Carrito</p>
-                        </div>
-                        <div class="container-text2">
-                            <p>Verificación de compra</p>
-                        </div>
-                        <div class="container-text3">
-                            <p>Forma de pago</p>
-                        </div>
-                    </div>
+        <div class="containercarrito">
 
-                    <!-- Contenedor del producto y su información -->
-                    <div class="box1">
-                        <div class="product-container">
-                            <div class="product-section">
 
-                                <div class="product">
-                                    <img src="/images/mogogs60.webp" alt="Moto G s60">
-                                </div>
 
-                                <div class="product-name">
-                                    <p>Celular Motorola G60s 128gb Aqua</p>
-                                </div>
 
-                            </div>
-                            <div class="units">
+            <!-- Contenedor triple que indica la sección actual -->
+            <div class="container-text">
+                <div class="container-text1">
+                    <p>Carrito</p>
+                </div>
+                <div class="container-text2">
+                    <p>Verificación de compra</p>
+                </div>
+                <div class="container-text3">
+                    <p>Forma de pago</p>
+                </div>
+            </div>
 
-                                <div class="text-unit">
-                                    <p>cantidad:</p>
-                                </div>
+            <!-- Contenedor del producto y su información -->
 
-                                <div class="add-unit">
-                                    <select name="cantidad" id="cantidad">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                    <label for="add-product">x $49.000,00</label>
-                                </div>
+            <div class="containerproductcarrito">
 
-                            </div>
+           
+            <div class="box1">
+                <div class="product-container">
+                    <div class="product-section">
 
-                            <div class="delet-product-t">
-                                <i class="fas fa-trash-alt"></i>
-                            </div>
-
-                           
-
-                            <div class="delete-section">
-
-                                
-
-                                <div class="delet-product">
-                                    <i class="fas fa-trash-alt"></i>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                   
-
-                    
-
-                    <!-- --- -->
-                    
-                  
-
-                    <div class="total-pay">
                         <div class="product">
-                            <a class="btn add-product" href="/">Añadir producto</a>
-                        </div>
-                       
-                        <p>TOTAL A PAGAR: $239.000,00</p>
-                        <div class="stepaso">
-                            <a class="btn stepaso" href="#">Siguiente paso</a>
-                        </div>
-                    </div>
-
-                    <!-- Estructura reservada para versión tablet -->
-                    <div class="total-pay-t">
-                        <div class="grupo1-t">
-                            <div class="flex1">
-                                <a class="btn-t sgrcomprando" href="/">Añadir producto</a>
-                            </div>
-                            <div class="flex2">
-                                <a class="btn-t stepaso" href="#">Siguiente paso</a>
-                            </div>
-                        </div>
-                        <div class="grupo2-t">
-                            
-                            <div class="total-price-t">
-                                <p>TOTAL A PAGAR: $96.000,00</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Estructuras reservadas para la versión mobile -->
-                    <div class="container-mobile">
-                        <div class="img-mobile">
                             <img src="/images/mogogs60.webp" alt="Moto G s60">
                         </div>
 
-                        <div class="info-mobile">
+                        <div class="product-name">
                             <p>Celular Motorola G60s 128gb Aqua</p>
                         </div>
 
-                        <div class="content-mobile">
-                            <div class="desplegagle-mobile">
-                                <select name="cantidad" id="cantidad">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                                <label for="box3">x $49.000,00</label>
-                            </div>
-                            <div class="icon-mobile">
-                                <i class="fas fa-trash-alt"></i>
-                            </div>
+                    </div>
+                    <div class="units">
+
+
+                        <div class="add-unit">
+                            <select name="cantidad" id="cantidad">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <label for="add-product">x $49.000,00</label>
                         </div>
+
                     </div>
 
-                    
-                   
+                    <div class="delet-product-t">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
 
-                    <!-- Contenedor para confirmar el pago versión Mobile -->
-                    <div class="pago-mobile">
 
-                        
 
+                    <div class="delete-section">
+
+
+
+                        <div class="delet-product">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+
+                    </div>
+
+                </div>     
+            </div>
+
+      
+                </div>
+
+            
+
+
+
+
+
+            <!-- --- -->
+
+
+
+            <div class="total-pay">
+                <div class="product">
+                    <a class="btn add-product" href="/">Añadir producto</a>
+                </div>
+
+                <p>TOTAL A PAGAR: $239.000,00</p>
+                <div class="stepaso">
+                    <a class="btn stepaso" href="#">Siguiente paso</a>
+                </div>
+            </div>
+
+            <!-- Estructura reservada para versión tablet -->
+            <div class="total-pay-t">
+                <div class="grupo1-t">
+                    <div class="flex1">
+                        <a class="btn-t sgrcomprando" href="/">Añadir producto</a>
+                    </div>
+                    <div class="flex2">
+                        <a class="btn-t stepaso" href="#">Siguiente paso</a>
+                    </div>
+                </div>
+                <div class="grupo2-t">
+
+                    <div class="total-price-t">
                         <p>TOTAL A PAGAR: $96.000,00</p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="flex-mobile">
+            <!-- Estructuras reservadas para la versión mobile -->
+            <div class="container-mobile">
+                <div class="img-mobile">
+                    <img src="/images/mogogs60.webp" alt="Moto G s60">
+                </div>
 
-                            <div class="product-mobile">
-                                <a class="btn-mobile" href="/">Añadir producto</a>
-                            </div>
+                <div class="info-mobile">
+                    <p>Celular Motorola G60s 128gb Aqua</p>
+                </div>
 
-                            <div class="stepaso-mobile">
-                                <a class="btn-mobile" href="#">Siguiente paso</a>
-                            </div>
+                <div class="content-mobile">
+                    <div class="desplegagle-mobile">
+                        <select name="cantidad" id="cantidad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <label for="box3">x $49.000,00</label>
+                    </div>
+                    <div class="icon-mobile">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </div>
+            </div>
 
-                        </div>
+
+
+
+            <!-- Contenedor para confirmar el pago versión Mobile -->
+            <div class="pago-mobile">
+
+
+
+                <p>TOTAL A PAGAR: $96.000,00</p>
+
+                <div class="flex-mobile">
+
+                    <div class="product-mobile">
+                        <a class="btn-mobile" href="/">Añadir producto</a>
                     </div>
 
-                </main>
+                    <div class="stepaso-mobile">
+                        <a class="btn-mobile" href="#">Siguiente paso</a>
+                    </div>
 
-                <div class="espacio-vacio"></div>
+                </div>
+            </div>
 
-                <%- include ('../partials/footer.ejs') %>
-                    <%- include ('../partials/scripts.ejs') %>
+        </div>
 
-    </body>
+    </main>
+
+    <div class="espacio-vacio"></div>
+
+    <%- include ('../partials/footer.ejs') %>
+    <%- include ('../partials/scripts.ejs') %>
+
+</body>
 
 </html>

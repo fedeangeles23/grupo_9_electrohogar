@@ -19,11 +19,11 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    width: 1110;
+    align-items: center;
 }
 /* Configuración del texto 1 */
 .container-text1{
-    width: 370px;
+    width: 300px;
     height: 40px;
     align-self: center;  
     background-color: #009688;
@@ -33,21 +33,21 @@
 }
 /* Configuración del texto 2 */
 .container-text2{
-    width: 370px;
+    width: 300px;
     height: 40px;
     align-self: center;
-    background-color: #009688;
-    border: 1px solid var(--color-white-gray);
+background-color: #009688a8;
+border: 1px solid var(--color-white-gray);
     border-color: var(--fine-border);
     box-shadow: 0px 0px 1px;
 }
 /* Configuración del texto 3 */
 .container-text3{
-    width: 370px;
+    width: 300px;
     height: 40px;
     align-self: center;
-    background-color: #009688;
-    border: 1px solid var(--color-white-gray);
+background-color: #009688a8;
+border: 1px solid var(--color-white-gray);
     border-color: var(--fine-border);
     box-shadow: 0px 0px 1px;
 }
@@ -66,7 +66,7 @@
     margin-left: auto;
     margin-right: auto;
     height: 140px;
-    width: 1110px;
+    width: 900px;
     margin-top: 5px;
     border: 1px solid var(--color-white-gray);
     border-color: var(--fine-border1);
@@ -255,7 +255,7 @@
     display: flex;
     background: var(--color-white-gray);
     height: 90px;
-    width: 1110px;
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -338,18 +338,6 @@
         width: 1110;
     }
 
-    .container-text1{
-        min-width: 370px;
-    }
-    /* Configuración del texto 2 */
-    .container-text2{
-        min-width: 370px;
-    }
-    /* Configuración del texto 3 */
-    .container-text3{
-        min-width: 370px;
-       
-    }
 
 }
 
@@ -739,4 +727,17 @@
 
 .units {
     margin: 30px;
+}
+.containercarrito {
+    display: flex;
+    min-height: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerproductcarrito{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
