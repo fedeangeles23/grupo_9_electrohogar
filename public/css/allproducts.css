@@ -118,6 +118,45 @@ aside{
     margin-right: 30px;
 }
 
+.dropdown {
+    width: 12rem;
+    position: relative;
+}
+
+.dropdown:hover .dropdown-list {
+    opacity: 1;
+    visibility: visible;
+}
+.dropdown-select {
+    
+    border-radius: 6px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.dropdown-list {
+    border-radius: 4px;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s linear, visibility 0.3s linear;
+    cursor: pointer;
+}
+
+.dropdown-list_item {
+    padding: 1rem;
+    font-size: 18px;
+    background-color: white;
+}
+
 
 /* Vista categorias boxarea */
 
