@@ -24,9 +24,9 @@ const addItem = async (id) => {
         const response = await fetch(`/api/cart/${id}`, {
             method: 'POST'
         })
-        const result = await response.send(result)
+        const result = await response.json()
 
-
+        
 
         if (result.ok) {
             cargarTabla(result.data)
