@@ -25,7 +25,7 @@ module.exports = [
            .then(user => {
                // Que compare la pass del body con la pass del usuario
                if(!bcrypt.compareSync(req.body.pass1, user.dataValues.pass)){
-                   return Promise.reject()
+                   return Promise.reject("Credenciales incorrectas")
                }
            })
            .catch(() => {

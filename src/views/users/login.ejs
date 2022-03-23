@@ -38,9 +38,14 @@
           <span class="error" id="passErrors">
             <%= (typeof errors != 'undefined' && errors.pass1) ? errors.pass1.msg : "" %>
           </span>
+
          
         </div>
-        <spam><%= (typeof errors != 'undefined' && errors.undefined) ? errors.undefined.msg : "" %></spam>
+
+          <span class="error" id="passErrors">
+            <%= (typeof errors != 'undefined' && errors.custom) ? errors.custom.msg : "" %>
+          </span>
+        
         
         <div class="input-check">
           <input type="checkbox" name="remember" id="remember"><label for="check">Recordar</label>

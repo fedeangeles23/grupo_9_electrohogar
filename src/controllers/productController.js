@@ -20,6 +20,7 @@ let controller = {
                 include: [{
                     association: 'productImages'
                 }]
+                /* include: all : true */
             })
             .then((productdetail) => {
                 res.render('products/productDetail', {
