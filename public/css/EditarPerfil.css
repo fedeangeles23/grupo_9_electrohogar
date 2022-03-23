@@ -1,0 +1,52 @@
+
+
+div.EditarPerfil {
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+form.form-EditPerfil {
+    text-align: center;
+}
+
+input#Usuario {
+    
+    text-align: center;
+    border-radius: 20px;
+    border:none;
+}
+
+input#email {
+
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+}
+
+input#Telefono {
+   
+    text-align: center;
+    border-radius: 20px;
+    border:none;
+}
+
+input#direccion {
+   
+    text-align: center;
+    border-radius: 20px;
+    border:none;
+}
+
+button.btnGuardarPerfil {
+    border-radius: 20px;
+    color: white;
+    background-color: blue;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.datosVolver {
+    text-align: center;
+    padding-top: 30px;
+}

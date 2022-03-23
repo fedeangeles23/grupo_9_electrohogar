@@ -36,6 +36,12 @@
      color:rgb(4, 0, 255);
  }
 
+
+
+li.menu-button {
+    list-style: none;
+     }
+
  .cards .new-arrival h1:after{
      content: "";
      height: 5px;

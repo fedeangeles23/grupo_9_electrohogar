@@ -33,6 +33,5 @@ router.get('/perfil/edit', userSessionCheck ,controller.editProfile)
 router.get('/loginGoogle', controller.loginGoogle);
 
 
-
 module.exports = router;
 
