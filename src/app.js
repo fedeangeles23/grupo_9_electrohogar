@@ -54,6 +54,8 @@ app.use('/admin', admin);
 
 app.use('/products', products);
 
+app.use('/api/cart', require('./routes/carritoRouter'));
+
 
 
 /* ----------- ERROR 404 ---------------*/

@@ -38,8 +38,13 @@
           <span class="error" id="passErrors">
             <%= (typeof errors != 'undefined' && errors.pass1) ? errors.pass1.msg : "" %>
           </span>
+
          
         </div>
+
+          <span class="error" id="passErrors">
+            <%= (typeof errors != 'undefined' && errors.custom) ? errors.custom.msg : "" %>
+          </span>
         
         
         <div class="input-check">
