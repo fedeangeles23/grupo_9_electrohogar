@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     
-<%- include('../partials/head.ejs') %>
+<%- include('../partials/head.ejs', {title: ' Allproducts | ElectroHogar'}) %>
 
     <body>
         <%- include('../partials/header.ejs') %>
@@ -23,11 +23,15 @@
                             <b>Vista: <img class="vistagrid" src="/icons/grid-view-svgrepo-com.svg" alt=""> <img class="vistagrid" src="/icons/menu-hamburger-nav-svgrepo-com.svg" alt=""> </b> 
                         </div>
 
-                        <div class="boxareachild3">
-                          <b>Filtrar por: <select class="selectprecio" name="selectprecio" id="">
-                              <option value="menorprecio">Menor precio</option>
-                              <option value="menorprecio">Mayor precio</option>
-                          </select></b>  
+                        <div class="dropdown">
+                            <div class="dropdown-select">
+                                <span class="select"> Filtar por: </span>
+                                <i class="fa fa-caret-down icon"></i>
+                            </div>
+                            <div class="dropdown-list">
+                                <div class="dropdown-list_item">Mayor precio</div>
+                                <div class="dropdown-list_item">Menor precio</div>
+                            </div>
                         </div>
                     </div>
 
