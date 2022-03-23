@@ -39,6 +39,16 @@ module.exports = {
                ]
                });
 
+               console.log('Aca esta tu productito >', product)
+
+               if(!product){
+                        return res.status(500).json({
+                             ok: false,
+                             msg: 'Comuniquese con el administrador de la web'
+                        })
+               }
+
+
                const {id, name, price, brand} = product;
 
                let item = {
@@ -46,8 +56,8 @@ module.exports = {
                     name,
                     price,
                     brand,
-                    image: productImages.image,
-                    amount : 1,
+/*                     image: ProductImage.image[0],
+ */                    amount : 1,
                     total : price
                }
 
