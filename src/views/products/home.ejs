@@ -35,8 +35,19 @@
             <div class="col2linea">
                 <img class="tarjetaslinea" src="/images/549d2cb2275c2ae398b2f7bd1450.png" alt="">
                 <span>Pagá con crédito y débito
-                    <a href="#">Ver promociones</a></span>
+                    </span>
+                    <a href="#" id="open" class="cta">Ver promociones</a>
             </div>
+
+            <div class="modal-container" id="modal_container">
+                <div class="modal modal-close">
+                    <p class="close" id="close">X</p>
+                    <img src="/img/medio-de-pago.png" alt="">
+                </div>
+            </div>
+
+
+            
 
             <div class="col3linea">
                 <img class="envioslinea" src="/images/ayudar.png" alt="">
@@ -255,7 +266,7 @@
 
 
 
-
+        <script src="/js/cerrarModal.js"></script>
     </main>
 
     <%- include ('../partials/footer.ejs') %>
@@ -268,6 +279,8 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script src="/js/modoOscu.js"></script>
+
+    
 
 </body>
 
