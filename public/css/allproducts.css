@@ -119,18 +119,29 @@ aside{
 }
 
 .dropdown {
-    width: 12rem;
-    position: relative;
+width: 7rem;
+position: relative;
+    margin-right: 10px;
 }
 
 .dropdown:hover .dropdown-list {
     opacity: 1;
+        z-index: 99;
     visibility: visible;
 }
+
+ .dropdown-list_item:hover {
+   color: blue;
+}
+
+i.fa.fa-caret-down.icon {
+    padding: 5px;
+}
+
 .dropdown-select {
     
     border-radius: 6px;
-    background-color: white;
+    background-color: #eeeeee;
     width: 100%;
     display: flex;
     align-items: center;
@@ -153,7 +164,8 @@ aside{
 
 .dropdown-list_item {
     padding: 1rem;
-    font-size: 18px;
+    width: 120px;
+    font-size: 13px;
     background-color: white;
 }
 

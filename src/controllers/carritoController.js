@@ -1,12 +1,10 @@
 const db = require('../database/models');
-const ProductImage = db.ProductImage
 
 
 module.exports = {
 
 
      show: async (req, res) => {
-
 
           if (!req.session.cart) {
                return res.status(500).json({
@@ -56,15 +54,14 @@ module.exports = {
                     name,
                     price,
                     brand,
-/*                     image: ProductImage.image[0],
- */                    amount : 1,
+                    image: product.productImages[0].image,
+                   amount : 1,
                     total : price
                }
 
                if(!req.session.cart){
                     req.session.cart = []
                }
-               console.log(req.session.cart)
           
                req.session.cart.push(item)
 
