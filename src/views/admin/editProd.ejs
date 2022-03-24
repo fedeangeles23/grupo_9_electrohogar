@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('../partials/head.ejs', {title: ' Admin | ElectroHogar'})) %>
+<%- include('../partials/head.ejs', {title: ' Admin | ElectroHogar'}) %>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <body>
@@ -11,7 +11,7 @@
           
           <h3 class="h3editprod">Estás editando el producto:<p class="produ-titulo"><%- product.name %></p></h3>
 
-          <div class="formmain">
+          <div class="formmain" id="formmain">
               <div class="formmain-create">
                 <form class="col-md-9 ms-sm-auto col-lg-10 px-md-4 row p-3 justify-content-center" action="/admin/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                   <div class="col-12 col-md-6">
@@ -27,7 +27,7 @@
 
                         <div class="col-12 mb-3">
                             <label for="inputName" class="form-label">Marca</label>
-                            <input type="text" class="form-control" id="inputBrand" name="drand" value="<%= locals.old ? old.brand : product.brand %>">
+                            <input type="text"  pattern="[a-z]*" class="form-control" id="inputBrand" name="drand" value="<%= locals.old ? old.brand : product.brand %>">
                             
                                 <small class="text-danger" class="error" id="inputBrandErrors">
                                     <%= (typeof errors != 'undefined' && errors.brand) ? errors.brand.msg : "" %>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
         
-                    <button type="submit" class="btn btn-outline-primary col-3 mt-3">
+                    <button type="submit" id="submitErrors" class="btn btn-outline-primary col-3 mt-3">
                         CREAR
                     </button>
                 </form>

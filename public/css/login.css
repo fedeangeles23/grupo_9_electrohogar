@@ -329,3 +329,12 @@ input#remember {
     align-items: center;
     flex-direction: column;
 }
+
+input:invalid {
+    animation: shake 300ms;
+}
+@keyframes shake {
+    25% { transform: translateX(4px); }
+    50% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+     }

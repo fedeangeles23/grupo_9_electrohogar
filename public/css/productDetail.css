@@ -31,6 +31,8 @@ img.small-img{
     margin: 20px;
 }
 
+
+
 div.small-cuadrado {
     margin-left: 20px;
 }
@@ -245,7 +247,7 @@ input:focus{
 .detalleyinfo h4 {
     display: inline-block;
     position: relative;
-    color: #700184;;
+    color: #700184;
   }
   
 
@@ -301,10 +303,15 @@ input:focus{
 
 
 .small-img-col img:hover{
-    border:1px solid rgb(25, 0, 255);
+    border:2px solid rgb(25, 0, 255);
     transition: 0.2s ease-in-out;
-
 }
+
+
+/* .productDetailcontainer img[type="checkbox"]:checked + img {
+background: rgb(190, 190, 194);
+
+} */
 
 
 .favdetail {
@@ -322,3 +329,56 @@ input:focus{
     padding:20px
 }
 
+main.productDetail {
+    position: relative;
+}
+
+/*ventana modal de ver sucursales */
+
+.modal-containerSucursal{
+    z-index: 9999; 
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    top: 30%;
+    left: 35%;
+    background: rgba(0,0,0, 0.5);
+   display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.modal .modal-closeSucursal{
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 7px;
+    transition: transform 1s;
+    transform: translateY(0%);
+} 
+
+.modal.modal-closeSucursal p{ 
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    background-color: red;
+    width: 23px;
+    height: 20px;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal.modal-closeSucursal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}

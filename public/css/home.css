@@ -615,7 +615,6 @@ a:hover{
     position: fixed;
     width: 100%;
     height: 100vh;
-   
     top: 0;
     left: 0;
     background: rgba(0,0,0, 0.5);
@@ -624,13 +623,8 @@ a:hover{
     align-items: center;
 }
 
-.show {
-    pointer-events: auto;
-    opacity: 1;
-}
-
 .modal{
-    width: 80%;
+    width: 75%;
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -657,5 +651,30 @@ a:hover{
 } 
 
 
+/* boton de ir arriba*/
+
+#button-up {
+    width: 60px;
+    height: 60px;
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: all 300ms ease;
+    transform: scale(0);
+}
+
+#button-up:hover{
+    transform: scale(1.1);
+    border-color: rgba(0, 0, 0, 0.1);
+}
 
 
