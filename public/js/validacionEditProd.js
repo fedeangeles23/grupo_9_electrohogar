@@ -31,6 +31,11 @@ window.addEventListener('load', function () {
     $descripcion = qs('#validationTextarea'),
     $descripcionErrors = qs('#validationTextareaErrors'),
 
+    $formmain = qs('#formmain'),
+
+    
+    submitErrors = qs('#submitErrors')
+
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
     
     
@@ -219,6 +224,21 @@ $descripcion.addEventListener('blur', function(e) {
            validationsErrors = false;
            break;
    }
+})
+
+$formmain.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let error = false;
+    let elementsForm = this.elements;
+
+    for (let index = 0; index < elementsForm.length - 1; index++){
+if(elementsForm[index].value == "") {
+elementsForm[index].classList.add('is-invalid');
+submitErrors.innerHTML = "los campos señalados son obligatorios";
+error = true;
+}
+    }
 })
 
 })

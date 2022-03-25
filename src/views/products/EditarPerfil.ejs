@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('../partials/head.ejs', {title: ' Editar mi perfil | ElectroHogar'})) %>
+
+<body>
+
+  <%- include('../partials/header.ejs') %>
+
+
+  <%- include('../partials/nav.ejs') %>
+
+
+    <main class="logregistermain">
+      <div class="containerregistro">
+  
+        <p class="ingreso">Tu perfil</p>
+  
+        
+         
+          <div class="login2">           
+            <input id="Usuario" pattern="[a-z]*" class="PerfilEdit" type="Usuario" name="Usuario" placeholder="Usuario:">
+             
+            <span class="error" id="UsuarioErrors" >
+           
+            </span>       
+          </div>
+          
+
+          
+          <div class="login2">            
+            <input id="email" class="PerfilEdit" type="email" name="email" placeholder="Email:">
+             
+            <span class="error" id="emailErrors" >
+           
+            </span>       
+          </div>
+
+          <div class="login2">
+            <input id="Telefono" class="PerfilEdit" type="telefono" name="telefono" placeholder="Teléfono:">
+             
+            <span class="error" id="TelefonoErrors" >
+           
+            </span>       
+          </div>
+  
+          
+          <div class="login2">
+            <input id="direccion" class="PerfilEdit" type="direccion" name="direccion" placeholder="Dirección:">
+           
+            <span class="error" id="direccionErrors">
+             
+            </span>
+          </div>
+          
+          <span class="perfilEdiii"><button type="submit" class="btnGuardarPerfil">Guardar Cambios</button></span>
+  
+      
+  
+         <div class="datosVolver">
+  
+         
+          <span> <a href="/users/perfil" class="link-EditPerff"> Volver atras</a> </span>
+         
+  
+        </div>
+  
+      </div>
+    
+    </main>
+  
+   <%- include('../partials/footer.ejs') %>
+  <%- include('../partials/scripts.ejs') %>
+  
+</body>
+</html>

@@ -16,7 +16,7 @@
                             <form class="col-md-9 ms-sm-auto col-lg-10 px-md-4 row p-3 justify-content-center" action="/admin/products/create" method="POST" enctype="multipart/form-data">
                                 <div class="col-12 col-md-6">
                                     <div class="col-12 mb-3">
-                                        <label  for="inputName" class="form-label">Nombre</label>
+                                        <label  for="inputName"  pattern="[a-z]*" class="form-label">Nombre</label>
                                         <input type="text" class="form-control" id="inputName" name="inputName" value="<%= locals.old && old.name %>" />
                                       
                                             <small class="error" id="inputNameErrors"> 
@@ -27,7 +27,7 @@
 
 
                                     <div class="col-12 mb-3">
-                                        <label for="inputName" class="form-label">Marca</label>
+                                        <label for="inputName"  pattern="[a-z]*" class="form-label">Marca</label>
                                         <input type="text" class="form-control" id="inputBrand" name="brand" value="<%= locals.old && old.brand %>" />
                                        
                                             <small class="error" id="inputBrandErrors">

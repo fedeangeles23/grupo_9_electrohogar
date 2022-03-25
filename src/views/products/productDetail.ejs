@@ -10,7 +10,7 @@
 
             <%- include('../partials/nav.ejs') %>
 
-                <main>
+                <main class="productDetail">
                     <div class="productDetailcontainer">
 
                     <p class="enrutador"> Inicio | <%- Categories.name  %> |  <%- Subcategories.name %></p>
@@ -24,10 +24,10 @@
                                 <div class="small-img-row">
                                     <div class="small-img-col">
                                         <div>
-                                        <img class="small-img" src="/images/productsDB/<%-productdetail.productImages[0].image  %>  " alt="">
+                                        <img class="small-img" type="checkbox" src="/images/productsDB/<%-productdetail.productImages[0].image  %>  " alt="">
                                          </div>
                                         <div class="small-cuadrado">
-                                            <img class="small-img" src="/images/productsDB/<%-productdetail.productImages[0].image  %>  " alt="">
+                                            <img class="small-img" type="checkbox" src="/images/productsDB/<%-productdetail.productImages[0].image  %>  " alt="">
 
                                      </div>
 
@@ -50,9 +50,12 @@
                                 <div class="prodenvioicon">
                                     <img src="/images/delivery-truck (1).png" alt="">
                                     <p class="prodenvio"> Retiro gratis por sucursal
-                                        <br><a  id="open" class="greelineprod" href="#">Ver sucursales</a>
+                                        <br>
                                     </p>
+                                    <a  class="greelineprod" id="openSucur" href="#">Ver sucursales</a>
                                 </div>
+
+                               
 
                                
                                 <div class="prodesucursalicon">
@@ -85,6 +88,13 @@
                     <br>
                 </div>
 
+                <div class="">
+                    <div class="modal modal-closeSucursal modal-containerSucursal"  id="modal_containerSucur">
+                        <p class="closeSucursal" id="closeSucur">X</p>
+                        <img src="/img/ver-sucursales.png" alt="">
+                    </div>
+                </div>
+
 
                 </main>
 
@@ -112,7 +122,8 @@
                 <%- include('../partials/footer.ejs') %>
 
                     <%- include('../partials/scripts.ejs') %>
-                                    
+                       
+                    <script src="/js/cerrarModalSucursales.js"></script>
     </body>
 
 </html>

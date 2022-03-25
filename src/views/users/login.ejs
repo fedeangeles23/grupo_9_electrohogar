@@ -52,7 +52,7 @@
 
         </div>
 
-        <span class="cuenta2"><button type="submit" class="btncontinuar">Continuar</button></span>
+        <span class="cuenta2"><button type="submit" id="botonLogin" class="btncontinuar">Continuar</button></span>
 
       </form>
 
@@ -73,6 +73,31 @@
       </div>
 
     </div>
+
+    <script>
+
+      
+          const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: 'success',
+  title: 'Logueado con exito'
+})
+
+</script>
+
+  
+
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   </main>
 
@@ -98,6 +123,8 @@
     }
   </script>
 <script src="/js/validacionLogin.js"></script> 
+
+<script src="/js/cargando.js"></script>
 
 <script src="/js/modoOscu.js"></script>
 </body>
