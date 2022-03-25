@@ -321,3 +321,19 @@ button.btn.btn-continuee {
     margin: 15px;
 }
 
+
+/* Editar perfil  */
+
+.formcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formcontainer input {
+    width: 200px;
+}
+
+.formcontainer button {
+    width: 130px;
+}

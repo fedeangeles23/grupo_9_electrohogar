@@ -21,8 +21,6 @@ router.get('/carrito', controller.carrito)
 // Medio de pago
 router.get('/medioDePago', controller.medioDePago)
 
-// Editar Perfil
-router.get('/EditarPerfil', controller.EditarPerfil)
 
 
 /* GET - Search products */

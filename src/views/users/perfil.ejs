@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('../partials/head.ejs'{ title: ' Mi perfil| ElectroHogar' }))  %>
+<%- include('../partials/head.ejs', { title: ' Mi perfil | ElectroHogar' })  %>
 
 <body>
 
@@ -24,7 +24,7 @@
             <p class="perfil2">Telefono: <%= session.user.tel %></p>
             <p class="perfil2">Direccion: <%= session.user.address %></p>
             <div class="btndatossesion">
-              <a href="/products/EditarPerfil">Editar mis datos</a><a href="/users/logout">Cerrar sesion</a>
+              <a href="/users/perfil/edit">Editar mis datos</a><a href="/users/logout">Cerrar sesion</a>
 
             </div>
 

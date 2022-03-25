@@ -24,9 +24,13 @@ router.get('/logout', controller.logout)
 
 
 /* Seccion perfil CRUD */
+//Users/perfil
 router.get('/perfil', userSessionCheck ,controller.perfil)
 
 router.get('/perfil/edit', userSessionCheck ,controller.editProfile)
+
+router.post('/perfil/edit', userSessionCheck, controller.editProfilePost)
+
 
 
 

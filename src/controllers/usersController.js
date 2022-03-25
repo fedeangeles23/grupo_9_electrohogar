@@ -3,6 +3,7 @@ const {
 } = require('express-validator')
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
+const user = require('../database/models/user');
 const Users = db.User;
 const Products = db.Products;
 
@@ -161,12 +162,31 @@ const controller = {
     },
 
     editProfile: (req, res) => {
-        Users.findByPk(req.session.user.id, {
-            include: [{
-                association: 'addresses'
-            }]
+        Users.findByPk(req.session.user.id)
+        .then((user) => {
+            res.render('users/EditarPerfil', {
+                session: req.session,
+                user
+            })
         })
+        console.log(user)
 
+    
+    },
+
+
+    editProfilePost: (req, res) => {
+         Users.update({
+             where: { id: req.session.user.id}
+         })
+         .then((user) => {
+             user.update({
+                 name: req.body.nameEdit
+             })
+             res.redirect('/users/perfil')
+         })
+         .catch(error => console.log(error))
+        
     },
 
     logout: (req, res) => {

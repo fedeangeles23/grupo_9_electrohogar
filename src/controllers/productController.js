@@ -147,11 +147,7 @@ let controller = {
                     })
                 },
 
-                EditarPerfil: (req, res) => {
-                    res.render('products/EditarPerfil', {
-                        session: req.session
-                    })
-                }
+        
 
 
 

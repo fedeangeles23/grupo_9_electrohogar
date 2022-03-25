@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('../partials/head.ejs', {title: ' Editar mi perfil | ElectroHogar'}) %>
+
+<body>
+
+  <%- include('../partials/header.ejs') %>
+
+
+  <%- include('../partials/nav.ejs') %>
+
+
+    <main class="logregistermain">
+      <div class="containerregistro">
+  
+        <p class="ingreso">Editar mis datos</p>
+  
+        
+        <form action="/users/perfil/edit" method="post">
+          <div class="formcontainer">
+            
+            <input id="name" class="input-style" type="text" name="nameEdit" placeholder="Nombre:"
+            value="<%= locals.old && old.name %>" />
+            <input id="lastname" class="input-style email" type="text" name="last_name" placeholder="Apellido:"
+            value="<%= locals.old && old.last_name %>" />
+            <input id="email" class="input-style" type="email" name="email" placeholder="Email:"
+            value="<%= locals.old && old.email %>" />
+            
+            <input id="pass" class="input-style" type="password" name="pass1" placeholder="Contraseña:">
+
+              <input id="phone" class="input-style" type="text" name="phone" placeholder="Telefono:"
+                value="<%= locals.old && old.tel %>"/>
+
+
+            
+            
+            
+            
+            
+            <button type="submit" class="btncontinuar">Guardar Cambios</button>
+            
+                      </div>
+
+        </form>
+         
+        
+          
+  
+      
+  
+         <div class="datosVolver">
+  
+         
+          <span> <a href="/users/perfil" class="link-EditPerff"> Volver atras</a> </span>
+         
+  
+        </div>
+  
+      </div>
+    
+    </main>
+  
+   <%- include('../partials/footer.ejs') %>
+  <%- include('../partials/scripts.ejs') %>
+  
+</body>
+</html>
