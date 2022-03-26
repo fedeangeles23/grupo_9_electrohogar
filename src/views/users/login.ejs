@@ -20,33 +20,33 @@
       <p class="ingreso">Ingresa los datos de tu cuenta</p>
 
       <form action="/users/login" method="POST" class="form-login">
-       
-        <div class="login2">
-          
-          <input id="email" class="input-style" type="email" name="email" placeholder="Email:"
-            value="<%= locals.old && old.email %>"/>
-          <span class="error" id="emailErrors" >
-            <%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : "" %>
-          </span>       
-        </div>
-        
 
-        
+        <div class="login2">
+
+          <input id="email" class="input-style" type="email" name="email" placeholder="Email:"
+            value="<%= locals.old && old.email %>" />
+          <span class="error" id="emailErrors">
+            <%= (typeof errors != 'undefined' && errors.email) ? errors.email.msg : "" %>
+          </span>
+        </div>
+
+
+
         <div class="login2">
           <input id="pass" class="input-style" type="password" name="pass1" placeholder="Contraseña:">
-         
+
           <span class="error" id="passErrors">
             <%= (typeof errors != 'undefined' && errors.pass1) ? errors.pass1.msg : "" %>
           </span>
 
-         
+
         </div>
 
-          <span class="error" id="passErrors">
-            <%= (typeof errors != 'undefined' && errors.custom) ? errors.custom.msg : "" %>
-          </span>
-        
-        
+        <span class="error" id="passErrors">
+          <%= (typeof errors != 'undefined' && errors.custom) ? errors.custom.msg : "" %>
+        </span>
+
+
         <div class="input-check">
           <input type="checkbox" name="remember" id="remember"><label for="check">Recordar</label>
 
@@ -57,7 +57,7 @@
       </form>
 
 
-      
+
       <div class="google-btnlogin">
 
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
@@ -74,29 +74,8 @@
 
     </div>
 
-    <script>
 
-      
-          const Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 3000,
-  timerProgressBar: true,
-  didOpen: (toast) => {
-    toast.addEventListener('mouseenter', Swal.stopTimer)
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
-  }
-})
 
-Toast.fire({
-  icon: 'success',
-  title: 'Logueado con exito'
-})
-
-</script>
-
-  
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   </main>
@@ -122,11 +101,36 @@ Toast.fire({
       });
     }
   </script>
-<script src="/js/validacionLogin.js"></script> 
 
-<script src="/js/cargando.js"></script>
 
-<script src="/js/modoOscu.js"></script>
+  <script>
+    if (req.session) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+
+      Toast.fire({
+        icon: 'success',
+        title: 'Logueado con exito'
+      })
+    }else{
+      console.log('No entro en seccion')
+    }
+  </script>
+
+  <script src="/js/validacionLogin.js"></script>
+
+  <script src="/js/cargando.js"></script>
+
+  <script src="/js/modoOscu.js"></script>
 </body>
 
 </html>

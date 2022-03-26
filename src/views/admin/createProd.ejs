@@ -16,8 +16,9 @@
                             <form class="col-md-9 ms-sm-auto col-lg-10 px-md-4 row p-3 justify-content-center" action="/admin/products/create" method="POST" enctype="multipart/form-data">
                                 <div class="col-12 col-md-6">
                                     <div class="col-12 mb-3">
+
                                         <label  for="inputName"  pattern="[a-z]*" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control" id="inputName" name="inputName" value="<%= locals.old && old.name %>" />
+                                        <input type="text" class="form-control" id="inputName" name="name" value="<%= locals.old && old.name %>" />
                                       
                                             <small class="error" id="inputNameErrors"> 
                                                 <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
@@ -102,7 +103,7 @@
 
                                     <div class="col-12 mb-3">
                                         <label for="inputImage" class="form-label">Imagen</label>
-                                        <input type="file" name="image" class="form-control" aria-label="file example" id="inputImage" multiple>
+                                        <input type="file" name="image" class="form-control" aria-label="file example" id="inputImage">
                                         
                                             <small class="text-danger" id="inputImageErrors">
                                                 <%= (typeof errors != 'undefined' && errors.image) ? errors.image.msg : "" %>

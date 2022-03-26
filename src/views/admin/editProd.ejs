@@ -27,7 +27,7 @@
 
                         <div class="col-12 mb-3">
                             <label for="inputName" class="form-label">Marca</label>
-                            <input type="text"  pattern="[a-z]*" class="form-control" id="inputBrand" name="drand" value="<%= locals.old ? old.brand : product.brand %>">
+                            <input type="text"  class="form-control" id="inputBrand" name="drand" value="<%= locals.old ? old.brand : product.brand %>">
                             
                                 <small class="text-danger" class="error" id="inputBrandErrors">
                                     <%= (typeof errors != 'undefined' && errors.brand) ? errors.brand.msg : "" %>

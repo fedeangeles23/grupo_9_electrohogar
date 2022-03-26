@@ -26,7 +26,7 @@
           <form action="/users/registro" method="POST" class="form-registro">
 
             <div class="form">
-              <input id="name" pattern="[a-z]*" class="input-style" type="text" name="name" placeholder="Nombre:"
+              <input id="name" class="input-style" type="text" name="name" placeholder="Nombre:"
                 value="<%= locals.old && old.name %>" />
 
               <span class="error" id="nameErrors">
@@ -36,7 +36,7 @@
             </div>
 
             <div class="form">
-              <input id="lastname" pattern="[a-z]*" class="input-style email" type="text" name="last_name" placeholder="Apellido:"
+              <input id="lastname" class="input-style email" type="text" name="last_name" placeholder="Apellido:"
                 value="<%= locals.old && old.last_name %>" />
               <i class="fa-regular fa-circle-check"></i>
               <i class="fa-solid fa-circle-exclamation"></i>

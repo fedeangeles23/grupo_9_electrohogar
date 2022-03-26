@@ -37,8 +37,6 @@ module.exports = {
                ]
                });
 
-               console.log('Aca esta tu productito >', product)
-
                if(!product){
                         return res.status(500).json({
                              ok: false,

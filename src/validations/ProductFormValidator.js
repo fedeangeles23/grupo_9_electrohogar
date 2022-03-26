@@ -17,10 +17,6 @@ module.exports = [
     .notEmpty()
     .withMessage('Debes elegir una categoría'),
 
-    check('subcategory')
-    .notEmpty()
-    .withMessage('Debes elegir una subcategoría'),
-
     check('price')
     .notEmpty()
     .withMessage('Debes ingresar un precio').bail()
@@ -32,6 +28,6 @@ module.exports = [
     .withMessage('Sólo números'),
 
     check('description')
-    .isLength({ min:20, max: 500 })
+    .isLength({ min:5, max: 500 })
     .withMessage('La descripción debe tener un minimo de 20 a 500 caracteres')
 ]
