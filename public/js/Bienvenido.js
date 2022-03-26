@@ -6,8 +6,8 @@ if( !sessionStorage.getItem("welcome")){
     })
     
     sessionStorage.setItem("welcome", true)
-}
-
+//aca
+ }
 
 
    const loginCheck = () => {
@@ -31,4 +31,4 @@ if( !sessionStorage.getItem("welcome")){
         }
 
        }
-      
+ 
