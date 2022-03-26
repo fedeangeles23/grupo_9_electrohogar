@@ -50,16 +50,11 @@ window.addEventListener('load', function () {
             $name.classList.add('is-invalid');
             validationsErrors = true
             break;
-            case $name.value.length <10 :
-            $nameErrors.innerHTML = 'Debes ingresar al menos 10 caracteres';
+            case $name.value.length <5 :
+            $nameErrors.innerHTML = 'Debes ingresar al menos 5 caracteres';
             $name.classList.add('is-invalid');
             validationsErrors = true
             break;
-        case !regExAlpha.test($name.value):
-            $nameErrors.innerHTML = 'Ingrese un nombre válido';
-            $name.classList.add('is-invalid');
-            validationsErrors = true
-            break
         default:
             $name.classList.remove('is-invalid');
             $name.classList.add('is-valid');
@@ -212,8 +207,8 @@ $descripcion.addEventListener('blur', function(e) {
            $descripcion.classList.add('is-invalid');
            validationsErrors = true
            break;
-           case $descripcion.value.length <20 :
-           $descripcionErrors.innerHTML = 'Debes ingresar al menos 20 caracteres';
+           case $descripcion.value.length <5 :
+           $descripcionErrors.innerHTML = 'Debes ingresar al menos 5 caracteres';
            $descripcion.classList.add('is-invalid');
            validationsErrors = true
            break;
@@ -226,19 +221,6 @@ $descripcion.addEventListener('blur', function(e) {
    }
 })
 
-$formmain.addEventListener('submit', function(e) {
-    e.preventDefault();
 
-    let error = false;
-    let elementsForm = this.elements;
-
-    for (let index = 0; index < elementsForm.length - 1; index++){
-if(elementsForm[index].value == "") {
-elementsForm[index].classList.add('is-invalid');
-submitErrors.innerHTML = "los campos señalados son obligatorios";
-error = true;
-}
-    }
-})
 
 })

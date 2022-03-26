@@ -28,6 +28,6 @@ module.exports = [
     .withMessage('Sólo números'),
 
     check('description')
-    .isLength({ min:5, max: 500 })
-    .withMessage('La descripción debe tener un minimo de 20 a 500 caracteres')
+    .isLength({ min:5, max: 10 })
+    .withMessage('La descripción debe tener un minimo de 5 a 10 caracteres')
 ]
