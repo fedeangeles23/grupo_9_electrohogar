@@ -19,12 +19,21 @@
 }
 
 .small-img-row{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  margin-top: 10px;
+         display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    
 }
 
+.infoprod {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoprod span {
+    color: #5b016b;
+}
 
 .small-img{
     margin-top: 10px;
@@ -225,7 +234,6 @@ input:focus{
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
     text-align: center;
-    margin-top: 90px;
 }
 
 .especificacionestecnicas {
@@ -282,14 +290,7 @@ input:focus{
     margin-top: 50px;
   }
 
-@media screen and (max-width: 725px) {
-    
-    .roww{
-        display: flex;
-        flex-direction: column;
-    }
 
-}
 
 
 /* Imagenes cuadrados de product detail */
@@ -391,4 +392,33 @@ main.productDetail {
     height: 100%;
     object-fit: cover;
     
+}
+.h3detail{
+    color: #700184;
+    display: flex;
+    padding-left: 50px;
+}
+
+@media screen and (max-width: 725px) {
+
+    .roww {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .roww {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgcontainercol2 {
+        width: 300px;
+        height: 300px;
+        background-color: white;
+    }
+
 }
