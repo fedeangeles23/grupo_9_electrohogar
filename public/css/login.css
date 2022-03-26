@@ -294,7 +294,7 @@ button.btncontinuar:hover{
 
 input.input-style{
     margin-bottom: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 input.input-style:focus {
