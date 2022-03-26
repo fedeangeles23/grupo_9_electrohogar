@@ -1,7 +1,34 @@
-Swal.fire({
-    title: "Bienvenido a ElectroHogar",
-    timer: 5000,
-    timerProgressBar: true,
-    imageUrl: '/img/electrohogarlogo.png',
-    imageWidth: '300px'
-})
+if( !sessionStorage.getItem("welcome")){
+    Swal.fire({
+        title: "Bienvenido a ElectroHogar",
+        timer: 4000,
+        timerProgressBar: true
+    })
+    
+    sessionStorage.setItem("welcome", true)
+}
+
+
+
+   const loginCheck = () => {
+       if(sessionStorage.getItem("login")) {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+    
+          Toast.fire({
+            icon: 'success',
+            title: 'Logueado con exito'
+          })
+        }
+
+       }
+      

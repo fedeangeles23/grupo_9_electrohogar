@@ -31,9 +31,14 @@
                             <ul>
                                 <div class="hovercuenta">
                                     <li> <a href="/users/perfil">Mi perfil</a></li>
-                                    <li> <a href="/users/logout">Cerrar sesion</a></li>
+                                    <li> <a onclick="sessionStorage.removeItem('login')" href="/users/logout">Cerrar sesion</a></li>
                                 </div>
                             </ul>
+
+                            <script> 
+                            sessionStorage.setItem("login", true)
+                            </script>
+
 
                         </li>
                         <% } else {%>
