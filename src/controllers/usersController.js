@@ -45,29 +45,27 @@ const controller = {
                     }
 
                     req.session.cart = [];
-
+                   
+                    console.log(req.session.cart);
+                    
                     db.Order.findOne({
                         where: {
                             userId: req.session.user.id,
-                            status: 'pending'
+                            state: 'pending'
                         },
                         include: [{
-                            association: 'carts',
-                            include: [{
-                                association: 'product',
-                                include: ['images']
-                            }]
+                            association: 'order_items'
                         }]
 
                     }).then(order => {
                         if (order) {
-                            order.carts.forEach(item => {
+                            order.order_items.forEach(item => {
                                 let product = {
                                     id: item.productId,
                                     name: item.product.name,
                                     price: item.product.price,
                                     discount: item.product.discount,
-                                    image: item.product.images[0].file,
+                                    image: product.productImages[0].image,
                                     amount: +item.amount,
                                     total: +item.product.price * item.quantity,
                                     orderId: order.id
@@ -163,30 +161,32 @@ const controller = {
 
     editProfile: (req, res) => {
         Users.findByPk(req.session.user.id)
-        .then((user) => {
-            res.render('users/EditarPerfil', {
-                session: req.session,
-                user
+            .then((user) => {
+                res.render('users/EditarPerfil', {
+                    session: req.session,
+                    user
+                })
             })
-        })
         console.log(user)
 
-    
+
     },
 
 
     editProfilePost: (req, res) => {
-         Users.update({
-             where: { id: req.session.user.id}
-         })
-         .then((user) => {
-             user.update({
-                 name: req.body.nameEdit
-             })
-             res.redirect('/users/perfil')
-         })
-         .catch(error => console.log(error))
-        
+        Users.update({
+                where: {
+                    id: req.session.user.id
+                }
+            })
+            .then((user) => {
+                user.update({
+                    name: req.body.nameEdit
+                })
+                res.redirect('/users/perfil')
+            })
+            .catch(error => console.log(error))
+
     },
 
     logout: (req, res) => {

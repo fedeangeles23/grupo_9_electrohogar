@@ -655,8 +655,9 @@ a:hover{
 
 #button-up {
     width: 60px;
+    z-index: 9999;
     height: 60px;
-    background: blue;
+    background: #140b5c;
     display: flex;
     justify-content: center;
     align-items: center;

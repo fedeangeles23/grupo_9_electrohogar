@@ -12,27 +12,42 @@ const Subcategories = db.Subcategory;
 let controller = {
 
         // Detalle de producto
-    detail: (req, res) => {
-        Products.findOne({
+
+        detail: (req, res) => {
+            let productdetail = Products.findOne({
                 where: {
                     id: req.params.id
                 },
                 include: [{
-                    association: 'productImages'
+                    all: true
                 }]
-                /* include: all : true */
             })
-            .then((productdetail) => {
-                res.render('products/productDetail', {
-                    productdetail,
-                    Categories,
-                    Subcategories,
-                    session: req.session
-                })
+
+            let productRelated = Products.findAll({
+                where: {
+                    subcategories : req.params.id
+                },
+                include: [{
+                    all: true
+                }]
             })
-            .catch(error => console.log(error))
-    },
-               
+
+            Promise.all([productdetail, productRelated])
+
+                    .then(([productdetail, productRelated]) => {
+                        res.render('products/productDetail', {
+                            productdetail,  
+                            productRelated,
+                            Categories,
+                            Subcategories,
+                            session: req.session
+                        })
+                    })
+
+                    .catch(error => console.log(error));
+
+                },
+
 
                 //----------------------- Categorias ---------------------------//
 
@@ -42,7 +57,8 @@ let controller = {
                             where: {
                                 id: req.params.id
                             },
-                            include: [{ association: 'subcategories',
+                            include: [{
+                                association: 'subcategories',
                                 include: [{
                                     association: 'products',
                                     include: [{
@@ -147,7 +163,7 @@ let controller = {
                     })
                 },
 
-        
+
 
 
 

@@ -22,14 +22,14 @@ router.get('/users', userAdminCheck, controller.dashboardUsers) //
 /* Crear productos */
 router.get('/products/create',  userAdminCheck, controller.create) // Envia los datos
 
-router.post('/products/create',  userAdminCheck, upload.array('image'), productFormValidator, controller.store) //  Recibe los datos
+router.post('/products/create', upload.single('image'), userAdminCheck, productFormValidator, controller.store) //  Recibe los datos
 
 
 /* Editar productos */
 
 router.get('/products/edit/:id',userAdminCheck, controller.edit);
 
-router.put('/products/edit/:id', userAdminCheck, upload.array('image'), productFormValidator, controller.update);
+router.put('/products/edit/:id', upload.single('image'), userAdminCheck, productFormValidator, controller.update);
 
  
 /* Eliminar productos */
@@ -37,6 +37,7 @@ router.put('/products/edit/:id', userAdminCheck, upload.array('image'), productF
 router.delete('/products/:id', controller.del);
 
 // Pasar userSessionCheck
+
 
 
 

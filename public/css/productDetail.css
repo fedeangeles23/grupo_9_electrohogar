@@ -22,16 +22,24 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-  
+  margin-top: 10px;
 }
 
 
-small-img{
+.small-img{
     margin-top: 10px;
     padding: 10px;
     margin: 20px;
 }
 
+.prodenvioo {
+    font-size: 13px;
+}
+
+.prodenvioicon {
+    display: flex;
+    align-items: flex-end;
+}
 
 
 div.small-cuadrado {
@@ -200,6 +208,7 @@ input:focus{
 .greelineprod {
     color: rgb(0, 145, 0);
     text-decoration: underline;
+    font-size: 13px;
 }
 
 .prodenvio {
@@ -304,8 +313,8 @@ input:focus{
 
 
 .small-img-col img:hover{
-    border:2px solid rgb(25, 0, 255);
-    transition: 0.2s ease-in-out;
+    border:1px solid rgb(25, 0, 255);
+    transition: 0.1s ease-in-out;
 }
 
 
