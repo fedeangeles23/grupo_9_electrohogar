@@ -2,7 +2,7 @@
 <html lang="es">
 <%- include('../partials/head.ejs', {title: ' Inicio | ElectroHogar'}) %>
 
-<body>
+<body onload="loginCheck()">
     <%- include('../partials/header.ejs') %>
 
     <%- include ('../partials/nav.ejs') %>
@@ -280,10 +280,10 @@
 
 
 
+      
 
-
-<!--         <script src="/js/cerrarModal.js"></script>
- -->    </main>
+        <script src="/js/cerrarModal.js"></script>
+   </main>
 
     <%- include ('../partials/footer.ejs') %>
 
@@ -296,8 +296,8 @@
 
     <script src="/js/modoOscu.js"></script>
 
-<!--     <script src="/js/Bienvenido.js"></script>
- -->
+    <script src="/js/Bienvenido.js"></script>
+ 
 </body>
 
 </html>
