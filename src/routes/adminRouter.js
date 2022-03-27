@@ -13,6 +13,9 @@ router.get('/', userAdminCheck, controller.indexAdmin) // Envia los datos
 
 
 router.get('/products',  userAdminCheck, controller.dashboardProducts) 
+//Search products Admin
+router.get('/search', controller.searchAdmin)
+
 
 /* Usuarios CRUD */
 router.get('/users', userAdminCheck, controller.dashboardUsers) // 

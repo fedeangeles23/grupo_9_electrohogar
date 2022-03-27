@@ -4,3 +4,33 @@
 <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
 <script src="/js/suscripcion.js"></script>
 <script src="/js/carrito.js"></script>
+  <script src="/js/validacionLogin.js"></script>
+
+  <script src="/js/cargando.js"></script>
+
+  <script src="/js/modoOscu.js"></script>
+
+  <script>
+      if (req.session.user) {
+           const Toast = Swal.mixin({
+           toast: true,
+           position: 'top-end',
+           showConfirmButton: false,
+           timer: 3000,
+           timerProgressBar: true,
+           didOpen: (toast) => {
+           toast.addEventListener('mouseenter', Swal.stopTimer)
+           toast.addEventListener('mouseleave', Swal.resumeTimer)
+           }
+           })
+
+           Toast.fire({
+           icon: 'success',
+           title: 'Logueado con exito'
+           })
+      } else {
+          console.log('No te logueaste')
+      }
+
+     
+  </script>

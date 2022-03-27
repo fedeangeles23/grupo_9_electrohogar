@@ -47,7 +47,7 @@ const controller = {
                     req.session.cart = [];
                    
                     console.log(req.session.cart);
-                    
+
                     db.Order.findOne({
                         where: {
                             userId: req.session.user.id,
@@ -59,7 +59,7 @@ const controller = {
 
                     }).then(order => {
                         if (order) {
-                            order.order_items.forEach(item => {
+                            order.order_item.forEach(item => {
                                 let product = {
                                     id: item.productId,
                                     name: item.product.name,

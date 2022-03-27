@@ -17,7 +17,7 @@
                   <div class="col-12 col-md-6">
                         <div class="col-12 mb-3">
                             <label for="inputName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="inputName" name="inputName" value="<%= locals.old ? old.name : product.name %>">
+                            <input type="text" class="form-control" id="inputName" name="name" value="<%= locals.old ? old.name : product.name %>">
                             
                                 <small class="text-danger" class="error" id="inputNameErrors">
                                     <%= (typeof errors != 'undefined' && errors.name) ? errors.name.msg : "" %>
@@ -27,7 +27,7 @@
 
                         <div class="col-12 mb-3">
                             <label for="inputName" class="form-label">Marca</label>
-                            <input type="text"  class="form-control" id="inputBrand" name="drand" value="<%= locals.old ? old.brand : product.brand %>">
+                            <input type="text"  class="form-control" id="inputBrand" name="brand" value="<%= locals.old ? old.brand : product.brand %>">
                             
                                 <small class="text-danger" class="error" id="inputBrandErrors">
                                     <%= (typeof errors != 'undefined' && errors.brand) ? errors.brand.msg : "" %>
@@ -96,7 +96,7 @@
 
                         <div class="col-12 mb-3">
                             <label for="inputImage" class="form-label">Imagen</label>
-                            <input type="file" name="image" class="form-control" aria-label="file example" id="inputImage" multiple>
+                            <input type="file" name="image" class="form-control" aria-label="file example" id="inputImage">
                             
                                 <small class="text-danger" id="inputImageErrors">
                                     <%= (typeof errors != 'undefined' && errors.image) ? errors.image.msg : "" %>

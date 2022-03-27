@@ -7,6 +7,7 @@
 
     <main>
 
+
         <div class="navAdminBtn">
             <a href="/admin/products/create" class="productCreateA">Crear producto</a>
 
@@ -15,8 +16,17 @@
             </div>
         </div>
 
+        <div class="searchadminprod">
+            <div class="buscarMobile">
+                <form action="/admin/products" method="GET" id="search">
+                    <input type="search" name="keywords" placeholder="Buscar productos..">
+                    <button class="btnsearch" type="submit"> <i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
 
         <div class="containerproductsAdmin">
+
 
             <% products.forEach(Product=> { %>
             <div class="cardAdmin"><a href="/products/detail/<%- Product.id %>">

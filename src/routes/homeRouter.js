@@ -1,10 +1,11 @@
-let express = require('express') //Llamamos express y enrutador
-let router = express.Router() //Ejecutamos el metodo router de express
-let controller = require('../controllers/homeController.js') // Requerimos el controlador para utilizarlo con router.get
+let express = require('express') 
+let router = express.Router() 
+let controller = require('../controllers/homeController.js') 
+const nodemailer = require('nodemailer');
 
 
-// GET - Listado de productos
-router.get('/', controller.home) // buscamos en el objeto controller el HOME
+
+router.get('/', controller.home) /
 
 
 /*  Footer vistas  */
@@ -17,8 +18,34 @@ router.get('/politica-y-privacidad', controller.politicaYprivacidad) //
 router.get('/contacto', controller.contacto) //
 router.get('/ventana', controller.ventana) //
 
-module.exports = router // Exportamos el let router
+/* Nodemailer - Email de subscripcion */
+router.post('/send-email', (req, res) => {
+const transporter = nodemailer.createTransport({
+    host: 'smtp.ethereal.email',
+    port: 587,
+    auth: {
+        user: 'jutbejsqxmpotzua@ethereal.email',
+        pass: 'VP7jWRgb4VzFTpFwNC'
+    }
+});
 
-// Esta es la estructura principal del routes en nuestro proyecto
+    var mailOptions = {
+        from: "Remitente",
+        to: "joakola87@gmail.com",
+        subject: "Electrohogar Subscripcion",
+        text: "Hola mundo!"
+    }
 
-// Con esto creamos el enrutador, 1 para detalle de prod, otra para carrito, etc.
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            res.status(500).send(error.message)
+        } else {
+            console.log("Email enviado");
+            res.status(200).jsonp(req.body);
+        }
+    });
+});
+
+
+module.exports = router 
+

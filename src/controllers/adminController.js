@@ -35,16 +35,45 @@ let controller = {
 
 
     /* End crud usuarios */
+
     dashboardProducts: (req, res) => {
-        Products.findAll()
+        Products.findAll({
+             order:[ 
+                 ['updatedAt', 'DESC']
+            ]})
             .then(products => {
                 res.render('admin/adminSettings', {
                     products,
                     session: req.session
                 })
             })
+            .catch(error => console.log(error))
 
     },
+
+    searchAdmin: (req, res) => {
+        Products.findAll({
+                where: {
+                    name: {
+                        [Op.substring]: req.query.keywords
+                    }
+                },
+                include: [{
+                    association: 'productImages'
+                }]
+            })
+            .then((result) => {
+                res.render('admin/adminSettings', {
+                    result,
+                    search: req.query.keywords,
+                    session: req.session
+                })
+            })
+
+    },
+
+
+    
 /* Fin panel admin */
 
 /* ---- CRUD --- */
