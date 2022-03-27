@@ -1,15 +1,15 @@
 console.log('Carrito conectado')
 
 const $ = (id) => document.getElementById(id);
-
 const carrito = $('carrito');
 
+console.log(carrito)
 const getCarrito = async () => {
     try {
         const response = await fetch('/api/cart/show')
         const result = await response.json()
-
-        if (ok) {
+        console.log(result)
+        if (result.ok) {
             cargarTabla(result.data)
         }
     } catch (error) {
@@ -40,7 +40,6 @@ const addItem = async (id) => {
 }
 
 const cargarTabla = (data) => {
-
     carrito.innerHTML = null;
 
     data.forEach(({
@@ -50,9 +49,7 @@ const cargarTabla = (data) => {
         price,
         total
     }) => {
-        let item = `
-         <div class="box1" id="carrito">
-                    <div class="product-container">
+        let item = `  <div class="product-container">
                         <div class="product-section">
 
                             <div class="product">
@@ -101,8 +98,7 @@ const cargarTabla = (data) => {
 
                         </div>
 
-                    </div>
-                </div>
+                    </div> 
 
         `
         carrito.innerHTML + item

@@ -13,13 +13,6 @@ module.exports = [
     check('pass1')
     .notEmpty()
     .withMessage("Debes escribir la contraseña"),
-
-    check('emailinput')
-    .notEmpty()
-    .withMessage("Ingresa un email").bail()
-    .isEmail()
-    .withMessage("Ingresa un email valido"),
-
   
     body('custom')
         .custom((value, {req}) => {

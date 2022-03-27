@@ -207,8 +207,8 @@ $descripcion.addEventListener('blur', function(e) {
            $descripcion.classList.add('is-invalid');
            validationsErrors = true
            break;
-           case $descripcion.value.length <20 :
-           $descripcionErrors.innerHTML = 'Debes ingresar al menos 20 caracteres';
+           case $descripcion.value.length <5 :
+           $descripcionErrors.innerHTML = 'Debes ingresar al menos 5 caracteres';
            $descripcion.classList.add('is-invalid');
            validationsErrors = true
            break;

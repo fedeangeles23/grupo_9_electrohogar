@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<%- include ('../partials/head.ejs', {title: 'Chat atencion al cliente | ElectroHogar'}) %>
+
+</head>
+
+<body>
+     <%- include ('../partials/header.ejs') %>
+     <%- include ('../partials/nav.ejs') %>
+     
+<div class="chatcontainer">
+
+    <div class="chatcenter">
+<h3 style="color: white;">Chat atencion al cliente online</h3>
+
+
+        <ul class="list-group">
+            <li></li>
+        </ul>
+        
+        <form action="/users/chat" method="get">
+            <input type="text" class="form-control" placeholder="Ingrese el mensaje">
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        let socket = io()
+        const form = document.querySelector('form')
+        const input = document.querySelector('input')
+        let mensajes = document.querySelector('ul')
+
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+
+            if (input.value) {
+                socket.emit('chat', input.value)
+                input.value = ""
+            }
+        })
+
+        socket.on('chat', (msg) => {
+            let item = document.createElement('li')
+            item.textContent = msg
+            mensajes.appendChild(item)
+            window.scrollTo(0, document.body.scrollHeight)
+        })
+    </script>
+
+
+
+
+<%- include ('../partials/footer.ejs') %>
+<%- include ('../partials/scripts.ejs') %>
+
+</body>
+
+
+</html>

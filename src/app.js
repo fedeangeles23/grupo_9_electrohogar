@@ -7,7 +7,8 @@ const method0verride =  require('method-override'); // Para poder usar los méto
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const cookie = require('./middlewares/cookie')
-
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
 
 app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}
 http://localhost:${PORT}
@@ -42,7 +43,6 @@ let users = require('./routes/usersRouter')
 let home = require('./routes/homeRouter')
 let admin = require('./routes/adminRouter')
 let products = require ('./routes/productRouter')
-
 
 /* ----------------Routes------------------------- */
 

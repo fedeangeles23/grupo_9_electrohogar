@@ -8,6 +8,7 @@ let registerValidator = require('../validations/registerValidator');
 let userSessionCheck = require('../middlewares/userSessionCheck')
 
 
+//Rutas comienzan desde /user
 
 // Muestra el login
 router.get('/login', controller.login);
@@ -33,8 +34,11 @@ router.post('/perfil/edit', userSessionCheck, controller.editProfilePost)
 
 
 
-
 router.get('/loginGoogle', controller.loginGoogle);
+
+
+/* Chat */ //Users/chat
+router.get('/chat', controller.chat)
 
 
 module.exports = router;
