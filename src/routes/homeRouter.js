@@ -1,7 +1,7 @@
 let express = require('express') 
 let router = express.Router() 
 let controller = require('../controllers/homeController.js') 
-const nodemailer = require('nodemailer');
+let loginValidator = require('../validations/loginValidator');
 
 
 
@@ -19,32 +19,8 @@ router.get('/contacto', controller.contacto) //
 router.get('/ventana', controller.ventana) //
 
 /* Nodemailer - Email de subscripcion */
-router.post('/send-email', (req, res) => {
-const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    auth: {
-        user: 'jutbejsqxmpotzua@ethereal.email',
-        pass: 'VP7jWRgb4VzFTpFwNC'
-    }
-});
+router.post('/send-email', loginValidator, controller.emailSubscripcion)
 
-    var mailOptions = {
-        from: "Remitente",
-        to: "joakola87@gmail.com",
-        subject: "Electrohogar Subscripcion",
-        text: "Hola mundo!"
-    }
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            res.status(500).send(error.message)
-        } else {
-            console.log("Email enviado");
-            res.status(200).jsonp(req.body);
-        }
-    });
-});
 
 
 module.exports = router 

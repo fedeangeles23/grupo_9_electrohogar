@@ -14,6 +14,12 @@ module.exports = [
     .notEmpty()
     .withMessage("Debes escribir la contraseña"),
 
+    check('emailinput')
+    .notEmpty()
+    .withMessage("Ingresa un email").bail()
+    .isEmail()
+    .withMessage("Ingresa un email valido"),
+
   
     body('custom')
         .custom((value, {req}) => {

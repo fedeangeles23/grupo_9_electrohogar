@@ -4,22 +4,21 @@ const nodemailer = require('nodemailer');
 
 app.post('/send-email', (req,res) => {
  const transporter = nodemailer.createTransport({
-     host: 'smtp.ethereal.email',
-     port: 587,
-     auth: {
-         user: 'c3ancjlk5nt6cg5y@ethereal.email',
-         pass: 'Q9YZjR9WVX9FdybFG8'
+   service: "gmail",
+     auth:{
+         user: 'electrohogargrupo9@gmail.com',
+         pass: 'electrohogargrupo123'
      }
  });
 
-    var mailOptions = {
-        from : "Remitente",
-        to: mailuser,
+    var details = {
+        from: "electrohogargrupo9@gmail.com",
+        to: "joakola87@gmail.com",
         subject: "Electrohogar Subscripcion",
-        text: "Hola mundo!"
+        text: "Hola mundo!",
     }
 
-    transporter.sendEmail(mailOptions, (error, info) => {
+    transporter.sendEmail(details, (error) => {
         if(error){
             res.status(500).send(error.message)
         }else{

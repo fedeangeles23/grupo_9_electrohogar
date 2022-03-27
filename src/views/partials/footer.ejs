@@ -40,9 +40,18 @@
       
         <ul class="box input-box">
           <li class="link_name"> 
-            <!-- <a href="/ventanaSuscribir" --> Suscribite <!-- </a> --> </li>
-          <li><input name="subName" id="bbbSub" type="text" placeholder="Pon tu Email aquí."></li>
-          <li><button id="butSubcri"> Suscripción</button></li>
+            <!-- <a href="/ventanaSuscribir" --> Enterate de nuestras novedades! <!-- </a> --> </li>
+
+          <li>
+            <form class="emailsubform" action="/send-email" method="post">
+              <input name="emailinput" id="bbbSub" type="text" placeholder="Email">
+               <button type="submit" id="butSubcri"> Suscribirse</button>
+                <span class="error">
+                  <%= (typeof errors != 'undefined' && errors.emailinput) ? errors.emailinput.msg : "" %>
+                </span>
+            </form>
+          </li>
+         
         </ul>
       
 

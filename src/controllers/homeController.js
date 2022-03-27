@@ -3,7 +3,9 @@
  const path = require('path');
  const db = require('../database/models');
  const { Op } = require('sequelize')
-
+const nodemailer = require('nodemailer');
+const express = require('express');
+const router = express.Router();
 
 
 
@@ -83,6 +85,40 @@
          },
          ventana: (req, res) => {
             res.render('footerViews/ventana', { session: req.session })
+         },
+
+         emailSubscripcion: (req, res) => {
+
+                
+                const transporter = nodemailer.createTransport({
+                    service: "gmail",
+                    auth: {
+                        user: 'electrohogargrupo9@gmail.com',
+                        pass: 'electrohogargrupo123'
+                    }
+                });
+
+                var details = {
+                    from: "electrohogargrupo9@gmail.com",
+                    to: req.body.emailinput,
+                    subject: " Subscripcion | ElectroHogar",
+                    text: "Gracias por subscribirte a ElectroHogar, ahora vas a recibir nuestras mejores ofertas y promociones en tu email!",
+                    attachments: [{
+                        filename: 'emailEG.png',
+                        path:(path.join(__dirname, '../views/users/emailEG.png'))
+                    }]
+                }
+
+                transporter.sendMail(details, (error) => {
+                    if (error) {
+                        res.status(500).send(error.message)
+                    } else {
+                        console.log("Email enviado");
+                        res.status(200).jsonp(req.body);
+                    }
+                });
+
+            return res.redirect('/')
          }
 
       
@@ -90,6 +126,3 @@
  };
 
  module.exports = controller
-
- const express = require('express');
- const router = express.Router();

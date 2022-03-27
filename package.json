@@ -24,6 +24,7 @@
     "mysql2": "^2.3.3",
     "node-fetch": "^2.6.7",
     "nodemailer": "^6.7.3",
+    "nodemailer-express-handlebars": "^5.0.0",
     "nodemon": "^2.0.15",
     "override": "0.0.1",
     "sequelize": "^6.17.0"
