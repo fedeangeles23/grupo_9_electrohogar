@@ -169,3 +169,41 @@
 .numeroProds {
       margin: 20px 0px;
 }
+
+div#modal_containerBorrar {
+    width: 70%;
+    height: 60%;
+    z-index: 9999999999;
+    text-align: center;
+}
+
+p#closeBorrar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    background-color: red;
+    width: 23px;
+    height: 20px;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal-modal-closeBorrar {
+    position: relative;
+    width: 70%;
+    height: 70px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 7px;
+    transition: transform 1s;
+    transform: translateY(0%);
+    background: cadetblue;
+}
+
+button.BottBorrar {
+    width: 40px;
+    background: floralwhite;
+    border-radius: 9px;
+}

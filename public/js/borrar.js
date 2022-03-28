@@ -1,10 +1,14 @@
-const borrar = () => {
-    Swal.fire({
-        title: 'Seguro que quieres borrar este producto?',
-        icon: 'question',
-        confirmButtonText: 'Aceptar',
-        timer: 9000
-        
-     
-    })
-}
+const open = document.getElementById('borrar');
+const modal_container = document.getElementById('modal_containerBorrar');
+const close = document.getElementById('closeBorrar');
+console.log(modal_container)
+open.addEventListener('click', (e) => {
+e.preventDefault()
+console.log(modal_container)
+    modal_container.style.display = "flex"
+   
+});
+
+close.addEventListener('click', () => {
+    modal_container.style.display = "none"
+});
