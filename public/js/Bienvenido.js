@@ -11,7 +11,8 @@ if( !sessionStorage.getItem("welcome")){
 
 
    const loginCheck = () => {
-       if(sessionStorage.getItem("login")) {
+       if(sessionStorage.getItem("login") && !sessionStorage.getItem("ok")) {
+         sessionStorage.setItem("ok", true)
         const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',

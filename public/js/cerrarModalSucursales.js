@@ -1,5 +1,5 @@
-function sucursales(){
-    Swal({
+const sucursales = () => {
+    Swal.fire({
         title: "Selecciona la localidad de entrega",
         input:'select',
         inputPlaceholder: 'Eligí tu provincia',
