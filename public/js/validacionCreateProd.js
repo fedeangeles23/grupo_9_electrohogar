@@ -50,11 +50,6 @@ window.addEventListener('load', function () {
             $name.classList.add('is-invalid');
             validationsErrors = true
             break;
-        case !regExAlpha.test($name.value):
-            $nameErrors.innerHTML = 'Ingrese un nombre válido';
-            $name.classList.add('is-invalid');
-            validationsErrors = true
-            break
         default:
             $name.classList.remove('is-invalid');
             $name.classList.add('is-valid');
