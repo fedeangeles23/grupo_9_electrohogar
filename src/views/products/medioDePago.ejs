@@ -56,7 +56,7 @@
 
         <div class="pagarPadre3">
 
-            <span class="pagar"> <button type="dsff" class="btn">Pagar</button> </span>
+            <span class="pagar"> <button id="pagarV" type="dsff" class="btn">Pagar</button> </span>
 
         </div>
 
@@ -64,7 +64,18 @@
 
     </div>
 
+    <div class="modal-containerPagar" id="modal_containerPagar">
+        <div class="modal-modal-closePagar">
+            <p class="closePagar" id="closePagar">X</p>
+            <img src="/img/gracias-por-tu-compra.png" alt="">
+        </div>
+    </div>    
+           
+      
+
     <script src="/js/validacionesPagar.js"></script>
+
+    <script src="/js/ventanaPagar.js"></script>
 
     <%- include ('../partials/footer.ejs') %>
     <%- include ('../partials/scripts.ejs') %>

@@ -29,6 +29,5 @@ if( !sessionStorage.getItem("welcome")){
             title: 'Logueado con exito'
           })
         }
-
        }
  
