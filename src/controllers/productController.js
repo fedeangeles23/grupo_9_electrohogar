@@ -1,9 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
-const {
-    Op
-} = require('sequelize')
+const { Op } = require('sequelize')
 
 const Products = db.Product;
 const Categories = db.Category;
@@ -25,7 +23,7 @@ let controller = {
 
         let productRelated = Products.findAll({
             include: [{
-                all: true
+                            association: 'productImages'
             }],
        /*      where: {
                 categories: product.categories

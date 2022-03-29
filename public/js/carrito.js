@@ -26,8 +26,6 @@ const addItem = async (id) => {
         })
         const result = await response.json()
 
-        
-
         if (result.ok) {
             cargarTabla(result.data)
         }
@@ -53,17 +51,15 @@ const cargarTabla = (data) => {
                         <div class="product-section">
 
                             <div class="product">
-                                <img src="/images/mogogs60.webp" alt="Moto G s60">
+                                <img src="/images/productsDB/${image}" alt="Moto G s60">
                             </div>
 
                             <div class="product-name">
-                                <p>Celular Motorola G60s 128gb Aqua</p>
+                                <p>${name}</p>
                             </div>
 
                         </div>
                         <div class="units">
-
-
                             <div class="add-unit">
                                 <select name="cantidad" id="cantidad">
                                     <option value="1">1</option>
@@ -77,7 +73,7 @@ const cargarTabla = (data) => {
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
-                                <label for="add-product">x $49.000,00</label>
+                                <label for="add-product">x ${price}</label>
                             </div>
 
                         </div>
@@ -86,11 +82,7 @@ const cargarTabla = (data) => {
                             <i class="fas fa-trash-alt"></i>
                         </div>
 
-
-
                         <div class="delete-section">
-
-
 
                             <div class="delet-product">
                                 <i class="fas fa-trash-alt"></i>
@@ -101,7 +93,7 @@ const cargarTabla = (data) => {
                     </div> 
 
         `
-        carrito.innerHTML + item
+        carrito.innerHTML += item
     });
 }
 

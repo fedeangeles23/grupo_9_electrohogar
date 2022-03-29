@@ -269,6 +269,12 @@ span a.link {
     flex-direction: column;
     align-items: center;
 }
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .form-registro input {
     width: 340px;

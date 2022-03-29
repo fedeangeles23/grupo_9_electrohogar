@@ -1,6 +1,7 @@
 let express = require('express')
 let router = express.Router()
 let controller = require('../controllers/productController.js')
+const userSessionCheck = require('../middlewares/userSessionCheck')
 
 
 // Product detail
@@ -16,7 +17,7 @@ router.get('/subcategory/:subcategory/:categoryId', controller.subcategory)
 router.get('/search', controller.search)
 
 // Carrito
-router.get('/carrito', controller.carrito)
+router.get('/carrito', userSessionCheck, controller.carrito)
 
 // Medio de pago
 router.get('/medioDePago', controller.medioDePago)
@@ -31,4 +32,5 @@ router.get('/search', controller.search)
 /* GET - Search products */
 /* router.get('/search', controller.search) 
  */
+
 module.exports = router;

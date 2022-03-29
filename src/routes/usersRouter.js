@@ -6,6 +6,7 @@ const uploadFile = require('../middlewares/uploadAvatar');
 let loginValidator = require('../validations/loginValidator');
 let registerValidator = require('../validations/registerValidator');
 let userSessionCheck = require('../middlewares/userSessionCheck')
+let cookie = require('../middlewares/cookie')
 
 
 //Rutas comienzan desde /user
@@ -13,7 +14,7 @@ let userSessionCheck = require('../middlewares/userSessionCheck')
 // Muestra el login
 router.get('/login', controller.login);
 // POST - Recibe datos del login
-router.post('/login', loginValidator ,controller.processLogin)
+router.post('/login', loginValidator, cookie , controller.processLogin)
 
 
 // Muestra el registro

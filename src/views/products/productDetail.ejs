@@ -13,7 +13,8 @@
     <main class="productDetail">
         <div class="productDetailcontainer">
 
-            <p class="enrutador"><a href="/">Inicio</a> | <a href="/products/subcategory/<%=productdetail.subcategoryId%>/1">
+            <p class="enrutador"><a href="/">Inicio</a> | <a
+                    href="/products/subcategory/<%=productdetail.subcategoryId%>/1">
                     <%-  productdetail.subcategories.name %> </a> </p>
 
             <div class="small-container single-product">
@@ -25,138 +26,151 @@
                         </div>
                         <div class="small-img-row">
                             <div class="small-img-col">
-                                <div>
-                                    <img class="small-img" type="checkbox"
-                                        src="/images/productsDB/<%-productdetail.productImages[0].image  %>  " alt="">
-                                </div>
-                                <div class="small-cuadrado">
-                                    <img class="small-img" type="checkbox"
-                                        src="/images/productsDB/<%-productdetail.productImages[0].image  %>  " alt="">
 
+
+
+                                <div class="small-img-container">
+                                    <img class="small-img" type="checkbox"
+                                        src="/images/productsDB/<%-productdetail.productImages[0].image  %>  " alt="">
                                 </div>
+                                <% if (productdetail.productImages.length > 1) { %>
+                                <div class="small-img-container">
+                                    <img class="small-img" type="checkbox"
+                                        src="/images/productsDB/<%-productdetail.productImages[1].image  %>  " alt="">
+                                </div>
+                                <% } %>
+
+                                <% if (productdetail.productImages.length > 2) { %>
+                                <div class="small-img-container">
+                                    <img class="small-img" type="checkbox"
+                                        src="/images/productsDB/<%-productdetail.productImages[2].image  %>  " alt="">
+                                </div>
+                                <% } %>
 
                             </div>
+
                         </div>
                     </div>
-                    <div class="col2">
-                        <div class="favdetail">
-                            <i class="fa">&#xf004;</i>
-                        </div>
-                        <p class="p"><%- productdetail.brand %> </p>
+                </div>
+                <div class="col2">
+                    <div class="favdetail">
+                        <i class="fa">&#xf004;</i>
+                    </div>
+                    <p class="p"><%- productdetail.brand %> </p>
 
-                        <h3 class="tituloprod"><%- productdetail.name %> </h3>
-                        <h4 class="precioprod">$<%- productdetail.price %> </h4>
-                        <p class="cuotaprod"><%- productdetail.cuotes  %> Cuotas sin interes x
-                            $<%- (Math.ceil(productdetail.price / productdetail.cuotes))  %> </p>
+                    <h3 class="tituloprod"><%- productdetail.name %> </h3>
+                    <h4 class="precioprod">$<%- productdetail.price %> </h4>
+                    <p class="cuotaprod"><%- productdetail.cuotes  %> Cuotas sin interes x
+                        $<%- (Math.ceil(productdetail.price / productdetail.cuotes))  %> </p>
 
-                        <input type="number" value="1">
-                        <a href="/products/medioDePago" class="btncomprar">Comprar</a>
-                        <button onclick="addItem('<%=productdetail.id%>')" class="btncart"> Agregar al
-                            carrito</button>
-                        <div class="prodenvioicon">
-                            <img src="/images/delivery-truck (1).png" alt="">
-                            <div>
+                    <input type="number" value="1">
+                    <a href="/products/medioDePago" class="btncomprar">Comprar</a>
+                    <button onclick="addItem('<%=productdetail.id%>')" class="btncart"> Agregar al
+                        carrito</button>
+                    <div class="prodenvioicon">
+                        <img src="/images/delivery-truck (1).png" alt="">
+                        <div>
 
-                                <p class="prodenvioo"> Retiro gratis por sucursal
-                                    <br>
-                                </p>
-                                <a class="greelineprod" onClick="sucursales()" href="#">Ver sucursales</a>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="prodesucursalicon">
-                            <img src="/images/tienda.png" alt="">
-                            <p class="prodenvio">Envio a domicilio a todo el pais
-                                <br> <a class="greelineprod" id="openSucur" href="#">Ver costos de envio</a>
+                            <p class="prodenvioo"> Retiro gratis por sucursal
+                                <br>
                             </p>
+                            <a class="greelineprod" onClick="sucursales()" href="#">Ver sucursales</a>
                         </div>
-
-
-
-                        <br>
-                    </div>
-                </div>
-            </div>
-
-            <div class="detalleprod">
-                <div class="infoprod">
-                        <span class="detalleproductocol1">Detalle de producto</span>
-
-                    <div class="descripcionprod" id="dpDescripcion" style="display: block;">
-                        <%- productdetail.description %>
                     </div>
 
+
+
+
+                    <div class="prodesucursalicon">
+                        <img src="/images/tienda.png" alt="">
+                        <p class="prodenvio">Envio a domicilio a todo el pais
+                            <br> <a class="greelineprod" id="openSucur" href="#">Ver costos de envio</a>
+                        </p>
+                    </div>
+
+
+
+                    <br>
                 </div>
-                <br>
             </div>
+        </div>
 
-            <div class="">
-                <div class="modal modal-closeSucursal modal-containerSucursal" id="modal_containerSucur">
-                    <p class="closeSucursal" id="closeSucur">X</p>
-                    <img src="/img/costo-de-envio.jpg" alt="">
+        <div class="detalleprod">
+            <div class="infoprod">
+                <span class="detalleproductocol1">Detalle de producto</span>
+
+                <div class="descripcionprod" id="dpDescripcion" style="display: block;">
+                    <%- productdetail.description %>
                 </div>
-            </div> 
 
-            <h3 class="h3detail">Tambien puede interesarte..</h3>
-            <div class="sectionSwiper">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+            </div>
+            <br>
+        </div>
 
-                        <% productRelated.forEach(Product=> { %>
-                        <div class="swiper-slide">
-                            <div class="cardSlider">
-                                <a href="/products/detail/<%- Product.id %>">
-                                    <div class="image-section">
-                                        <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
-                                    </div>
-                                    <div class="descriptionSlider">
-                                        <h1>
-                                            <% if (Product.name.length> 10) { %>
-                                            <%- `${Product.name.slice(0,90)}` %>
+        <div class="">
+            <div class="modal modal-closeSucursal modal-containerSucursal" id="modal_containerSucur">
+                <p class="closeSucursal" id="closeSucur">X</p>
+                <img src="/img/costo-de-envio.jpg" alt="">
+            </div>
+        </div>
+
+        <h3 class="h3detail">Tambien puede interesarte..</h3>
+        <div class="sectionSwiper">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <% productRelated.forEach(Product=> { %>
+                    <div class="swiper-slide">
+                        <div class="cardSlider">
+                            <a href="/products/detail/<%- Product.id %>">
+                                <div class="image-section">
+                                    <img src="/images/productsDB/<%- Product.productImages[0].image %>" alt="">
+                                </div>
+                                <div class="descriptionSlider">
+                                    <h1>
+                                        <% if (Product.name.length> 10) { %>
+                                        <%- `${Product.name.slice(0,90)}` %>
+                                        <% } else { %>
+                                        <%= Product.name %>
+                                        <% } %>
+                                    </h1>
+                                    <span>$<%- Product.price %></span>
+                                    <div class="discountCardPrice">
+
+                                        <div class="discountPricediv">
+                                            <% if (Product.discount> 0) { %>
+                                            <span class="discountPrice">
+                                                <%- (Product.price * Product.discount) / 100 %>
+                                            </span>
+                                            <span class="discountCard">
+                                                <%- Product.discount%> %OFF
+                                            </span>
                                             <% } else { %>
-                                            <%= Product.name %>
+
                                             <% } %>
-                                        </h1>
-                                        <span>$<%- Product.price %></span>
-                                        <div class="discountCardPrice">
-
-                                            <div class="discountPricediv">
-                                                <% if (Product.discount> 0) { %>
-                                                <span class="discountPrice">
-                                                    <%- (Product.price * Product.discount) / 100 %>
-                                                </span>
-                                                <span class="discountCard">
-                                                    <%- Product.discount%> %OFF
-                                                </span>
-                                                <% } else { %>
-
-                                                <% } %>
-                                            </div>
-
                                         </div>
 
                                     </div>
-                                    <small class="cuotasSlider"> <%- Product.cuotes %> cuotas x
-                                        <%- Product.price / Product.cuotes  %>
-                                    </small>
+
+                                </div>
+                                <small class="cuotasSlider"> <%- Product.cuotes %> cuotas x
+                                    <%- Product.price / Product.cuotes  %>
+                                </small>
 
 
 
-                                </a>
+                            </a>
 
-                            </div>
                         </div>
-
-                        <% }) %>
-
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+
+                    <% }) %>
+
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
+        </div>
 
 
     </main>

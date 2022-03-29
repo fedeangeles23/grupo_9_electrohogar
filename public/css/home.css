@@ -642,12 +642,12 @@ a:hover{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: red;
-    color: #eee;
-    line-height: 25px;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 7px;
+     background: #585a5d8a;
+     color: #eee;
+     line-height: 25px;
+     cursor: pointer;
+     text-align: center;
+     border-radius: 30px;
 } 
 
 

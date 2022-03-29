@@ -7,6 +7,7 @@ const method0verride =  require('method-override'); // Para poder usar los méto
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const cookie = require('./middlewares/cookie')
+
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 

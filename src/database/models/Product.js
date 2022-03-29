@@ -52,7 +52,7 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "productId"
         })
         Product.hasMany(models.Order_item, {
-            as: "order_items",
+            as: "order_item",
             foreignKey: "productId"
         }) 
     }

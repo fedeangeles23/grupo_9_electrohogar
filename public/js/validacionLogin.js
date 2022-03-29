@@ -22,8 +22,8 @@ window.addEventListener('load', function () {
           $pass.classList.add('is-invalid');
           validationsErrors = true
           break;
-          case value.trim().length <8 :
-            $passErrors.innerHTML = 'La contraseña debe tener un mínimo de 8 a 12 cararcteres, un número y una mayúscula'
+          case value.trim().length <5 :
+            $passErrors.innerHTML = 'La contraseña debe tener un mínimo de 5 a 12 cararcteres, un número y una mayúscula'
             $pass.classList.add('is-invalid');
             validationsErrors = true
             break;

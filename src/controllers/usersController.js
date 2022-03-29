@@ -1,11 +1,10 @@
-const {
-    validationResult
-} = require('express-validator')
+const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 const user = require('../database/models/user');
 const Users = db.User;
 const Products = db.Products;
+
 
 
 
@@ -47,8 +46,8 @@ const controller = {
                         req.session.cart = [];
                     }
 
-                      if (req.session.carrito == undefined) {
-                          req.session.carrito = [];
+                      if (req.session.likes == undefined) {
+                          req.session.likes = [];
                       }
                    
                     console.log(req.session.cart);
@@ -59,11 +58,12 @@ const controller = {
                             state: 'pending'
                         },
                         include: [{
-                            association: 'order_items'
+                            association: 'order_item'
                         }]
 
                     }).then(order => {
-                        if (order) {
+                        console.log(order)
+                        if (order && order.order_item.length > 0) {
                             order.order_item.forEach(item => {
                                 let product = {
                                     id: item.productId,
@@ -75,6 +75,7 @@ const controller = {
                                     total: +item.product.price * item.quantity,
                                     orderId: order.id
                                 }
+                                console.log(product)
                                 req.session.cart.push(product)
                             });
                         }
@@ -214,9 +215,7 @@ const controller = {
         const http = require('http')
         const server = http.createServer(app)
 
-        const {
-            Server
-        } = require('socket.io')
+        const { Server } = require('socket.io')
         const io = new Server(server)
 
         io.on('connection', (socket) => {
@@ -241,8 +240,6 @@ const controller = {
         })
 
     }
-
-
 
 }
 

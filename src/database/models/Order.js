@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
 
     }
     let config = {
-        tableName: "order",
+        tableName: "orders",
         timestamps: true
     }
 
@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "userId"
         })
         Order.hasMany(models.Order_item, {
-            as: "order_items",
+            as: "order_item",
             foreignKey: "orderId"
         })
     }
